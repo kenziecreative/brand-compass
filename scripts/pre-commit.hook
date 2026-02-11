@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Pre-commit hook: Ensure workspace ships clean.
+# Install with: npm run hooks:install
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+STATE_FILE="$REPO_ROOT/workspace/STATE.md"
+
+# Only validate if STATE.md is staged
+if git diff --cached --name-only | grep -q "^workspace/STATE\.md$"; then
+  # Read staged version, not working copy
+  CLIENT_NAME=$(git show :workspace/STATE.md | grep "Name:" | head -1 | sed 's/.*Name:\*\*[[:space:]]*//')
+
+  if [ -z "$CLIENT_NAME" ]; then
+    echo "ERROR: Could not parse client name from workspace/STATE.md"
+    exit 1
+  fi
+
+  if [[ ! "$CLIENT_NAME" =~ ^\[ ]]; then
+    echo "ERROR: workspace/STATE.md contains client data (found: '$CLIENT_NAME')"
+    echo ""
+    echo "Run 'npm run workspace:clean' before committing."
+    exit 1
+  fi
+
+  echo "✓ STATE.md is clean template"
+fi
+
+# Double-check no workspace content slipped past .gitignore
+LEAKED=$(git diff --cached --name-only | grep "^workspace/" | grep -v "^workspace/STATE\.md$" | grep -v "^workspace/STATE-template\.md$" | grep -v "^workspace/reference/" | grep -v "\.gitkeep$" || true)
+
+if [ -n "$LEAKED" ]; then
+  echo "ERROR: Workspace files staged that should be gitignored:"
+  echo "$LEAKED"
+  echo ""
+  echo "Check .gitignore configuration."
+  exit 1
+fi
+
+exit 0

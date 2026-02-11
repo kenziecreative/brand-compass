@@ -4,7 +4,7 @@ An AI-guided brand development system by [Kenzie Creative](https://kenziecreativ
 
 ## What This Is
 
-**Backend:** 11 specialist agents and 14 slash commands orchestrated through Claude Code. Each phase guides a discovery conversation, launches agents for research and drafting, and tracks progress in `workspace/STATE.md`.
+**Backend:** 12 specialist agents and 16 slash commands orchestrated through Claude Code. Each phase guides a discovery conversation, launches agents for research and drafting, and tracks progress in `workspace/STATE.md`.
 
 **Frontend:** A React dashboard at `localhost` showing the brand system being assembled phase by phase — structured content cards displaying core belief, archetypes, messaging options, visual direction, and more as phases complete.
 
@@ -26,34 +26,36 @@ The dashboard runs at `http://localhost:3001`. Open Claude Code in the project d
 ### Starting a Brand Project
 
 ```
-/brand-compass/phase-1-origin
+/brand-compass:start
 ```
 
-This begins the discovery conversation. Claude guides you through questions about the client's core belief, origin story, and the problem they solve. Each phase builds on the last.
+This runs onboarding (Phase 0), then you proceed through discovery phases. Claude guides you through questions about the client's core belief, origin story, and the problem they solve. Each phase builds on the last.
 
 ### The 8 Phases
 
 | Phase | Command | Focus |
 |-------|---------|-------|
-| 1 | `/brand-compass/phase-1-origin` | Origin & Belief |
-| 2 | `/brand-compass/phase-2-audience` | Audience Definition |
-| 3 | `/brand-compass/phase-3-positioning` | Positioning & Differentiation |
-| A | `/brand-compass/checkpoint-a` | Strategic Foundation Gate |
-| 4 | `/brand-compass/phase-4-personality` | Personality & Archetypes |
-| 5 | `/brand-compass/phase-5-messaging` | Messaging Architecture |
-| 6 | `/brand-compass/phase-6-voice` | Voice & Expression |
-| B | `/brand-compass/checkpoint-b` | Verbal Brand Gate |
-| 7 | `/brand-compass/phase-7-visual` | Visual Identity |
-| 8 | `/brand-compass/phase-8-toolkit` | Toolkit Assembly |
+| 0 | `/brand-compass:start` | Onboarding |
+| 1 | `/brand-compass:phase-1-origin` | Origin & Belief |
+| 2 | `/brand-compass:phase-2-audience` | Audience Definition |
+| A | `/brand-compass:checkpoint-a` | Strategic Foundation Gate |
+| 3 | `/brand-compass:phase-3-positioning` | Positioning & Differentiation |
+| 4 | `/brand-compass:phase-4-personality` | Personality & Archetypes |
+| 5 | `/brand-compass:phase-5-messaging` | Messaging Architecture |
+| 6 | `/brand-compass:phase-6-voice` | Voice & Expression |
+| B | `/brand-compass:checkpoint-b` | Verbal Brand Gate |
+| 7 | `/brand-compass:phase-7-visual` | Visual Identity |
+| 8 | `/brand-compass:phase-8-toolkit` | Toolkit Assembly |
 
 ### Utility Commands
 
 | Command | Purpose |
 |---------|---------|
-| `/brand-compass/resume` | Resume from where you left off |
-| `/brand-compass/save-state` | Emergency state save |
-| `/brand-compass/export` | Package final deliverables |
-| `/brand-compass/sanity-check` | Project health check |
+| `/brand-compass:resume` | Resume from where you left off |
+| `/brand-compass:save-state` | Emergency state save |
+| `/brand-compass:export` | Package final deliverables |
+| `/brand-compass:verify` | Verify deliverable quality |
+| `/brand-compass:sanity-check` | Project health check |
 
 ### Viewing Progress
 
@@ -63,25 +65,28 @@ The dashboard at `localhost` shows:
 - Brand summary accumulating across phases
 - Final deliverables on the Output page
 
-Restart the dev server after agents write new files to see updates in the dashboard.
+The dev server uses HMR — workspace files update the dashboard automatically as agents write them.
 
 ## Project Structure
 
 ```
 knz-brand-compass/
   CLAUDE.md                 # Orchestration instructions
-  workspace/                # Brand project workspace
+  workspace/
     STATE.md                # Progress tracking (per-client)
+    reference/              # Reference materials + example brand
     research/               # Agent research outputs
     drafts/                 # Agent draft outputs
     output/                 # Final deliverables
     assets/                 # Generated visual assets
-    reference/              # Reference materials (archetypes guide)
   src/                      # Frontend dashboard
   .claude/
-    agents/                 # 11 specialist agents
-    commands/brand-compass/ # 14 slash commands
+    agents/                 # 12 specialist agents
+    commands/brand-compass/ # 16 slash commands
+    skills/                 # 6 reference skills
 ```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and workflow.
 
 ## Agents
 
@@ -95,6 +100,7 @@ knz-brand-compass/
 | Visual Director | Translates verbal brand into visual direction |
 | Image Generator | Creates visual assets from approved direction |
 | Document Assembler | Compiles final deliverable documents |
+| Brand Verifier | Validates deliverable completeness and consistency |
 | State Reader | Produces resumption briefings |
 | State Writer | Maintains STATE.md at transitions |
 | Memory Extractor | Captures session context before compaction |

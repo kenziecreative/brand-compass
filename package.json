@@ -10,7 +10,12 @@
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write src/",
-    "format:check": "prettier --check src/"
+    "format:check": "prettier --check src/",
+    "workspace:load": "bash scripts/load-test-data.sh",
+    "workspace:clean": "bash scripts/clean-workspace.sh",
+    "test:dev": "npm run workspace:load && npm run dev",
+    "hooks:install": "bash scripts/install-git-hooks.sh",
+    "prebuild": "npm run workspace:clean"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.12",
