@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baseline — UI Component Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+/* ============================================================
+   BASELINE — UI COMPONENT KIT
+   Self-contained reference for developers and designers.
+   ============================================================ */
+
+/* --- CSS Custom Properties (Design Tokens) --- */
+:root {
+  /* Colors */
+  --navy: #1B2B4B;
+  --navy-50: #F0F3F7; --navy-100: #D8E0EB; --navy-200: #B1C1D6;
+  --navy-300: #8AA2C2; --navy-400: #5276A0; --navy-500: #1B2B4B;
+  --navy-600: #162340; --navy-700: #111B34; --navy-800: #0C1428; --navy-900: #070C1C;
+  --teal: #2A9D8F;
+  --teal-50: #F0FAF8; --teal-100: #D1F0EB; --teal-200: #A3E1D7;
+  --teal-300: #75D2C3; --teal-400: #47C3AF; --teal-500: #2A9D8F;
+  --teal-600: #228172; --teal-700: #1A6456; --teal-800: #124839; --teal-900: #0A2B1D;
+  --slate: #64748B;
+  --coral: #E8725C;
+  --white: #FFFFFF;
+  --warm-gray: #F8F7F5;
+  --light-gray: #E2E8F0;
+
+  /* Semantic */
+  --color-success: #2A9D8F;
+  --color-warning: #D4A855;
+  --color-error: #E8725C;
+  --color-info: #1B2B4B;
+
+  /* Typography */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(27, 43, 75, 0.06);
+  --shadow-md: 0 4px 12px rgba(27, 43, 75, 0.08);
+  --shadow-lg: 0 8px 24px rgba(27, 43, 75, 0.12);
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--navy);
+  background-color: var(--white);
+}
+
+/* --- Layout --- */
+.page-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+/* --- Header --- */
+.brand-header {
+  text-align: center;
+  padding: var(--space-2xl) 0 var(--space-xl);
+  border-bottom: 2px solid var(--light-gray);
+  margin-bottom: var(--space-2xl);
+}
+
+.brand-header__mark {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-md);
+}
+
+.brand-header__name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+}
+
+.brand-header__subtitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--slate);
+  margin-top: var(--space-xs);
+  letter-spacing: 0.01em;
+}
+
+.brand-header__meta {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-top: var(--space-md);
+  opacity: 0.7;
+}
+
+/* --- Sections --- */
+.section {
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.section__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.section__number {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.section__divider {
+  flex: 1;
+  height: 1px;
+  background: var(--light-gray);
+  align-self: center;
+  margin-left: var(--space-sm);
+}
+
+.section__desc {
+  font-size: 0.9375rem;
+  color: var(--slate);
+  margin-bottom: var(--space-xl);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* --- Subsection --- */
+.subsection {
+  margin-bottom: var(--space-xl);
+}
+
+.subsection__label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-sm);
+}
+
+/* --- Component Grid --- */
+.component-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.component-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.component-grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* --- Code Block --- */
+.code-block-wrapper {
+  position: relative;
+  margin-bottom: var(--space-xl);
+}
+
+.code-block {
+  background: var(--navy);
+  color: var(--light-gray);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.8;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.code-block .comment {
+  color: var(--slate);
+}
+
+.code-block .prop {
+  color: var(--teal-300);
+}
+
+.code-block .val {
+  color: #E8B87C;
+}
+
+.copy-btn {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  background: var(--navy-600);
+  color: var(--light-gray);
+  border: 1px solid var(--navy-400);
+  padding: 6px 14px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+
+.copy-btn--copied {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+
+/* ============================================================
+   COMPONENT STYLES
+   ============================================================ */
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.btn--sm {
+  font-size: 0.8125rem;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.btn--lg {
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: var(--radius-lg);
+}
+
+/* Primary */
+.btn--primary {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.btn--primary:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.btn--primary:active {
+  background: var(--teal-600);
+  border-color: var(--teal-600);
+}
+
+/* Secondary */
+.btn--secondary {
+  background: var(--white);
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+.btn--secondary:hover {
+  background: var(--navy-50);
+}
+
+.btn--secondary:active {
+  background: var(--navy-100);
+}
+
+/* Accent */
+.btn--accent {
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+}
+
+.btn--accent:hover {
+  background: var(--teal-600);
+  border-color: var(--teal-600);
+}
+
+.btn--accent:active {
+  background: var(--teal-700);
+  border-color: var(--teal-700);
+}
+
+/* Danger */
+.btn--danger {
+  background: var(--coral);
+  color: var(--white);
+  border-color: var(--coral);
+}
+
+.btn--danger:hover {
+  background: #d4604a;
+  border-color: #d4604a;
+}
+
+.btn--danger:active {
+  background: #c0503b;
+  border-color: #c0503b;
+}
+
+/* Ghost */
+.btn--ghost {
+  background: transparent;
+  color: var(--navy);
+  border-color: transparent;
+}
+
+.btn--ghost:hover {
+  background: var(--navy-50);
+}
+
+.btn--ghost:active {
+  background: var(--navy-100);
+}
+
+/* Disabled */
+.btn:disabled,
+.btn--disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Button Group */
+.btn-group {
+  display: inline-flex;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+.btn-group .btn:last-child {
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.btn-group .btn + .btn {
+  margin-left: -2px;
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.card__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+}
+
+.card__text {
+  font-size: 0.875rem;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+.card--feature {
+  border-left: 4px solid var(--teal);
+}
+
+.card--stat {
+  text-align: center;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.card--stat .stat-number {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: var(--space-sm);
+}
+
+.card--stat .stat-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.card--interactive {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card--interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Badges --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.badge--success {
+  background: var(--teal-100);
+  color: var(--teal-700);
+}
+
+.badge--warning {
+  background: #FDF5E3;
+  color: #8A6A1E;
+}
+
+.badge--error {
+  background: #FDE8E4;
+  color: #B94430;
+}
+
+.badge--info {
+  background: var(--navy-100);
+  color: var(--navy-700);
+}
+
+.badge--neutral {
+  background: var(--light-gray);
+  color: var(--slate);
+}
+
+/* Pill */
+.badge--pill {
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
+/* Outline */
+.badge--outline {
+  background: transparent;
+  border: 1.5px solid currentColor;
+}
+
+.badge--outline.badge--success {
+  color: var(--teal);
+}
+
+.badge--outline.badge--warning {
+  color: var(--color-warning);
+}
+
+.badge--outline.badge--error {
+  color: var(--coral);
+}
+
+.badge--outline.badge--info {
+  color: var(--navy);
+}
+
+.badge--outline.badge--neutral {
+  color: var(--slate);
+}
+
+/* --- Form Elements --- */
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--navy);
+  margin-bottom: var(--space-xs);
+}
+
+.form-helper {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-top: var(--space-xs);
+}
+
+.form-helper--error {
+  color: var(--coral);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  display: block;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--navy);
+  background: var(--warm-gray);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--slate);
+  opacity: 0.6;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(27, 43, 75, 0.1);
+  background: var(--white);
+}
+
+.form-input--error,
+.form-select--error,
+.form-textarea--error {
+  border-color: var(--coral);
+}
+
+.form-input--error:focus,
+.form-select--error:focus,
+.form-textarea--error:focus {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 3px rgba(232, 114, 92, 0.15);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%2364748B'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* Custom Checkbox */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+  user-select: none;
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+  display: none;
+}
+
+.form-check__indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: var(--warm-gray);
+  border: 1.5px solid var(--light-gray);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.form-check__indicator--radio {
+  border-radius: 50%;
+}
+
+.form-check input:checked + .form-check__indicator {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.form-check input:checked + .form-check__indicator::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 10px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+.form-check input[type="radio"]:checked + .form-check__indicator--radio::after {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  transform: none;
+}
+
+/* Toggle Switch */
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--navy);
+  user-select: none;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle__track {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--light-gray);
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.toggle__track::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.toggle input:checked + .toggle__track {
+  background: var(--teal);
+}
+
+.toggle input:checked + .toggle__track::after {
+  transform: translateX(20px);
+}
+
+/* --- Tables --- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin-bottom: var(--space-lg);
+}
+
+.data-table thead th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate);
+  background: var(--warm-gray);
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid var(--light-gray);
+}
+
+.data-table thead th:first-child {
+  border-radius: var(--radius-md) 0 0 0;
+}
+
+.data-table thead th:last-child {
+  border-radius: 0 var(--radius-md) 0 0;
+}
+
+.data-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: middle;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: var(--warm-gray);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table .mono {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+/* --- Navigation Patterns --- */
+/* Horizontal Nav */
+.demo-navbar {
+  display: flex;
+  align-items: center;
+  background: var(--navy);
+  padding: 0 var(--space-lg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.demo-navbar__brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: var(--white);
+  margin-right: var(--space-xl);
+  padding: 14px 0;
+  letter-spacing: -0.01em;
+}
+
+.demo-navbar__links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+}
+
+.demo-navbar__link {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--navy-200);
+  text-decoration: none;
+  padding: 14px var(--space-md);
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.demo-navbar__link:hover,
+.demo-navbar__link--active {
+  color: var(--white);
+  border-bottom-color: var(--teal);
+}
+
+/* Tabs */
+.demo-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--light-gray);
+  margin-bottom: var(--space-lg);
+}
+
+.demo-tab {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--slate);
+  background: none;
+  border: none;
+  padding: 12px var(--space-lg);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.demo-tab:hover {
+  color: var(--navy);
+}
+
+.demo-tab--active {
+  color: var(--navy);
+  border-bottom-color: var(--teal);
+  font-weight: 600;
+}
+
+/* Breadcrumbs */
+.demo-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.demo-breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.demo-breadcrumbs li + li::before {
+  content: '/';
+  color: var(--slate);
+  opacity: 0.5;
+}
+
+.demo-breadcrumbs a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.demo-breadcrumbs a:hover {
+  color: var(--teal-700);
+  text-decoration: underline;
+}
+
+.demo-breadcrumbs .current {
+  color: var(--slate);
+}
+
+/* --- Alerts --- */
+.alert {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+  margin-bottom: var(--space-md);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.alert--info {
+  border-left-color: var(--navy);
+  background: var(--navy-50);
+}
+
+.alert--success {
+  border-left-color: var(--teal);
+  background: var(--teal-50);
+}
+
+.alert--warning {
+  border-left-color: var(--color-warning);
+  background: #FDF5E3;
+}
+
+.alert--error {
+  border-left-color: var(--coral);
+  background: #FDE8E4;
+}
+
+.alert__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  border-radius: 50%;
+}
+
+.alert--info .alert__icon {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.alert--success .alert__icon {
+  background: var(--teal);
+  color: var(--white);
+}
+
+.alert--warning .alert__icon {
+  background: var(--color-warning);
+  color: var(--white);
+}
+
+.alert--error .alert__icon {
+  background: var(--coral);
+  color: var(--white);
+}
+
+.alert__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+
+.alert__desc {
+  font-size: 0.8125rem;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+/* --- Dark Mode Preview --- */
+.dark-preview {
+  background: var(--navy-900);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  color: var(--white);
+  margin-top: var(--space-lg);
+}
+
+.dark-preview .card {
+  background: var(--navy-800);
+  border-color: var(--navy-600);
+  color: var(--light-gray);
+}
+
+.dark-preview .card__title {
+  color: var(--white);
+}
+
+.dark-preview .card__text {
+  color: var(--navy-200);
+}
+
+.dark-preview .btn--primary {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--white);
+}
+
+.dark-preview .btn--primary:hover {
+  background: var(--teal-400);
+  border-color: var(--teal-400);
+}
+
+.dark-preview .btn--secondary {
+  background: transparent;
+  border-color: var(--navy-200);
+  color: var(--light-gray);
+}
+
+.dark-preview .btn--secondary:hover {
+  background: var(--navy-700);
+}
+
+.dark-preview .btn--ghost {
+  color: var(--light-gray);
+}
+
+.dark-preview .btn--ghost:hover {
+  background: var(--navy-700);
+}
+
+.dark-preview .form-input {
+  background: var(--navy-700);
+  border-color: var(--navy-600);
+  color: var(--white);
+}
+
+.dark-preview .form-input::placeholder {
+  color: var(--navy-300);
+}
+
+.dark-preview .form-input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+  background: var(--navy-800);
+}
+
+.dark-preview .form-label {
+  color: var(--light-gray);
+}
+
+.dark-preview .badge--info {
+  background: var(--navy-600);
+  color: var(--light-gray);
+}
+
+.dark-preview .badge--success {
+  background: var(--teal-800);
+  color: var(--teal-200);
+}
+
+.dark-preview .badge--error {
+  background: rgba(232, 114, 92, 0.2);
+  color: #F4A898;
+}
+
+.dark-preview .badge--warning {
+  background: rgba(212, 168, 85, 0.2);
+  color: #E8C874;
+}
+
+.dark-preview .alert {
+  background: var(--navy-800);
+  box-shadow: none;
+}
+
+.dark-preview .alert__title {
+  color: var(--white);
+}
+
+.dark-preview .alert__desc {
+  color: var(--navy-200);
+}
+
+.dark-preview .data-table thead th {
+  background: var(--navy-700);
+  color: var(--navy-200);
+  border-bottom-color: var(--navy-600);
+}
+
+.dark-preview .data-table tbody td {
+  border-bottom-color: var(--navy-700);
+  color: var(--light-gray);
+}
+
+.dark-preview .data-table tbody tr:nth-child(even) {
+  background: var(--navy-800);
+}
+
+.dark-preview .data-table tbody tr:nth-child(odd) {
+  background: var(--navy-900);
+}
+
+.dark-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* --- Demo Surface --- */
+.demo-surface {
+  background: var(--warm-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+/* --- Footer --- */
+.brand-footer {
+  text-align: center;
+  padding: var(--space-xl) 0 var(--space-lg);
+  margin-top: var(--space-xl);
+  border-top: 2px solid var(--light-gray);
+}
+
+.brand-footer__logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+
+.brand-footer__note {
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-top: var(--space-xs);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .brand-header__name {
+    font-size: 2.25rem;
+  }
+
+  .section__title {
+    font-size: 1.375rem;
+  }
+
+  .component-grid--3,
+  .component-grid--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .component-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .component-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-md);
+  }
+
+  .demo-navbar__links {
+    flex-wrap: wrap;
+  }
+
+  .data-table {
+    font-size: 0.8125rem;
+  }
+
+  .data-table thead th,
+  .data-table tbody td {
+    padding: 8px 10px;
+  }
+}
+
+/* --- Print --- */
+@media print {
+  body {
+    font-size: 11pt;
+    color: #000;
+  }
+
+  .page-wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .brand-header {
+    padding-top: 0;
+  }
+
+  .copy-btn,
+  .toggle,
+  .dark-toggle-wrapper,
+  .dark-preview,
+  .btn-group,
+  .demo-navbar,
+  .demo-tabs,
+  .demo-breadcrumbs {
+    display: none !important;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+
+  .card--interactive:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .brand-footer__note {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="brand-header">
+      <span class="brand-header__mark">Baseline</span>
+      <h1 class="brand-header__name">UI Component Kit</h1>
+      <p class="brand-header__subtitle">Production-ready components for Baseline products</p>
+      <p class="brand-header__meta">Compliance that scales with you.</p>
+    </header>
+
+    <!-- ═══════════════════ 01 CSS VARIABLES ═══════════════════ -->
+    <section class="section" id="css-variables">
+      <div class="section__header">
+        <span class="section__number">01</span>
+        <h2 class="section__title">CSS Variables Reference</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Design tokens defined as CSS custom properties. Copy and paste into any project to adopt the Baseline design system.</p>
+
+      <div class="code-block-wrapper">
+        <button class="copy-btn" onclick="copyVariables(this)">Copy</button>
+        <pre class="code-block" id="css-vars-code"><span class="comment">/* Colors */</span>
+<span class="prop">--navy</span>: <span class="val">#1B2B4B</span>;
+<span class="prop">--navy-50</span>: <span class="val">#F0F3F7</span>;  <span class="prop">--navy-100</span>: <span class="val">#D8E0EB</span>;  <span class="prop">--navy-200</span>: <span class="val">#B1C1D6</span>;
+<span class="prop">--navy-300</span>: <span class="val">#8AA2C2</span>;  <span class="prop">--navy-400</span>: <span class="val">#5276A0</span>;  <span class="prop">--navy-500</span>: <span class="val">#1B2B4B</span>;
+<span class="prop">--navy-600</span>: <span class="val">#162340</span>;  <span class="prop">--navy-700</span>: <span class="val">#111B34</span>;  <span class="prop">--navy-800</span>: <span class="val">#0C1428</span>;  <span class="prop">--navy-900</span>: <span class="val">#070C1C</span>;
+<span class="prop">--teal</span>: <span class="val">#2A9D8F</span>;
+<span class="prop">--teal-50</span>: <span class="val">#F0FAF8</span>;  <span class="prop">--teal-100</span>: <span class="val">#D1F0EB</span>;  <span class="prop">--teal-200</span>: <span class="val">#A3E1D7</span>;
+<span class="prop">--teal-300</span>: <span class="val">#75D2C3</span>;  <span class="prop">--teal-400</span>: <span class="val">#47C3AF</span>;  <span class="prop">--teal-500</span>: <span class="val">#2A9D8F</span>;
+<span class="prop">--teal-600</span>: <span class="val">#228172</span>;  <span class="prop">--teal-700</span>: <span class="val">#1A6456</span>;  <span class="prop">--teal-800</span>: <span class="val">#124839</span>;  <span class="prop">--teal-900</span>: <span class="val">#0A2B1D</span>;
+<span class="prop">--slate</span>: <span class="val">#64748B</span>;
+<span class="prop">--coral</span>: <span class="val">#E8725C</span>;
+<span class="prop">--white</span>: <span class="val">#FFFFFF</span>;
+<span class="prop">--warm-gray</span>: <span class="val">#F8F7F5</span>;
+<span class="prop">--light-gray</span>: <span class="val">#E2E8F0</span>;
+
+<span class="comment">/* Semantic */</span>
+<span class="prop">--color-success</span>: <span class="val">#2A9D8F</span>;
+<span class="prop">--color-warning</span>: <span class="val">#D4A855</span>;
+<span class="prop">--color-error</span>: <span class="val">#E8725C</span>;
+<span class="prop">--color-info</span>: <span class="val">#1B2B4B</span>;
+
+<span class="comment">/* Typography */</span>
+<span class="prop">--font-heading</span>: <span class="val">'Plus Jakarta Sans', sans-serif</span>;
+<span class="prop">--font-body</span>: <span class="val">'Inter', sans-serif</span>;
+<span class="prop">--font-mono</span>: <span class="val">'JetBrains Mono', monospace</span>;
+
+<span class="comment">/* Spacing */</span>
+<span class="prop">--space-xs</span>: <span class="val">0.25rem</span>;   <span class="prop">--space-sm</span>: <span class="val">0.5rem</span>;   <span class="prop">--space-md</span>: <span class="val">1rem</span>;
+<span class="prop">--space-lg</span>: <span class="val">1.5rem</span>;    <span class="prop">--space-xl</span>: <span class="val">2rem</span>;    <span class="prop">--space-2xl</span>: <span class="val">3rem</span>;
+
+<span class="comment">/* Radii */</span>
+<span class="prop">--radius-sm</span>: <span class="val">4px</span>;   <span class="prop">--radius-md</span>: <span class="val">8px</span>;   <span class="prop">--radius-lg</span>: <span class="val">12px</span>;   <span class="prop">--radius-xl</span>: <span class="val">16px</span>;
+
+<span class="comment">/* Shadows */</span>
+<span class="prop">--shadow-sm</span>: <span class="val">0 1px 2px rgba(27, 43, 75, 0.06)</span>;
+<span class="prop">--shadow-md</span>: <span class="val">0 4px 12px rgba(27, 43, 75, 0.08)</span>;
+<span class="prop">--shadow-lg</span>: <span class="val">0 8px 24px rgba(27, 43, 75, 0.12)</span>;</pre>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 02 BUTTONS ═══════════════════ -->
+    <section class="section" id="buttons">
+      <div class="section__header">
+        <span class="section__number">02</span>
+        <h2 class="section__title">Buttons</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Five button variants in three sizes. Primary buttons use navy with a teal hover state. All buttons use Inter 600 weight with consistent padding and border-radius.</p>
+
+      <!-- Variants -->
+      <div class="subsection">
+        <p class="subsection__label">Variants</p>
+        <div class="demo-surface">
+          <div class="component-row">
+            <button class="btn btn--primary">Primary</button>
+            <button class="btn btn--secondary">Secondary</button>
+            <button class="btn btn--accent">Accent</button>
+            <button class="btn btn--danger">Danger</button>
+            <button class="btn btn--ghost">Ghost</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sizes -->
+      <div class="subsection">
+        <p class="subsection__label">Sizes</p>
+        <div class="demo-surface">
+          <div class="component-row" style="align-items: center;">
+            <button class="btn btn--primary btn--sm">Small</button>
+            <button class="btn btn--primary">Medium</button>
+            <button class="btn btn--primary btn--lg">Large</button>
+          </div>
+          <div class="component-row" style="align-items: center;">
+            <button class="btn btn--secondary btn--sm">Small</button>
+            <button class="btn btn--secondary">Medium</button>
+            <button class="btn btn--secondary btn--lg">Large</button>
+          </div>
+          <div class="component-row" style="align-items: center;">
+            <button class="btn btn--accent btn--sm">Small</button>
+            <button class="btn btn--accent">Medium</button>
+            <button class="btn btn--accent btn--lg">Large</button>
+          </div>
+          <div class="component-row" style="align-items: center;">
+            <button class="btn btn--danger btn--sm">Small</button>
+            <button class="btn btn--danger">Medium</button>
+            <button class="btn btn--danger btn--lg">Large</button>
+          </div>
+          <div class="component-row" style="align-items: center;">
+            <button class="btn btn--ghost btn--sm">Small</button>
+            <button class="btn btn--ghost">Medium</button>
+            <button class="btn btn--ghost btn--lg">Large</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disabled -->
+      <div class="subsection">
+        <p class="subsection__label">Disabled States</p>
+        <div class="demo-surface">
+          <div class="component-row">
+            <button class="btn btn--primary" disabled>Primary</button>
+            <button class="btn btn--secondary" disabled>Secondary</button>
+            <button class="btn btn--accent" disabled>Accent</button>
+            <button class="btn btn--danger" disabled>Danger</button>
+            <button class="btn btn--ghost" disabled>Ghost</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button Group -->
+      <div class="subsection">
+        <p class="subsection__label">Button Group</p>
+        <div class="demo-surface">
+          <div class="btn-group">
+            <button class="btn btn--secondary">Overview</button>
+            <button class="btn btn--secondary" style="background: var(--navy-50);">Controls</button>
+            <button class="btn btn--secondary">Evidence</button>
+            <button class="btn btn--secondary">History</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 03 CARDS ═══════════════════ -->
+    <section class="section" id="cards">
+      <div class="section__header">
+        <span class="section__number">03</span>
+        <h2 class="section__title">Cards</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Containers for grouping related content. Use feature cards for callouts, stat cards for key metrics, and interactive cards for clickable surfaces.</p>
+
+      <!-- Basic Card -->
+      <div class="subsection">
+        <p class="subsection__label">Basic Card</p>
+        <div class="component-grid component-grid--3">
+          <div class="card">
+            <h3 class="card__title">SOC 2 Readiness</h3>
+            <p class="card__text">Assess your current compliance posture and identify gaps before your official audit begins.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Revenue Recognition</h3>
+            <p class="card__text">ASC 606 implementation tailored for SaaS and subscription-based business models.</p>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Audit Support</h3>
+            <p class="card__text">End-to-end audit preparation including documentation, evidence collection, and remediation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card -->
+      <div class="subsection">
+        <p class="subsection__label">Feature Card</p>
+        <div class="component-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="card card--feature">
+            <h3 class="card__title">Automated Evidence Collection</h3>
+            <p class="card__text">Connect your infrastructure and automatically pull evidence for compliance controls. Reduce manual effort by up to 80%.</p>
+          </div>
+          <div class="card card--feature">
+            <h3 class="card__title">Continuous Monitoring</h3>
+            <p class="card__text">Real-time alerts when controls drift out of compliance. Stay audit-ready 365 days a year, not just during audit season.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat Card -->
+      <div class="subsection">
+        <p class="subsection__label">Stat Card</p>
+        <div class="component-grid component-grid--4">
+          <div class="card card--stat">
+            <div class="stat-number">98.6%</div>
+            <div class="stat-label">Compliance Rate</div>
+          </div>
+          <div class="card card--stat">
+            <div class="stat-number">142</div>
+            <div class="stat-label">Controls Monitored</div>
+          </div>
+          <div class="card card--stat">
+            <div class="stat-number">$2.4M</div>
+            <div class="stat-label">Revenue Tracked</div>
+          </div>
+          <div class="card card--stat">
+            <div class="stat-number">17</div>
+            <div class="stat-label">Days to Audit</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Card -->
+      <div class="subsection">
+        <p class="subsection__label">Interactive Card</p>
+        <div class="component-grid component-grid--3">
+          <div class="card card--interactive">
+            <h3 class="card__title">Getting Started</h3>
+            <p class="card__text">Set up your workspace, connect integrations, and complete your first compliance assessment.</p>
+          </div>
+          <div class="card card--interactive">
+            <h3 class="card__title">Control Library</h3>
+            <p class="card__text">Browse pre-built control frameworks for SOC 2, ISO 27001, HIPAA, and more.</p>
+          </div>
+          <div class="card card--interactive">
+            <h3 class="card__title">API Reference</h3>
+            <p class="card__text">Integrate Baseline into your existing tools with our REST API and webhook support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 04 BADGES ═══════════════════ -->
+    <section class="section" id="badges">
+      <div class="section__header">
+        <span class="section__number">04</span>
+        <h2 class="section__title">Badges &amp; Tags</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Status indicators and categorical labels. Use filled badges for high-priority status, pills for softer labeling, and outlines for minimal contexts.</p>
+
+      <!-- Status Badges -->
+      <div class="subsection">
+        <p class="subsection__label">Status Badges</p>
+        <div class="demo-surface">
+          <div class="component-row">
+            <span class="badge badge--success">Compliant</span>
+            <span class="badge badge--warning">In Review</span>
+            <span class="badge badge--error">Non-Compliant</span>
+            <span class="badge badge--info">Pending</span>
+            <span class="badge badge--neutral">Archived</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pill Badges -->
+      <div class="subsection">
+        <p class="subsection__label">Pill Badges</p>
+        <div class="demo-surface">
+          <div class="component-row">
+            <span class="badge badge--success badge--pill">Passed</span>
+            <span class="badge badge--warning badge--pill">Needs Attention</span>
+            <span class="badge badge--error badge--pill">Failed</span>
+            <span class="badge badge--info badge--pill">Scheduled</span>
+            <span class="badge badge--neutral badge--pill">Inactive</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outline Badges -->
+      <div class="subsection">
+        <p class="subsection__label">Outline Badges</p>
+        <div class="demo-surface">
+          <div class="component-row">
+            <span class="badge badge--outline badge--success">Success</span>
+            <span class="badge badge--outline badge--warning">Warning</span>
+            <span class="badge badge--outline badge--error">Error</span>
+            <span class="badge badge--outline badge--info">Info</span>
+            <span class="badge badge--outline badge--neutral">Neutral</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 05 FORM ELEMENTS ═══════════════════ -->
+    <section class="section" id="forms">
+      <div class="section__header">
+        <span class="section__number">05</span>
+        <h2 class="section__title">Form Elements</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Input components with consistent warm-gray backgrounds, navy focus rings, and clear error states. All form elements follow a label, input, helper text pattern.</p>
+
+      <div class="form-columns" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl);">
+
+        <!-- Left Column -->
+        <div>
+          <!-- Text Input -->
+          <div class="form-group">
+            <label class="form-label" for="demo-company">Company Name</label>
+            <input type="text" id="demo-company" class="form-input" placeholder="e.g. Acme Corp">
+            <span class="form-helper">Legal entity name as registered.</span>
+          </div>
+
+          <!-- Select -->
+          <div class="form-group">
+            <label class="form-label" for="demo-framework">Framework</label>
+            <select id="demo-framework" class="form-select">
+              <option value="">Select a compliance framework</option>
+              <option>SOC 2 Type II</option>
+              <option>ISO 27001</option>
+              <option>HIPAA</option>
+              <option>PCI DSS</option>
+            </select>
+          </div>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="form-label" for="demo-notes">Additional Notes</label>
+            <textarea id="demo-notes" class="form-textarea" placeholder="Describe any specific compliance requirements or concerns..."></textarea>
+          </div>
+
+          <!-- Error State -->
+          <div class="form-group">
+            <label class="form-label" for="demo-ein">EIN / Tax ID</label>
+            <input type="text" id="demo-ein" class="form-input form-input--error" value="123-45">
+            <span class="form-helper form-helper--error">Please enter a valid 9-digit EIN (XX-XXXXXXX).</span>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <!-- Checkboxes -->
+          <div class="form-group">
+            <label class="form-label">Frameworks of Interest</label>
+            <label class="form-check">
+              <input type="checkbox" checked>
+              <span class="form-check__indicator"></span>
+              SOC 2 Type II
+            </label>
+            <label class="form-check">
+              <input type="checkbox" checked>
+              <span class="form-check__indicator"></span>
+              ISO 27001
+            </label>
+            <label class="form-check">
+              <input type="checkbox">
+              <span class="form-check__indicator"></span>
+              HIPAA
+            </label>
+            <label class="form-check">
+              <input type="checkbox">
+              <span class="form-check__indicator"></span>
+              PCI DSS
+            </label>
+          </div>
+
+          <!-- Radio Buttons -->
+          <div class="form-group">
+            <label class="form-label">Company Stage</label>
+            <label class="form-check">
+              <input type="radio" name="stage" checked>
+              <span class="form-check__indicator form-check__indicator--radio"></span>
+              Seed / Pre-Series A
+            </label>
+            <label class="form-check">
+              <input type="radio" name="stage">
+              <span class="form-check__indicator form-check__indicator--radio"></span>
+              Series A&ndash;B
+            </label>
+            <label class="form-check">
+              <input type="radio" name="stage">
+              <span class="form-check__indicator form-check__indicator--radio"></span>
+              Series C+
+            </label>
+          </div>
+
+          <!-- Toggles -->
+          <div class="form-group">
+            <label class="form-label">Notifications</label>
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+              <label class="toggle">
+                <input type="checkbox" checked>
+                <span class="toggle__track"></span>
+                Email alerts for control drift
+              </label>
+              <label class="toggle">
+                <input type="checkbox">
+                <span class="toggle__track"></span>
+                Weekly compliance digest
+              </label>
+              <label class="toggle">
+                <input type="checkbox" checked>
+                <span class="toggle__track"></span>
+                Slack notifications
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 06 TABLES ═══════════════════ -->
+    <section class="section" id="tables">
+      <div class="section__header">
+        <span class="section__number">06</span>
+        <h2 class="section__title">Tables</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Data tables with alternating row backgrounds and inline status badges. Control IDs and numeric data use JetBrains Mono for tabular clarity.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Control ID</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Last Reviewed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono">CC-1.1</td>
+            <td>Board of directors demonstrates independence from management</td>
+            <td><span class="badge badge--success">Compliant</span></td>
+            <td class="mono">2025-12-14</td>
+          </tr>
+          <tr>
+            <td class="mono">CC-2.3</td>
+            <td>Internal communication of security objectives and responsibilities</td>
+            <td><span class="badge badge--success">Compliant</span></td>
+            <td class="mono">2025-12-14</td>
+          </tr>
+          <tr>
+            <td class="mono">CC-3.1</td>
+            <td>Risk assessment process identifies and evaluates threats</td>
+            <td><span class="badge badge--warning">In Review</span></td>
+            <td class="mono">2025-11-28</td>
+          </tr>
+          <tr>
+            <td class="mono">CC-5.2</td>
+            <td>Access controls enforced through logical security software</td>
+            <td><span class="badge badge--success">Compliant</span></td>
+            <td class="mono">2025-12-10</td>
+          </tr>
+          <tr>
+            <td class="mono">CC-6.1</td>
+            <td>Encryption of data in transit and at rest</td>
+            <td><span class="badge badge--error">Non-Compliant</span></td>
+            <td class="mono">2025-12-02</td>
+          </tr>
+          <tr>
+            <td class="mono">CC-7.4</td>
+            <td>Incident response plan documented and tested</td>
+            <td><span class="badge badge--warning">In Review</span></td>
+            <td class="mono">2025-11-15</td>
+          </tr>
+          <tr>
+            <td class="mono">CC-8.1</td>
+            <td>Change management policies and procedures established</td>
+            <td><span class="badge badge--success">Compliant</span></td>
+            <td class="mono">2025-12-14</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ═══════════════════ 07 NAVIGATION ═══════════════════ -->
+    <section class="section" id="navigation">
+      <div class="section__header">
+        <span class="section__number">07</span>
+        <h2 class="section__title">Navigation Patterns</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Primary navigation, tab sets, and breadcrumbs. The navy navbar anchors the top of any application, while tabs and breadcrumbs provide in-page wayfinding.</p>
+
+      <!-- Horizontal Nav Bar -->
+      <div class="subsection">
+        <p class="subsection__label">Horizontal Nav Bar</p>
+        <nav class="demo-navbar">
+          <span class="demo-navbar__brand">Baseline</span>
+          <ul class="demo-navbar__links">
+            <li><a href="#navigation" class="demo-navbar__link demo-navbar__link--active">Dashboard</a></li>
+            <li><a href="#navigation" class="demo-navbar__link">Controls</a></li>
+            <li><a href="#navigation" class="demo-navbar__link">Evidence</a></li>
+            <li><a href="#navigation" class="demo-navbar__link">Reports</a></li>
+            <li><a href="#navigation" class="demo-navbar__link">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Tabs -->
+      <div class="subsection">
+        <p class="subsection__label">Tab Navigation</p>
+        <div class="demo-tabs">
+          <button class="demo-tab demo-tab--active">Overview</button>
+          <button class="demo-tab">Controls</button>
+          <button class="demo-tab">Evidence</button>
+          <button class="demo-tab">Activity Log</button>
+          <button class="demo-tab">Settings</button>
+        </div>
+      </div>
+
+      <!-- Breadcrumbs -->
+      <div class="subsection">
+        <p class="subsection__label">Breadcrumbs</p>
+        <div class="demo-surface">
+          <ul class="demo-breadcrumbs">
+            <li><a href="#navigation">Home</a></li>
+            <li><a href="#navigation">Compliance</a></li>
+            <li><a href="#navigation">SOC 2</a></li>
+            <li><span class="current">CC-6.1 Encryption</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 08 ALERTS ═══════════════════ -->
+    <section class="section" id="alerts">
+      <div class="section__header">
+        <span class="section__number">08</span>
+        <h2 class="section__title">Alerts</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">Contextual notifications with a colored left border, icon, title, and description. Use them to communicate status, feedback, or required actions.</p>
+
+      <div class="alert alert--info">
+        <span class="alert__icon">i</span>
+        <div class="alert__content">
+          <div class="alert__title">Audit Scheduled</div>
+          <div class="alert__desc">Your SOC 2 Type II audit is scheduled to begin on January 15, 2026. Ensure all evidence has been uploaded before this date.</div>
+        </div>
+      </div>
+
+      <div class="alert alert--success">
+        <span class="alert__icon">&#10003;</span>
+        <div class="alert__content">
+          <div class="alert__title">Control Assessment Complete</div>
+          <div class="alert__desc">All 142 controls have been assessed. 138 are compliant, 3 are in review, and 1 requires remediation.</div>
+        </div>
+      </div>
+
+      <div class="alert alert--warning">
+        <span class="alert__icon">!</span>
+        <div class="alert__content">
+          <div class="alert__title">Evidence Expiring Soon</div>
+          <div class="alert__desc">3 pieces of evidence will expire within the next 30 days. Review and refresh your penetration test report, vendor risk assessment, and disaster recovery plan.</div>
+        </div>
+      </div>
+
+      <div class="alert alert--error">
+        <span class="alert__icon">&#10005;</span>
+        <div class="alert__content">
+          <div class="alert__title">Critical: Encryption Non-Compliant</div>
+          <div class="alert__desc">Control CC-6.1 has been flagged as non-compliant. Data at rest on the staging database is not encrypted. Immediate remediation is required.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ 09 DARK MODE ═══════════════════ -->
+    <section class="section" id="dark-mode">
+      <div class="section__header">
+        <span class="section__number">09</span>
+        <h2 class="section__title">Dark Mode</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__desc">A dark-surface preview of core components. Backgrounds shift to navy-900 and navy-800, text becomes white and light-gray, while teal and coral accent colors remain unchanged.</p>
+
+      <div class="dark-toggle-wrapper">
+        <label class="toggle" id="dark-mode-toggle">
+          <input type="checkbox" checked>
+          <span class="toggle__track"></span>
+          Dark mode preview
+        </label>
+      </div>
+
+      <div class="dark-preview" id="dark-preview-panel">
+
+        <!-- Dark Mode: Buttons -->
+        <div style="margin-bottom: var(--space-xl);">
+          <p style="font-family: var(--font-heading); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: var(--space-md);">Buttons</p>
+          <div class="component-row">
+            <button class="btn btn--primary">Primary</button>
+            <button class="btn btn--secondary">Secondary</button>
+            <button class="btn btn--accent">Accent</button>
+            <button class="btn btn--danger">Danger</button>
+            <button class="btn btn--ghost">Ghost</button>
+          </div>
+        </div>
+
+        <!-- Dark Mode: Cards -->
+        <div style="margin-bottom: var(--space-xl);">
+          <p style="font-family: var(--font-heading); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: var(--space-md);">Cards</p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-lg);">
+            <div class="card">
+              <h3 class="card__title">Compliance Dashboard</h3>
+              <p class="card__text">Monitor your compliance posture across all frameworks in real time.</p>
+            </div>
+            <div class="card card--stat" style="text-align: center;">
+              <div class="stat-number" style="color: var(--teal);">98.6%</div>
+              <div class="stat-label" style="color: var(--navy-200);">Compliance Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dark Mode: Badges -->
+        <div style="margin-bottom: var(--space-xl);">
+          <p style="font-family: var(--font-heading); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: var(--space-md);">Badges</p>
+          <div class="component-row">
+            <span class="badge badge--success">Compliant</span>
+            <span class="badge badge--warning">In Review</span>
+            <span class="badge badge--error">Non-Compliant</span>
+            <span class="badge badge--info">Pending</span>
+          </div>
+        </div>
+
+        <!-- Dark Mode: Form Input -->
+        <div style="margin-bottom: var(--space-xl);">
+          <p style="font-family: var(--font-heading); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: var(--space-md);">Form Input</p>
+          <div style="max-width: 400px;">
+            <label class="form-label">Search Controls</label>
+            <input type="text" class="form-input" placeholder="e.g. CC-6.1 Encryption">
+          </div>
+        </div>
+
+        <!-- Dark Mode: Alert -->
+        <div style="margin-bottom: var(--space-xl);">
+          <p style="font-family: var(--font-heading); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: var(--space-md);">Alert</p>
+          <div class="alert alert--success">
+            <span class="alert__icon">&#10003;</span>
+            <div class="alert__content">
+              <div class="alert__title">All Controls Passing</div>
+              <div class="alert__desc">Your compliance posture is healthy. No action items at this time.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dark Mode: Table -->
+        <div>
+          <p style="font-family: var(--font-heading); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: var(--space-md);">Table</p>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Control ID</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono">CC-1.1</td>
+                <td>Board independence from management</td>
+                <td><span class="badge badge--success">Compliant</span></td>
+              </tr>
+              <tr>
+                <td class="mono">CC-3.1</td>
+                <td>Risk assessment process</td>
+                <td><span class="badge badge--warning">In Review</span></td>
+              </tr>
+              <tr>
+                <td class="mono">CC-6.1</td>
+                <td>Data encryption at rest</td>
+                <td><span class="badge badge--error">Non-Compliant</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="brand-footer">
+      <p class="brand-footer__logo">Baseline</p>
+      <p class="brand-footer__note">This document is confidential and intended for internal use only.</p>
+    </footer>
+
+  </div>
+
+  <!-- ═══════════════════ JAVASCRIPT ═══════════════════ -->
+  <script>
+    /* Copy CSS variables to clipboard */
+    function copyVariables(btn) {
+      var codeEl = document.getElementById('css-vars-code');
+      var text = codeEl.textContent || codeEl.innerText;
+
+      /* Wrap in :root { } */
+      var fullCSS = ':root {\n' + text.split('\n').map(function(line) {
+        return '  ' + line;
+      }).join('\n') + '\n}';
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(fullCSS).then(function() {
+          showCopied(btn);
+        });
+      } else {
+        /* Fallback for older browsers */
+        var ta = document.createElement('textarea');
+        ta.value = fullCSS;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showCopied(btn);
+      }
+    }
+
+    function showCopied(btn) {
+      var original = btn.textContent;
+      btn.textContent = 'Copied';
+      btn.classList.add('copy-btn--copied');
+      setTimeout(function() {
+        btn.textContent = original;
+        btn.classList.remove('copy-btn--copied');
+      }, 2000);
+    }
+
+    /* Dark mode toggle */
+    (function() {
+      var darkToggle = document.getElementById('dark-mode-toggle');
+      var darkPanel = document.getElementById('dark-preview-panel');
+
+      if (darkToggle && darkPanel) {
+        var checkbox = darkToggle.querySelector('input');
+        checkbox.addEventListener('change', function() {
+          darkPanel.style.display = this.checked ? 'block' : 'none';
+        });
+      }
+    })();
+
+    /* Interactive tabs demo */
+    (function() {
+      var tabs = document.querySelectorAll('.demo-tab');
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          tabs.forEach(function(t) { t.classList.remove('demo-tab--active'); });
+          this.classList.add('demo-tab--active');
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baseline &mdash; Visual Identity System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Custom Properties ─────────────────────────────────── */
+    :root {
+      --navy: #1B2B4B;
+      --teal: #2A9D8F;
+      --slate: #64748B;
+      --coral: #E8725C;
+      --white: #FFFFFF;
+      --warm-gray: #F8F7F5;
+      --light-gray: #E2E8F0;
+
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --space-xs: 0.5rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.25rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4.5rem;
+    }
+
+    /* ── Reset & Base ──────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--navy);
+      background-color: var(--white);
+    }
+
+    /* ── Layout ────────────────────────────────────────────── */
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--space-xl) var(--space-lg);
+    }
+
+    /* ── Header ────────────────────────────────────────────── */
+    .brand-header {
+      text-align: center;
+      padding: var(--space-2xl) 0 var(--space-xl);
+      border-bottom: 2px solid var(--light-gray);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .brand-header__mark {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-md);
+    }
+
+    .brand-header__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-header__subtitle {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: var(--slate);
+      margin-top: var(--space-xs);
+      letter-spacing: 0.01em;
+    }
+
+    .brand-header__meta {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--slate);
+      margin-top: var(--space-md);
+      opacity: 0.7;
+    }
+
+    /* ── Table of Contents ─────────────────────────────────── */
+    .toc {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .toc__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: var(--space-md);
+    }
+
+    .toc__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xs) var(--space-xl);
+    }
+
+    .toc__item {
+      font-family: var(--font-heading);
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    .toc__number {
+      display: inline-block;
+      width: 1.75rem;
+      color: var(--teal);
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .toc__link {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .toc__link:hover {
+      color: var(--teal);
+    }
+
+    /* ── Sections ──────────────────────────────────────────── */
+    .section {
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section__header {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+
+    .section__number {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .section__title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .section__divider {
+      flex: 1;
+      height: 1px;
+      background: var(--light-gray);
+      align-self: center;
+      margin-left: var(--space-sm);
+    }
+
+    /* ── Labels & Blocks ──────────────────────────────────── */
+    .block__label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .sub-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 0.35rem;
+    }
+
+    /* ── Specimen Cards ───────────────────────────────────── */
+    .specimen {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: var(--space-lg);
+    }
+
+    .specimen__header {
+      background: var(--warm-gray);
+      padding: var(--space-md) var(--space-lg);
+      border-bottom: 1px solid var(--light-gray);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
+    }
+
+    .specimen__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: var(--navy);
+    }
+
+    .specimen__meta {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--slate);
+    }
+
+    .specimen__body {
+      padding: var(--space-lg);
+    }
+
+    .specimen__alphabet {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--navy);
+      margin-bottom: var(--space-md);
+      word-break: break-all;
+    }
+
+    .specimen__usage {
+      background: var(--warm-gray);
+      border-radius: 8px;
+      padding: var(--space-md);
+      margin-top: var(--space-md);
+    }
+
+    .specimen__usage p {
+      font-size: 0.875rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    .specimen__usage strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* ── Headline Samples ─────────────────────────────────── */
+    .headline-sample {
+      font-family: var(--font-heading);
+      color: var(--navy);
+      margin-bottom: var(--space-md);
+      line-height: 1.2;
+    }
+
+    .headline-sample .size-label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 400;
+      color: var(--slate);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    /* ── Type Scale ────────────────────────────────────────── */
+    .scale-row {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-lg);
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .scale-row:last-child {
+      border-bottom: none;
+    }
+
+    .scale-row__info {
+      flex: 0 0 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .scale-row__level {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--teal);
+    }
+
+    .scale-row__specs {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    .scale-row__example {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── Logo / Mark ───────────────────────────────────────── */
+    .mark-grid {
+      display: flex;
+      align-items: flex-end;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-lg);
+    }
+
+    .mark-grid__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .mark-grid__size {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--slate);
+    }
+
+    .lockup {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .lockup__text {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .color-variant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .color-variant {
+      border-radius: 12px;
+      padding: var(--space-xl) var(--space-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-sm);
+      border: 1px solid var(--light-gray);
+    }
+
+    .color-variant__label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: var(--space-xs);
+    }
+
+    .clearspace-diagram {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .clearspace-box {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .clearspace-box__inner {
+      border: 2px dashed var(--teal);
+      border-radius: 8px;
+      padding: 40px 52px;
+      position: relative;
+    }
+
+    .clearspace-box__measure-h,
+    .clearspace-box__measure-v {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .clearspace-box__measure-h {
+      bottom: -28px;
+      left: 0;
+      right: 0;
+      height: 20px;
+    }
+
+    .clearspace-box__measure-v {
+      right: -36px;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      writing-mode: vertical-rl;
+    }
+
+    .clearspace-box__measure-label {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      color: var(--teal);
+      background: var(--warm-gray);
+      padding: 0 4px;
+    }
+
+    .clearspace-box__measure-h::before,
+    .clearspace-box__measure-v::before {
+      content: '';
+      position: absolute;
+      background: var(--teal);
+      opacity: 0.4;
+    }
+
+    .clearspace-box__measure-h::before {
+      left: 0;
+      right: 0;
+      height: 1px;
+      top: 50%;
+    }
+
+    .clearspace-box__measure-v::before {
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      left: 50%;
+    }
+
+    /* ── Imagery Cards ─────────────────────────────────────── */
+    .imagery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    .imagery-card {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-lg);
+    }
+
+    .imagery-card__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+    }
+
+    .imagery-card__icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .imagery-card__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: var(--space-xs);
+    }
+
+    .imagery-card__desc {
+      font-size: 0.875rem;
+      color: var(--slate);
+      line-height: 1.6;
+      margin-bottom: var(--space-sm);
+    }
+
+    .imagery-card__guidelines {
+      list-style: none;
+    }
+
+    .imagery-card__guidelines li {
+      font-size: 0.8125rem;
+      color: var(--navy);
+      padding-left: 1rem;
+      position: relative;
+      margin-bottom: 0.35rem;
+      line-height: 1.5;
+    }
+
+    .imagery-card__guidelines li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .avoid-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+
+    .avoid-card {
+      background: var(--white);
+      border: 2px solid var(--coral);
+      border-radius: 12px;
+      padding: var(--space-md) var(--space-lg);
+    }
+
+    .avoid-card__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--coral);
+      margin-bottom: 0.25rem;
+    }
+
+    .avoid-card__desc {
+      font-size: 0.8125rem;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+
+    /* ── AI Prompt Block ───────────────────────────────────── */
+    .prompt-block {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: var(--space-xl);
+      margin-bottom: var(--space-lg);
+    }
+
+    .prompt-block__label {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-sm);
+    }
+
+    .prompt-block__text {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .prompt-block__note {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      color: var(--slate);
+      margin-top: var(--space-md);
+      font-style: italic;
+    }
+
+    /* ── Principle Cards ───────────────────────────────────── */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+
+    .principle-card {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      border-left: 3px solid var(--teal);
+    }
+
+    .principle-card__number {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--teal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .principle-card__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+      line-height: 1.3;
+    }
+
+    .principle-card__desc {
+      font-size: 0.875rem;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* ── Code Block ────────────────────────────────────────── */
+    .code-block {
+      background: var(--navy);
+      border-radius: 8px;
+      padding: var(--space-md) var(--space-lg);
+      overflow-x: auto;
+      margin-bottom: var(--space-md);
+    }
+
+    .code-block code {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .code-block .comment {
+      color: var(--slate);
+    }
+
+    .code-block .keyword {
+      color: var(--coral);
+    }
+
+    .code-block .string {
+      color: var(--teal);
+    }
+
+    .code-block .type {
+      color: #93C5FD;
+    }
+
+    /* ── Financial Figures ─────────────────────────────────── */
+    .figures-row {
+      display: flex;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-md);
+    }
+
+    .figure-item {
+      background: var(--warm-gray);
+      border-radius: 8px;
+      padding: var(--space-sm) var(--space-md);
+      font-family: var(--font-mono);
+    }
+
+    .figure-item__label {
+      font-family: var(--font-body);
+      font-size: 0.625rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 2px;
+    }
+
+    .figure-item__value {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ── Minimum Size Table ────────────────────────────────── */
+    .min-size-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: var(--space-md);
+      font-size: 0.875rem;
+    }
+
+    .min-size-table th {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate);
+      text-align: left;
+      padding: var(--space-xs) var(--space-sm);
+      border-bottom: 2px solid var(--light-gray);
+    }
+
+    .min-size-table td {
+      padding: var(--space-xs) var(--space-sm);
+      border-bottom: 1px solid var(--light-gray);
+      color: var(--navy);
+    }
+
+    .min-size-table td:first-child {
+      font-weight: 600;
+    }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    .brand-footer {
+      text-align: center;
+      padding: var(--space-xl) 0 var(--space-lg);
+      margin-top: var(--space-xl);
+      border-top: 2px solid var(--light-gray);
+    }
+
+    .brand-footer__logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-footer__note {
+      font-size: 0.8125rem;
+      color: var(--slate);
+      margin-top: var(--space-xs);
+    }
+
+    /* ── Print Styles ──────────────────────────────────────── */
+    @media print {
+      html {
+        font-size: 11pt;
+      }
+
+      body {
+        background: white;
+        color: #1B2B4B;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page-wrapper {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .toc {
+        background: none;
+        border: 1px solid #E2E8F0;
+        padding: 1rem 1.5rem;
+        page-break-after: avoid;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+
+      .specimen,
+      .prompt-block,
+      .clearspace-diagram {
+        page-break-inside: avoid;
+      }
+
+      .prompt-block {
+        background: #1B2B4B !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .code-block {
+        background: #1B2B4B !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .color-variant {
+        page-break-inside: avoid;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .brand-footer__note {
+        display: none;
+      }
+    }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .page-wrapper {
+        padding: var(--space-lg) var(--space-md);
+      }
+
+      .brand-header__name {
+        font-size: 2.25rem;
+      }
+
+      .toc__list {
+        grid-template-columns: 1fr;
+      }
+
+      .section__header {
+        flex-wrap: wrap;
+      }
+
+      .section__divider {
+        display: none;
+      }
+
+      .scale-row {
+        flex-direction: column;
+        gap: var(--space-xs);
+      }
+
+      .scale-row__info {
+        flex: none;
+      }
+
+      .imagery-grid,
+      .avoid-grid,
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .color-variant-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mark-grid {
+        justify-content: center;
+      }
+
+      .lockup {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="brand-header">
+      <span class="brand-header__mark">Visual Identity</span>
+      <h1 class="brand-header__name">Baseline</h1>
+      <p class="brand-header__subtitle">Visual Identity System</p>
+      <p class="brand-header__meta">Confidential &mdash; Prepared for internal use</p>
+    </header>
+
+    <!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc__title">Contents</p>
+      <ol class="toc__list">
+        <li class="toc__item"><span class="toc__number">01</span><a class="toc__link" href="#typography">Typography Specimens</a></li>
+        <li class="toc__item"><span class="toc__number">02</span><a class="toc__link" href="#type-scale">Type Scale</a></li>
+        <li class="toc__item"><span class="toc__number">03</span><a class="toc__link" href="#mark">Mark &amp; Logo</a></li>
+        <li class="toc__item"><span class="toc__number">04</span><a class="toc__link" href="#imagery">Imagery Guidelines</a></li>
+        <li class="toc__item"><span class="toc__number">05</span><a class="toc__link" href="#ai-prompt">AI Generation Prompt</a></li>
+        <li class="toc__item"><span class="toc__number">06</span><a class="toc__link" href="#principles">Visual Principles</a></li>
+      </ol>
+    </nav>
+
+
+    <!-- ═══════════════════ SECTION 1: TYPOGRAPHY SPECIMENS ═══════════════════ -->
+    <section id="typography" class="section">
+      <div class="section__header">
+        <span class="section__number">01</span>
+        <h2 class="section__title">Typography Specimens</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <!-- Plus Jakarta Sans -->
+      <div class="specimen">
+        <div class="specimen__header">
+          <span class="specimen__name">Plus Jakarta Sans</span>
+          <span class="specimen__meta">Weights: Bold 700, SemiBold 600</span>
+        </div>
+        <div class="specimen__body">
+          <p class="sub-label">Bold 700 &mdash; Alphabet</p>
+          <p class="specimen__alphabet" style="font-family: var(--font-heading); font-weight: 700;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</p>
+
+          <p class="sub-label">SemiBold 600 &mdash; Alphabet</p>
+          <p class="specimen__alphabet" style="font-family: var(--font-heading); font-weight: 600;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</p>
+
+          <p class="sub-label" style="margin-top: var(--space-lg);">Headline Samples</p>
+
+          <div class="headline-sample" style="font-weight: 700; font-size: 48px; margin-top: var(--space-sm);">
+            <span class="size-label">48px &middot; Bold</span>
+            Compliance that scales
+          </div>
+          <div class="headline-sample" style="font-weight: 700; font-size: 36px;">
+            <span class="size-label">36px &middot; Bold</span>
+            Enterprise-grade audit, startup-stage pricing
+          </div>
+          <div class="headline-sample" style="font-weight: 700; font-size: 24px;">
+            <span class="size-label">24px &middot; SemiBold</span>
+            SOC 2 certification in eight weeks, not six months
+          </div>
+          <div class="headline-sample" style="font-weight: 600; font-size: 20px;">
+            <span class="size-label">20px &middot; SemiBold</span>
+            Financial infrastructure built for technology companies
+          </div>
+
+          <div class="specimen__usage">
+            <p><strong>Usage:</strong> All headings, display text, navigation labels, and buttons. Bold 700 for primary headlines (H1, H2) and display sizes. SemiBold 600 for secondary headings (H3, H4) and UI labels. Tracked at +0.15em for the wordmark lockup.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inter -->
+      <div class="specimen">
+        <div class="specimen__header">
+          <span class="specimen__name">Inter</span>
+          <span class="specimen__meta">Weights: Regular 400, Medium 500, SemiBold 600</span>
+        </div>
+        <div class="specimen__body">
+          <p class="sub-label">Regular 400</p>
+          <p class="specimen__alphabet" style="font-family: var(--font-body); font-weight: 400;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</p>
+
+          <p class="sub-label">Medium 500</p>
+          <p class="specimen__alphabet" style="font-family: var(--font-body); font-weight: 500;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</p>
+
+          <p class="sub-label">SemiBold 600</p>
+          <p class="specimen__alphabet" style="font-family: var(--font-body); font-weight: 600;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</p>
+
+          <p class="sub-label" style="margin-top: var(--space-lg);">Body Text Sample &mdash; 16px / 1.5 line-height</p>
+          <p style="font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.5; color: var(--navy); margin-bottom: var(--space-md);">
+            Every growing tech company hits the same inflection point. The product is shipping, revenue is climbing, and suddenly an enterprise prospect asks for SOC&nbsp;2 documentation. Your payment processor needs PCI certification. The board wants audited financials by next quarter. Baseline exists for this exact moment &mdash; we bring enterprise-grade compliance to startup-stage companies, delivered by accountants who understand SaaS metrics, cloud infrastructure, and the pace at which technology businesses actually move. No six-month timelines. No Big Four pricing. Just clear roadmaps, tight execution, and financial systems designed to compound.
+          </p>
+
+          <p class="sub-label">Smaller Text Samples</p>
+          <p style="font-family: var(--font-body); font-weight: 400; font-size: 14px; line-height: 1.5; color: var(--slate); margin-bottom: var(--space-xs);">
+            <strong style="color: var(--navy);">14px:</strong> Baseline delivers SOC 2 audits, PCI compliance, and financial infrastructure for growing technology companies at a price point and pace that makes sense.
+          </p>
+          <p style="font-family: var(--font-body); font-weight: 400; font-size: 13px; line-height: 1.5; color: var(--slate);">
+            <strong style="color: var(--navy);">13px:</strong> Average time to SOC 2 Type II: 8 weeks. 200+ audits completed. 98% client retention rate. 60% referral-driven growth.
+          </p>
+
+          <div class="specimen__usage">
+            <p><strong>Usage:</strong> All body copy, paragraphs, descriptions, and supporting text. Regular 400 for standard reading. Medium 500 for emphasized inline text, table headers, and form labels. SemiBold 600 for bold inline text and small interactive elements.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- JetBrains Mono -->
+      <div class="specimen">
+        <div class="specimen__header">
+          <span class="specimen__name">JetBrains Mono</span>
+          <span class="specimen__meta">Weights: Regular 400, Bold 700</span>
+        </div>
+        <div class="specimen__body">
+          <p class="sub-label">Regular 400 &mdash; Alphabet &amp; Digits</p>
+          <p class="specimen__alphabet" style="font-family: var(--font-mono); font-weight: 400;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</p>
+
+          <p class="sub-label">Programming Characters</p>
+          <p class="specimen__alphabet" style="font-family: var(--font-mono); font-weight: 400; font-size: 1.125rem;">{ } [ ] ( ) =&gt; // /* */ &lt; &gt; :: -&gt; != === &amp;&amp; || ++ -- ** ?? ?. ...</p>
+
+          <p class="sub-label" style="margin-top: var(--space-lg);">Code Block Example</p>
+          <div class="code-block">
+            <code><pre style="margin: 0; white-space: pre-wrap;"><span class="comment">// Baseline audit configuration</span>
+<span class="keyword">interface</span> <span class="type">AuditConfig</span> {
+  companyId: <span class="type">string</span>;
+  framework: <span class="string">'SOC2'</span> | <span class="string">'PCI-DSS'</span> | <span class="string">'ISO27001'</span>;
+  targetDate: <span class="type">Date</span>;
+  scope: <span class="type">string</span>[];
+}
+
+<span class="keyword">const</span> audit = <span class="keyword">await</span> baseline.createAudit({
+  companyId: <span class="string">'acme-saas-2024'</span>,
+  framework: <span class="string">'SOC2'</span>,
+  targetDate: <span class="keyword">new</span> <span class="type">Date</span>(<span class="string">'2024-06-30'</span>),
+  scope: [<span class="string">'CC6.1'</span>, <span class="string">'CC7.2'</span>, <span class="string">'CC8.1'</span>],
+});</pre></code>
+          </div>
+
+          <p class="sub-label">Financial Figures &amp; Compliance IDs</p>
+          <div class="figures-row">
+            <div class="figure-item">
+              <p class="figure-item__label">Control ID</p>
+              <p class="figure-item__value">CC6.1</p>
+            </div>
+            <div class="figure-item">
+              <p class="figure-item__label">Revenue</p>
+              <p class="figure-item__value">$127,450.00</p>
+            </div>
+            <div class="figure-item">
+              <p class="figure-item__label">Framework</p>
+              <p class="figure-item__value">SOC 2 Type II</p>
+            </div>
+            <div class="figure-item">
+              <p class="figure-item__label">Compliance Score</p>
+              <p class="figure-item__value">98.7%</p>
+            </div>
+          </div>
+
+          <div class="figures-row">
+            <div class="figure-item">
+              <p class="figure-item__label">Audit ID</p>
+              <p class="figure-item__value">BL-2024-0847</p>
+            </div>
+            <div class="figure-item">
+              <p class="figure-item__label">ARR</p>
+              <p class="figure-item__value">$2,340,000</p>
+            </div>
+            <div class="figure-item">
+              <p class="figure-item__label">PCI Scope</p>
+              <p class="figure-item__value">SAQ-D v4.0</p>
+            </div>
+          </div>
+
+          <div class="specimen__usage">
+            <p><strong>Usage:</strong> Code snippets, terminal output, data tables, financial figures, compliance identifiers, API references, and technical documentation. Regular 400 for inline code and data displays. Bold 700 for emphasized figures and key metrics in dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════ SECTION 2: TYPE SCALE ═══════════════════ -->
+    <section id="type-scale" class="section">
+      <div class="section__header">
+        <span class="section__number">02</span>
+        <h2 class="section__title">Type Scale</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">Display</span>
+          <span class="scale-row__specs">48px / 1.1 / 700<br>Plus Jakarta Sans Bold</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 48px; line-height: 1.1; color: var(--navy);">Compliance that scales</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">H1</span>
+          <span class="scale-row__specs">36px / 1.15 / 700<br>Plus Jakarta Sans Bold</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 36px; line-height: 1.15; color: var(--navy);">Financial infrastructure</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">H2</span>
+          <span class="scale-row__specs">28px / 1.2 / 700<br>Plus Jakarta Sans Bold</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-heading); font-weight: 700; font-size: 28px; line-height: 1.2; color: var(--navy);">SOC 2 audits for startups</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">H3</span>
+          <span class="scale-row__specs">24px / 1.25 / 600<br>Plus Jakarta Sans SemiBold</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 1.25; color: var(--navy);">Enterprise-grade, startup-priced</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">H4</span>
+          <span class="scale-row__specs">20px / 1.3 / 600<br>Plus Jakarta Sans SemiBold</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 1.3; color: var(--navy);">Clear roadmaps, tight execution</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">Body</span>
+          <span class="scale-row__specs">16px / 1.5 / 400<br>Inter Regular</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.5; color: var(--navy);">Baseline delivers SOC 2 audits, PCI compliance, and financial infrastructure for growing tech companies.</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">Body Small</span>
+          <span class="scale-row__specs">14px / 1.5 / 400<br>Inter Regular</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-body); font-weight: 400; font-size: 14px; line-height: 1.5; color: var(--navy);">Average time to SOC 2 Type II certification: 8 weeks compared to the industry average of 4&ndash;6 months.</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">Caption</span>
+          <span class="scale-row__specs">13px / 1.4 / 400<br>Inter Regular</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-body); font-weight: 400; font-size: 13px; line-height: 1.4; color: var(--slate);">Last updated March 2024 &middot; Baseline Compliance &middot; All rights reserved</span>
+        </div>
+      </div>
+
+      <div class="scale-row">
+        <div class="scale-row__info">
+          <span class="scale-row__level">Code</span>
+          <span class="scale-row__specs">14px / 1.5 / 400<br>JetBrains Mono Regular</span>
+        </div>
+        <div class="scale-row__example">
+          <span style="font-family: var(--font-mono); font-weight: 400; font-size: 14px; line-height: 1.5; color: var(--navy);">framework: 'SOC2' | scope: ['CC6.1', 'CC7.2'] | status: PASSED</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════ SECTION 3: MARK & LOGO ═══════════════════ -->
+    <section id="mark" class="section">
+      <div class="section__header">
+        <span class="section__number">03</span>
+        <h2 class="section__title">Mark &amp; Logo</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <!-- SVG Mark Definition (hidden, referenced by use) -->
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+          <!-- Geometric B mark: clean geometric forms, bottom stroke extends right with upward angle -->
+          <symbol id="baseline-mark" viewBox="0 0 100 120">
+            <!-- Left vertical stem -->
+            <rect x="16" y="10" width="14" height="100" rx="2" fill="currentColor"/>
+            <!-- Upper bowl: semicircle arc -->
+            <path d="M30 10 H52 C70 10 78 20 78 32 C78 44 70 54 52 54 H30 Z" fill="currentColor"/>
+            <!-- Lower bowl: slightly wider semicircle -->
+            <path d="M30 54 H56 C76 54 84 66 84 78 C84 90 76 100 56 100 H30 Z" fill="currentColor"/>
+            <!-- Cutouts to create the B shape (background-colored) -->
+            <rect x="30" y="22" width="22" height="20" rx="10" fill="white" class="mark-cutout"/>
+            <rect x="30" y="66" width="26" height="22" rx="11" fill="white" class="mark-cutout"/>
+            <!-- Upward-trending baseline extension from bottom-right -->
+            <path d="M56 100 L92 100 L96 94" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </symbol>
+
+          <!-- Navy mark (white cutouts) -->
+          <symbol id="mark-navy" viewBox="0 0 100 120">
+            <rect x="16" y="10" width="14" height="100" rx="2" fill="#1B2B4B"/>
+            <path d="M30 10 H52 C70 10 78 20 78 32 C78 44 70 54 52 54 H30 Z" fill="#1B2B4B"/>
+            <path d="M30 54 H56 C76 54 84 66 84 78 C84 90 76 100 56 100 H30 Z" fill="#1B2B4B"/>
+            <rect x="30" y="22" width="22" height="20" rx="10" fill="white"/>
+            <rect x="30" y="66" width="26" height="22" rx="11" fill="white"/>
+            <path d="M56 100 L92 100 L96 94" stroke="#1B2B4B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </symbol>
+
+          <!-- White mark (for dark backgrounds) -->
+          <symbol id="mark-white" viewBox="0 0 100 120">
+            <rect x="16" y="10" width="14" height="100" rx="2" fill="white"/>
+            <path d="M30 10 H52 C70 10 78 20 78 32 C78 44 70 54 52 54 H30 Z" fill="white"/>
+            <path d="M30 54 H56 C76 54 84 66 84 78 C84 90 76 100 56 100 H30 Z" fill="white"/>
+            <rect x="30" y="22" width="22" height="20" rx="10" fill="#1B2B4B"/>
+            <rect x="30" y="66" width="26" height="22" rx="11" fill="#1B2B4B"/>
+            <path d="M56 100 L92 100 L96 94" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </symbol>
+
+          <!-- Teal mark variant -->
+          <symbol id="mark-teal" viewBox="0 0 100 120">
+            <rect x="16" y="10" width="14" height="100" rx="2" fill="#2A9D8F"/>
+            <path d="M30 10 H52 C70 10 78 20 78 32 C78 44 70 54 52 54 H30 Z" fill="#2A9D8F"/>
+            <path d="M30 54 H56 C76 54 84 66 84 78 C84 90 76 100 56 100 H30 Z" fill="#2A9D8F"/>
+            <rect x="30" y="22" width="22" height="20" rx="10" fill="white"/>
+            <rect x="30" y="66" width="26" height="22" rx="11" fill="white"/>
+            <path d="M56 100 L92 100 L96 94" stroke="#2A9D8F" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </symbol>
+        </defs>
+      </svg>
+
+      <!-- Mark at multiple sizes -->
+      <p class="block__label" style="margin-bottom: var(--space-md);">Mark &mdash; Size Variants</p>
+      <div class="mark-grid">
+        <div class="mark-grid__item">
+          <svg width="120" height="144" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+          <span class="mark-grid__size">120px</span>
+        </div>
+        <div class="mark-grid__item">
+          <svg width="64" height="76.8" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+          <span class="mark-grid__size">64px</span>
+        </div>
+        <div class="mark-grid__item">
+          <svg width="32" height="38.4" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+          <span class="mark-grid__size">32px</span>
+        </div>
+        <div class="mark-grid__item">
+          <svg width="24" height="28.8" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+          <span class="mark-grid__size">24px</span>
+        </div>
+      </div>
+
+      <!-- Wordmark Lockup -->
+      <p class="block__label" style="margin-bottom: var(--space-md);">Wordmark Lockup</p>
+      <div style="background: var(--warm-gray); border-radius: 12px; padding: var(--space-xl); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-lg);">
+        <div class="lockup">
+          <svg width="48" height="57.6" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+          <span class="lockup__text" style="font-size: 32px; color: var(--navy);">BASELINE</span>
+        </div>
+      </div>
+
+      <!-- Color Variants -->
+      <p class="block__label" style="margin-bottom: var(--space-md);">Color Variants</p>
+      <div class="color-variant-grid">
+        <div class="color-variant" style="background: var(--white);">
+          <div class="lockup">
+            <svg width="36" height="43.2" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+            <span class="lockup__text" style="font-size: 20px; color: var(--navy);">BASELINE</span>
+          </div>
+          <span class="color-variant__label" style="color: var(--slate);">Navy on White</span>
+        </div>
+        <div class="color-variant" style="background: var(--warm-gray);">
+          <div class="lockup">
+            <svg width="36" height="43.2" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+            <span class="lockup__text" style="font-size: 20px; color: var(--navy);">BASELINE</span>
+          </div>
+          <span class="color-variant__label" style="color: var(--slate);">Navy on Warm Gray</span>
+        </div>
+        <div class="color-variant" style="background: var(--navy); border-color: var(--navy);">
+          <div class="lockup">
+            <svg width="36" height="43.2" viewBox="0 0 100 120"><use href="#mark-white"/></svg>
+            <span class="lockup__text" style="font-size: 20px; color: var(--white);">BASELINE</span>
+          </div>
+          <span class="color-variant__label" style="color: rgba(255,255,255,0.6);">White on Navy</span>
+        </div>
+        <div class="color-variant" style="background: var(--white);">
+          <div class="lockup">
+            <svg width="36" height="43.2" viewBox="0 0 100 120"><use href="#mark-teal"/></svg>
+            <span class="lockup__text" style="font-size: 20px; color: var(--navy);">BASELINE</span>
+          </div>
+          <span class="color-variant__label" style="color: var(--slate);">Teal Mark Variant</span>
+        </div>
+      </div>
+
+      <!-- Clear Space Rules -->
+      <p class="block__label" style="margin-bottom: var(--space-md);">Clear Space</p>
+      <div class="clearspace-diagram">
+        <div class="clearspace-box">
+          <div class="clearspace-box__inner">
+            <svg width="48" height="57.6" viewBox="0 0 100 120"><use href="#mark-navy"/></svg>
+            <div class="clearspace-box__measure-h">
+              <span class="clearspace-box__measure-label">1x minimum</span>
+            </div>
+            <div class="clearspace-box__measure-v">
+              <span class="clearspace-box__measure-label">1x min</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 0.8125rem; color: var(--slate); text-align: center; max-width: 520px; line-height: 1.6;">
+          Maintain a minimum clear space equal to 1x the height of the &ldquo;B&rdquo; mark on all sides. For the full lockup (mark + wordmark), maintain 1x the mark height on all sides from the outer edges of the combined unit. Never crowd the mark with other visual elements.
+        </p>
+      </div>
+
+      <!-- Minimum Sizes -->
+      <p class="block__label" style="margin-bottom: var(--space-md);">Minimum Reproduction Sizes</p>
+      <table class="min-size-table">
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Digital (px)</th>
+            <th>Print (mm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark only</td>
+            <td>24px height</td>
+            <td>8mm height</td>
+          </tr>
+          <tr>
+            <td>Wordmark lockup</td>
+            <td>120px width</td>
+            <td>30mm width</td>
+          </tr>
+          <tr>
+            <td>Favicon / app icon</td>
+            <td>16px (mark only, simplified)</td>
+            <td>N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <!-- ═══════════════════ SECTION 4: IMAGERY GUIDELINES ═══════════════════ -->
+    <section id="imagery" class="section">
+      <div class="section__header">
+        <span class="section__number">04</span>
+        <h2 class="section__title">Imagery Guidelines</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <p class="block__label" style="margin-bottom: var(--space-md);">Categories</p>
+      <div class="imagery-grid">
+        <!-- Data Visualizations -->
+        <div class="imagery-card">
+          <div class="imagery-card__icon">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="12" width="3" height="6" rx="1" fill="#2A9D8F"/>
+              <rect x="7" y="8" width="3" height="10" rx="1" fill="#2A9D8F"/>
+              <rect x="12" y="5" width="3" height="13" rx="1" fill="white"/>
+              <rect x="17" y="2" width="1" height="16" rx="0.5" fill="rgba(255,255,255,0.4)"/>
+            </svg>
+          </div>
+          <p class="imagery-card__name">Data Visualizations</p>
+          <p class="imagery-card__desc">Clean charts, graphs, and dashboards that present compliance and financial data with clarity and confidence.</p>
+          <ul class="imagery-card__guidelines">
+            <li>Use brand palette: navy for primary data, teal for highlights, coral sparingly for alerts</li>
+            <li>Minimal grid lines and axis labels &mdash; let the data breathe</li>
+            <li>No 3D effects, drop shadows, or decorative gradients on charts</li>
+            <li>Prefer bar, line, and area charts over pie charts</li>
+          </ul>
+        </div>
+
+        <!-- Environmental Photography -->
+        <div class="imagery-card">
+          <div class="imagery-card__icon">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="16" height="12" rx="2" fill="white"/>
+              <circle cx="7" cy="9" r="2" fill="#2A9D8F"/>
+              <path d="M2 13 L7 10 L11 13 L15 8 L18 11 L18 14 C18 15.1 17.1 16 16 16 H4 C2.9 16 2 15.1 2 14 Z" fill="rgba(42,157,143,0.3)"/>
+            </svg>
+          </div>
+          <p class="imagery-card__name">Environmental Photography</p>
+          <p class="imagery-card__desc">Modern office spaces with natural light, organized workspaces, and a professional-but-approachable feel. Think WeWork meets Deloitte.</p>
+          <ul class="imagery-card__guidelines">
+            <li>Natural lighting from large windows &mdash; warm white balance</li>
+            <li>Light wood surfaces, glass walls, clean desks</li>
+            <li>Shallow depth of field for editorial quality</li>
+            <li>No sterile corporate environments or fluorescent lighting</li>
+          </ul>
+        </div>
+
+        <!-- Contextual Elements -->
+        <div class="imagery-card">
+          <div class="imagery-card__icon">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="2" width="14" height="16" rx="2" fill="white"/>
+              <line x1="6" y1="6" x2="14" y2="6" stroke="#2A9D8F" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="6" y1="9" x2="12" y2="9" stroke="rgba(42,157,143,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="6" y1="12" x2="10" y2="12" stroke="rgba(42,157,143,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="imagery-card__name">Contextual Elements</p>
+          <p class="imagery-card__desc">Supporting visuals that ground the brand in the world of accounting and technology: monitors showing dashboards, whiteboards with timelines, structured documents.</p>
+          <ul class="imagery-card__guidelines">
+            <li>Screens should show clean, realistic UI &mdash; not stock mockups</li>
+            <li>Whiteboards and notes should feel authentic, not staged</li>
+            <li>Avoid showing actual client data or identifiable information</li>
+            <li>Keep backgrounds minimal and uncluttered</li>
+          </ul>
+        </div>
+
+        <!-- People -->
+        <div class="imagery-card">
+          <div class="imagery-card__icon">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="7" r="3" fill="white"/>
+              <path d="M4 17 C4 13.7 6.7 11 10 11 C13.3 11 16 13.7 16 17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <p class="imagery-card__name">People</p>
+          <p class="imagery-card__desc">Real people in natural professional settings &mdash; collaborative moments, focused work, and casual conversations that convey competence without stiffness.</p>
+          <ul class="imagery-card__guidelines">
+            <li>Diverse, authentic representation &mdash; no stock photo staging</li>
+            <li>Smart casual dress code &mdash; professional but not suit-and-tie</li>
+            <li>Show collaboration: side-by-side screen reviews, whiteboard discussions</li>
+            <li>Genuine expressions &mdash; focus and engagement over posed smiles</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Avoid Section -->
+      <p class="block__label" style="margin-bottom: var(--space-md); color: var(--coral);">Avoid</p>
+      <div class="avoid-grid">
+        <div class="avoid-card">
+          <p class="avoid-card__name">Generic Stock Photography</p>
+          <p class="avoid-card__desc">Handshakes, skylines, puzzle pieces, or any image that could belong to any company. If it looks like a stock photo, it is.</p>
+        </div>
+        <div class="avoid-card">
+          <p class="avoid-card__name">Overly Dark or Moody Imagery</p>
+          <p class="avoid-card__desc">We are professional, not intimidating. Avoid dark-lit rooms, harsh shadows, or visuals that feel cold and unwelcoming.</p>
+        </div>
+        <div class="avoid-card">
+          <p class="avoid-card__name">Cluttered Desks &amp; Messy Environments</p>
+          <p class="avoid-card__desc">Baseline is about structure and clarity. Environments should feel organized and intentional, never chaotic.</p>
+        </div>
+        <div class="avoid-card">
+          <p class="avoid-card__name">Decorative Data Visualizations</p>
+          <p class="avoid-card__desc">No chartjunk, no 3D pie charts, no gratuitous infographics. If the visual does not communicate real information, remove it.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════ SECTION 5: AI GENERATION PROMPT ═══════════════════ -->
+    <section id="ai-prompt" class="section">
+      <div class="section__header">
+        <span class="section__number">05</span>
+        <h2 class="section__title">AI Generation Prompt</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <p style="margin-bottom: var(--space-md); color: var(--slate); font-size: 0.9375rem; line-height: 1.6;">Use the following prompt as a starting point when generating on-brand imagery with AI tools (Midjourney, DALL-E, Stable Diffusion, etc.). Adjust parameters as needed for the specific output format.</p>
+
+      <div class="prompt-block">
+        <p class="prompt-block__label">Reusable Image Prompt</p>
+        <p class="prompt-block__text">Clean, modern office environment with natural light and light wood surfaces. Professional but not corporate. Glass walls, organized desk with single monitor showing clean data dashboard. Color palette: navy blue (#1B2B4B), teal (#2A9D8F), warm gray (#F8F7F5). Minimal, structured, no clutter. Photography style: shallow depth of field, warm white balance, natural lighting from large windows.</p>
+        <p class="prompt-block__note">Tip: Append context-specific modifiers like &ldquo;focused on the monitor,&rdquo; &ldquo;two people reviewing a whiteboard,&rdquo; or &ldquo;close-up of hands on keyboard&rdquo; to tailor the output to specific use cases.</p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════ SECTION 6: VISUAL PRINCIPLES ═══════════════════ -->
+    <section id="principles" class="section">
+      <div class="section__header">
+        <span class="section__number">06</span>
+        <h2 class="section__title">Visual Principles</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <div class="principles-grid">
+        <div class="principle-card">
+          <p class="principle-card__number">01</p>
+          <p class="principle-card__name">Structure Over Decoration</p>
+          <p class="principle-card__desc">Every visual element earns its place. If it does not inform, orient, or support comprehension, it does not belong. Ornamentation without purpose undermines the trust we are building.</p>
+        </div>
+        <div class="principle-card">
+          <p class="principle-card__number">02</p>
+          <p class="principle-card__name">Whitespace Is Content</p>
+          <p class="principle-card__desc">Generous spacing signals confidence and control. It gives content room to breathe and communicates that we are not trying too hard. The space between elements is as intentional as the elements themselves.</p>
+        </div>
+        <div class="principle-card">
+          <p class="principle-card__number">03</p>
+          <p class="principle-card__name">Data Should Look Like Data</p>
+          <p class="principle-card__desc">Clean visualizations with clear labels, honest scales, and no chartjunk. When we show numbers, they should be immediately legible and trustworthy. No decorative distortion of information.</p>
+        </div>
+        <div class="principle-card">
+          <p class="principle-card__number">04</p>
+          <p class="principle-card__name">Professional Does Not Mean Boring</p>
+          <p class="principle-card__desc">Modern and approachable, never stiff. We use color with intention, typography with personality, and layouts that feel current without chasing trends. Credibility and warmth coexist.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="brand-footer">
+      <p class="brand-footer__logo">Baseline</p>
+      <p class="brand-footer__note">This document is confidential and intended for internal use only.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

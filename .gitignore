@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Workspace content (generated per-client)
+workspace/research/*.md
+workspace/drafts/*.md
+workspace/output/*.md
+workspace/output/*.html
+workspace/assets/*
+!workspace/research/.gitkeep
+!workspace/drafts/.gitkeep
+!workspace/output/.gitkeep
+!workspace/assets/.gitkeep
+
+# Keep reference files and STATE.md template
+!workspace/reference/
+!workspace/STATE.md
+
+# Claude auto-memory (per-machine)
+.claude/plans/
+
+# Dev-only tooling (not part of the distributable)
+.claude/agents/implementation-verifier.md
+.claude/commands/brand-compass/verify-build.md

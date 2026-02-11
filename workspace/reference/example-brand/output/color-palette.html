@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baseline — Color Palette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Custom Properties ─────────────────────────────────── */
+    :root {
+      --navy: #1B2B4B;
+      --teal: #2A9D8F;
+      --slate: #64748B;
+      --coral: #E8725C;
+      --white: #FFFFFF;
+      --warm-gray: #F8F7F5;
+      --light-gray: #E2E8F0;
+
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --space-xs: 0.5rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.25rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4.5rem;
+
+      --radius: 12px;
+
+      /* ── Theme (light default) ── */
+      --page-bg: var(--white);
+      --card-bg: var(--warm-gray);
+      --card-border: var(--light-gray);
+      --text-primary: var(--navy);
+      --text-secondary: var(--slate);
+      --text-heading: var(--navy);
+      --divider: var(--light-gray);
+    }
+
+    /* ── Reset & Base ──────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background-color: var(--page-bg);
+      transition: background-color 0.35s ease, color 0.35s ease;
+    }
+
+    /* ── Layout ────────────────────────────────────────────── */
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: var(--space-xl) var(--space-lg);
+    }
+
+    /* ── Header ────────────────────────────────────────────── */
+    .brand-header {
+      text-align: center;
+      padding: var(--space-2xl) 0 var(--space-xl);
+      border-bottom: 2px solid var(--divider);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .brand-header__mark {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-md);
+    }
+
+    .brand-header__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--text-heading);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-header__subtitle {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-top: var(--space-xs);
+      letter-spacing: 0.01em;
+    }
+
+    .brand-header__meta {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      margin-top: var(--space-md);
+      opacity: 0.7;
+    }
+
+    /* ── Dark Mode Toggle ─────────────────────────────────── */
+    .dark-toggle {
+      position: fixed;
+      top: var(--space-md);
+      right: var(--space-md);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 40px;
+      padding: 6px 16px 6px 12px;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text-primary);
+      transition: all 0.35s ease;
+      user-select: none;
+    }
+
+    .dark-toggle:hover {
+      border-color: var(--teal);
+    }
+
+    .dark-toggle__icon {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      line-height: 1;
+    }
+
+    /* ── Table of Contents ─────────────────────────────────── */
+    .toc {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-2xl);
+      transition: background-color 0.35s ease;
+    }
+
+    .toc__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-md);
+    }
+
+    .toc__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xs) var(--space-xl);
+    }
+
+    .toc__item {
+      font-family: var(--font-heading);
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+
+    .toc__number {
+      display: inline-block;
+      width: 1.75rem;
+      color: var(--teal);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .toc__link {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .toc__link:hover {
+      color: var(--teal);
+    }
+
+    /* ── Sections ──────────────────────────────────────────── */
+    .section {
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .section:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section__header {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+
+    .section__number {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .section__title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: var(--text-heading);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .section__divider {
+      flex: 1;
+      height: 1px;
+      background: var(--divider);
+      align-self: center;
+      margin-left: var(--space-sm);
+    }
+
+    .section__intro {
+      color: var(--text-secondary);
+      margin-bottom: var(--space-xl);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    /* ── Base Color Cards ─────────────────────────────────── */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .color-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      transition: background-color 0.35s ease, border-color 0.35s ease;
+    }
+
+    .color-card__swatch {
+      height: 120px;
+      width: 100%;
+    }
+
+    .color-card__body {
+      padding: var(--space-md);
+    }
+
+    .color-card__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: var(--text-heading);
+      margin-bottom: 2px;
+    }
+
+    .color-card__role {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      margin-bottom: var(--space-sm);
+      line-height: 1.5;
+    }
+
+    .color-card__values {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .color-card__value {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .color-card__value-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.625rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      opacity: 0.7;
+      width: 28px;
+      flex-shrink: 0;
+    }
+
+    .color-card__hex-btn {
+      cursor: pointer;
+      position: relative;
+      border-radius: 4px;
+      padding: 1px 5px;
+      margin: -1px -5px;
+      background: none;
+      border: none;
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      transition: background-color 0.15s ease;
+    }
+
+    .color-card__hex-btn:hover {
+      background: rgba(42, 157, 143, 0.12);
+    }
+
+    /* ── "Copied!" tooltip ────────────────────────────────── */
+    .copied-tip {
+      display: none;
+      position: absolute;
+      top: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--navy);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .copied-tip.show {
+      display: block;
+      animation: tipPop 1.2s ease forwards;
+    }
+
+    @keyframes tipPop {
+      0%   { opacity: 0; transform: translateX(-50%) translateY(4px); }
+      15%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+      70%  { opacity: 1; transform: translateX(-50%) translateY(0); }
+      100% { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+    }
+
+    /* ── Tint Scale Section ───────────────────────────────── */
+    .tint-group {
+      margin-bottom: var(--space-xl);
+    }
+
+    .tint-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .tint-group__label {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: var(--text-heading);
+      margin-bottom: var(--space-sm);
+    }
+
+    .tint-scale {
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .tint-step {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px var(--space-md);
+      min-height: 44px;
+      cursor: pointer;
+      transition: opacity 0.15s ease;
+      position: relative;
+    }
+
+    .tint-step:hover {
+      opacity: 0.88;
+    }
+
+    .tint-step__left {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .tint-step__weight {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.8125rem;
+      min-width: 28px;
+    }
+
+    .tint-step__var {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      opacity: 0.65;
+    }
+
+    .tint-step__right {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .tint-step__hex {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 400;
+    }
+
+    .tint-step__base {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.625rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.25);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* ── Pairings Section ─────────────────────────────────── */
+    .pairings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-lg);
+    }
+
+    .pairing-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      transition: border-color 0.35s ease;
+    }
+
+    .pairing-card__preview {
+      padding: var(--space-lg) var(--space-md);
+      text-align: center;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pairing-card__sample-heading {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .pairing-card__sample-body {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+
+    .pairing-card__meta {
+      padding: var(--space-sm) var(--space-md);
+      background: var(--card-bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-sm);
+      border-top: 1px solid var(--card-border);
+      transition: background-color 0.35s ease, border-color 0.35s ease;
+    }
+
+    .pairing-card__label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .pairing-card__ratio {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+      flex-shrink: 0;
+    }
+
+    .pairing-card__ratio-value {
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: 0.8125rem;
+      color: var(--text-primary);
+    }
+
+    .pairing-card__badge {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.625rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .pairing-card__badge--aaa {
+      background: #D1FAE5;
+      color: #065F46;
+    }
+
+    .pairing-card__badge--aa {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .pairing-card__badge--fail {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
+
+    .pairing-card__note {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      color: var(--coral);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    /* ── Code Block ───────────────────────────────────────── */
+    .code-block-wrapper {
+      position: relative;
+      background: var(--navy);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .code-block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-sm) var(--space-md);
+      background: rgba(0,0,0,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .code-block-header__title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .code-block-header__btn {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.04em;
+      color: var(--teal);
+      background: rgba(42, 157, 143, 0.15);
+      border: 1px solid rgba(42, 157, 143, 0.3);
+      border-radius: 6px;
+      padding: 4px 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .code-block-header__btn:hover {
+      background: rgba(42, 157, 143, 0.25);
+      border-color: rgba(42, 157, 143, 0.5);
+    }
+
+    .code-block-header__btn.is-copied {
+      color: #D1FAE5;
+      background: rgba(16, 185, 129, 0.2);
+      border-color: rgba(16, 185, 129, 0.4);
+    }
+
+    .code-block__body {
+      padding: var(--space-md) var(--space-lg);
+      overflow-x: auto;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .code-block__body pre {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      line-height: 1.8;
+      color: #CBD5E1;
+      white-space: pre;
+      margin: 0;
+    }
+
+    .code-block__body .cm { color: #64748B; }
+    .code-block__body .sel { color: #2A9D8F; }
+    .code-block__body .prop { color: #CBD5E1; }
+    .code-block__body .val { color: #E8725C; }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    .brand-footer {
+      text-align: center;
+      padding: var(--space-xl) 0 var(--space-lg);
+      margin-top: var(--space-xl);
+      border-top: 2px solid var(--divider);
+    }
+
+    .brand-footer__logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--text-heading);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-footer__note {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      margin-top: var(--space-xs);
+    }
+
+    /* ── Print Styles ──────────────────────────────────────── */
+    @media print {
+      html { font-size: 11pt; }
+
+      body {
+        background: white !important;
+        color: #1B2B4B !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page-wrapper { max-width: 100%; padding: 0; }
+      .dark-toggle  { display: none !important; }
+
+      .section,
+      .color-card,
+      .pairing-card,
+      .tint-group,
+      .code-block-wrapper { page-break-inside: avoid; }
+
+      .toc {
+        background: none;
+        border: 1px solid #E2E8F0;
+        padding: 1rem 1.5rem;
+      }
+
+      .color-card { border: 1px solid #E2E8F0; }
+      .code-block-wrapper { background: #1B2B4B !important; }
+      .brand-footer__note { display: none; }
+      a { color: inherit; text-decoration: none; }
+    }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .page-wrapper { padding: var(--space-lg) var(--space-md); }
+      .brand-header__name { font-size: 2.25rem; }
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .pairings-grid { grid-template-columns: 1fr; }
+      .toc__list { grid-template-columns: 1fr; }
+      .section__header { flex-wrap: wrap; }
+      .section__divider { display: none; }
+
+      .dark-toggle {
+        position: static;
+        margin: 0 auto var(--space-lg);
+        display: inline-flex;
+      }
+      .brand-header { padding-top: var(--space-xl); }
+    }
+
+    @media (max-width: 480px) {
+      .color-grid { grid-template-columns: 1fr; }
+      .tint-step { flex-wrap: wrap; gap: 4px; }
+      .tint-step__right { width: 100%; justify-content: flex-end; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ═══════════════════ DARK MODE TOGGLE ═══════════════════ -->
+    <button class="dark-toggle" id="darkToggle" type="button" aria-label="Toggle dark mode preview">
+      <span class="dark-toggle__icon" id="darkToggleIcon">&#9790;</span>
+      <span id="darkToggleLabel">Dark Mode</span>
+    </button>
+
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="brand-header">
+      <span class="brand-header__mark">Visual Identity</span>
+      <h1 class="brand-header__name">Baseline</h1>
+      <p class="brand-header__subtitle">Color Palette</p>
+      <p class="brand-header__meta">Confidential &mdash; Prepared for internal use</p>
+    </header>
+
+    <!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc__title">Contents</p>
+      <ol class="toc__list">
+        <li class="toc__item"><span class="toc__number">01</span><a class="toc__link" href="#base-colors">Base Colors</a></li>
+        <li class="toc__item"><span class="toc__number">02</span><a class="toc__link" href="#tint-scales">Tint Scales</a></li>
+        <li class="toc__item"><span class="toc__number">03</span><a class="toc__link" href="#color-pairings">Color Pairings</a></li>
+        <li class="toc__item"><span class="toc__number">04</span><a class="toc__link" href="#css-variables">CSS Variables</a></li>
+      </ol>
+    </nav>
+
+    <!-- ═══════════════════ SECTION 1: BASE COLORS ═══════════════════ -->
+    <section id="base-colors" class="section">
+      <div class="section__header">
+        <span class="section__number">01</span>
+        <h2 class="section__title">Base Colors</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__intro">Six foundational colors define the Baseline visual identity. Navy anchors the brand with authority and trust. Teal drives action and draws the eye. Slate provides quiet structure. Coral speaks up when something matters. White and Warm Gray create breathing room for content to do its work.</p>
+      <div class="color-grid" id="colorGrid"></div>
+    </section>
+
+    <!-- ═══════════════════ SECTION 2: TINT SCALES ═══════════════════ -->
+    <section id="tint-scales" class="section">
+      <div class="section__header">
+        <span class="section__number">02</span>
+        <h2 class="section__title">Tint Scales</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__intro">Ten-step tint scales for each chromatic color, generated from HSL lightness adjustments. The 500 step is the base color. Lighter values (50&ndash;400) work well for backgrounds, borders, and hover states. Darker values (600&ndash;900) provide depth for text, shadows, and high-contrast surfaces.</p>
+      <div id="tintScales"></div>
+    </section>
+
+    <!-- ═══════════════════ SECTION 3: COLOR PAIRINGS ═══════════════════ -->
+    <section id="color-pairings" class="section">
+      <div class="section__header">
+        <span class="section__number">03</span>
+        <h2 class="section__title">Color Pairings</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__intro">Recommended foreground/background combinations with WCAG 2.1 contrast ratios. Every primary text pairing must meet AA (4.5 : 1) or AAA (7 : 1) for normal text. Decorative and large-text uses may accept AA Large (3 : 1).</p>
+      <div class="pairings-grid" id="pairingsGrid"></div>
+    </section>
+
+    <!-- ═══════════════════ SECTION 4: CSS VARIABLES ═══════════════════ -->
+    <section id="css-variables" class="section">
+      <div class="section__header">
+        <span class="section__number">04</span>
+        <h2 class="section__title">CSS Variables</h2>
+        <span class="section__divider"></span>
+      </div>
+      <p class="section__intro">Copy-ready custom property declarations for all base colors, tint scales, and typography tokens. Paste into your project&rsquo;s <code style="font-family:var(--font-mono);font-size:0.875em;background:var(--card-bg);padding:2px 6px;border-radius:4px;">:root</code> block.</p>
+      <div class="code-block-wrapper">
+        <div class="code-block-header">
+          <span class="code-block-header__title">:root { &hellip; }</span>
+          <button class="code-block-header__btn" id="copyAllBtn" type="button">Copy All</button>
+        </div>
+        <div class="code-block__body">
+          <pre id="cssOutput"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="brand-footer">
+      <p class="brand-footer__logo">Baseline</p>
+      <p class="brand-footer__note">This document is confidential and intended for internal use only.</p>
+    </footer>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════════════════════ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* ─── Color math helpers ───────────────────────────────── */
+
+    function hexToRgb(hex) {
+      var r = parseInt(hex.slice(1, 3), 16);
+      var g = parseInt(hex.slice(3, 5), 16);
+      var b = parseInt(hex.slice(5, 7), 16);
+      return { r: r, g: g, b: b };
+    }
+
+    function rgbToHsl(r, g, b) {
+      r /= 255; g /= 255; b /= 255;
+      var max = Math.max(r, g, b), min = Math.min(r, g, b);
+      var h, s, l = (max + min) / 2;
+      if (max === min) {
+        h = s = 0;
+      } else {
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+          case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+          case g: h = ((b - r) / d + 2) / 6; break;
+          case b: h = ((r - g) / d + 4) / 6; break;
+        }
+      }
+      return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
+    }
+
+    function hslToRgb(h, s, l) {
+      h /= 360; s /= 100; l /= 100;
+      var r, g, b;
+      if (s === 0) {
+        r = g = b = l;
+      } else {
+        function hue2rgb(p, q, t) {
+          if (t < 0) t += 1;
+          if (t > 1) t -= 1;
+          if (t < 1/6) return p + (q - p) * 6 * t;
+          if (t < 1/2) return q;
+          if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+          return p;
+        }
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+      }
+      return { r: Math.round(r * 255), g: Math.round(g * 255), b: Math.round(b * 255) };
+    }
+
+    function rgbToHex(r, g, b) {
+      return '#' + [r, g, b].map(function (x) {
+        return x.toString(16).padStart(2, '0');
+      }).join('').toUpperCase();
+    }
+
+    function luminance(r, g, b) {
+      var a = [r, g, b].map(function (v) {
+        v /= 255;
+        return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+      });
+      return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+    }
+
+    function contrastRatio(hex1, hex2) {
+      var c1 = hexToRgb(hex1), c2 = hexToRgb(hex2);
+      var l1 = luminance(c1.r, c1.g, c1.b);
+      var l2 = luminance(c2.r, c2.g, c2.b);
+      var lighter = Math.max(l1, l2), darker = Math.min(l1, l2);
+      return (lighter + 0.05) / (darker + 0.05);
+    }
+
+    function textColorForBg(hex) {
+      var c = hexToRgb(hex);
+      return luminance(c.r, c.g, c.b) > 0.35 ? '#1B2B4B' : '#FFFFFF';
+    }
+
+    /* ─── Tint generation ──────────────────────────────────── */
+
+    function generateTintScale(hex) {
+      var rgb = hexToRgb(hex);
+      var hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+      var baseL = hsl.l;
+      var baseS = hsl.s;
+
+      // Lightness targets: smoothly interpolate from very light to very dark
+      // keeping 500 = base
+      var lightnessTargets = {
+        50:  95,
+        100: 88,
+        200: 78,
+        300: 68,
+        400: 55,
+        500: baseL,
+        600: Math.max(8, baseL * 0.82),
+        700: Math.max(6, baseL * 0.65),
+        800: Math.max(5, baseL * 0.48),
+        900: Math.max(4, baseL * 0.32)
+      };
+
+      // Saturation: desaturate lighter tints, slightly boost darker shades
+      var satTargets = {
+        50:  Math.max(8, baseS * 0.30),
+        100: Math.max(12, baseS * 0.45),
+        200: Math.max(18, baseS * 0.60),
+        300: Math.max(22, baseS * 0.75),
+        400: Math.max(28, baseS * 0.88),
+        500: baseS,
+        600: Math.min(100, baseS * 1.05),
+        700: Math.min(100, baseS * 1.08),
+        800: Math.min(100, baseS * 1.08),
+        900: Math.min(100, baseS * 1.05)
+      };
+
+      var steps = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+      return steps.map(function (step) {
+        var newL = Math.round(lightnessTargets[step]);
+        var newS = Math.round(satTargets[step]);
+        var newRgb = hslToRgb(hsl.h, newS, newL);
+        return { step: step, hex: rgbToHex(newRgb.r, newRgb.g, newRgb.b), isBase: step === 500 };
+      });
+    }
+
+    /* ─── Clipboard helper ─────────────────────────────────── */
+
+    function copyText(text, tipEl) {
+      navigator.clipboard.writeText(text).then(function () {
+        if (!tipEl) return;
+        tipEl.classList.remove('show');
+        void tipEl.offsetWidth;           // reflow
+        tipEl.classList.add('show');
+        setTimeout(function () { tipEl.classList.remove('show'); }, 1300);
+      });
+    }
+
+    /* ─── Data ─────────────────────────────────────────────── */
+
+    var baseColors = [
+      { name: 'Navy',      hex: '#1B2B4B', role: 'Primary \u2014 headers, navigation, key UI surfaces',    varName: '--navy' },
+      { name: 'Teal',      hex: '#2A9D8F', role: 'Accent \u2014 CTAs, links, data highlights, progress',   varName: '--teal' },
+      { name: 'Slate',     hex: '#64748B', role: 'Secondary \u2014 captions, metadata, borders',            varName: '--slate' },
+      { name: 'Coral',     hex: '#E8725C', role: 'Emphasis \u2014 alerts, key metrics, important callouts', varName: '--coral' },
+      { name: 'White',     hex: '#FFFFFF', role: 'Background \u2014 primary surfaces',                      varName: '--white' },
+      { name: 'Warm Gray', hex: '#F8F7F5', role: 'Soft background \u2014 cards, alternate rows, sections',  varName: '--warm-gray' }
+    ];
+
+    var tintColors = [
+      { name: 'Navy',  hex: '#1B2B4B', varPrefix: '--navy' },
+      { name: 'Teal',  hex: '#2A9D8F', varPrefix: '--teal' },
+      { name: 'Slate', hex: '#64748B', varPrefix: '--slate' },
+      { name: 'Coral', hex: '#E8725C', varPrefix: '--coral' }
+    ];
+
+    var pairings = [
+      { fg: '#1B2B4B', bg: '#FFFFFF', fgName: 'Navy',  bgName: 'White',     note: '' },
+      { fg: '#1B2B4B', bg: '#F8F7F5', fgName: 'Navy',  bgName: 'Warm Gray', note: '' },
+      { fg: '#FFFFFF', bg: '#1B2B4B', fgName: 'White', bgName: 'Navy',      note: '' },
+      { fg: '#FFFFFF', bg: '#2A9D8F', fgName: 'White', bgName: 'Teal',      note: '' },
+      { fg: '#2A9D8F', bg: '#FFFFFF', fgName: 'Teal',  bgName: 'White',     note: '' },
+      { fg: '#E8725C', bg: '#FFFFFF', fgName: 'Coral', bgName: 'White',     note: 'Emphasis only \u2014 use sparingly for callouts and alerts' }
+    ];
+
+    // Store tint data for CSS output
+    var allTints = {};
+
+    /* ─── Render: Base Colors ──────────────────────────────── */
+
+    function renderBaseColors() {
+      var grid = document.getElementById('colorGrid');
+
+      baseColors.forEach(function (color) {
+        var rgb = hexToRgb(color.hex);
+        var hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+
+        var card = document.createElement('div');
+        card.className = 'color-card';
+
+        // Light swatches need a subtle inner border so they don't vanish
+        var swatchExtra = (color.hex === '#FFFFFF' || color.hex === '#F8F7F5')
+          ? 'border-bottom:1px solid var(--light-gray);' : '';
+
+        card.innerHTML =
+          '<div class="color-card__swatch" style="background:' + color.hex + ';' + swatchExtra + '"></div>' +
+          '<div class="color-card__body">' +
+            '<div class="color-card__name">' + color.name + '</div>' +
+            '<div class="color-card__role">' + color.role + '</div>' +
+            '<div class="color-card__values">' +
+              '<div class="color-card__value">' +
+                '<span class="color-card__value-label">HEX</span>' +
+                '<button class="color-card__hex-btn" type="button" data-hex="' + color.hex + '">' +
+                  color.hex +
+                  '<span class="copied-tip">Copied!</span>' +
+                '</button>' +
+              '</div>' +
+              '<div class="color-card__value">' +
+                '<span class="color-card__value-label">RGB</span>' +
+                '<span>' + rgb.r + ', ' + rgb.g + ', ' + rgb.b + '</span>' +
+              '</div>' +
+              '<div class="color-card__value">' +
+                '<span class="color-card__value-label">HSL</span>' +
+                '<span>' + hsl.h + ', ' + hsl.s + '%, ' + hsl.l + '%</span>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        var btn = card.querySelector('.color-card__hex-btn');
+        var tip = card.querySelector('.copied-tip');
+        btn.addEventListener('click', function () { copyText(color.hex, tip); });
+
+        grid.appendChild(card);
+      });
+    }
+
+    /* ─── Render: Tint Scales ──────────────────────────────── */
+
+    function renderTintScales() {
+      var container = document.getElementById('tintScales');
+
+      tintColors.forEach(function (color) {
+        var scale = generateTintScale(color.hex);
+        allTints[color.varPrefix] = scale;
+
+        var group = document.createElement('div');
+        group.className = 'tint-group';
+
+        var label = document.createElement('div');
+        label.className = 'tint-group__label';
+        label.textContent = color.name;
+        group.appendChild(label);
+
+        var scaleEl = document.createElement('div');
+        scaleEl.className = 'tint-scale';
+
+        scale.forEach(function (s) {
+          var textCol = textColorForBg(s.hex);
+          var varName = color.varPrefix + '-' + s.step;
+          var stepEl = document.createElement('div');
+          stepEl.className = 'tint-step';
+          stepEl.style.backgroundColor = s.hex;
+          stepEl.style.color = textCol;
+
+          stepEl.innerHTML =
+            '<div class="tint-step__left">' +
+              '<span class="tint-step__weight">' + s.step + '</span>' +
+              '<span class="tint-step__var">' + varName + '</span>' +
+            '</div>' +
+            '<div class="tint-step__right">' +
+              '<span class="tint-step__hex">' + s.hex + '</span>' +
+              (s.isBase ? '<span class="tint-step__base">Base</span>' : '') +
+              '<span class="copied-tip">Copied!</span>' +
+            '</div>';
+
+          var tip = stepEl.querySelector('.copied-tip');
+          stepEl.addEventListener('click', function () { copyText(s.hex, tip); });
+
+          scaleEl.appendChild(stepEl);
+        });
+
+        group.appendChild(scaleEl);
+        container.appendChild(group);
+      });
+    }
+
+    /* ─── Render: Color Pairings ───────────────────────────── */
+
+    function renderPairings() {
+      var grid = document.getElementById('pairingsGrid');
+
+      pairings.forEach(function (p) {
+        var ratio = contrastRatio(p.fg, p.bg);
+        var ratioStr = ratio.toFixed(1) + ' : 1';
+        var level, badgeClass;
+
+        if (ratio >= 7) {
+          level = 'AAA'; badgeClass = 'pairing-card__badge--aaa';
+        } else if (ratio >= 4.5) {
+          level = 'AA'; badgeClass = 'pairing-card__badge--aa';
+        } else if (ratio >= 3) {
+          level = 'AA Large'; badgeClass = 'pairing-card__badge--aa';
+        } else {
+          level = 'Fail'; badgeClass = 'pairing-card__badge--fail';
+        }
+
+        // For light backgrounds, add a subtle inner border so card boundary is visible
+        var previewBorder = (p.bg === '#FFFFFF' || p.bg === '#F8F7F5')
+          ? 'border-bottom:1px solid var(--light-gray);' : '';
+
+        var card = document.createElement('div');
+        card.className = 'pairing-card';
+        card.innerHTML =
+          '<div class="pairing-card__preview" style="background:' + p.bg + ';color:' + p.fg + ';' + previewBorder + '">' +
+            '<div class="pairing-card__sample-heading">Compliance that scales</div>' +
+            '<div class="pairing-card__sample-body">Enterprise-grade audit &amp; accounting</div>' +
+          '</div>' +
+          '<div class="pairing-card__meta">' +
+            '<div>' +
+              '<div class="pairing-card__label">' + p.fgName + ' on ' + p.bgName + '</div>' +
+              (p.note ? '<div class="pairing-card__note">' + p.note + '</div>' : '') +
+            '</div>' +
+            '<div class="pairing-card__ratio">' +
+              '<span class="pairing-card__ratio-value">' + ratioStr + '</span>' +
+              '<span class="pairing-card__badge ' + badgeClass + '">' + level + '</span>' +
+            '</div>' +
+          '</div>';
+
+        grid.appendChild(card);
+      });
+    }
+
+    /* ─── Render: CSS Variables Code Block ─────────────────── */
+
+    function renderCSSOutput() {
+      var pre = document.getElementById('cssOutput');
+      var lines = [];
+
+      lines.push('<span class="sel">:root</span> {');
+      lines.push('');
+      lines.push('  <span class="cm">/* \u2500\u2500 Base Colors \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */</span>');
+
+      baseColors.forEach(function (c) {
+        lines.push('  <span class="prop">' + c.varName + '</span>: <span class="val">' + c.hex + '</span>;');
+      });
+      lines.push('  <span class="prop">--light-gray</span>: <span class="val">#E2E8F0</span>;');
+      lines.push('');
+
+      tintColors.forEach(function (color) {
+        var scale = allTints[color.varPrefix];
+        lines.push('  <span class="cm">/* \u2500\u2500 ' + color.name + ' Scale \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */</span>');
+        scale.forEach(function (s) {
+          var vn = color.varPrefix + '-' + s.step;
+          var baseTag = s.isBase ? ' <span class="cm">/* base */</span>' : '';
+          lines.push('  <span class="prop">' + vn + '</span>: <span class="val">' + s.hex + '</span>;' + baseTag);
+        });
+        lines.push('');
+      });
+
+      lines.push('  <span class="cm">/* \u2500\u2500 Typography \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */</span>');
+      lines.push('  <span class="prop">--font-heading</span>: <span class="val">\'Plus Jakarta Sans\', sans-serif</span>;');
+      lines.push('  <span class="prop">--font-body</span>: <span class="val">\'Inter\', sans-serif</span>;');
+      lines.push('  <span class="prop">--font-mono</span>: <span class="val">\'JetBrains Mono\', monospace</span>;');
+      lines.push('}');
+
+      pre.innerHTML = lines.join('\n');
+    }
+
+    function buildPlainCSS() {
+      var lines = [];
+      lines.push(':root {');
+      lines.push('');
+      lines.push('  /* -- Base Colors --------------------------- */');
+
+      baseColors.forEach(function (c) {
+        lines.push('  ' + c.varName + ': ' + c.hex + ';');
+      });
+      lines.push('  --light-gray: #E2E8F0;');
+      lines.push('');
+
+      tintColors.forEach(function (color) {
+        var scale = allTints[color.varPrefix];
+        lines.push('  /* -- ' + color.name + ' Scale ------------------------ */');
+        scale.forEach(function (s) {
+          var vn = color.varPrefix + '-' + s.step;
+          var baseTag = s.isBase ? ' /* base */' : '';
+          lines.push('  ' + vn + ': ' + s.hex + ';' + baseTag);
+        });
+        lines.push('');
+      });
+
+      lines.push('  /* -- Typography --------------------------- */');
+      lines.push("  --font-heading: 'Plus Jakarta Sans', sans-serif;");
+      lines.push("  --font-body: 'Inter', sans-serif;");
+      lines.push("  --font-mono: 'JetBrains Mono', monospace;");
+      lines.push('}');
+
+      return lines.join('\n');
+    }
+
+    /* ─── Dark Mode ────────────────────────────────────────── */
+
+    // We apply dark mode by swapping CSS custom properties on :root
+    var darkStyles = {
+      '--page-bg':        'var(--navy-900, #0A1122)',
+      '--card-bg':        'var(--navy-800, #0F182D)',
+      '--card-border':    'var(--navy-700, #131F38)',
+      '--text-primary':   '#F8F7F5',
+      '--text-secondary': '#A1ADBB',
+      '--text-heading':   '#FFFFFF',
+      '--divider':        'var(--navy-700, #131F38)'
+    };
+
+    var lightStyles = {
+      '--page-bg':        '#FFFFFF',
+      '--card-bg':        '#F8F7F5',
+      '--card-border':    '#E2E8F0',
+      '--text-primary':   '#1B2B4B',
+      '--text-secondary': '#64748B',
+      '--text-heading':   '#1B2B4B',
+      '--divider':        '#E2E8F0'
+    };
+
+    var isDark = false;
+
+    function applyTheme(styles) {
+      var root = document.documentElement;
+      Object.keys(styles).forEach(function (key) {
+        root.style.setProperty(key, styles[key]);
+      });
+    }
+
+    function initDarkMode() {
+      var toggle = document.getElementById('darkToggle');
+      var icon   = document.getElementById('darkToggleIcon');
+      var label  = document.getElementById('darkToggleLabel');
+
+      toggle.addEventListener('click', function () {
+        isDark = !isDark;
+        if (isDark) {
+          applyTheme(darkStyles);
+          icon.innerHTML  = '&#9788;';
+          label.textContent = 'Light Mode';
+        } else {
+          applyTheme(lightStyles);
+          icon.innerHTML  = '&#9790;';
+          label.textContent = 'Dark Mode';
+        }
+      });
+    }
+
+    /* ─── Copy All ─────────────────────────────────────────── */
+
+    function initCopyAll() {
+      var btn = document.getElementById('copyAllBtn');
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(buildPlainCSS()).then(function () {
+          btn.textContent = 'Copied!';
+          btn.classList.add('is-copied');
+          setTimeout(function () {
+            btn.textContent = 'Copy All';
+            btn.classList.remove('is-copied');
+          }, 2000);
+        });
+      });
+    }
+
+    /* ─── Boot ─────────────────────────────────────────────── */
+
+    document.addEventListener('DOMContentLoaded', function () {
+      renderBaseColors();
+      renderTintScales();
+      renderPairings();
+      renderCSSOutput();
+      initDarkMode();
+      initCopyAll();
+    });
+
+  })();
+  </script>
+</body>
+</html>

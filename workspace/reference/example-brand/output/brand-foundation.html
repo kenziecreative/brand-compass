@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baseline — Brand Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Custom Properties ─────────────────────────────────── */
+    :root {
+      --navy: #1B2B4B;
+      --teal: #2A9D8F;
+      --slate: #64748B;
+      --coral: #E8725C;
+      --white: #FFFFFF;
+      --warm-gray: #F8F7F5;
+      --light-gray: #E2E8F0;
+
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --space-xs: 0.5rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.25rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4.5rem;
+    }
+
+    /* ── Reset & Base ──────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--navy);
+      background-color: var(--white);
+    }
+
+    /* ── Layout ────────────────────────────────────────────── */
+    .page-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--space-xl) var(--space-lg);
+    }
+
+    /* ── Header ────────────────────────────────────────────── */
+    .brand-header {
+      text-align: center;
+      padding: var(--space-2xl) 0 var(--space-xl);
+      border-bottom: 2px solid var(--light-gray);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .brand-header__mark {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-md);
+    }
+
+    .brand-header__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-header__subtitle {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-size: 1.125rem;
+      color: var(--slate);
+      margin-top: var(--space-xs);
+      letter-spacing: 0.01em;
+    }
+
+    .brand-header__meta {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--slate);
+      margin-top: var(--space-md);
+      opacity: 0.7;
+    }
+
+    /* ── Table of Contents ─────────────────────────────────── */
+    .toc {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-lg) var(--space-xl);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .toc__title {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: var(--space-md);
+    }
+
+    .toc__list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xs) var(--space-xl);
+    }
+
+    .toc__item {
+      font-family: var(--font-heading);
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+
+    .toc__number {
+      display: inline-block;
+      width: 1.75rem;
+      color: var(--teal);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .toc__link {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .toc__link:hover {
+      color: var(--teal);
+    }
+
+    /* ── Sections ──────────────────────────────────────────── */
+    .section {
+      margin-bottom: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .section__header {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-xl);
+    }
+
+    .section__number {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--teal);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .section__title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .section__divider {
+      flex: 1;
+      height: 1px;
+      background: var(--light-gray);
+      align-self: center;
+      margin-left: var(--space-sm);
+    }
+
+    /* ── Content Blocks ────────────────────────────────────── */
+    .block {
+      border-left: 3px solid var(--teal);
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .block--plain {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .block__label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .block__heading {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1875rem;
+      color: var(--navy);
+      margin-bottom: var(--space-sm);
+      line-height: 1.35;
+    }
+
+    .block p {
+      margin-bottom: var(--space-md);
+      color: var(--navy);
+    }
+
+    .block p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Callout / Feature Text ────────────────────────────── */
+    .callout {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.3125rem;
+      line-height: 1.55;
+      color: var(--navy);
+      margin-bottom: var(--space-md);
+    }
+
+    .callout--tagline {
+      font-size: 1.625rem;
+      text-align: center;
+      padding: var(--space-xl) 0;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+
+    /* ── Highlight Box ─────────────────────────────────────── */
+    .highlight-box {
+      background: var(--warm-gray);
+      border-radius: 10px;
+      padding: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .highlight-box__label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .highlight-box p {
+      margin-bottom: var(--space-md);
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Audience Segments ─────────────────────────────────── */
+    .segment {
+      border-left: 3px solid var(--teal);
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .segment__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: var(--navy);
+      margin-bottom: var(--space-xs);
+    }
+
+    .segment__detail {
+      margin-bottom: var(--space-sm);
+    }
+
+    .segment__detail-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.8125rem;
+      color: var(--slate);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .segment__detail p {
+      margin: 0;
+    }
+
+    .segment__signals {
+      font-style: italic;
+      color: var(--slate);
+      font-size: 0.9375rem;
+    }
+
+    /* ── Anti-Audience ─────────────────────────────────────── */
+    .anti-audience {
+      list-style: none;
+    }
+
+    .anti-audience li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .anti-audience li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 8px;
+      height: 2px;
+      background: var(--coral);
+    }
+
+    .anti-audience__name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* ── Positioning Grid ──────────────────────────────────── */
+    .positioning-item {
+      border-left: 3px solid var(--teal);
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-xl);
+    }
+
+    .positioning-item__label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .positioning-item p {
+      margin-bottom: var(--space-md);
+    }
+
+    .positioning-item p:last-child {
+      margin-bottom: 0;
+    }
+
+    .territory-own {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1875rem;
+      color: var(--navy);
+      display: inline;
+    }
+
+    /* ── Narrative ─────────────────────────────────────────── */
+    .narrative {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .narrative__label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-md);
+    }
+
+    .narrative p {
+      margin-bottom: var(--space-md);
+    }
+
+    .narrative p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Boilerplates ──────────────────────────────────────── */
+    .boilerplate {
+      border-left: 3px solid var(--teal);
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      position: relative;
+    }
+
+    .boilerplate__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+
+    .boilerplate__length-label {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.9375rem;
+      color: var(--navy);
+    }
+
+    .boilerplate__meter {
+      display: flex;
+      gap: 3px;
+      align-items: center;
+    }
+
+    .boilerplate__meter-pip {
+      width: 18px;
+      height: 5px;
+      border-radius: 2.5px;
+      background: var(--light-gray);
+    }
+
+    .boilerplate__meter-pip--filled {
+      background: var(--teal);
+    }
+
+    .boilerplate p {
+      margin-bottom: var(--space-md);
+    }
+
+    .boilerplate p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Proof Points ──────────────────────────────────────── */
+    .proof-points {
+      list-style: none;
+      counter-reset: proof;
+    }
+
+    .proof-points li {
+      counter-increment: proof;
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: var(--space-lg);
+    }
+
+    .proof-points li::before {
+      content: counter(proof, decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--teal);
+      line-height: 1.7;
+    }
+
+    .proof-points__stat {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ── Personality Cards ─────────────────────────────────── */
+    .trait-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: var(--space-lg);
+    }
+
+    .trait-card__header {
+      background: var(--warm-gray);
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .trait-card__number {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--teal);
+    }
+
+    .trait-card__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.0625rem;
+      color: var(--navy);
+    }
+
+    .trait-card__tagline {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--slate);
+      margin-left: auto;
+    }
+
+    .trait-card__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .trait-card__col {
+      padding: var(--space-md) var(--space-lg);
+    }
+
+    .trait-card__col:first-child {
+      border-right: 1px solid var(--light-gray);
+    }
+
+    .trait-card__col-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-xs);
+    }
+
+    .trait-card__col-label--means {
+      color: var(--teal);
+    }
+
+    .trait-card__col-label--not {
+      color: var(--coral);
+    }
+
+    .trait-card__col p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ── Archetype Cards ───────────────────────────────────── */
+    .archetype {
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: var(--space-lg);
+    }
+
+    .archetype--primary {
+      border: 2px solid var(--teal);
+      background: var(--white);
+    }
+
+    .archetype--supporting {
+      border: 1px solid var(--light-gray);
+      background: var(--white);
+    }
+
+    .archetype__header {
+      padding: var(--space-md) var(--space-lg);
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-sm);
+    }
+
+    .archetype--primary .archetype__header {
+      background: var(--teal);
+    }
+
+    .archetype--supporting .archetype__header {
+      background: var(--warm-gray);
+    }
+
+    .archetype__badge {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .archetype--primary .archetype__badge {
+      background: rgba(255,255,255,0.2);
+      color: var(--white);
+    }
+
+    .archetype--supporting .archetype__badge {
+      background: var(--light-gray);
+      color: var(--slate);
+    }
+
+    .archetype__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+
+    .archetype--primary .archetype__name {
+      color: var(--white);
+    }
+
+    .archetype--supporting .archetype__name {
+      color: var(--navy);
+    }
+
+    .archetype__origin {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      margin-left: auto;
+    }
+
+    .archetype--primary .archetype__origin {
+      color: rgba(255,255,255,0.7);
+    }
+
+    .archetype--supporting .archetype__origin {
+      color: var(--slate);
+    }
+
+    .archetype__body {
+      padding: var(--space-lg);
+    }
+
+    .archetype__detail {
+      margin-bottom: var(--space-md);
+    }
+
+    .archetype__detail:last-child {
+      margin-bottom: 0;
+    }
+
+    .archetype__detail-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--slate);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .archetype__detail-label--shadow {
+      color: var(--coral);
+    }
+
+    .archetype__detail p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    /* ── Brand World ───────────────────────────────────────── */
+    .brand-world {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+
+    .brand-world__label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .brand-world__name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--navy);
+      margin-bottom: var(--space-sm);
+    }
+
+    .brand-world p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    /* ── Influences ────────────────────────────────────────── */
+    .influences {
+      list-style: none;
+    }
+
+    .influences li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: var(--space-md);
+    }
+
+    .influences li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .influences__name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* ── Market of One ─────────────────────────────────────── */
+    .market-of-one {
+      background: var(--warm-gray);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      margin-bottom: var(--space-xl);
+      position: relative;
+    }
+
+    .market-of-one::before {
+      content: '\201C';
+      position: absolute;
+      top: 0.1em;
+      left: 0.85rem;
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--teal);
+      opacity: 0.2;
+    }
+
+    .market-of-one__label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: var(--space-xs);
+    }
+
+    .market-of-one p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    .brand-footer {
+      text-align: center;
+      padding: var(--space-xl) 0 var(--space-lg);
+      margin-top: var(--space-xl);
+      border-top: 2px solid var(--light-gray);
+    }
+
+    .brand-footer__logo {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-footer__note {
+      font-size: 0.8125rem;
+      color: var(--slate);
+      margin-top: var(--space-xs);
+    }
+
+    /* ── Print Styles ──────────────────────────────────────── */
+    @media print {
+      html {
+        font-size: 11pt;
+      }
+
+      body {
+        background: white;
+        color: #1B2B4B;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page-wrapper {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .toc {
+        background: none;
+        border: 1px solid #E2E8F0;
+        padding: 1rem 1.5rem;
+        page-break-after: avoid;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+
+      .trait-card,
+      .archetype,
+      .narrative,
+      .brand-world,
+      .highlight-box,
+      .market-of-one {
+        page-break-inside: avoid;
+      }
+
+      .narrative,
+      .brand-world,
+      .highlight-box,
+      .market-of-one {
+        background: none;
+        border: 1px solid #E2E8F0;
+      }
+
+      .archetype--primary .archetype__header {
+        background: #2A9D8F !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .trait-card__header {
+        background: none;
+        border-bottom: 1px solid #E2E8F0;
+      }
+
+      .archetype--supporting .archetype__header {
+        background: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .brand-footer__note {
+        display: none;
+      }
+    }
+
+    /* ── Small-screen adjustments ──────────────────────────── */
+    @media (max-width: 640px) {
+      .page-wrapper {
+        padding: var(--space-lg) var(--space-md);
+      }
+
+      .brand-header__name {
+        font-size: 2.25rem;
+      }
+
+      .toc__list {
+        grid-template-columns: 1fr;
+      }
+
+      .trait-card__body {
+        grid-template-columns: 1fr;
+      }
+
+      .trait-card__col:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--light-gray);
+      }
+
+      .trait-card__tagline {
+        display: none;
+      }
+
+      .section__header {
+        flex-wrap: wrap;
+      }
+
+      .section__divider {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="brand-header">
+      <span class="brand-header__mark">Brand Strategy</span>
+      <h1 class="brand-header__name">Baseline</h1>
+      <p class="brand-header__subtitle">Brand Foundation &amp; Messaging</p>
+      <p class="brand-header__meta">Confidential &mdash; Prepared for internal use</p>
+    </header>
+
+    <!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
+    <nav class="toc" aria-label="Table of contents">
+      <p class="toc__title">Contents</p>
+      <ol class="toc__list">
+        <li class="toc__item"><span class="toc__number">01</span><a class="toc__link" href="#core-belief">Core Belief</a></li>
+        <li class="toc__item"><span class="toc__number">02</span><a class="toc__link" href="#audience">Audience</a></li>
+        <li class="toc__item"><span class="toc__number">03</span><a class="toc__link" href="#positioning">Positioning</a></li>
+        <li class="toc__item"><span class="toc__number">04</span><a class="toc__link" href="#messaging">Messaging Architecture</a></li>
+        <li class="toc__item"><span class="toc__number">05</span><a class="toc__link" href="#personality">Brand Personality</a></li>
+      </ol>
+    </nav>
+
+    <!-- ═══════════════════ SECTION 1: CORE BELIEF ═══════════════════ -->
+    <section id="core-belief" class="section">
+      <div class="section__header">
+        <span class="section__number">01</span>
+        <h2 class="section__title">Core Belief</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <div class="block">
+        <p class="block__label">Belief Statement</p>
+        <p class="callout">Growing tech companies deserve the same financial infrastructure as enterprises&nbsp;&mdash; they just need it delivered differently. Compliance isn&rsquo;t a barrier to growth; it&rsquo;s the foundation that makes growth sustainable.</p>
+      </div>
+
+      <div class="block">
+        <p class="block__label">Origin Moment</p>
+        <p>After eight years at a Big Four firm, the pattern became impossible to ignore: the companies that needed quality audit work the most were the ones that could least afford it. Small SaaS companies would come in with a legitimate need&nbsp;&mdash; their first enterprise client asking for SOC&nbsp;2, a payment processor requiring PCI compliance&nbsp;&mdash; and get quoted six figures for work that should cost a quarter of that. Or worse, they&rsquo;d go to a generalist accountant who&rsquo;d never seen a SaaS P&amp;L and end up with compliance theater&nbsp;&mdash; reports that technically existed but didn&rsquo;t actually protect anyone.</p>
+        <p>The breaking point was watching a 30-person startup burn four months and $180K on a SOC&nbsp;2 audit that should have taken six weeks. Their accountant didn&rsquo;t understand cloud infrastructure. Their auditor had never worked with recurring revenue. Nobody on the engagement had ever seen a startup&rsquo;s cap table. That company deserved better. Every growing tech company deserves better.</p>
+      </div>
+
+      <div class="block">
+        <p class="block__label">The Problem This Addresses</p>
+        <p>Small tech companies face a compliance cliff. They&rsquo;re fine running on QuickBooks and a part-time bookkeeper until their first enterprise client asks for a SOC&nbsp;2 report, or a payment processor requires PCI compliance, or an investor wants audited financials. Then they&rsquo;re scrambling&nbsp;&mdash; overpaying for expertise that doesn&rsquo;t understand their business, getting advice from accountants who&rsquo;ve never seen a SaaS P&amp;L, and treating compliance as a fire drill instead of a growth investment.</p>
+        <p>The options are broken: Big Four firms are overbuilt and overpriced for companies under 100 people. Generalist accounting firms don&rsquo;t understand technology businesses. Compliance software platforms (Vanta, Drata) automate evidence collection but can&rsquo;t replace professional judgment. There&rsquo;s a gap between &ldquo;too expensive&rdquo; and &ldquo;doesn&rsquo;t understand us&rdquo;&nbsp;&mdash; and that&rsquo;s where Baseline operates.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SECTION 2: AUDIENCE ═══════════════════ -->
+    <section id="audience" class="section">
+      <div class="section__header">
+        <span class="section__number">02</span>
+        <h2 class="section__title">Audience</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <!-- Segments -->
+      <p class="block__label" style="margin-bottom: var(--space-md);">Segments</p>
+
+      <div class="segment">
+        <p class="segment__name">1. The Scaling CTO</p>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Situation</span>
+          <p>Technical founder who just realized compliance is now their problem. The board is asking about SOC&nbsp;2, a healthcare client sent a security questionnaire, or an investor wants audited financials.</p>
+        </div>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Signal Phrases</span>
+          <p class="segment__signals">&ldquo;I don&rsquo;t even know where to start with SOC&nbsp;2,&rdquo; &ldquo;We need this done but I can&rsquo;t take three engineers off product,&rdquo; &ldquo;How do other startups handle this?&rdquo;</p>
+        </div>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Needs</span>
+          <p>Clear roadmap, realistic timeline, someone who understands their tech stack.</p>
+        </div>
+      </div>
+
+      <div class="segment">
+        <p class="segment__name">2. The First Finance Hire</p>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Situation</span>
+          <p>Ops or finance person brought in at 20&ndash;50 employees to &ldquo;figure out&rdquo; the financial side. Often their first time dealing with audit, compliance, or investor-grade reporting.</p>
+        </div>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Signal Phrases</span>
+          <p class="segment__signals">&ldquo;I inherited a mess,&rdquo; &ldquo;Our books are technically accurate but not investor-ready,&rdquo; &ldquo;I need a firm that won&rsquo;t talk down to me&rdquo;</p>
+        </div>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Needs</span>
+          <p>A partner, not just a vendor. Someone who teaches while they deliver.</p>
+        </div>
+      </div>
+
+      <div class="segment">
+        <p class="segment__name">3. The Startup CFO</p>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Situation</span>
+          <p>Fractional or full-time CFO who needs an accounting firm that speaks their language&nbsp;&mdash; SaaS metrics, ARR, cohort analysis, cap table management.</p>
+        </div>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Signal Phrases</span>
+          <p class="segment__signals">&ldquo;My last firm didn&rsquo;t understand deferred revenue,&rdquo; &ldquo;I need SOC&nbsp;2 done right without the Big Four price tag,&rdquo; &ldquo;Can you handle both the audit and the ongoing compliance?&rdquo;</p>
+        </div>
+        <div class="segment__detail">
+          <span class="segment__detail-label">Needs</span>
+          <p>Competence they can trust. A firm that operates at their speed.</p>
+        </div>
+      </div>
+
+      <!-- Unified Profile -->
+      <div class="highlight-box">
+        <p class="highlight-box__label">Unified Profile</p>
+        <p><strong style="font-family: var(--font-heading); color: var(--navy);">Infrastructure Builders</strong>&nbsp;&mdash; People responsible for building the financial and compliance backbone of growing tech companies. They&rsquo;re smart, time-constrained, and tired of being sold to by firms that don&rsquo;t understand their world. They value competence over credentials and clarity over complexity.</p>
+      </div>
+
+      <!-- Market of One -->
+      <div class="market-of-one">
+        <p class="market-of-one__label">Market of One</p>
+        <p><strong>Jordan, 34</strong>&nbsp;&mdash; Head of Ops at a 35-person SaaS company that closed Series&nbsp;A six months ago. The board is asking about SOC&nbsp;2. Their biggest client&nbsp;&mdash; a healthcare company&nbsp;&mdash; just sent a 200-question security questionnaire. Jordan has never dealt with compliance before and just googled &ldquo;SOC&nbsp;2 for startups&rdquo; for the first time. Every accounting firm they&rsquo;ve called either doesn&rsquo;t know what SOC&nbsp;2 is or quoted $150K. Jordan doesn&rsquo;t need a lecture on audit standards. They need someone to say: &ldquo;Here&rsquo;s exactly what you need, here&rsquo;s what it costs, and here&rsquo;s the timeline. Let&rsquo;s go.&rdquo;</p>
+      </div>
+
+      <!-- Anti-Audience -->
+      <div class="block--plain" style="margin-bottom: var(--space-xl);">
+        <p class="block__label" style="margin-bottom: var(--space-md);">Anti-Audience</p>
+        <ul class="anti-audience">
+          <li><span class="anti-audience__name">Enterprise companies with internal audit teams</span>&nbsp;&mdash; They don&rsquo;t need us. They have the budget and headcount for Big Four.</li>
+          <li><span class="anti-audience__name">Cost-minimizers looking for the cheapest bookkeeper</span>&nbsp;&mdash; Compliance done cheaply is compliance done badly. We&rsquo;re not the low-cost option.</li>
+          <li><span class="anti-audience__name">Checkbox founders</span>&nbsp;&mdash; Leaders who see compliance as paperwork to get through, not infrastructure to build on. They&rsquo;ll resent the investment and cut corners.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SECTION 3: POSITIONING ═══════════════════ -->
+    <section id="positioning" class="section">
+      <div class="section__header">
+        <span class="section__number">03</span>
+        <h2 class="section__title">Positioning</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <div class="positioning-item">
+        <p class="positioning-item__label">Positioning Statement</p>
+        <p>For growing tech companies that need enterprise-grade compliance without enterprise-grade budgets, <strong>Baseline</strong> is the accounting firm that speaks your language&nbsp;&mdash; SaaS metrics, cloud infrastructure, startup economics&nbsp;&mdash; so you can get SOC&nbsp;2 certified, PCI compliant, and investor-ready without hiring a Big Four firm.</p>
+      </div>
+
+      <div class="positioning-item">
+        <p class="positioning-item__label">Value Proposition</p>
+        <p>Enterprise-grade compliance built for startup-stage companies. SOC&nbsp;2 audits, PCI compliance, and financial infrastructure delivered by accountants who understand SaaS business models, cloud architecture, and the pace of startup growth.</p>
+      </div>
+
+      <div class="positioning-item">
+        <p class="positioning-item__label">The Intersection</p>
+        <p>Deep accounting expertise + genuine technology fluency + startup-stage pragmatism. The ability to deliver Big Four-quality audit work with the speed, pricing, and communication style that growing companies actually need.</p>
+      </div>
+
+      <div class="positioning-item">
+        <p class="positioning-item__label">Territory to Own</p>
+        <p><span class="territory-own">&ldquo;Compliance as growth infrastructure&rdquo;</span>&nbsp;&mdash; The idea that good financial systems don&rsquo;t slow you down, they speed you up. A SOC&nbsp;2 report isn&rsquo;t paperwork&nbsp;&mdash; it&rsquo;s the key that unlocks enterprise sales. PCI compliance isn&rsquo;t overhead&nbsp;&mdash; it&rsquo;s what lets you process payments without fear. The companies that treat compliance as infrastructure outgrow the ones that treat it as a checkbox.</p>
+      </div>
+
+      <div class="positioning-item">
+        <p class="positioning-item__label">Contrarian Point of View</p>
+        <p>Most accounting firms treat compliance as a cost center&nbsp;&mdash; something companies have to do, an expense to be minimized. We treat it as a growth lever. Every SOC&nbsp;2 report we deliver opens a door to enterprise revenue. Every PCI certification removes a barrier to payment processing. Every audit-ready financial system makes the next fundraise faster. The firms that help you &ldquo;just get through the audit&rdquo; are leaving money on the table. We build the systems that compound.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ SECTION 4: MESSAGING ═══════════════════ -->
+    <section id="messaging" class="section">
+      <div class="section__header">
+        <span class="section__number">04</span>
+        <h2 class="section__title">Messaging Architecture</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <!-- Tagline -->
+      <div style="background: var(--warm-gray); border-radius: 12px; padding: var(--space-lg); margin-bottom: var(--space-xl); text-align: center;">
+        <p class="highlight-box__label">Tagline</p>
+        <p class="callout--tagline" style="margin: 0;">Compliance that scales with you.</p>
+      </div>
+
+      <!-- Core Narrative -->
+      <div class="narrative">
+        <p class="narrative__label">Core Narrative</p>
+        <p>Every growing tech company hits the same wall. You&rsquo;re building product, closing deals, hiring fast&nbsp;&mdash; and then someone asks for a SOC&nbsp;2 report. Or your payment processor wants PCI documentation. Or your Series&nbsp;A investors want audited financials by next quarter.</p>
+        <p>You call the Big Four. They quote $200K and a six-month timeline. You call your current accountant. They&rsquo;ve never heard of SOC&nbsp;2. You call the &ldquo;startup-friendly&rdquo; bookkeeping platforms. They can do your books, but compliance? That&rsquo;s not their thing.</p>
+        <p>Baseline exists because growing tech companies shouldn&rsquo;t have to choose between quality and affordability. We&rsquo;re accountants and auditors who specialize exclusively in technology companies&nbsp;&mdash; SaaS, fintech, healthtech, devtools. We understand your revenue model, your infrastructure, your cap table, and the specific compliance requirements your industry demands.</p>
+        <p>We deliver SOC&nbsp;2 audits, PCI compliance, and financial infrastructure at a price point and pace that makes sense for companies with 10 to 200 people. Not because we cut corners, but because we&rsquo;ve done this enough times to know exactly what you need and exactly how to get there.</p>
+        <p>Compliance that scales with you. That&rsquo;s Baseline.</p>
+      </div>
+
+      <!-- Boilerplates -->
+      <p class="block__label" style="margin-bottom: var(--space-lg);">Boilerplate Descriptions</p>
+
+      <div class="boilerplate">
+        <div class="boilerplate__header">
+          <span class="boilerplate__length-label">One Sentence</span>
+          <span class="boilerplate__meter">
+            <span class="boilerplate__meter-pip boilerplate__meter-pip--filled"></span>
+            <span class="boilerplate__meter-pip"></span>
+            <span class="boilerplate__meter-pip"></span>
+          </span>
+        </div>
+        <p>Baseline delivers SOC&nbsp;2 audits, PCI compliance, and financial infrastructure for growing tech companies&nbsp;&mdash; enterprise-grade quality at startup-friendly pricing.</p>
+      </div>
+
+      <div class="boilerplate">
+        <div class="boilerplate__header">
+          <span class="boilerplate__length-label">One Paragraph</span>
+          <span class="boilerplate__meter">
+            <span class="boilerplate__meter-pip boilerplate__meter-pip--filled"></span>
+            <span class="boilerplate__meter-pip boilerplate__meter-pip--filled"></span>
+            <span class="boilerplate__meter-pip"></span>
+          </span>
+        </div>
+        <p>Baseline is an accounting and compliance firm built exclusively for technology companies. We help SaaS startups and growing tech businesses navigate SOC&nbsp;2 certification, PCI compliance, financial audits, and ongoing accounting&nbsp;&mdash; all delivered by a team that understands cloud infrastructure, recurring revenue models, and the pace of startup growth. Our clients get Big Four-quality work without the Big Four price tag or timeline.</p>
+      </div>
+
+      <div class="boilerplate">
+        <div class="boilerplate__header">
+          <span class="boilerplate__length-label">Three Paragraphs</span>
+          <span class="boilerplate__meter">
+            <span class="boilerplate__meter-pip boilerplate__meter-pip--filled"></span>
+            <span class="boilerplate__meter-pip boilerplate__meter-pip--filled"></span>
+            <span class="boilerplate__meter-pip boilerplate__meter-pip--filled"></span>
+          </span>
+        </div>
+        <p>Baseline is an accounting and compliance firm built exclusively for technology companies. We specialize in the financial infrastructure that growing SaaS, fintech, and healthtech companies need&nbsp;&mdash; SOC&nbsp;2 audits, PCI compliance, investor-ready financials, and ongoing accounting services&nbsp;&mdash; delivered by a team that genuinely understands how technology businesses work.</p>
+        <p>Our clients are typically 10 to 200-person companies navigating compliance for the first time. Maybe an enterprise prospect just asked for SOC&nbsp;2 documentation. Maybe a payment processor requires PCI certification. Maybe the board wants audited financials by next quarter. Whatever the trigger, we provide a clear roadmap, a realistic timeline, and a team that won&rsquo;t need you to explain what an API is.</p>
+        <p>Beyond compliance, we offer extended services through our partner network: privacy policy reviews, payment service integration consulting, and bookkeeping boot camps for teams building their first finance function. Every engagement is designed to create infrastructure that compounds&nbsp;&mdash; systems that don&rsquo;t just check a box today, but support your growth for the next five years.</p>
+      </div>
+
+      <!-- Proof Points -->
+      <p class="block__label" style="margin-bottom: var(--space-lg);">Proof Points</p>
+
+      <ol class="proof-points">
+        <li><span class="proof-points__stat">200+ SOC&nbsp;2 audits completed</span> for technology companies ranging from 8-person pre-seed startups to 500-person Series&nbsp;C companies.</li>
+        <li><span class="proof-points__stat">Average time to SOC&nbsp;2 Type&nbsp;II: 8 weeks</span>&nbsp;&mdash; compared to the industry average of 4&ndash;6 months for first-time audits.</li>
+        <li><span class="proof-points__stat">60% of clients come through referrals</span> from CTOs and CFOs at other startups&nbsp;&mdash; the strongest signal of trust in a relationship-driven industry.</li>
+        <li><span class="proof-points__stat">Partner network spanning 15 specialized firms</span> covering privacy law, payment processing, international tax, and HR compliance.</li>
+        <li><span class="proof-points__stat">Bookkeeping Boot Camp alumni: 400+ finance-first hires</span>&nbsp;&mdash; people who took our 6-week program and built their company&rsquo;s first real financial function.</li>
+        <li><span class="proof-points__stat">98% client retention rate</span>&nbsp;&mdash; companies that start with us for SOC&nbsp;2 stay for ongoing compliance, bookkeeping, and financial planning.</li>
+      </ol>
+    </section>
+
+    <!-- ═══════════════════ SECTION 5: BRAND PERSONALITY ═══════════════════ -->
+    <section id="personality" class="section">
+      <div class="section__header">
+        <span class="section__number">05</span>
+        <h2 class="section__title">Brand Personality</h2>
+        <span class="section__divider"></span>
+      </div>
+
+      <!-- Personality Traits -->
+      <p class="block__label" style="margin-bottom: var(--space-lg);">Personality Traits</p>
+
+      <div class="trait-card">
+        <div class="trait-card__header">
+          <span class="trait-card__number">01</span>
+          <span class="trait-card__name">Precise</span>
+          <span class="trait-card__tagline">Detail-oriented, thorough, gets the numbers right</span>
+        </div>
+        <div class="trait-card__body">
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--means">What It Means</p>
+            <p>Every deliverable is accurate, complete, and defensible. We catch what others miss.</p>
+          </div>
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p>Rigid, nitpicky, or unable to move fast. Precision and speed aren&rsquo;t opposites.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-card__header">
+          <span class="trait-card__number">02</span>
+          <span class="trait-card__name">Approachable</span>
+          <span class="trait-card__tagline">Explains things clearly, no condescension</span>
+        </div>
+        <div class="trait-card__body">
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--means">What It Means</p>
+            <p>We teach as we deliver. Clients understand what we&rsquo;re doing and why. No jargon walls.</p>
+          </div>
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p>Casual, unserious, or overly friendly. We&rsquo;re warm, not buddy-buddy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-card__header">
+          <span class="trait-card__number">03</span>
+          <span class="trait-card__name">Pragmatic</span>
+          <span class="trait-card__tagline">Right-sized solutions, not gold-plated</span>
+        </div>
+        <div class="trait-card__body">
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--means">What It Means</p>
+            <p>We build what you need now and design it to grow. No overengineering, no unnecessary complexity.</p>
+          </div>
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p>Cutting corners or doing the minimum. Pragmatic isn&rsquo;t the same as cheap.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="trait-card">
+        <div class="trait-card__header">
+          <span class="trait-card__number">04</span>
+          <span class="trait-card__name">Tech-Fluent</span>
+          <span class="trait-card__tagline">Understands the stack, the metrics, the business model</span>
+        </div>
+        <div class="trait-card__body">
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--means">What It Means</p>
+            <p>We speak your language. We know what AWS, ARR, and a cap table are. You don&rsquo;t have to educate your accountant.</p>
+          </div>
+          <div class="trait-card__col">
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p>Trendy, jargon-heavy, or performatively technical. We&rsquo;re fluent, not showing off.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Archetypes -->
+      <p class="block__label" style="margin-bottom: var(--space-lg); margin-top: var(--space-xl);">Archetypes</p>
+
+      <div class="archetype archetype--primary">
+        <div class="archetype__header">
+          <span class="archetype__badge">Primary</span>
+          <span class="archetype__name">The Navigator</span>
+          <span class="archetype__origin">adapted from Sage</span>
+        </div>
+        <div class="archetype__body">
+          <div class="archetype__detail">
+            <span class="archetype__detail-label">How It Shows Up</span>
+            <p>Guides companies through unfamiliar compliance territory with confidence and clarity. Knows the map because they&rsquo;ve walked the path hundreds of times.</p>
+          </div>
+          <div class="archetype__detail">
+            <span class="archetype__detail-label">What It Enables</span>
+            <p>Clients feel oriented, not overwhelmed. Complex requirements become clear next steps.</p>
+          </div>
+          <div class="archetype__detail">
+            <span class="archetype__detail-label archetype__detail-label--shadow">Shadow to Watch</span>
+            <p>Over-explaining, becoming preachy, assuming the client wants a lecture instead of a solution.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="archetype archetype--supporting">
+        <div class="archetype__header">
+          <span class="archetype__badge">Supporting</span>
+          <span class="archetype__name">The Builder</span>
+          <span class="archetype__origin">adapted from Creator</span>
+        </div>
+        <div class="archetype__body">
+          <div class="archetype__detail">
+            <span class="archetype__detail-label">How It Shows Up</span>
+            <p>Doesn&rsquo;t just audit&nbsp;&mdash; constructs the financial infrastructure companies need to scale. Systems, processes, and documentation designed to last.</p>
+          </div>
+          <div class="archetype__detail">
+            <span class="archetype__detail-label">What It Enables</span>
+            <p>Deliverables that compound. A SOC&nbsp;2 engagement that also builds the compliance muscle for next year.</p>
+          </div>
+          <div class="archetype__detail">
+            <span class="archetype__detail-label archetype__detail-label--shadow">Shadow to Watch</span>
+            <p>Overbuilding, scope creep, creating systems more complex than the company needs right now.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand World -->
+      <div class="brand-world">
+        <p class="brand-world__label">Brand World</p>
+        <p class="brand-world__name">The Modern Office</p>
+        <p>A space that&rsquo;s organized but not sterile. Glass walls and light wood surfaces. Dual monitors showing clean dashboards&nbsp;&mdash; not Excel chaos, but structured data visualization. A whiteboard with an audit timeline sketched out. Good coffee in the kitchen. The feeling of having your finances together without being uptight about it. Professional enough to trust with your audit, human enough to explain it over lunch. Think WeWork-meets-Deloitte&nbsp;&mdash; the credibility of a serious firm with the energy of a company that actually likes what it does.</p>
+      </div>
+
+      <!-- Influences -->
+      <div style="margin-bottom: var(--space-xl);">
+        <p class="block__label" style="margin-bottom: var(--space-md);">Influences</p>
+        <ul class="influences">
+          <li><span class="influences__name">Stripe&rsquo;s documentation</span>&nbsp;&mdash; Technical precision made accessible. Complex topics explained clearly without dumbing down.</li>
+          <li><span class="influences__name">Pilot&rsquo;s positioning</span>&nbsp;&mdash; Proved that &ldquo;accounting for startups&rdquo; is a real category. But they stayed in bookkeeping&nbsp;&mdash; Baseline goes deeper into compliance.</li>
+          <li><span class="influences__name">A16Z&rsquo;s content strategy</span>&nbsp;&mdash; Establishing authority by teaching, not selling. The best marketing is being genuinely useful.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
+    <footer class="brand-footer">
+      <p class="brand-footer__logo">Baseline</p>
+      <p class="brand-footer__note">This document is confidential and intended for internal use only.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
