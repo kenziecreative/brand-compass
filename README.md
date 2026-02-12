@@ -73,6 +73,14 @@ Use any dictation tool you have — [WhisperFlow](https://whisperflow.com), [Sup
 
 Phase commands (`/brand-compass:phase-1-origin` through `/brand-compass:phase-8-toolkit`) are available if you need to jump to a specific phase, but in normal use the system advances automatically.
 
+## Picking Up Where You Left Off
+
+Building a brand takes multiple sessions. The system is designed for that.
+
+Every decision you make, every phase you complete, and every piece of work the system produces is tracked in a project state file. When you come back — whether it's the next day or next week — run `/brand-compass:resume` and the system reads your state, checks for any work that finished while you were away, and picks up exactly where you left off. You don't need to re-explain anything.
+
+If a session runs long enough that the conversation history needs to compress, the system automatically extracts the important context — what you decided, what's in progress, what still needs attention — before that happens. Nothing gets lost.
+
 ## License
 
 Proprietary. Copyright Kenzie Creative.
