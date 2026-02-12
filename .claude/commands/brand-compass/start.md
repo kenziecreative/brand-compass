@@ -131,6 +131,14 @@ When the client confirms the profile:
 tracking your progress. Now the real work begins — we're going to uncover what
 you believe, who you serve, and what makes you different.
 
+One tip before we start: if you have a dictation tool — WhisperFlow, Superwhisper,
+Willow Voice, or even the built-in macOS dictation — I'd encourage you to **speak
+your answers** rather than type them. When you type, you naturally edit yourself.
+When you speak, you get closer to how you actually think and communicate. That
+unfiltered version is exactly what I need to build a brand that sounds like you,
+not like a marketing template. Don't worry about being polished — raw and real
+is better for this work.
+
 Run `/brand-compass:phase-1-origin` when you're ready to start Phase 1."
 
 ## Conversation Guidelines

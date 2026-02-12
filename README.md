@@ -21,6 +21,19 @@ npm run dev
 
 The dashboard runs at `http://localhost:3001`. Open Claude Code in the project directory to start the brand process.
 
+### Recommended: Use a Dictation Tool
+
+Brand discovery works best when you speak your answers rather than type them. When you type, you naturally edit yourself — filtering, polishing, second-guessing. When you speak, you get closer to how you actually think and communicate. That unfiltered voice is exactly what the brand system needs to capture.
+
+We recommend using a speech-to-text tool for your responses during discovery:
+
+- [WhisperFlow](https://whisperflow.com)
+- [Superwhisper](https://superwhisper.com)
+- [Willow Voice](https://www.willowvoice.app)
+- macOS built-in dictation (Fn Fn or Globe key)
+
+Just talk through your answers naturally. The system will pick up on your real voice — your phrasing, rhythm, and vocabulary — which directly improves the quality of messaging, bios, and voice analysis later in the process.
+
 ## Usage
 
 ### Starting a Brand Project
