@@ -179,6 +179,7 @@ These are common patterns in AI-generated copy that make it feel robotic or gene
 - **The safety sandwich:** Don't open and close with safe, generic statements while burying the interesting material in the middle. Lead with the most compelling detail.
 - **Symmetrical structure:** Don't make every narrative follow the same shape (short setup → medium development → tidy conclusion). Some options should open with a provocative statement. Others might build slowly. Vary the architecture across options.
 - **"In today's [X]..." or "In a world where..."** Never open with these. They are the hallmark of generic AI copy.
+- **Em dash overuse:** Em dashes are a legitimate writing device — but AI uses them at 3-5x the rate of most human writers. When every other sentence has a parenthetical set off by em dashes, it becomes a tic, not a technique. Use them sparingly. Often a comma, a period, or a colon does the same job without the stylistic weight. If a draft has more than two em dashes per paragraph, rewrite most of them out.
 
 ## Quality Bar
 - Range of options, not variations of the same idea
