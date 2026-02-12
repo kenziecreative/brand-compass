@@ -28,6 +28,7 @@ const outputHtmlFiles = import.meta.glob('/workspace/output/*.html', {
   eager: true,
 }) as Record<string, string>
 
+
 export interface ContentFile {
   path: string
   filename: string
