@@ -9,7 +9,7 @@ description: >
   - Phase 5 discovery is complete
   - Lead strategist has core belief, audience, positioning, and personality documented
 
-model: sonnet
+model: opus
 tools: Read, Write
 ---
 
