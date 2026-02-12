@@ -139,6 +139,54 @@ If STATE.md lists asset packs:
 - For each selected pack, check that `practical-toolkit.md` contains a `## Asset Pack: [Pack Name]` section
 - Verify each pack section has substantive content (not just a header)
 
+### Level 5: Personality Alignment
+
+Verify that HTML output structural design decisions align with the brand's personality traits and visual direction. This is a coherence check, not pixel-perfect auditing.
+
+**Required inputs:**
+- `workspace/drafts/visual-direction.md` — the Design System Parameters section
+- `workspace/research/archetype-assessment.md` — personality traits and archetypes
+- All HTML files in `workspace/output/`
+
+If `visual-direction.md` does not contain a "Design System Parameters" section, skip Level 5 and note "Personality check skipped — no design system parameters in visual direction" as Info.
+
+**Check 5A: Parameter Application**
+
+Extract the CSS Custom Properties Block from visual-direction.md. For each HTML output file, verify:
+- `--radius-*` values in the HTML match the visual direction values (within 2px tolerance)
+- `--shadow-*` values in the HTML match (allow minor rgba opacity differences)
+- `--space-*` values match (within 0.1rem tolerance)
+- `--font-weight-*` values match exactly
+- `--letter-spacing-*` values match (within 0.01em tolerance)
+- `--line-height-*` values match (within 0.1 tolerance)
+
+Score: count matching vs. mismatched properties. Report any mismatches with the expected value (from visual direction) and the actual value (from HTML).
+
+**Check 5B: Personality Coherence**
+
+Read personality traits from archetype-assessment.md and visual tension from visual-direction.md. Scan the HTML files for structural indicators that contradict the stated personality:
+
+| If Personality Says... | Flag If HTML Has... |
+|------------------------|---------------------|
+| Bold, strong, authoritative | Border radius > 16px (too soft), shadows with high blur (too diffuse), line-height > 1.8 (too airy) |
+| Warm, organic, nurturing | Border radius < 4px (too sharp), no shadows (too flat), letter-spacing on headings > 0.05em (too rigid) |
+| Precise, structured, systematic | Border radius > 12px (too casual), irregular spacing patterns, missing grid structure |
+| Playful, energetic, disruptive | All radii identical (too uniform), low-contrast typography weights, no visual surprise elements |
+| Calm, minimal, refined | Shadow-lg with opacity > 0.15 (too heavy), font-weight-heading > 700 (too bold), tight spacing |
+| Sophisticated, elegant, premium | Space density too tight, body line-height < 1.5, no letter-spacing on labels |
+
+This is a soft check — flag for human review, not a hard fail. Brand personality expression has legitimate range. The check catches obvious mismatches (e.g., a "bold, disruptive" brand with 16px pill-shaped corners and diffuse, soft shadows).
+
+**Check 5C: Cross-File Consistency**
+
+Verify that all five HTML files use the same personality tokens:
+- Extract `--radius-md` from each file — all should match
+- Extract `--shadow-md` from each file — all should match
+- Extract `--space-lg` from each file — all should match
+- Extract `--font-weight-heading` from each file — all should match
+
+Report any file that deviates from the majority value.
+
 ## Output Format
 
 Return a structured report:
@@ -158,6 +206,7 @@ Return a structured report:
 | Substance | N issues | [placeholder count] |
 | Consistency | N issues | [mismatches found] |
 | Coverage | N/M outputs | [gaps if any] |
+| Personality | N/M tokens | [mismatches found] |
 
 ## Overall Status: PASS | ISSUES FOUND | INCOMPLETE
 
@@ -165,9 +214,12 @@ Return a structured report:
 
 ### Critical (blocks delivery)
 - [issue with file path and line reference]
+- Design system parameters from visual-direction.md not applied to HTML files (Level 5A)
 
 ### Warning (should review)
 - [issue with file path and suggestion]
+- Personality coherence flag — structural CSS contradicts stated personality (Level 5B)
+- Inconsistent personality tokens across HTML files (Level 5C)
 
 ### Info (minor)
 - [observation]

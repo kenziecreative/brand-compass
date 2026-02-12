@@ -26,7 +26,7 @@ Every recommendation you make should feel like it could only belong to THIS bran
 - Any visual preferences client has mentioned
 
 ## Before Starting Work
-Read `.claude/skills/visual-translation/SKILL.md` for personality-to-visual mappings and archetype visual expressions. Reference `.claude/skills/brand-example/SKILL.md` for quality bar.
+Read `.claude/skills/visual-translation/SKILL.md` for personality-to-visual mappings and archetype visual expressions — use these mappings to drive both your creative recommendations and the Design System Parameters section. Reference `.claude/skills/brand-example/SKILL.md` for quality bar. Read the reference example at `workspace/reference/example-brand/drafts/visual-direction.md` to see the expected format including the Design System Parameters section.
 
 ## Creative Thinking
 
@@ -74,6 +74,7 @@ These are the visual equivalents of "passionate leader" in copy. They're safe, c
 4. Define imagery/illustration style
 5. Describe the visual brand world
 6. Note what to avoid visually
+7. Generate design system parameters that translate your aesthetic decisions into concrete CSS values for HTML deliverables
 
 ## Output Format
 Write to `workspace/drafts/visual-direction.md`:
@@ -184,6 +185,88 @@ Avoid: [specific elements, styles, or qualities to exclude]
 
 ---
 
+## Design System Parameters
+
+These translate the visual direction above into concrete CSS values for all HTML deliverables. The Document Assembler copies these values directly — they control not just color and font, but how shapes, space, and weight express the brand's personality.
+
+Accessibility floor: all spacing must maintain comfortable reading at 16px body size. Body line-height must not go below 1.4.
+
+### Shape & Edge
+- **Border radius:** [Xpx] — [rationale tied to personality: e.g., "Sharp 2px corners reinforce the geometric rigor of the brand's analytical personality"]
+- **Border radius (large surfaces — cards, panels):** [Xpx] — [rationale]
+- **Border radius (small elements — badges, buttons):** [Xpx] — [rationale]
+- **Border style:** [e.g., "Crisp 1px solid borders" or "No visible borders — shadow and background contrast only" or "2px borders for weight and definition"]
+
+### Shadow & Depth
+- **Shadow style:** [keyword: crisp / soft / diffuse / none] — [rationale]
+- **Shadow (small):** [CSS value, e.g., "0 1px 3px rgba(X,X,X, 0.08)"]
+- **Shadow (medium):** [CSS value]
+- **Shadow (large):** [CSS value]
+- **Shadow color base:** [hex of the shadow tint, typically derived from the primary dark color]
+
+### Spacing & Density
+- **Spacing philosophy:** [keyword: compact / balanced / generous / spacious] — [rationale]
+- **Base spacing unit:** [rem value, e.g., "1rem" or "1.25rem"]
+- **Section gap:** [rem value for spacing between major document sections]
+- **Line height (body):** [number, e.g., 1.5, 1.6, 1.7, 1.8]
+
+### Weight & Contrast
+- **Heading weight:** [number, e.g., 700, 800, 900 for bold brands; 400, 500 for light/airy brands]
+- **Body weight:** [number, e.g., 400 standard, 300 for light/airy]
+- **Heading-to-body contrast:** [keyword: dramatic / moderate / subtle] — [rationale]
+- **Letter-spacing (headings):** [em value, e.g., "-0.02em" for tight/bold, "0.05em" for open/airy]
+- **Letter-spacing (labels/uppercase):** [em value]
+- **Text transform (labels):** [uppercase / normal / small-caps]
+
+### Layout & Structure
+- **Max content width:** [px, e.g., 800px for intimate/focused, 1000px for expansive]
+- **Card style:** [description, e.g., "Elevated with shadow, no border" or "Flat with 1px border" or "Inset with colored left edge"]
+- **Divider style:** [description, e.g., "Thin 1px light gray" or "Bold 2px primary" or "No dividers — spacing only"]
+- **Section header style:** [description, e.g., "Numbered with divider line" or "Large weight contrast only" or "Accent-colored underline"]
+
+### Component Personality
+- **Button style:** [description, e.g., "Square, full-weight, solid fill" or "Rounded pill, lighter weight" or "Ghost/outline default, solid for primary"]
+- **Badge shape:** [description, e.g., "Square/rectangular" or "Pill/rounded" or "Tag with notch"]
+- **Accent treatment:** [description, e.g., "Left border accent on cards" or "Top border" or "Background tint" or "Underline"]
+- **Hover behavior:** [description, e.g., "Lift + shadow increase" or "Background tint change" or "Underline reveal" or "Subtle scale"]
+
+### CSS Custom Properties Block
+
+```css
+/* Personality Tokens — generated from visual direction */
+--radius-sm: Xpx;
+--radius-md: Xpx;
+--radius-lg: Xpx;
+--radius-xl: Xpx;
+
+--shadow-sm: [value];
+--shadow-md: [value];
+--shadow-lg: [value];
+
+--space-xs: Xrem;
+--space-sm: Xrem;
+--space-md: Xrem;
+--space-lg: Xrem;
+--space-xl: Xrem;
+--space-2xl: Xrem;
+
+--font-weight-heading: X;
+--font-weight-body: X;
+--font-weight-bold: X;
+
+--letter-spacing-heading: Xem;
+--letter-spacing-label: Xem;
+
+--line-height-body: X;
+--line-height-heading: X;
+
+--content-max-width: Xpx;
+
+--transition-speed: Xs;
+```
+
+---
+
 ## Mark/Logo Direction
 
 ### Recommended Approach
@@ -230,5 +313,7 @@ Avoid: [specific elements, styles, or qualities to exclude]
 - **Includes what to avoid:** Constraints clarify. Every section should have a "not this" that prevents drift.
 - **AI generation prompt that actually works:** Test it mentally. Would appending this prompt to "a person working at a desk" produce an image that looks like it belongs to this brand?
 - **Tension in the system:** The best visual identities contain at least one unexpected pairing — a warm palette with a geometric font, an organic illustration style with a precise grid, a playful color accent in an otherwise authoritative system. If every element says the same thing at the same volume, the identity is safe but forgettable. Find the productive tension.
+- **Design system parameters are precise and parseable:** The CSS Custom Properties Block must contain exact values — no placeholders, no ranges, no "approximately." A Sonnet-level agent will copy these values directly into HTML files. If a value says `--radius-md: 8px`, that's what appears in the CSS.
+- **Parameters reflect personality, not defaults:** If the brand is "bold and angular," radii should be small (0-4px). If the brand is "warm and organic," radii should be larger (12-20px). If the parameters could apply to any brand, they're defaults, not decisions.
 
 Remember: visual direction shapes first impressions, and first impressions shape everything that follows. Don't default to safe palettes and familiar pairings. Find the combination that could only belong to this brand, explain why it's right, and trust the client to see it.

@@ -127,4 +127,84 @@ This is the world Baseline inhabits and the world Baseline helps its clients bui
 
 ---
 
+## 8. Design System Parameters
+
+These translate the visual direction above into concrete CSS values for all HTML deliverables. Every value is a design decision rooted in Baseline's personality: precise, modern, authoritative but approachable.
+
+### Shape & Edge
+- **Border radius:** 8px — Moderate radius balances professional precision with enough softness to avoid feeling institutional. Geometric without being severe.
+- **Border radius (large surfaces — cards, panels):** 12px — Cards and panels get slightly more curve to feel approachable at the scale of a content container.
+- **Border radius (small elements — badges, buttons):** 4px — Buttons, badges, and inputs stay tighter to maintain the crisp, structured feel of a compliance interface.
+- **Border style:** Crisp 1px solid borders using light-gray — visible structure without heaviness. Borders define zones; they don't decorate.
+
+### Shadow & Depth
+- **Shadow style:** crisp — Low-spread, low-blur shadows that create subtle depth without softness. The shadow should feel like a precise elevation, not a glow.
+- **Shadow (small):** 0 1px 2px rgba(27, 43, 75, 0.06)
+- **Shadow (medium):** 0 4px 12px rgba(27, 43, 75, 0.08)
+- **Shadow (large):** 0 8px 24px rgba(27, 43, 75, 0.12)
+- **Shadow color base:** #1B2B4B (navy)
+
+### Spacing & Density
+- **Spacing philosophy:** balanced — Professional density that respects the reader's time without feeling cramped. Financial data needs room, but this isn't a lifestyle brand that can waste space.
+- **Base spacing unit:** 1rem
+- **Section gap:** 3rem
+- **Line height (body):** 1.7
+
+### Weight & Contrast
+- **Heading weight:** 700 — Bold headings create clear hierarchy for scanning dense compliance and strategy documents.
+- **Body weight:** 400 — Standard weight for sustained reading.
+- **Heading-to-body contrast:** moderate — Clear hierarchy without dramatic weight swings.
+- **Letter-spacing (headings):** -0.01em — Slight tightening for clean headline presentation.
+- **Letter-spacing (labels/uppercase):** 0.1em — Open tracking for uppercase labels follows typographic convention and aids readability.
+- **Text transform (labels):** uppercase
+
+### Layout & Structure
+- **Max content width:** 900px — Wide enough for data tables and comparison layouts, narrow enough for comfortable reading.
+- **Card style:** Flat with 1px light-gray border and subtle shadow. Clean, structured containers that organize without competing for attention.
+- **Divider style:** Thin 1px light-gray between major sections. Heavier treatment reserved for document header/footer only.
+- **Section header style:** Numbered with teal section number, heading text, and extending divider line.
+
+### Component Personality
+- **Button style:** Solid fill with moderate radius, professional and clickable without playfulness. Primary in teal, secondary with border only.
+- **Badge shape:** Slightly rounded rectangle (4px radius). Structured, not casual.
+- **Accent treatment:** Left border accent on feature cards. Teal colored accent line.
+- **Hover behavior:** Subtle color shift on buttons. Cards lift with shadow increase on interactive variants.
+
+### CSS Custom Properties Block
+
+```css
+/* Personality Tokens — Baseline */
+--radius-sm: 4px;
+--radius-md: 8px;
+--radius-lg: 12px;
+--radius-xl: 16px;
+
+--shadow-sm: 0 1px 2px rgba(27, 43, 75, 0.06);
+--shadow-md: 0 4px 12px rgba(27, 43, 75, 0.08);
+--shadow-lg: 0 8px 24px rgba(27, 43, 75, 0.12);
+
+--space-xs: 0.25rem;
+--space-sm: 0.5rem;
+--space-md: 1rem;
+--space-lg: 1.5rem;
+--space-xl: 2rem;
+--space-2xl: 3rem;
+
+--font-weight-heading: 700;
+--font-weight-body: 400;
+--font-weight-bold: 600;
+
+--letter-spacing-heading: -0.01em;
+--letter-spacing-label: 0.1em;
+
+--line-height-body: 1.7;
+--line-height-heading: 1.2;
+
+--content-max-width: 900px;
+
+--transition-speed: 0.2s;
+```
+
+---
+
 *End of visual direction draft. Recommended next step: internal review of color palette and mark direction before proceeding to design exploration and asset production.*
