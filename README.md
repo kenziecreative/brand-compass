@@ -37,6 +37,12 @@ The process has eight phases:
 
 Each phase builds on the last. You can stop and resume between sessions — the system picks up exactly where you left off.
 
+## This Is Not a Logo Generator
+
+Brand Compass is a full brand development process, not a quick-fix tool. It doesn't hand you a logo and call it done. It builds the strategic foundation first — what you believe, who you serve, how you're different, how you speak — and then derives the visuals from that foundation. The colors, typography, and mark direction exist because they mean something, not because they looked good in a template.
+
+If you just need a logo, this isn't the right tool. If you want a brand system where the visuals and the messaging actually support each other — where every piece traces back to a real strategic decision — that's what this builds.
+
 ## Getting Started
 
 You'll need [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed.
