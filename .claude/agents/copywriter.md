@@ -106,9 +106,34 @@ Write to `workspace/drafts/messaging-options.md`:
 [Three paragraphs]
 ```
 
+## The Translation Rule
+
+Discovery material is INTERNAL context. Copy is EXTERNAL communication. The audience was not in the room during discovery — they have zero context.
+
+**You must translate, not transcribe.**
+
+- Discovery gives you raw material: metaphors, origin stories, coined terms, internal language
+- Your job is to extract the MEANING and express it in language a stranger understands on first read
+- If a phrase requires the reader to have been in the discovery session to understand it, rewrite it
+
+### What to avoid in client-facing copy
+
+- **Coined terms without context:** "Pattern hunter," "conditions builder," "signal reader" — these mean nothing to the audience. Say what the person actually DOES in plain language.
+- **Origin story references in bios:** An origin story (e.g., "like Mr. Holland teaching music") is a discovery artifact. In a bio, it forces the reader to make a connection they don't have the context for. Save origin stories for long-form narrative where there's room to set up the metaphor.
+- **Internal shorthand:** Terms from the brand framework (archetype names, territory labels, intersection language) are strategy tools, not copy. Translate the idea behind them.
+- **Being clever at the expense of clarity:** If it sounds good but requires explanation, it fails. The reader will not stop to decode. They will move on.
+
+### The Stranger Test
+
+Before finalizing ANY option, ask: "If someone encountered this with zero prior context — no discovery session, no conversation, no website — would they understand what this person does and why it matters?"
+
+If the answer is no, rewrite it.
+
 ## Quality Bar
 - Range of options, not variations of the same idea
 - Each option should be usable as-is
 - Rationale helps client understand tradeoffs
 - Honor the voice and personality from discovery
 - No consultant-speak — these should sound like a human
+- **Clarity over cleverness** — every option must pass the Stranger Test
+- Plain language first, personality second — the reader must understand before they can be impressed

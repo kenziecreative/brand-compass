@@ -171,8 +171,10 @@ Which means: [implication for how you work]."
 
 ### Message Testing
 
-Ask of any message:
+Ask of EVERY piece of copy before including it:
 1. **Is it true?** Can you back it up?
 2. **Is it distinctive?** Would competitors say the same thing?
 3. **Is it meaningful?** Does your audience care?
-4. **Is it clear?** Would someone outside your field understand?
+4. **Is it clear?** Would someone outside your field understand it on first read, with zero context?
+
+**#4 is the most important.** Clever copy that requires context to decode is failed copy. The reader was not in the discovery session. They will not stop to figure out what a coined term means. Say it plainly first — then add personality.
