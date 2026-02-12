@@ -1,9 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { getPhase } from '@/lib/phase-utils'
 import { loadState } from '@/lib/state-loader'
+import { getPhaseContent } from '@/lib/content-parser'
 import { EmptyState } from '@/components/EmptyState'
 import { ClientProfileCard } from '@/components/ClientProfileCard'
 import { NextPhaseButton } from '@/components/NextPhaseButton'
+import { PhaseContent, AgentOutputSection } from '@/components/PhaseContent'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { DiscoveryChecklist } from '@/components/DiscoveryChecklist'
@@ -56,6 +58,7 @@ export function PhasePage() {
 
   const phaseDiscovery = state?.discoveryOutputs.filter(d => d.phase === phaseNumber) ?? []
   const phaseDecisions = state?.decisions.filter(d => d.phase === phaseNumber) ?? []
+  const content = getPhaseContent(phaseNumber)
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
@@ -78,6 +81,14 @@ export function PhasePage() {
       <div className="space-y-6">
         {/* Discovery outputs checklist */}
         {phaseDiscovery.length > 0 && <DiscoveryChecklist items={phaseDiscovery} />}
+
+        {/* Phase content from workspace files */}
+        {content.primary && <PhaseContent markdown={content.primary} title={config.name} />}
+
+        {/* Agent research/draft output (collapsible) */}
+        {content.agentOutput && content.agentOutputLabel && (
+          <AgentOutputSection markdown={content.agentOutput} label={content.agentOutputLabel} />
+        )}
 
         {/* Key decisions for this phase */}
         {phaseDecisions.length > 0 && (

@@ -263,9 +263,13 @@ function parseKeyDecisions(md: string): KeyDecision[] {
   const lines = section.split('\n').filter(l => l.trim().length > 0 && !l.startsWith('['))
   for (const line of lines) {
     const phaseMatch = line.match(/Phase (\d+)/i)
+    // Strip leading bullet, date prefix, and "Phase N —" prefix for cleaner display
+    let text = line.replace(/^[-*]\s*/, '').trim()
+    text = text.replace(/^\d{4}-\d{2}-\d{2}:\s*/, '')
+    text = text.replace(/^Phase \d+\s*[—–-]\s*/i, '')
     decisions.push({
       phase: phaseMatch ? parseInt(phaseMatch[1], 10) : 0,
-      decision: line.replace(/^[-*]\s*/, '').trim(),
+      decision: text,
     })
   }
   return decisions

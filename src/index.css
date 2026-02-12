@@ -179,6 +179,92 @@
   }
 }
 
+/* Prose — styles for rendered markdown content */
+.prose {
+  @apply text-sm text-foreground leading-relaxed;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground mt-5 mb-2;
+  }
+  h1 {
+    @apply text-xl;
+  }
+  h2 {
+    @apply text-lg;
+  }
+  h3 {
+    @apply text-base font-semibold;
+  }
+  h4 {
+    @apply text-sm font-semibold;
+  }
+
+  p {
+    @apply mb-3;
+  }
+
+  ul,
+  ol {
+    @apply mb-3 pl-5;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  li {
+    @apply mb-1;
+  }
+  li > ul,
+  li > ol {
+    @apply mt-1 mb-0;
+  }
+
+  strong {
+    @apply font-semibold text-foreground;
+  }
+  em {
+    @apply italic;
+  }
+
+  blockquote {
+    @apply border-l-2 border-walnut/30 pl-4 my-3 text-muted-foreground italic;
+  }
+
+  code {
+    @apply px-1 py-0.5 bg-muted rounded text-xs font-mono;
+  }
+
+  hr {
+    @apply my-6 border-border;
+  }
+
+  table {
+    @apply w-full my-3 text-xs;
+  }
+  th {
+    @apply text-left font-semibold pb-2 border-b border-border pr-3;
+  }
+  td {
+    @apply py-1.5 border-b border-border/50 pr-3;
+  }
+
+  a {
+    @apply text-accent underline underline-offset-2;
+  }
+
+  > :first-child {
+    @apply mt-0;
+  }
+  > :last-child {
+    @apply mb-0;
+  }
+}
+
 /* Animations */
 @layer utilities {
   .animate-fade-in {

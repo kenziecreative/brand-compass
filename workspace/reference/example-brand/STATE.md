@@ -1,4 +1,4 @@
-# Brand Development State
+# Brand Project State
 
 ## Client
 - **Name:** Baseline
@@ -6,96 +6,86 @@
 - **Description:** Accounting firm specializing in helping SaaS and technology startups access enterprise-grade compliance services — SOC 2 audits, PCI compliance, privacy policy reviews, payment integration consulting, and bookkeeping boot camps.
 - **Platforms:** Website, LinkedIn, conferences, partner referrals, webinars
 - **Existing Assets:** Basic logo, inconsistent color usage, no formal brand guidelines
-- **Asset Packs:** Pitch Deck, Print Collateral
+- **Asset Packs:** pitch-deck, print-collateral
 
 ## Current Position
-- **Phase:** Complete
-- **Step:** All phases finished
-- **Blocking on:** Nothing
-- **Next Action:** Brand development complete. All deliverables exported.
+- Phase: 8 (Toolkit Assembly)
+- Step: Complete
+- Blocking on: Nothing
 
-## Phase Completion
+## Completed Phases
+- [x] Phase 0: Onboarding
 - [x] Phase 1: Origin & Belief
-- [x] Phase 2: Audience Definition
+- [x] Phase 2: Audience
 - [x] Phase 3: Positioning & Differentiation
-- [x] Checkpoint A: Strategic Foundation ✓
 - [x] Phase 4: Personality & Archetypes
 - [x] Phase 5: Messaging Architecture
 - [x] Phase 6: Voice & Expression
-- [x] Checkpoint B: Verbal Brand ✓
 - [x] Phase 7: Visual Identity
 - [x] Phase 8: Toolkit Assembly
 
+## Checkpoints
+- [x] Checkpoint A: Phases 1-3 solid (required before Phase 4)
+- [x] Checkpoint B: Phases 1-6 complete (required before Phase 7)
+
+## Running Agents
+| Agent | Task | Launched | Expected | Output Location |
+|-------|------|----------|----------|-----------------|
+| — | — | — | — | — |
+
+## Completed Agent Outputs
+| Agent | Output Location | Incorporated? |
+|-------|-----------------|---------------|
+| Content Auditor | workspace/research/content-audit.md | Yes |
+| Research Analyst | workspace/research/competitive-brief.md | Yes |
+| Archetype Analyst | workspace/research/archetype-assessment.md | Yes |
+| Copywriter | workspace/drafts/messaging-options.md | Yes |
+| Voice Analyzer | workspace/research/voice-fingerprint.md | Yes |
+| Visual Director | workspace/drafts/visual-direction.md | Yes |
+| Document Assembler | workspace/output/ | Yes |
+
+## Key Decisions
+- 2025-01-17: Phase 5 — Tagline: "Compliance that scales with you." selected over "Your audit team, without the overhead." and "Enterprise-ready. Startup-friendly."
+- 2025-01-16: Phase 4 — Primary archetype: The Navigator (adapted from Sage) — guides companies through unfamiliar compliance territory
+- 2025-01-16: Phase 4 — Supporting archetype: The Builder (adapted from Creator) — constructs durable infrastructure
+- 2025-01-17: Phase 7 — Color palette: Navy/Teal/Slate — trust + growth, deliberately avoiding Big Four navy-and-gold stuffiness
+- 2025-01-17: Phase 7 — Typography: Plus Jakarta Sans headlines + Inter body
+- 2025-01-18: Phase 7 — Mark: Geometric "B" with upward-trending baseline integrated
+- 2025-01-15: Phase 0 — Asset packs selected: Pitch Deck, Print Collateral
+
 ## Discovery Outputs
-
-### Phase 1
-- [x] Core belief articulated
-- [x] Origin story captured
-- [x] Problem addressed defined
-
-### Phase 2
-- [x] Audience segments defined (3)
-- [x] Unified audience profile written
-- [x] Market of One described
-- [x] Anti-audience identified
-
-### Phase 3
-- [x] Positioning statement written
-- [x] Value proposition defined
+[Track which discovery sections have been completed]
+- [x] Client profile captured
+- [x] Asset packs selected
+- [x] Core Belief documented
+- [x] Audience segments defined
+- [x] Market of One created
+- [x] Anti-audience defined
+- [x] Positioning statement drafted
 - [x] Intersection identified
-- [x] Territory to own claimed
-- [x] Contrarian POV stated
-
-### Phase 4
-- [x] Personality traits defined (4)
-- [x] Archetypes mapped (primary + supporting)
+- [x] Territory claimed
+- [x] Contrarian POV articulated
+- [x] Personality traits defined
+- [x] Archetypes mapped
 - [x] Brand world described
-- [x] Brand character created
-
-### Phase 5
 - [x] Tagline options generated
 - [x] Core narrative drafted
-- [x] Boilerplates written (3 lengths)
+- [x] Boilerplates written
 - [x] Proof points listed
-
-### Phase 6
-- [x] Voice summary written
-- [x] Signature moves identified
-- [x] Guardrails established
-- [x] Scaling by context defined
-
-### Phase 7
+- [x] Voice analyzed
+- [x] Writing style codified
+- [x] Guardrails set
 - [x] Visual direction approved
 - [x] Color palette finalized
 - [x] Typography selected
 - [x] Mark/logo created
-
-### Phase 8
 - [x] Toolkit compiled
 
-## Running Agents
-
-| Agent | Status | Started | Output |
-|-------|--------|---------|--------|
-| Content Auditor | Complete | Session 1 | research/content-audit.md |
-| Research Analyst | Complete | Session 1 | research/competitive-brief.md |
-| Archetype Analyst | Complete | Session 2 | research/archetype-assessment.md |
-| Copywriter | Complete | Session 2 | drafts/messaging-options.md |
-| Voice Analyzer | Complete | Session 3 | research/voice-fingerprint.md |
-| Visual Director | Complete | Session 3 | drafts/visual-direction.md |
-| Document Assembler | Complete | Session 4 | output/*.md, output/*.html |
-
-## Key Decisions
-- Tagline: "Compliance that scales with you." selected over "Your audit team, without the overhead." and "Enterprise-ready. Startup-friendly."
-- Primary archetype: The Navigator (adapted from Sage) — guides companies through unfamiliar compliance territory
-- Color palette: Navy/Teal/Slate — trust + growth, deliberately avoiding Big Four navy-and-gold stuffiness by pairing with modern teal
-- Typography: Plus Jakarta Sans headlines + Inter body — modern geometric feel, tech-friendly without being cold
-- Visual direction: Clean, structured, minimal — glass-and-light-wood aesthetic, dashboards and data visualization as imagery
-- Mark: Geometric "B" with upward-trending baseline integrated — wordmark-first approach
-- Asset packs selected: Pitch Deck, Print Collateral
+## Next Action
+Brand system complete. Run /brand-compass:export to package deliverables.
 
 ## Session Log
-- **Session 1:** Completed Phases 1-3, Checkpoint A passed. Core belief, audience, and positioning established. Content Auditor analyzed existing website copy. Research Analyst mapped competitive landscape.
-- **Session 2:** Completed Phases 4-5. Personality and archetypes defined (Navigator + Builder). Copywriter generated messaging options — tagline and narrative selected.
-- **Session 3:** Completed Phase 6, Checkpoint B passed, Phase 7. Voice guide finalized. Visual Director produced direction — navy/teal palette approved. Mark explorations generated.
-- **Session 4:** Phase 8 complete. Document Assembler produced all 7 deliverables. Export complete.
+- 2025-01-15: Completed onboarding, Phase 1 (Origin & Belief), Phase 2 (Audience), Phase 3 (Positioning). Checkpoint A passed.
+- 2025-01-16: Phase 4 (Personality & Archetypes), Phase 5 (Messaging Architecture). Navigator + Builder archetypes. Tagline selected.
+- 2025-01-17: Phase 6 (Voice & Expression), Checkpoint B passed, Phase 7 (Visual Identity). Navy/teal palette approved.
+- 2025-01-18: Phase 8 (Toolkit Assembly). All 7 deliverables generated. Export complete.
