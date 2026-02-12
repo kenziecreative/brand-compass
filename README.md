@@ -60,7 +60,7 @@ That begins onboarding. From there, the system guides you through each phase. A 
 
 Brand discovery works best when you talk rather than type. When you type, you edit yourself — filtering, polishing, second-guessing. When you speak, you get closer to how you actually think and communicate. That unfiltered voice is exactly what the system needs.
 
-Use any dictation tool you have — [WhisperFlow](https://whisperflow.com), [Superwhisper](https://superwhisper.com), [Willow Voice](https://www.willowvoice.app), or the built-in macOS dictation (Fn key twice). Just talk through your answers. The system picks up on your real phrasing, rhythm, and vocabulary, which directly improves the quality of your messaging, bios, and voice guide.
+Use any dictation tool you have — [Wispr Flow](https://wisprflow.com), [Superwhisper](https://superwhisper.com), [Monologue](https://monologue.app), [Willow Voice](https://www.willowvoice.app), or the built-in macOS dictation (Fn key twice). Just talk through your answers. The system picks up on your real phrasing, rhythm, and vocabulary, which directly improves the quality of your messaging, bios, and voice guide.
 
 ## Commands
 

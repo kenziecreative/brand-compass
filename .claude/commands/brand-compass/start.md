@@ -131,7 +131,7 @@ When the client confirms the profile:
 tracking your progress. Now the real work begins — we're going to uncover what
 you believe, who you serve, and what makes you different.
 
-One tip before we start: if you have a dictation tool — WhisperFlow, Superwhisper,
+One tip before we start: if you have a dictation tool — Wispr Flow, Superwhisper, Monologue,
 Willow Voice, or even the built-in macOS dictation — I'd encourage you to **speak
 your answers** rather than type them. When you type, you naturally edit yourself.
 When you speak, you get closer to how you actually think and communicate. That
