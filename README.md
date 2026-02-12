@@ -4,6 +4,8 @@
 
 Brand Compass walks you through the same strategic process that professional brand strategists use with their clients — from uncovering your core belief to delivering a complete visual identity system. The difference is that you're having a conversation, not filling out a questionnaire. You talk through your story, your audience, your point of view, and the system listens, challenges, reflects back, and builds your brand from what's real about you.
 
+The system adapts to who you are. A musician, a startup founder, a consultant, and a nonprofit leader all go through the same strategic process — but the questions sharpen around your context, the archetypes map to your energy, the visual identity derives from your personality, and the voice guide captures how *you* actually communicate. No two brand systems come out the same because no two people put the same thing in.
+
 At the end, you have a complete brand system: foundation documents, voice guide, color palette, visual identity, UI components, and a practical toolkit with bios, pitches, and decision filters — all rendered in your brand's own visual language.
 
 ## What You Get
