@@ -48,7 +48,7 @@ If you just need a logo, this isn't the right tool. If you want a brand system w
 You'll need [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed.
 
 ```bash
-git clone https://github.com/kenziecreative/knz-brand-guidance my-brand-project
+git clone https://github.com/kenziecreative/brand-compass my-brand-project
 cd my-brand-project
 npm install
 npm run dev

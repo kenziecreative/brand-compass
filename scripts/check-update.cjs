@@ -32,7 +32,7 @@ const child = spawn(process.execPath, ['-e', `
   try {
     // Verify this is the brand-compass repo
     const remote = run('git remote get-url origin');
-    if (!remote.includes('knz-brand-guidance')) process.exit(0);
+    if (!remote.includes('brand-compass')) process.exit(0);
 
     // Fetch latest from remote (quiet, no merge, include tags for version detection)
     run('git fetch origin main --quiet --tags');
