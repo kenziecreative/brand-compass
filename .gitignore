@@ -30,9 +30,12 @@ workspace/assets/*
 !workspace/output/.gitkeep
 !workspace/assets/.gitkeep
 
-# Keep reference files and STATE.md template
+# Keep reference files and STATE template
 !workspace/reference/
-!workspace/STATE.md
+!workspace/STATE-template.md
+
+# STATE.md is user engagement data — never overwrite via git
+workspace/STATE.md
 
 # Claude auto-memory (per-machine)
 .claude/plans/

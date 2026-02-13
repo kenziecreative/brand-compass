@@ -27,12 +27,12 @@ npm run workspace:clean
 ### What Ships vs. What Doesn't
 
 **Tracked (ships with the product):**
-- `workspace/STATE.md` — blank template with `[Client Name]` placeholder
-- `workspace/STATE-template.md` — source of truth for the clean state
+- `workspace/STATE-template.md` — blank template, source of truth for new engagements
 - `workspace/reference/` — example brand + archetype guide (used by document assembler)
 - `.gitkeep` files in empty directories
 
-**Gitignored (runtime content):**
+**Gitignored (runtime/engagement data):**
+- `workspace/STATE.md` — live engagement state (created from template by `/brand-compass:start`)
 - `workspace/research/*.md`
 - `workspace/drafts/*.md`
 - `workspace/output/*.md` and `*.html`
@@ -72,8 +72,8 @@ npm run build              # Production build (auto-cleans)
 knz-brand-compass/
   CLAUDE.md                 # Orchestration instructions
   workspace/
-    STATE.md                # Progress tracking (blank template in repo)
-    STATE-template.md       # Source of truth for clean state
+    STATE-template.md       # Blank template (tracked in git)
+    STATE.md                # Live engagement state (gitignored, created from template)
     research/               # Agent research outputs (gitignored)
     drafts/                 # Agent draft outputs (gitignored)
     output/                 # Final deliverables (gitignored)

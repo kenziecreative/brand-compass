@@ -12,9 +12,15 @@ fi
 
 echo "Cleaning workspace to distribution state..."
 
-# Restore blank STATE.md
-echo "  → Restoring STATE.md template"
-cp "$TEMPLATE_FILE" "$WORKSPACE_DIR/STATE.md"
+# Restore blank STATE.md only if it doesn't contain engagement data.
+# During an active engagement, STATE.md is the single source of truth
+# for the web UI and must not be overwritten by build/clean cycles.
+if ! grep -q "\[Client Name\]" "$WORKSPACE_DIR/STATE.md" 2>/dev/null; then
+  echo "  → STATE.md contains engagement data — skipping (use workspace:load to reset)"
+else
+  echo "  → Restoring STATE.md template"
+  cp "$TEMPLATE_FILE" "$WORKSPACE_DIR/STATE.md"
+fi
 
 # Clean research/ (preserve .gitkeep)
 echo "  → Cleaning research/"

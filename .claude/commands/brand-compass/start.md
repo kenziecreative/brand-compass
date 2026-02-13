@@ -6,6 +6,8 @@ follows depends on the information captured here.
 
 ## Step 1: Check Prerequisites
 
+If `workspace/STATE.md` does not exist, copy `workspace/STATE-template.md` to `workspace/STATE.md` first.
+
 Read `workspace/STATE.md`. If a client name is already set (not a placeholder),
 say:
 

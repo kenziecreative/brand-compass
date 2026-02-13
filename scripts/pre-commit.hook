@@ -6,24 +6,31 @@
 REPO_ROOT="$(git rev-parse --show-toplevel)"
 STATE_FILE="$REPO_ROOT/workspace/STATE.md"
 
-# Only validate if STATE.md is staged
+# STATE.md is gitignored (engagement data). If it's being removed from
+# tracking, that's expected. If it's somehow being added back, validate
+# it's the blank template.
 if git diff --cached --name-only | grep -q "^workspace/STATE\.md$"; then
-  # Read staged version, not working copy
-  CLIENT_NAME=$(git show :workspace/STATE.md | grep "Name:" | head -1 | sed 's/.*Name:\*\*[[:space:]]*//')
+  # Check if it's a deletion (expected — removing from tracking)
+  if git diff --cached --diff-filter=D --name-only | grep -q "^workspace/STATE\.md$"; then
+    echo "✓ STATE.md removed from tracking (now gitignored)"
+  else
+    # It's being added/modified — validate it's the blank template
+    CLIENT_NAME=$(git show :workspace/STATE.md | grep "Name:" | head -1 | sed 's/.*Name:\*\*[[:space:]]*//')
 
-  if [ -z "$CLIENT_NAME" ]; then
-    echo "ERROR: Could not parse client name from workspace/STATE.md"
-    exit 1
+    if [ -z "$CLIENT_NAME" ]; then
+      echo "ERROR: Could not parse client name from workspace/STATE.md"
+      exit 1
+    fi
+
+    if [[ ! "$CLIENT_NAME" =~ ^\[ ]]; then
+      echo "ERROR: workspace/STATE.md contains client data (found: '$CLIENT_NAME')"
+      echo ""
+      echo "STATE.md should be gitignored. Run 'npm run workspace:clean' before committing."
+      exit 1
+    fi
+
+    echo "✓ STATE.md is clean template"
   fi
-
-  if [[ ! "$CLIENT_NAME" =~ ^\[ ]]; then
-    echo "ERROR: workspace/STATE.md contains client data (found: '$CLIENT_NAME')"
-    echo ""
-    echo "Run 'npm run workspace:clean' before committing."
-    exit 1
-  fi
-
-  echo "✓ STATE.md is clean template"
 fi
 
 # Double-check no workspace content slipped past .gitignore
