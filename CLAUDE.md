@@ -200,6 +200,29 @@ Do not ask the client to re-explain. State has it. If it doesn't, that's a previ
 
 ---
 
+## UX Rules
+
+Claude Code is a development environment with a conversation layer, not a chat interface. Design for its strongest primitives: AskUserQuestion, TodoWrite, and file generation. The terminal is the baseline — VSCode features (clickable links, file explorer sidebar) are progressive enhancements, never requirements.
+
+### Interaction
+
+- **Use AskUserQuestion for every discrete choice** (2-4 options). Tagline selection, archetype confirmation, checkpoint gates, phase transitions, agent output review — if the user's response would just be a letter or short phrase, use the tool instead of listing options in text. Reserve text-based responses for open-ended discovery questions and nuanced feedback.
+- **End every turn with exactly one question or one AskUserQuestion.** If there are multiple items to confirm, present them sequentially — one per turn. The client can always say "this is all good, keep going" to batch. Avoid open-ended "What do you think?" — ask something specific. Exception: compiled output reviews (Phase 8, checkpoints) can be longer but must still end with a single clear next-step question.
+
+### Progress
+
+- **Maintain a phase-level TodoWrite** showing all 8 phases plus checkpoints. Update it silently at every phase transition. This is the client's persistent progress bar across the entire engagement.
+- **Use separate task-level TodoWrite within complex phases.** Phase 8 assembly has bio bank, elevator pitches, decision filter, etc. — track those as task-level items. Don't mix phase-level and task-level in the same list.
+- **When agents run:** (1) Tell the client what the agent is doing, (2) set a time expectation, (3) continue conversation on a different topic if possible. For agents running longer than 60 seconds, provide at least one progress update. For blocking agents, be explicit that the client is waiting and why. Use TodoWrite to make agent status visible. Never let more than 90 seconds of silence pass while an agent is running.
+
+### Files
+
+- **Always announce generated files explicitly** with: file name, path, one-line description, and line count. Never rely on the file explorer sidebar or clickable links alone. Announce as if the user is in a plain terminal.
+- **For visual artifacts (HTML), offer to open in the browser.** Use `open <path>` on macOS, `xdg-open <path>` on Linux. Detect the platform and use the right command.
+- **When the output is visual, generate an HTML file** rather than describing it in text. The browser is a better rendering surface than the terminal for colors, typography, layouts, and specimens. Mid-process visual artifacts (color previews during Phase 7, bio previews during Phase 5) are just as valuable as final deliverables.
+
+---
+
 ## Phase-Specific Instructions
 
 ### Phase 1: Origin & Belief

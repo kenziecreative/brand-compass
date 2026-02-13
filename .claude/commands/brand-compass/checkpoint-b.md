@@ -51,7 +51,14 @@ Before we move into visual identity, let's see the full brand in one view. This 
 
 **Brand World:** [the physical space/environment description]
 
-When a designer reads this, will they know what to create? Is there anything missing, wrong, or unclear?"
+When a designer reads this, will they know what to create?"
+
+Use AskUserQuestion:
+  question: "Does your complete verbal brand hold together?"
+  options:
+    - "Yes — ready for visual identity" (proceed to consistency check, then Step 6)
+    - "Mostly, but something needs adjusting" (iterate on specific items)
+    - "Something feels disconnected" (redirect to relevant phase)
 
 ## Step 4: Check for Internal Consistency
 

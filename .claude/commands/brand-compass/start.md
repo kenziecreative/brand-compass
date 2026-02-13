@@ -93,9 +93,11 @@ descriptions]
   voice guide
 
 "Pick as many as you want. You can also add or remove packs at any point during
-the process. Which ones fit?"
+the process."
 
-6. Which asset packs would you like?
+Use AskUserQuestion with multiSelect: true to present the asset packs. List the 2-4 recommended packs first (based on their type/platforms), with descriptions. The client clicks to select rather than typing names.
+
+After selection, confirm: "You've selected [packs]. You can add or change these at any time."
 
 ## Step 4: Synthesize & Confirm
 
@@ -110,9 +112,15 @@ After all groups are covered, present the captured profile back to the client:
 **Existing assets:** [What they have]
 **Asset packs:** [Selected packs]
 
-Does this look right? Anything to adjust?"
+Does this look right?"
 
-Iterate until the client confirms.
+Use AskUserQuestion:
+  question: "Does your project profile look right?"
+  options:
+    - "Looks good — let's start" (proceed to Step 5)
+    - "I need to adjust something" (iterate)
+
+When confirmed, proceed.
 
 ## Step 5: Mark Complete
 

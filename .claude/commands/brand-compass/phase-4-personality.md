@@ -66,7 +66,14 @@ Update STATE.md Running Agents table.
 
 When the Archetype Analyst completes, read `workspace/research/archetype-assessment.md` and share:
 
-"The analysis suggests your primary energy is [X] — classically called [Y], but for you it shows up as [behavior]. Supporting energy is [Z]. Does that feel right?"
+"The analysis suggests your primary energy is [X] — classically called [Y], but for you it shows up as [behavior]. Supporting energy is [Z]."
+
+Use AskUserQuestion:
+  question: "Does this archetype mapping feel right?"
+  options:
+    - "Yes, that's me" (proceed to synthesis)
+    - "Close but needs adjustment" (discuss what feels off)
+    - "That doesn't fit" (revisit archetype discussion)
 
 ## Step 5: Synthesize & Confirm
 

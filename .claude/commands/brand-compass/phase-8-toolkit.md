@@ -130,21 +130,31 @@ If clean, proceed to Step 6.
 
 ## Step 6: Review & Confirm
 
-When the Document Assembler completes, read each output file and present a summary:
+When the Document Assembler completes, read each output file and present a summary. Announce files explicitly with name, path, one-line description, and line count:
 
-"Your brand system is assembled:
+"Your brand system is assembled. [N] files written to workspace/output/:
 
-1. **Brand Foundation** (MD + HTML) — [key elements summary]
-2. **Voice & Expression Guide** (MD + HTML) — [key elements summary]
-3. **Color Palette** (HTML) — [number of colors, tint scales, CSS variables]
-4. **Visual System** (HTML) — [typography, imagery, mark direction]
-5. **UI Kit** (HTML) — [component patterns with brand tokens]
-6. **Practical Toolkit** (MD) — bios, pitches, decision filter, language bank
+**Core Deliverables:**
+1. brand-foundation.md — Strategy, positioning, messaging, personality ([X] lines)
+2. brand-foundation.html — Same content with brand visual tokens ([X] lines)
+3. voice-guide.md — Voice system, guardrails, language bank ([X] lines)
+4. voice-guide.html — Same content with brand visual tokens ([X] lines)
+5. color-palette.html — Interactive specimen with tint scales, CSS variables ([X] lines)
+6. visual-system.html — Typography, mark/logo, imagery direction ([X] lines)
+7. ui-kit.html — Component library with brand tokens ([X] lines)
+8. practical-toolkit.md — Bios, pitches, decision filter, language bank ([X] lines)
+
 [If asset packs selected:]
-7. **[Pack Name]** (HTML) — [key elements summary]
-...
+**Asset Packs:**
+9. [pack-id].html — [description] ([X] lines)
+..."
 
-Want to review any section, or should we package it for export?"
+Then use AskUserQuestion:
+  question: "Want to review any section, or package for export?"
+  options:
+    - "Open an HTML file in my browser" (ask which one, then run platform-appropriate open command)
+    - "Review a specific section" (discuss and iterate)
+    - "Package for export" (proceed to Step 7)
 
 Work through any adjustments the client requests.
 

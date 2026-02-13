@@ -57,20 +57,13 @@ After discovery is complete (all four groups addressed), launch the Copywriter:
 
 Update STATE.md Running Agents table.
 
-When the Copywriter completes, read `workspace/drafts/messaging-options.md` and present:
+When the Copywriter completes, read `workspace/drafts/messaging-options.md` and present options using AskUserQuestion for each discrete choice.
 
-"Here are the options:
+**Tagline selection:** Use AskUserQuestion with the top 3-4 tagline options (label = tagline, description = rationale). Present one decision at a time — tagline first, then story angle, then boilerplate preference.
 
-**Taglines (pick 1-2 that resonate):**
-1. [Option]
-2. [Option]
-3. [Option]
+**Story angle selection:** After tagline is chosen, use AskUserQuestion with the 2-3 narrative angles (label = angle name, description = brief summary of the approach).
 
-**Story angles:**
-A. [Angle — brief description]
-B. [Angle — brief description]
-
-What's pulling you?"
+For each selection, present the full text of the chosen option and ask for refinement before moving to the next choice.
 
 ## Step 5: Refine & Confirm
 

@@ -44,7 +44,14 @@ Before we move into personality, messaging, and visual work, let's make sure the
 
 **Contrarian POV:** [bold take]
 
-Does this hold together? When you read it as a whole, does it feel like YOU — not just accurate, but energizing? Is there anything that feels off, generic, or disconnected?"
+Does this hold together? When you read it as a whole, does it feel like YOU — not just accurate, but energizing?"
+
+Use AskUserQuestion:
+  question: "Does your strategic foundation hold together?"
+  options:
+    - "Solid — let's move forward" (proceed to Step 5)
+    - "Mostly right but something needs adjusting" (iterate on specific items)
+    - "Something feels off — let's revisit" (redirect to relevant phase)
 
 ## Step 4: Validate or Iterate
 
