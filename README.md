@@ -103,6 +103,10 @@ Every decision you make, every phase you complete, and every piece of work the s
 
 If a session runs long enough that the conversation history needs to compress, the system automatically extracts the important context — what you decided, what's in progress, what still needs attention — before that happens. Nothing gets lost.
 
+## Inspiration
+
+Brand Compass was inspired by [Design OS](https://buildermethods.com/design-os) by Brian Casel — a systematic approach to brand development that showed how structured process and creative strategy can work together.
+
 ## License
 
 Proprietary. Copyright Kenzie Creative.
