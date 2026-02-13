@@ -3,1028 +3,1078 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseline — Voice &amp; Expression Guide</title>
+  <title>Baseline &mdash; Voice &amp; Expression Guide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* =============================================
-       CSS Custom Properties — Brand Palette
-       ============================================= */
-    :root {
-      --navy: #1B2B4B;
-      --teal: #2A9D8F;
-      --slate: #64748B;
-      --coral: #E8725C;
-      --white: #FFFFFF;
-      --warm-gray: #F8F7F5;
-      --light-gray: #E2E8F0;
-      --green: #22C55E;
-
-      --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
-
-      --space-xs: 0.25rem;
-      --space-sm: 0.5rem;
-      --space-md: 1rem;
-      --space-lg: 1.5rem;
-      --space-xl: 2rem;
-      --space-2xl: 3rem;
-      --space-3xl: 4rem;
-      --space-4xl: 6rem;
-
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 12px;
-      --radius-pill: 100px;
-    }
-
-    /* =============================================
-       Reset & Base
-       ============================================= */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--navy);
-      background-color: var(--white);
-    }
-
-    /* =============================================
-       Layout
-       ============================================= */
-    .page-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 var(--space-xl);
-    }
-
-    /* =============================================
-       Header
-       ============================================= */
-    .site-header {
-      padding: var(--space-4xl) 0 var(--space-3xl);
-      border-bottom: 2px solid var(--navy);
-      margin-bottom: var(--space-3xl);
-    }
-
-    .site-header__brand {
-      font-family: var(--font-heading);
-      font-size: 0.8125rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-sm);
-    }
-
-    .site-header__title {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-
-    .site-header__subtitle {
-      font-family: var(--font-body);
-      font-size: 1.0625rem;
-      color: var(--slate);
-      margin-top: var(--space-sm);
-      font-weight: 400;
-    }
-
-    .site-header__meta {
-      display: flex;
-      gap: var(--space-xl);
-      margin-top: var(--space-lg);
-      font-size: 0.8125rem;
-      color: var(--slate);
-    }
-
-    .site-header__meta span {
-      display: flex;
-      align-items: center;
-      gap: var(--space-xs);
-    }
-
-    .site-header__meta strong {
-      font-weight: 500;
-      color: var(--navy);
-    }
-
-    /* =============================================
-       Table of Contents
-       ============================================= */
-    .toc {
-      background: var(--warm-gray);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl) var(--space-2xl);
-      margin-bottom: var(--space-3xl);
-    }
-
-    .toc__title {
-      font-family: var(--font-heading);
-      font-size: 0.6875rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: var(--space-md);
-    }
-
-    .toc__list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-xs) var(--space-2xl);
-    }
-
-    .toc__list li {
-      line-height: 1.4;
-    }
-
-    .toc__list a {
-      font-family: var(--font-heading);
-      font-size: 0.9375rem;
-      font-weight: 500;
-      color: var(--navy);
-      text-decoration: none;
-      display: flex;
-      align-items: baseline;
-      gap: var(--space-sm);
-      padding: var(--space-xs) 0;
-      transition: color 0.15s ease;
-    }
-
-    .toc__list a:hover {
-      color: var(--teal);
-    }
-
-    .toc__number {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--teal);
-      flex-shrink: 0;
-      width: 1.5em;
-    }
-
-    /* =============================================
-       Sections
-       ============================================= */
-    .section {
-      margin-bottom: var(--space-4xl);
-    }
-
-    .section--alt {
-      background: var(--warm-gray);
-      margin-left: calc(-1 * var(--space-xl));
-      margin-right: calc(-1 * var(--space-xl));
-      padding: var(--space-3xl) var(--space-xl);
-      border-radius: 0;
-    }
-
-    .section__eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--teal);
-      letter-spacing: 0.05em;
-      margin-bottom: var(--space-sm);
-    }
-
-    .section__title {
-      font-family: var(--font-heading);
-      font-size: 1.75rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-bottom: var(--space-lg);
-    }
-
-    .section__divider {
-      width: 2.5rem;
-      height: 3px;
-      background: var(--teal);
-      border: none;
-      margin-bottom: var(--space-xl);
-      border-radius: 2px;
-    }
-
-    /* =============================================
-       Typography
-       ============================================= */
-    h3 {
-      font-family: var(--font-heading);
-      font-size: 1.1875rem;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.3;
-      margin-top: var(--space-2xl);
-      margin-bottom: var(--space-md);
-    }
-
-    h4 {
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-top: var(--space-lg);
-      margin-bottom: var(--space-sm);
-    }
-
-    p {
-      margin-bottom: var(--space-md);
-      color: var(--navy);
-    }
-
-    p.muted {
-      color: var(--slate);
-      font-size: 0.9375rem;
-    }
-
-    strong {
-      font-weight: 600;
-    }
-
-    ul, ol {
-      margin-bottom: var(--space-md);
-      padding-left: var(--space-lg);
-    }
-
-    li {
-      margin-bottom: var(--space-sm);
-    }
-
-    li::marker {
-      color: var(--teal);
-    }
-
-    a {
-      color: var(--teal);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-    }
-
-    a:hover {
-      color: var(--navy);
-    }
-
-    /* =============================================
-       Voice One-Liner
-       ============================================= */
-    .voice-oneliner {
-      font-family: var(--font-heading);
-      font-size: 1.375rem;
-      font-weight: 600;
-      color: var(--navy);
-      line-height: 1.45;
-      border-left: 4px solid var(--teal);
-      padding-left: var(--space-lg);
-      margin: var(--space-xl) 0;
-    }
-
-    /* =============================================
-       Voice Tags (Pills)
-       ============================================= */
-    .voice-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-sm);
-      margin: var(--space-lg) 0;
-    }
-
-    .voice-tag {
-      display: inline-flex;
-      align-items: center;
-      font-family: var(--font-heading);
-      font-size: 0.8125rem;
-      font-weight: 500;
-      color: var(--teal);
-      background: rgba(42, 157, 143, 0.08);
-      border: 1px solid rgba(42, 157, 143, 0.2);
-      padding: 0.25em 0.85em;
-      border-radius: var(--radius-pill);
-      white-space: nowrap;
-      letter-spacing: 0.01em;
-    }
-
-    /* =============================================
-       Reader Experience Box
-       ============================================= */
-    .reader-experience {
-      background: var(--warm-gray);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      margin: var(--space-xl) 0;
-    }
-
-    .reader-experience__label {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: var(--space-md);
-    }
-
-    .reader-experience__should {
-      font-size: 1rem;
-      color: var(--navy);
-      margin-bottom: var(--space-md);
-      padding-left: var(--space-lg);
-      border-left: 3px solid var(--green);
-    }
-
-    .reader-experience__never {
-      font-size: 0.9375rem;
-      color: var(--coral);
-      padding-left: var(--space-lg);
-      border-left: 3px solid var(--coral);
-    }
-
-    /* =============================================
-       Callout / Principle Box
-       ============================================= */
-    .principle-box {
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      margin: var(--space-lg) 0;
-    }
-
-    .principle-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* =============================================
-       Styled List (with bold lead-ins)
-       ============================================= */
-    .styled-list {
-      list-style: none;
-      padding-left: 0;
-      margin: var(--space-lg) 0;
-    }
-
-    .styled-list li {
-      position: relative;
-      padding-left: var(--space-lg);
-      margin-bottom: var(--space-md);
-      line-height: 1.65;
-    }
-
-    .styled-list li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.6em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    /* =============================================
-       Signature Move Cards
-       ============================================= */
-    .move-card {
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl) var(--space-xl) var(--space-lg);
-      margin-bottom: var(--space-xl);
-      transition: box-shadow 0.2s ease;
-    }
-
-    .move-card:hover {
-      box-shadow: 0 4px 20px rgba(27, 43, 75, 0.06);
-    }
-
-    .move-card__number {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--teal);
-      margin-bottom: var(--space-xs);
-    }
-
-    .move-card__name {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: var(--space-sm);
-      line-height: 1.3;
-    }
-
-    .move-card__desc {
-      font-size: 0.9375rem;
-      color: var(--slate);
-      margin-bottom: var(--space-lg);
-      line-height: 1.6;
-    }
-
-    .move-card__meta {
-      display: flex;
-      gap: var(--space-xl);
-      margin-bottom: var(--space-lg);
-      font-size: 0.8125rem;
-    }
-
-    .move-card__meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .move-card__meta-label {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--slate);
-    }
-
-    .move-card__meta-value {
-      font-size: 0.875rem;
-      color: var(--navy);
-      font-weight: 500;
-    }
-
-    .move-card__example {
-      background: var(--warm-gray);
-      border-left: 3px solid var(--teal);
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      padding: var(--space-md) var(--space-lg);
-      font-size: 0.9375rem;
-      line-height: 1.65;
-      color: var(--navy);
-    }
-
-    .move-card__example-label {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: var(--space-xs);
-      display: block;
-    }
-
-    /* =============================================
-       Guardrails — "Never Do This"
-       ============================================= */
-    .never-list {
-      list-style: none;
-      padding: 0;
-      margin: var(--space-lg) 0;
-    }
-
-    .never-list li {
-      border-left: 3px solid var(--coral);
-      background: rgba(232, 114, 92, 0.04);
-      padding: var(--space-md) var(--space-lg);
-      margin-bottom: var(--space-md);
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      line-height: 1.65;
-    }
-
-    .never-list li strong {
-      color: var(--coral);
-      font-weight: 600;
-    }
-
-    /* =============================================
-       Avoid Table
-       ============================================= */
-    .avoid-table-wrapper {
-      margin: var(--space-xl) 0;
-      overflow-x: auto;
-    }
-
-    .avoid-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      font-size: 0.9375rem;
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .avoid-table thead th {
-      font-family: var(--font-heading);
-      font-size: 0.6875rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--slate);
-      background: var(--warm-gray);
-      padding: var(--space-md) var(--space-lg);
-      text-align: left;
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    .avoid-table tbody td {
-      padding: var(--space-md) var(--space-lg);
-      border-bottom: 1px solid var(--light-gray);
-      vertical-align: top;
-      line-height: 1.55;
-    }
-
-    .avoid-table tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    .avoid-table tbody tr:hover {
-      background: rgba(42, 157, 143, 0.02);
-    }
-
-    .avoid-table .col-avoid {
-      color: var(--coral);
-      font-weight: 600;
-      font-family: var(--font-heading);
-      white-space: nowrap;
-    }
-
-    .avoid-table .col-why {
-      color: var(--slate);
-      font-size: 0.875rem;
-    }
-
-    .avoid-table .col-instead {
-      color: var(--teal);
-      font-weight: 500;
-    }
-
-    /* =============================================
-       Quality Checklist
-       ============================================= */
-    .quality-checklist {
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      margin: var(--space-xl) 0;
-    }
-
-    .quality-checklist__title {
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: var(--space-md);
-    }
-
-    .quality-checklist ol {
-      list-style: none;
-      padding: 0;
-      counter-reset: qc;
-    }
-
-    .quality-checklist li {
-      counter-increment: qc;
-      position: relative;
-      padding-left: var(--space-2xl);
-      margin-bottom: var(--space-md);
-      font-size: 0.9375rem;
-      line-height: 1.6;
-    }
-
-    .quality-checklist li::before {
-      content: counter(qc);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1.5em;
-      height: 1.5em;
-      border-radius: 50%;
-      background: rgba(42, 157, 143, 0.1);
-      color: var(--teal);
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .quality-checklist li em {
-      color: var(--slate);
-      font-style: normal;
-      font-size: 0.875rem;
-    }
-
-    /* =============================================
-       Authenticity Spectrum — Side-by-Side
-       ============================================= */
-    .spectrum-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-lg);
-      margin: var(--space-xl) 0;
-    }
-
-    .spectrum-card {
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      line-height: 1.65;
-    }
-
-    .spectrum-card--professional {
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-    }
-
-    .spectrum-card--conversational {
-      background: var(--warm-gray);
-      border: 1px solid transparent;
-    }
-
-    .spectrum-card__label {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-md);
-    }
-
-    .spectrum-card--professional .spectrum-card__label {
-      color: var(--navy);
-    }
-
-    .spectrum-card--conversational .spectrum-card__label {
-      color: var(--teal);
-    }
-
-    .spectrum-card__text {
-      font-size: 0.9375rem;
-      color: var(--navy);
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .spectrum-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-sm);
-      background: rgba(42, 157, 143, 0.08);
-      border-radius: var(--radius-pill);
-      padding: 0.4em 1em;
-      margin: var(--space-lg) 0 var(--space-md);
-      font-family: var(--font-heading);
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--teal);
-    }
-
-    .spectrum-bar {
-      display: flex;
-      height: 6px;
-      border-radius: 3px;
-      overflow: hidden;
-      width: 6em;
-    }
-
-    .spectrum-bar__fill {
-      background: var(--navy);
-    }
-
-    .spectrum-bar__rest {
-      background: rgba(42, 157, 143, 0.3);
-    }
-
-    .spectrum-note {
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--slate);
-      font-style: italic;
-      margin-top: var(--space-md);
-    }
-
-    /* =============================================
-       Context Cards (Scaling by Context)
-       ============================================= */
-    .context-card {
-      border: 1px solid var(--light-gray);
-      border-radius: var(--radius-lg);
-      padding: var(--space-xl);
-      margin-bottom: var(--space-xl);
-      background: var(--white);
-    }
-
-    .context-card__header {
-      display: flex;
-      align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-lg);
-    }
-
-    .context-card__icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: var(--radius-md);
-      background: rgba(42, 157, 143, 0.08);
-      color: var(--teal);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 600;
-      flex-shrink: 0;
-    }
-
-    .context-card__title {
-      font-family: var(--font-heading);
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.2;
-    }
-
-    .context-card__subtitle {
-      font-size: 0.8125rem;
-      color: var(--slate);
-      font-weight: 400;
-    }
-
-    .context-card__rules {
-      list-style: none;
-      padding: 0;
-      margin-bottom: var(--space-lg);
-    }
-
-    .context-card__rules li {
-      position: relative;
-      padding-left: var(--space-lg);
-      margin-bottom: var(--space-sm);
-      font-size: 0.9375rem;
-      line-height: 1.6;
-    }
-
-    .context-card__rules li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.6em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    .context-card__examples-label {
-      font-family: var(--font-mono);
-      font-size: 0.6875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: var(--space-sm);
-    }
-
-    .context-card__example {
-      background: var(--warm-gray);
-      border-radius: var(--radius-md);
-      padding: var(--space-md) var(--space-lg);
-      font-size: 0.875rem;
-      line-height: 1.65;
-      color: var(--navy);
-      margin-bottom: var(--space-sm);
-    }
-
-    /* =============================================
-       Constant Principles (footer banner)
-       ============================================= */
-    .constants-banner {
-      background: var(--navy);
-      margin-left: calc(-1 * var(--space-xl));
-      margin-right: calc(-1 * var(--space-xl));
-      padding: var(--space-3xl) var(--space-xl);
-      margin-top: var(--space-4xl);
-      color: var(--white);
-    }
-
-    .constants-banner__eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-lg);
-    }
-
-    .constants-banner__title {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: var(--space-xl);
-    }
-
-    .constants-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-md) var(--space-xl);
-    }
-
-    .constant-item {
-      display: flex;
-      align-items: baseline;
-      gap: var(--space-sm);
-      font-size: 0.9375rem;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.5;
-    }
-
-    .constant-item::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-      flex-shrink: 0;
-      position: relative;
-      top: -1px;
-    }
-
-    /* =============================================
-       Footer
-       ============================================= */
-    .site-footer {
-      padding: var(--space-2xl) 0;
-      text-align: center;
-      font-size: 0.8125rem;
-      color: var(--slate);
-      border-top: 1px solid var(--light-gray);
-    }
-
-    .site-footer span {
-      color: var(--teal);
-    }
-
-    /* =============================================
-       Print Styles
-       ============================================= */
-    @media print {
-      body {
-        font-size: 11pt;
-        color: #000;
-        background: #fff;
-      }
-
-      .page-wrapper {
-        max-width: 100%;
-        padding: 0;
-      }
-
-      .site-header {
-        padding: 1cm 0 0.5cm;
-        border-bottom-color: #000;
-      }
-
-      .section--alt {
-        background: #f5f5f5;
-        margin-left: 0;
-        margin-right: 0;
-        padding: 1cm;
-      }
-
-      .toc {
-        page-break-after: always;
-        background: #f5f5f5;
-      }
-
-      .section {
-        page-break-inside: avoid;
-      }
-
-      .move-card,
-      .context-card,
-      .quality-checklist,
-      .principle-box {
-        page-break-inside: avoid;
-        border-color: #ccc;
-      }
-
-      .constants-banner {
-        background: #1B2B4B !important;
-        color: #fff !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .move-card:hover {
-        box-shadow: none;
-      }
-
-      .voice-tag {
-        border-color: #999;
-        color: #333;
-        background: #f0f0f0;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .toc__list a {
-        color: #000;
-      }
-
-      .avoid-table .col-avoid {
-        color: #c0392b;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .avoid-table .col-instead {
-        color: #1a7a6e;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .never-list li {
-        border-left-color: #c0392b;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-    }
-
-    /* =============================================
-       Responsive
-       ============================================= */
-    @media (max-width: 640px) {
-      .site-header__title {
-        font-size: 1.75rem;
-      }
-
-      .toc__list {
-        grid-template-columns: 1fr;
-      }
-
-      .site-header__meta {
-        flex-direction: column;
-        gap: var(--space-sm);
-      }
-
-      .spectrum-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .constants-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .move-card__meta {
-        flex-direction: column;
-        gap: var(--space-md);
-      }
-    }
+/* ================================================================
+   BASELINE — VOICE & EXPRESSION GUIDE
+   Self-contained brand specimen. DM Serif Display + Inter.
+   Tokens aligned to color-palette.html and ui-kit.html.
+   This document practices what it preaches — written in Baseline
+   voice, not generic documentation voice.
+   ================================================================ */
+
+/* ── Brand Tokens ───────────────────────────────────────────────── */
+:root {
+  --navy: #0F2B3C;
+  --teal: #1A8A7D;
+  --slate: #4A5568;
+  --coral: #E8734A;
+  --white: #FFFFFF;
+  --warm-gray: #F7F5F2;
+  --light-gray: #E2E4E8;
+  --green: #1A8A7D;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 100px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 43, 60, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 43, 60, 0.08);
+  --shadow-lg: 0 8px 24px rgba(15, 43, 60, 0.12);
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+
+  --letter-spacing-heading: -0.01em;
+  --letter-spacing-label: 0.1em;
+  --line-height-body: 1.7;
+  --line-height-heading: 1.2;
+  --content-max-width: 900px;
+  --transition-speed: 0.2s;
+}
+
+/* ── Reset ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: var(--line-height-body);
+  color: var(--navy);
+  background: var(--white);
+}
+
+/* ── Page Layout ────────────────────────────────────────────────── */
+.page {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: var(--space-3xl);
+}
+
+.header__brand {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-sm);
+}
+
+.header__title {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.header__subtitle {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  color: var(--slate);
+  margin-top: var(--space-sm);
+  font-weight: 400;
+}
+
+.header__meta {
+  display: flex;
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+  font-size: 0.8125rem;
+  color: var(--slate);
+}
+
+.header__meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.header__meta strong {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ── Table of Contents ──────────────────────────────────────────── */
+.toc {
+  background: var(--warm-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.toc__title {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: var(--space-md);
+}
+
+.toc__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xs) var(--space-2xl);
+}
+
+.toc__list li { line-height: 1.4; }
+
+.toc__list a {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding: var(--space-xs) 0;
+  transition: color var(--transition-speed) ease;
+}
+
+.toc__list a:hover { color: var(--teal); }
+
+.toc__number {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+  flex-shrink: 0;
+  width: 1.5em;
+}
+
+/* ── Sections ───────────────────────────────────────────────────── */
+.section {
+  margin-bottom: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section--alt {
+  background: var(--warm-gray);
+  margin-left: calc(-1 * var(--space-xl));
+  margin-right: calc(-1 * var(--space-xl));
+  padding: var(--space-3xl) var(--space-xl);
+  border-radius: 0;
+  border-bottom: none;
+}
+
+.section__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.section__number {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: var(--navy);
+  letter-spacing: var(--letter-spacing-heading);
+  line-height: var(--line-height-heading);
+}
+
+.section__rule {
+  flex: 1;
+  height: 1px;
+  background: var(--light-gray);
+  align-self: center;
+  margin-left: var(--space-sm);
+}
+
+.section__intro {
+  color: var(--slate);
+  margin-bottom: var(--space-xl);
+  font-size: 0.9375rem;
+  line-height: var(--line-height-body);
+  max-width: 680px;
+}
+
+/* ── Typography Base ────────────────────────────────────────────── */
+h3 {
+  font-family: var(--font-display);
+  font-size: 1.1875rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+h4 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+p { margin-bottom: var(--space-md); color: var(--navy); }
+
+strong { font-weight: 600; }
+
+ul, ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+li { margin-bottom: var(--space-sm); }
+li::marker { color: var(--teal); }
+
+a {
+  color: var(--teal);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--navy); }
+
+/* ── Voice One-Liner ────────────────────────────────────────────── */
+.voice-oneliner {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.45;
+  border-left: 4px solid var(--teal);
+  padding-left: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+
+/* ── Voice Tags (Pills) ────────────────────────────────────────── */
+.voice-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: var(--space-lg) 0;
+}
+
+.voice-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--teal);
+  background: rgba(26, 138, 125, 0.08);
+  border: 1px solid rgba(26, 138, 125, 0.2);
+  padding: 0.3em 0.85em;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* ── Reader Experience Box ──────────────────────────────────────── */
+.reader-experience {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin: var(--space-xl) 0;
+}
+
+.reader-experience__label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: var(--space-md);
+}
+
+.reader-experience__should {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+  border-left: 3px solid var(--teal);
+}
+
+.reader-experience__never {
+  font-size: 0.9375rem;
+  color: var(--coral);
+  padding-left: var(--space-lg);
+  border-left: 3px solid var(--coral);
+}
+
+/* ── Principle Box ──────────────────────────────────────────────── */
+.principle-box {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  margin: var(--space-lg) 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.principle-box strong { color: var(--white); }
+.principle-box p:last-child { margin-bottom: 0; }
+
+/* ── Styled List ────────────────────────────────────────────────── */
+.styled-list {
+  list-style: none;
+  padding-left: 0;
+  margin: var(--space-lg) 0;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-md);
+  line-height: 1.65;
+}
+
+.styled-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+/* ── Signature Move Cards ───────────────────────────────────────── */
+.move-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  margin-bottom: var(--space-xl);
+  transition: box-shadow var(--transition-speed) ease;
+}
+
+.move-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.move-card__number {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: var(--space-xs);
+}
+
+.move-card__name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.move-card__desc {
+  font-size: 0.9375rem;
+  color: var(--slate);
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+}
+
+.move-card__meta {
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-lg);
+  font-size: 0.8125rem;
+}
+
+.move-card__meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.move-card__meta-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.move-card__meta-value {
+  font-size: 0.875rem;
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.move-card__example {
+  background: var(--warm-gray);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--navy);
+}
+
+.move-card__example-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+/* ── Do / Don't Grid ────────────────────────────────────────────── */
+.do-dont-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+
+.do-card, .dont-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  line-height: 1.65;
+  font-size: 0.9375rem;
+}
+
+.do-card {
+  background: rgba(26, 138, 125, 0.04);
+  border: 1px solid rgba(26, 138, 125, 0.15);
+  border-left: 4px solid var(--teal);
+}
+
+.dont-card {
+  background: rgba(232, 115, 74, 0.04);
+  border: 1px solid rgba(232, 115, 74, 0.15);
+  border-left: 4px solid var(--coral);
+}
+
+.do-card__label, .dont-card__label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+
+.do-card__label { color: var(--teal); }
+.dont-card__label { color: var(--coral); }
+
+.do-card p, .dont-card p { margin-bottom: 0; }
+
+/* ── Before/After ───────────────────────────────────────────────── */
+.before-after {
+  margin: var(--space-xl) 0;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.before-after__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  padding: var(--space-sm) var(--space-lg);
+  display: block;
+}
+
+.before-after__before {
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.before-after__before .before-after__label { color: var(--coral); }
+
+.before-after__after {
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--warm-gray);
+}
+
+.before-after__after .before-after__label { color: var(--teal); }
+
+.before-after__text {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.before-after__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-gray);
+  padding: var(--space-xs) 0;
+  font-size: 0.75rem;
+  color: var(--slate);
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+}
+
+/* ── Guardrails / Never List ────────────────────────────────────── */
+.never-card {
+  border-left: 4px solid var(--coral);
+  background: rgba(232, 115, 74, 0.04);
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-md);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  line-height: 1.65;
+}
+
+.never-card strong {
+  color: var(--coral);
+  font-weight: 700;
+}
+
+/* ── Avoid Table ────────────────────────────────────────────────── */
+.avoid-table-wrapper {
+  margin: var(--space-xl) 0;
+  overflow-x: auto;
+}
+
+.avoid-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9375rem;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.avoid-table thead th {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  background: var(--warm-gray);
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.avoid-table tbody td {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.avoid-table tbody tr:last-child td { border-bottom: none; }
+.avoid-table tbody tr:hover { background: rgba(26, 138, 125, 0.02); }
+
+.avoid-table .col-avoid {
+  color: var(--coral);
+  font-weight: 600;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.avoid-table .col-why {
+  color: var(--slate);
+  font-size: 0.875rem;
+}
+
+.avoid-table .col-instead {
+  color: var(--teal);
+  font-weight: 500;
+}
+
+/* ── Quality Checklist ──────────────────────────────────────────── */
+.quality-checklist {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin: var(--space-xl) 0;
+}
+
+.quality-checklist__title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: var(--space-md);
+}
+
+.quality-checklist ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: qc;
+}
+
+.quality-checklist li {
+  counter-increment: qc;
+  position: relative;
+  padding-left: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.quality-checklist li::before {
+  content: counter(qc);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: rgba(26, 138, 125, 0.1);
+  color: var(--teal);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quality-checklist li em {
+  color: var(--slate);
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+/* ── Scaling Spectrum ───────────────────────────────────────────── */
+.spectrum-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  margin: var(--space-xl) 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--light-gray);
+}
+
+.spectrum-step {
+  padding: var(--space-xl);
+  background: var(--white);
+  position: relative;
+}
+
+.spectrum-step--short { border-left: 4px solid var(--teal); }
+.spectrum-step--medium { border-left: 4px solid var(--navy); }
+.spectrum-step--long { border-left: 4px solid var(--slate); }
+
+.spectrum-step__icon {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.spectrum-step--short .spectrum-step__icon { color: var(--teal); }
+.spectrum-step--medium .spectrum-step__icon { color: var(--navy); }
+.spectrum-step--long .spectrum-step__icon { color: var(--slate); }
+
+.spectrum-step__title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.spectrum-step__context {
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-bottom: var(--space-md);
+}
+
+.spectrum-step__bar {
+  display: flex;
+  gap: 3px;
+  margin-bottom: var(--space-md);
+}
+
+.spectrum-step__bar-seg {
+  height: 4px;
+  border-radius: 2px;
+  flex: 1;
+}
+
+.spectrum-step__bar-seg--pro { background: var(--navy); }
+.spectrum-step__bar-seg--conv { background: var(--teal); opacity: 0.4; }
+
+.spectrum-step__rules {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spectrum-step__rules li {
+  position: relative;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--navy);
+}
+
+.spectrum-step__rules li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+/* ── Context Cards ──────────────────────────────────────────────── */
+.context-card {
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  background: var(--white);
+}
+
+.context-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.context-card__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(26, 138, 125, 0.08);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.context-card__title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.context-card__subtitle {
+  font-size: 0.8125rem;
+  color: var(--slate);
+  font-weight: 400;
+}
+
+.context-card__rules {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--space-lg);
+}
+
+.context-card__rules li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.context-card__rules li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.context-card__examples-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: var(--space-sm);
+}
+
+.context-card__example {
+  background: var(--warm-gray);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Authenticity Spectrum ──────────────────────────────────────── */
+.spectrum-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: rgba(26, 138, 125, 0.08);
+  border-radius: var(--radius-pill);
+  padding: 0.4em 1em;
+  margin: var(--space-lg) 0 var(--space-md);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.spectrum-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 6em;
+}
+
+.spectrum-bar__fill { background: var(--navy); }
+.spectrum-bar__rest { background: rgba(26, 138, 125, 0.3); }
+
+.spectrum-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+
+.spectrum-card {
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  line-height: 1.65;
+}
+
+.spectrum-card--professional {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+}
+
+.spectrum-card--conversational {
+  background: var(--warm-gray);
+  border: 1px solid transparent;
+}
+
+.spectrum-card__label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.spectrum-card--professional .spectrum-card__label { color: var(--navy); }
+.spectrum-card--conversational .spectrum-card__label { color: var(--teal); }
+
+.spectrum-card__text {
+  font-size: 0.9375rem;
+  color: var(--navy);
+  line-height: var(--line-height-body);
+  margin: 0;
+}
+
+.spectrum-note {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--slate);
+  font-style: italic;
+  margin-top: var(--space-md);
+}
+
+/* ── Constants Banner ───────────────────────────────────────────── */
+.constants-banner {
+  background: var(--navy);
+  margin-left: calc(-1 * var(--space-xl));
+  margin-right: calc(-1 * var(--space-xl));
+  padding: var(--space-3xl) var(--space-xl);
+  margin-top: var(--space-3xl);
+  color: var(--white);
+}
+
+.constants-banner__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-lg);
+}
+
+.constants-banner__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: var(--space-xl);
+}
+
+.constants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md) var(--space-xl);
+}
+
+.constant-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.constant-item::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  flex-shrink: 0;
+  position: relative;
+  top: -1px;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.site-footer {
+  padding: var(--space-2xl) 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--slate);
+  border-top: 1px solid var(--light-gray);
+}
+
+.site-footer span { color: var(--teal); }
+
+/* ── Print ───────────────────────────────────────────────────────── */
+@media print {
+  body { font-size: 11pt; color: #000; background: #fff; }
+  .page { max-width: 100%; padding: 0; }
+  .header { padding: 1cm 0 0.5cm; border-bottom-color: #000; }
+  .section--alt { background: #f5f5f5; margin-left: 0; margin-right: 0; padding: 1cm; }
+  .toc { page-break-after: always; background: #f5f5f5; }
+  .section { page-break-inside: avoid; }
+  .move-card, .context-card, .quality-checklist, .principle-box { page-break-inside: avoid; border-color: #ccc; }
+  .constants-banner { background: var(--navy) !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; margin-left: 0; margin-right: 0; }
+  .principle-box { background: var(--navy) !important; color: #fff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .move-card:hover { box-shadow: none; }
+  .voice-tag { border-color: #999; color: #333; background: #f0f0f0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  a { color: inherit; text-decoration: none; }
+  .toc__list a { color: #000; }
+  .avoid-table .col-avoid { color: #c0392b; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .avoid-table .col-instead { color: #1a7a6e; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .never-card { border-left-color: #c0392b; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .header__title { font-size: 2rem; }
+  .toc__list { grid-template-columns: 1fr; }
+  .header__meta { flex-direction: column; gap: var(--space-sm); }
+  .spectrum-grid { grid-template-columns: 1fr; }
+  .spectrum-visual { grid-template-columns: 1fr; }
+  .do-dont-grid { grid-template-columns: 1fr; }
+  .constants-grid { grid-template-columns: 1fr; }
+  .move-card__meta { flex-direction: column; gap: var(--space-md); }
+  .section__header { flex-wrap: wrap; }
+  .section__rule { display: none; }
+}
   </style>
 </head>
 <body>
 
-  <div class="page-wrapper">
+  <div class="page">
 
-    <!-- =============================================
-         HEADER
-         ============================================= -->
-    <header class="site-header" id="top">
-      <div class="site-header__brand">Baseline</div>
-      <h1 class="site-header__title">Voice &amp; Expression Guide</h1>
-      <p class="site-header__subtitle">How we write, how we sound, and why it matters.</p>
-      <div class="site-header__meta">
+    <!-- ═══════════════════ HEADER ═══════════════════ -->
+    <header class="header" id="top">
+      <div class="header__brand">Baseline</div>
+      <h1 class="header__title">Voice &amp; Expression Guide</h1>
+      <p class="header__subtitle">How we write, how we sound, and why it matters.</p>
+      <div class="header__meta">
         <span><strong>Version</strong> 1.0</span>
         <span><strong>Last updated</strong> February 2026</span>
         <span><strong>Classification</strong> Internal</span>
       </div>
     </header>
 
-    <!-- =============================================
-         TABLE OF CONTENTS
-         ============================================= -->
+    <!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
     <nav class="toc">
       <div class="toc__title">Contents</div>
       <ol class="toc__list">
@@ -1037,33 +1087,37 @@
       </ol>
     </nav>
 
-    <!-- =============================================
-         SECTION 1: PHILOSOPHICAL ANCHOR
-         ============================================= -->
+    <!-- ═══════════════════ 01: PHILOSOPHICAL ANCHOR ═══════════════════ -->
     <section class="section" id="philosophical-anchor">
-      <div class="section__eyebrow">Section 01</div>
-      <h2 class="section__title">Philosophical Anchor</h2>
-      <hr class="section__divider">
+      <div class="section__header">
+        <span class="section__number">01</span>
+        <h2 class="section__title">Philosophical Anchor</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <p class="section__intro">Before style guides and word lists, there&rsquo;s a deeper question: what is our job when we write? This section answers that. Everything else in this document is an expression of these three principles.</p>
 
       <h3>How We Think</h3>
-      <p>We believe complexity should be navigated, not imposed. Compliance is genuinely complicated &mdash; but our job is to make it feel manageable, not to prove how complicated it is. Every piece of communication should leave the reader feeling more capable, not more overwhelmed.</p>
+      <p>We believe complexity should be navigated, not imposed. Compliance is genuinely complicated&nbsp;&mdash; but our job is to make it feel manageable, not to prove how complicated it is. Every piece of communication should leave the reader feeling more capable, not more overwhelmed.</p>
 
       <h3>How We Relate to the Reader</h3>
-      <p>We're the experienced guide, not the gatekeeper. We've walked this path hundreds of times. We know where the pitfalls are and how to avoid them. Our role is to share that knowledge &mdash; clearly, directly, and without making anyone feel stupid for not knowing it already.</p>
+      <p>We&rsquo;re the experienced guide, not the gatekeeper. We&rsquo;ve walked this path hundreds of times. We know where the pitfalls are and how to avoid them. Our role is to share that knowledge&nbsp;&mdash; clearly, directly, and without making anyone feel stupid for not knowing it already.</p>
 
       <h3>What Never Changes</h3>
       <div class="principle-box">
-        <p>Regardless of format, audience, or context: we are <strong>precise</strong>, we are <strong>clear</strong>, and we <strong>respect the reader's intelligence and time</strong>.</p>
+        <p>Regardless of format, audience, or context: we are <strong>precise</strong>, we are <strong>clear</strong>, and we <strong>respect the reader&rsquo;s intelligence and time</strong>. These three principles are non-negotiable. If a piece of content fails any of them, it doesn&rsquo;t ship.</p>
       </div>
     </section>
 
-    <!-- =============================================
-         SECTION 2: VOICE SUMMARY
-         ============================================= -->
+    <!-- ═══════════════════ 02: VOICE SUMMARY ═══════════════════ -->
     <section class="section section--alt" id="voice-summary">
-      <div class="section__eyebrow">Section 02</div>
-      <h2 class="section__title">Voice Summary</h2>
-      <hr class="section__divider">
+      <div class="section__header">
+        <span class="section__number">02</span>
+        <h2 class="section__title">Voice Summary</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <p class="section__intro">Voice is not tone. Tone changes by context&nbsp;&mdash; a proposal sounds different from a tweet. Voice is the thing underneath that stays constant. This is Baseline&rsquo;s voice, distilled.</p>
 
       <h3>One-Liner</h3>
       <div class="voice-oneliner">
@@ -1084,35 +1138,65 @@
       <h3>Reader Experience</h3>
       <div class="reader-experience">
         <div class="reader-experience__label">After reading Baseline content, the reader should feel:</div>
-        <p class="reader-experience__should">"Okay, I understand this now. These people know what they're doing, and they're not going to waste my time."</p>
+        <p class="reader-experience__should">&ldquo;Okay, I understand this now. These people know what they&rsquo;re doing, and they&rsquo;re not going to waste my time.&rdquo;</p>
         <div class="reader-experience__label" style="margin-top: var(--space-lg);">Never:</div>
-        <p class="reader-experience__never">"I feel dumb" or "I still don't know what to do next."</p>
+        <p class="reader-experience__never">&ldquo;I feel dumb&rdquo; or &ldquo;I still don&rsquo;t know what to do next.&rdquo;</p>
+      </div>
+
+      <!-- Before/After: Voice in Action -->
+      <h3>Voice in Action</h3>
+      <p style="color: var(--slate); font-size: 0.9375rem; margin-bottom: var(--space-lg);">The difference between generic professional writing and Baseline&rsquo;s voice isn&rsquo;t dramatic. It&rsquo;s specific. Here&rsquo;s what the shift looks like.</p>
+
+      <div class="before-after">
+        <div class="before-after__before">
+          <span class="before-after__label">Generic</span>
+          <p class="before-after__text">We provide comprehensive compliance solutions that help technology companies meet regulatory requirements efficiently and cost-effectively.</p>
+        </div>
+        <div class="before-after__arrow">Rewritten in Baseline voice</div>
+        <div class="before-after__after">
+          <span class="before-after__label">Baseline</span>
+          <p class="before-after__text">We get tech companies SOC&nbsp;2 certified in 8 weeks. Not because we cut corners&nbsp;&mdash; because we&rsquo;ve done this 200 times and know exactly what the auditor needs.</p>
+        </div>
+      </div>
+
+      <div class="before-after" style="margin-top: var(--space-lg);">
+        <div class="before-after__before">
+          <span class="before-after__label">Generic</span>
+          <p class="before-after__text">Our team of experienced professionals is dedicated to delivering best-in-class audit and compliance services tailored to your unique needs.</p>
+        </div>
+        <div class="before-after__arrow">Rewritten in Baseline voice</div>
+        <div class="before-after__after">
+          <span class="before-after__label">Baseline</span>
+          <p class="before-after__text">Your last accountant didn&rsquo;t know what deferred revenue was. We do. We also know what a cap table looks like, how SaaS metrics work, and why your board wants audited financials by Q3.</p>
+        </div>
       </div>
     </section>
 
-    <!-- =============================================
-         SECTION 3: WRITING STYLE
-         ============================================= -->
+    <!-- ═══════════════════ 03: WRITING STYLE ═══════════════════ -->
     <section class="section" id="writing-style">
-      <div class="section__eyebrow">Section 03</div>
-      <h2 class="section__title">Writing Style</h2>
-      <hr class="section__divider">
+      <div class="section__header">
+        <span class="section__number">03</span>
+        <h2 class="section__title">Writing Style</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <p class="section__intro">Voice is who we are. Style is the mechanics of how we put sentences together. This section covers rhythm, structure, and the professional-to-conversational balance that defines Baseline writing.</p>
 
       <h3>Sentence and Paragraph Rhythm</h3>
       <ul class="styled-list">
         <li><strong>Average sentence length: 14&ndash;18 words.</strong> Shorter than academic, longer than casual.</li>
         <li><strong>Mix of declarative sentences</strong> (stating facts) with occasional questions (engaging the reader).</li>
         <li><strong>Paragraphs: 2&ndash;4 sentences.</strong> Never a wall of text. Break before the reader needs to.</li>
-        <li><strong>Single-sentence paragraphs for emphasis</strong> &mdash; but sparingly. Once per piece, max.</li>
+        <li><strong>Single-sentence paragraphs for emphasis</strong>&nbsp;&mdash; but sparingly. Once per piece, max.</li>
       </ul>
 
       <h3>Structure Usage</h3>
       <ul class="styled-list">
-        <li><strong>Headers liberally</strong> &mdash; readers scan before they read. Make scanning productive.</li>
-        <li><strong>Numbered lists for sequences</strong> &mdash; "Step 1, Step 2, Step 3" when order matters.</li>
-        <li><strong>Bullet points for options</strong> &mdash; when items are parallel, not sequential.</li>
-        <li><strong>Bold for key terms</strong> on first use, then normal text after. Don't bold for emphasis mid-sentence &mdash; that's what sentence structure is for.</li>
-        <li><strong>Tables for comparisons</strong> &mdash; pricing, timelines, feature sets. Structured data should look structured.</li>
+        <li><strong>Headers liberally</strong>&nbsp;&mdash; readers scan before they read. Make scanning productive.</li>
+        <li><strong>Numbered lists for sequences</strong>&nbsp;&mdash; &ldquo;Step 1, Step 2, Step 3&rdquo; when order matters.</li>
+        <li><strong>Bullet points for options</strong>&nbsp;&mdash; when items are parallel, not sequential.</li>
+        <li><strong>Bold for key terms</strong> on first use, then normal text after. Don&rsquo;t bold for emphasis mid-sentence&nbsp;&mdash; that&rsquo;s what sentence structure is for.</li>
+        <li><strong>Tables for comparisons</strong>&nbsp;&mdash; pricing, timelines, feature sets. Structured data should look structured.</li>
       </ul>
 
       <h3>Authenticity Spectrum</h3>
@@ -1128,32 +1212,71 @@
       <div class="spectrum-grid">
         <div class="spectrum-card spectrum-card--professional">
           <div class="spectrum-card__label">Professional Register</div>
-          <p class="spectrum-card__text">"SOC 2 Type II certification requires a minimum observation period of six months. We structure our engagements to begin evidence collection on day one, which means most clients achieve certification within eight weeks of engagement start."</p>
+          <p class="spectrum-card__text">&ldquo;SOC&nbsp;2 Type&nbsp;II certification requires a minimum observation period of six months. We structure our engagements to begin evidence collection on day one, which means most clients achieve certification within eight weeks of engagement start.&rdquo;</p>
         </div>
         <div class="spectrum-card spectrum-card--conversational">
           <div class="spectrum-card__label">Conversational Register</div>
-          <p class="spectrum-card__text">"Most firms will tell you SOC 2 takes six months. It doesn't have to. We've done this enough times to know exactly what the auditor needs and when &mdash; so we start collecting evidence from day one. Eight weeks, start to finish."</p>
+          <p class="spectrum-card__text">&ldquo;Most firms will tell you SOC&nbsp;2 takes six months. It doesn&rsquo;t have to. We&rsquo;ve done this enough times to know exactly what the auditor needs and when&nbsp;&mdash; so we start collecting evidence from day one. Eight weeks, start to finish.&rdquo;</p>
         </div>
       </div>
       <p class="spectrum-note">Both are Baseline. The mix depends on context.</p>
+
+      <!-- Do/Don't Examples -->
+      <h3>Voice Do&rsquo;s and Don&rsquo;ts</h3>
+      <p style="color: var(--slate); font-size: 0.9375rem;">Rendered as actual text. Not described&nbsp;&mdash; demonstrated.</p>
+
+      <div class="do-dont-grid">
+        <div class="do-card">
+          <p class="do-card__label">Do: Lead with specifics</p>
+          <p>&ldquo;Average time to SOC&nbsp;2 Type&nbsp;II: 8 weeks. That includes evidence collection, gap remediation, and the audit itself.&rdquo;</p>
+        </div>
+        <div class="dont-card">
+          <p class="dont-card__label">Don&rsquo;t: Lead with vague claims</p>
+          <p>&ldquo;We provide fast, efficient compliance services that get you certified in record time.&rdquo;</p>
+        </div>
+      </div>
+
+      <div class="do-dont-grid">
+        <div class="do-card">
+          <p class="do-card__label">Do: Explain the unfamiliar</p>
+          <p>&ldquo;PCI DSS Level 1 requires an annual on-site assessment by a QSA. Translation: a certified auditor verifies your payment systems are secure.&rdquo;</p>
+        </div>
+        <div class="dont-card">
+          <p class="dont-card__label">Don&rsquo;t: Assume knowledge</p>
+          <p>&ldquo;PCI DSS Level 1 QSA assessments must be completed annually per the Council&rsquo;s mandate.&rdquo;</p>
+        </div>
+      </div>
+
+      <div class="do-dont-grid">
+        <div class="do-card">
+          <p class="do-card__label">Do: Sound like a person</p>
+          <p>&ldquo;Your enterprise prospect just asked for SOC&nbsp;2 documentation. We can have it done in 8 weeks.&rdquo;</p>
+        </div>
+        <div class="dont-card">
+          <p class="dont-card__label">Don&rsquo;t: Sound like a brochure</p>
+          <p>&ldquo;Baseline is a leading provider of SOC&nbsp;2 compliance solutions for enterprise-ready technology companies.&rdquo;</p>
+        </div>
+      </div>
     </section>
 
-    <!-- =============================================
-         SECTION 4: SIGNATURE MOVES
-         ============================================= -->
+    <!-- ═══════════════════ 04: SIGNATURE MOVES ═══════════════════ -->
     <section class="section section--alt" id="signature-moves">
-      <div class="section__eyebrow">Section 04</div>
-      <h2 class="section__title">Signature Moves</h2>
-      <hr class="section__divider">
+      <div class="section__header">
+        <span class="section__number">04</span>
+        <h2 class="section__title">Signature Moves</h2>
+        <span class="section__rule"></span>
+      </div>
+
+      <p class="section__intro">Every strong voice has recognizable patterns&nbsp;&mdash; techniques that recur often enough to become identifiable but not so often they become tics. These are Baseline&rsquo;s four signature moves. Each one earns trust in a different way.</p>
 
       <!-- Move 1: The Reframe -->
       <div class="move-card">
         <div class="move-card__number">Move 01</div>
         <div class="move-card__name">The Reframe</div>
-        <p class="move-card__desc">Taking a compliance concept that sounds intimidating and repositioning it as a business asset.</p>
+        <p class="move-card__desc">Taking a compliance concept that sounds intimidating and repositioning it as a business asset. This is the core Baseline move&nbsp;&mdash; the one that makes &ldquo;compliance as growth infrastructure&rdquo; real in a single sentence.</p>
         <div class="move-card__meta">
           <div class="move-card__meta-item">
-            <span class="move-card__meta-label">When to use</span>
+            <span class="move-card__meta-label">When to Use</span>
             <span class="move-card__meta-value">Introducing a compliance requirement for the first time</span>
           </div>
           <div class="move-card__meta-item">
@@ -1163,7 +1286,7 @@
         </div>
         <div class="move-card__example">
           <span class="move-card__example-label">Example</span>
-          "A SOC 2 report isn't a cost of doing business. It's the key that unlocks every enterprise deal on your pipeline."
+          &ldquo;A SOC&nbsp;2 report isn&rsquo;t a cost of doing business. It&rsquo;s the key that unlocks every enterprise deal on your pipeline.&rdquo;
         </div>
       </div>
 
@@ -1171,20 +1294,20 @@
       <div class="move-card">
         <div class="move-card__number">Move 02</div>
         <div class="move-card__name">The Plain Translation</div>
-        <p class="move-card__desc">Following a technical statement with a plain-English restatement.</p>
+        <p class="move-card__desc">Following a technical statement with a plain-English restatement. Respects the reader&rsquo;s intelligence by keeping the technical term, then respects their time by immediately making it useful.</p>
         <div class="move-card__meta">
           <div class="move-card__meta-item">
-            <span class="move-card__meta-label">When to use</span>
+            <span class="move-card__meta-label">When to Use</span>
             <span class="move-card__meta-value">After any jargon the audience might not know</span>
           </div>
           <div class="move-card__meta-item">
             <span class="move-card__meta-label">Frequency</span>
-            <span class="move-card__meta-value">As needed &mdash; every unfamiliar term</span>
+            <span class="move-card__meta-value">As needed&nbsp;&mdash; every unfamiliar term</span>
           </div>
         </div>
         <div class="move-card__example">
           <span class="move-card__example-label">Example</span>
-          "PCI DSS Level 1 compliance requires an annual on-site assessment by a QSA. Translation: once a year, a certified auditor comes in and verifies your payment systems are secure."
+          &ldquo;PCI DSS Level 1 compliance requires an annual on-site assessment by a QSA. Translation: once a year, a certified auditor comes in and verifies your payment systems are secure.&rdquo;
         </div>
       </div>
 
@@ -1192,10 +1315,10 @@
       <div class="move-card">
         <div class="move-card__number">Move 03</div>
         <div class="move-card__name">The Honest Qualifier</div>
-        <p class="move-card__desc">Proactively addressing what we're NOT or what we can't do &mdash; building trust through transparency.</p>
+        <p class="move-card__desc">Proactively addressing what we&rsquo;re NOT or what we can&rsquo;t do&nbsp;&mdash; building trust through transparency. Most firms only talk about what they can do. We name the edges.</p>
         <div class="move-card__meta">
           <div class="move-card__meta-item">
-            <span class="move-card__meta-label">When to use</span>
+            <span class="move-card__meta-label">When to Use</span>
             <span class="move-card__meta-value">Sales contexts, service pages, proposals</span>
           </div>
           <div class="move-card__meta-item">
@@ -1205,7 +1328,7 @@
         </div>
         <div class="move-card__example">
           <span class="move-card__example-label">Example</span>
-          "We're not the cheapest option. If you need a bookkeeper for $500/month, there are good ones out there. We're for companies that need compliance infrastructure that holds up under scrutiny."
+          &ldquo;We&rsquo;re not the cheapest option. If you need a bookkeeper for $500/month, there are good ones out there. We&rsquo;re for companies that need compliance infrastructure that holds up under scrutiny.&rdquo;
         </div>
       </div>
 
@@ -1213,10 +1336,10 @@
       <div class="move-card">
         <div class="move-card__number">Move 04</div>
         <div class="move-card__name">The Concrete Number</div>
-        <p class="move-card__desc">Replacing vague claims with specific, defensible numbers.</p>
+        <p class="move-card__desc">Replacing vague claims with specific, defensible numbers. Precision isn&rsquo;t just a personality trait&nbsp;&mdash; it&rsquo;s a writing technique. Numbers do the work that adjectives can&rsquo;t.</p>
         <div class="move-card__meta">
           <div class="move-card__meta-item">
-            <span class="move-card__meta-label">When to use</span>
+            <span class="move-card__meta-label">When to Use</span>
             <span class="move-card__meta-value">Any claim about speed, quality, or results</span>
           </div>
           <div class="move-card__meta-item">
@@ -1226,26 +1349,38 @@
         </div>
         <div class="move-card__example">
           <span class="move-card__example-label">Example</span>
-          Instead of "We complete SOC 2 audits quickly" &rarr; "Average time to SOC 2 Type II: 8 weeks."
+          Instead of &ldquo;We complete SOC&nbsp;2 audits quickly&rdquo; &rarr; &ldquo;Average time to SOC&nbsp;2 Type&nbsp;II: 8 weeks.&rdquo;
         </div>
       </div>
     </section>
 
-    <!-- =============================================
-         SECTION 5: GUARDRAILS
-         ============================================= -->
+    <!-- ═══════════════════ 05: GUARDRAILS ═══════════════════ -->
     <section class="section" id="guardrails">
-      <div class="section__eyebrow">Section 05</div>
-      <h2 class="section__title">Guardrails</h2>
-      <hr class="section__divider">
+      <div class="section__header">
+        <span class="section__number">05</span>
+        <h2 class="section__title">Guardrails</h2>
+        <span class="section__rule"></span>
+      </div>
 
-      <h3>Never Do This</h3>
-      <ul class="never-list">
-        <li><strong>Never condescend.</strong> The reader may not know what SOC 2 is. That's fine. They know their business better than we ever will. Respect flows both directions.</li>
-        <li><strong>Never use fear as a motivator.</strong> "You COULD get breached" or "The penalties for non-compliance are severe" &mdash; this is true but manipulative. We sell capability, not anxiety.</li>
-        <li><strong>Never hide behind jargon.</strong> If we can't explain it simply, we don't understand it well enough. Every technical term gets a plain-English companion.</li>
-        <li><strong>Never make promises about audit outcomes.</strong> We can guarantee our process and our thoroughness. We cannot guarantee a specific audit result &mdash; that's not how auditing works, and implying otherwise is dishonest.</li>
-      </ul>
+      <p class="section__intro">Knowing what NOT to do is as important as knowing what to do. These guardrails aren&rsquo;t arbitrary restrictions&nbsp;&mdash; each one protects a specific dimension of trust that Baseline has earned.</p>
+
+      <h3>Non-Negotiable Rules</h3>
+
+      <div class="never-card">
+        <p><strong>Never condescend.</strong> The reader may not know what SOC&nbsp;2 is. That&rsquo;s fine. They know their business better than we ever will. Respect flows both directions.</p>
+      </div>
+
+      <div class="never-card">
+        <p><strong>Never use fear as a motivator.</strong> &ldquo;You COULD get breached&rdquo; or &ldquo;The penalties for non-compliance are severe&rdquo;&nbsp;&mdash; this is true but manipulative. We sell capability, not anxiety.</p>
+      </div>
+
+      <div class="never-card">
+        <p><strong>Never hide behind jargon.</strong> If we can&rsquo;t explain it simply, we don&rsquo;t understand it well enough. Every technical term gets a plain-English companion.</p>
+      </div>
+
+      <div class="never-card">
+        <p><strong>Never make promises about audit outcomes.</strong> We can guarantee our process and our thoroughness. We cannot guarantee a specific audit result&nbsp;&mdash; that&rsquo;s not how auditing works, and implying otherwise is dishonest.</p>
+      </div>
 
       <h3>Words and Phrases to Avoid</h3>
       <div class="avoid-table-wrapper">
@@ -1259,42 +1394,42 @@
           </thead>
           <tbody>
             <tr>
-              <td class="col-avoid">"Leverage"</td>
+              <td class="col-avoid">&ldquo;Leverage&rdquo;</td>
               <td class="col-why">Corporate jargon</td>
-              <td class="col-instead">"Use" or "build on"</td>
+              <td class="col-instead">&ldquo;Use&rdquo; or &ldquo;build on&rdquo;</td>
             </tr>
             <tr>
-              <td class="col-avoid">"Synergy"</td>
+              <td class="col-avoid">&ldquo;Synergy&rdquo;</td>
               <td class="col-why">Empty buzzword</td>
               <td class="col-instead">Say what actually happens</td>
             </tr>
             <tr>
-              <td class="col-avoid">"Best-in-class"</td>
+              <td class="col-avoid">&ldquo;Best-in-class&rdquo;</td>
               <td class="col-why">Unverifiable claim</td>
               <td class="col-instead">Be specific about what makes it good</td>
             </tr>
             <tr>
-              <td class="col-avoid">"Turnkey solution"</td>
+              <td class="col-avoid">&ldquo;Turnkey solution&rdquo;</td>
               <td class="col-why">Vague and overused</td>
-              <td class="col-instead">Describe what's actually included</td>
+              <td class="col-instead">Describe what&rsquo;s actually included</td>
             </tr>
             <tr>
-              <td class="col-avoid">"Peace of mind"</td>
+              <td class="col-avoid">&ldquo;Peace of mind&rdquo;</td>
               <td class="col-why">Cliche, sells feeling not substance</td>
               <td class="col-instead">Describe the actual outcome</td>
             </tr>
             <tr>
-              <td class="col-avoid">"It's simple"</td>
-              <td class="col-why">Dismissive &mdash; if it were simple, they wouldn't need us</td>
-              <td class="col-instead">"Here's how it works"</td>
+              <td class="col-avoid">&ldquo;It&rsquo;s simple&rdquo;</td>
+              <td class="col-why">Dismissive&nbsp;&mdash; if it were simple, they wouldn&rsquo;t need us</td>
+              <td class="col-instead">&ldquo;Here&rsquo;s how it works&rdquo;</td>
             </tr>
             <tr>
-              <td class="col-avoid">"Don't worry"</td>
+              <td class="col-avoid">&ldquo;Don&rsquo;t worry&rdquo;</td>
               <td class="col-why">Patronizing</td>
               <td class="col-instead">Address the concern directly</td>
             </tr>
             <tr>
-              <td class="col-avoid">"Disrupting the industry"</td>
+              <td class="col-avoid">&ldquo;Disrupting the industry&rdquo;</td>
               <td class="col-why">Startup cliche, especially ironic for accountants</td>
               <td class="col-instead">Describe what we do differently</td>
             </tr>
@@ -1314,15 +1449,66 @@
       </div>
     </section>
 
-    <!-- =============================================
-         SECTION 6: SCALING BY CONTEXT
-         ============================================= -->
+    <!-- ═══════════════════ 06: SCALING BY CONTEXT ═══════════════════ -->
     <section class="section section--alt" id="scaling-by-context">
-      <div class="section__eyebrow">Section 06</div>
-      <h2 class="section__title">Scaling by Context</h2>
-      <hr class="section__divider">
+      <div class="section__header">
+        <span class="section__number">06</span>
+        <h2 class="section__title">Scaling by Context</h2>
+        <span class="section__rule"></span>
+      </div>
 
-      <!-- Short-Form -->
+      <p class="section__intro">Voice stays constant. Format doesn&rsquo;t. A tweet and a whitepaper both sound like Baseline, but the professional-to-conversational ratio shifts. Here&rsquo;s how the voice scales from short-form to long-form.</p>
+
+      <!-- Visual Spectrum -->
+      <div class="spectrum-visual">
+        <div class="spectrum-step spectrum-step--short">
+          <div class="spectrum-step__icon">Short</div>
+          <div class="spectrum-step__title">Short-Form</div>
+          <div class="spectrum-step__context">Social, email subjects, ads</div>
+          <div class="spectrum-step__bar">
+            <span class="spectrum-step__bar-seg spectrum-step__bar-seg--pro" style="flex: 6;"></span>
+            <span class="spectrum-step__bar-seg spectrum-step__bar-seg--conv" style="flex: 4;"></span>
+          </div>
+          <ul class="spectrum-step__rules">
+            <li>Lead with outcomes</li>
+            <li>One idea per post</li>
+            <li>Numbers over adjectives</li>
+            <li>Dry humor welcome</li>
+          </ul>
+        </div>
+        <div class="spectrum-step spectrum-step--medium">
+          <div class="spectrum-step__icon">Medium</div>
+          <div class="spectrum-step__title">Medium-Form</div>
+          <div class="spectrum-step__context">Blog, LinkedIn, newsletters</div>
+          <div class="spectrum-step__bar">
+            <span class="spectrum-step__bar-seg spectrum-step__bar-seg--pro" style="flex: 7;"></span>
+            <span class="spectrum-step__bar-seg spectrum-step__bar-seg--conv" style="flex: 3;"></span>
+          </div>
+          <ul class="spectrum-step__rules">
+            <li>Open with the problem</li>
+            <li>Teach something real</li>
+            <li>Headers every 200&ndash;300 words</li>
+            <li>End with a takeaway, not a pitch</li>
+          </ul>
+        </div>
+        <div class="spectrum-step spectrum-step--long">
+          <div class="spectrum-step__icon">Long</div>
+          <div class="spectrum-step__title">Long-Form</div>
+          <div class="spectrum-step__context">Guides, whitepapers, case studies</div>
+          <div class="spectrum-step__bar">
+            <span class="spectrum-step__bar-seg spectrum-step__bar-seg--pro" style="flex: 9;"></span>
+            <span class="spectrum-step__bar-seg spectrum-step__bar-seg--conv" style="flex: 1;"></span>
+          </div>
+          <ul class="spectrum-step__rules">
+            <li>Full professional register</li>
+            <li>TOC, sections, executive summary</li>
+            <li>Real data and timelines</li>
+            <li>Strategic conversational moments</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Detailed Context Cards -->
       <div class="context-card">
         <div class="context-card__header">
           <div class="context-card__icon">S</div>
@@ -1334,16 +1520,15 @@
         <ul class="context-card__rules">
           <li>Lead with the outcome, not the service.</li>
           <li>One idea per post. If you need a comma, you might need two posts.</li>
-          <li>Numbers perform: "8 weeks to SOC 2" &gt; "Fast SOC 2 audits"</li>
-          <li>Dry humor welcome but not forced. If it's not funny, be useful instead.</li>
+          <li>Numbers perform: &ldquo;8 weeks to SOC&nbsp;2&rdquo; > &ldquo;Fast SOC&nbsp;2 audits&rdquo;</li>
+          <li>Dry humor welcome but not forced. If it&rsquo;s not funny, be useful instead.</li>
         </ul>
         <div class="context-card__examples-label">Examples</div>
-        <div class="context-card__example">"Your enterprise prospect just asked for SOC 2 documentation. We can have it done in 8 weeks."</div>
-        <div class="context-card__example">"SOC 2 doesn't have to take 6 months. Here's why most firms make it take that long."</div>
-        <div class="context-card__example">"We've never had a client say 'I wish we'd waited longer to get SOC 2 certified.'"</div>
+        <div class="context-card__example">&ldquo;Your enterprise prospect just asked for SOC&nbsp;2 documentation. We can have it done in 8 weeks.&rdquo;</div>
+        <div class="context-card__example">&ldquo;SOC&nbsp;2 doesn&rsquo;t have to take 6 months. Here&rsquo;s why most firms make it take that long.&rdquo;</div>
+        <div class="context-card__example">&ldquo;We&rsquo;ve never had a client say &lsquo;I wish we&rsquo;d waited longer to get SOC&nbsp;2 certified.&rsquo;&rdquo;</div>
       </div>
 
-      <!-- Medium-Form -->
       <div class="context-card">
         <div class="context-card__header">
           <div class="context-card__icon">M</div>
@@ -1354,13 +1539,12 @@
         </div>
         <ul class="context-card__rules">
           <li>Open with the problem or situation, not with who we are.</li>
-          <li>Teach something real &mdash; the reader should learn even if they never hire us.</li>
+          <li>Teach something real&nbsp;&mdash; the reader should learn even if they never hire us.</li>
           <li>Structure with headers every 200&ndash;300 words.</li>
           <li>End with a clear takeaway or next step, not a sales pitch.</li>
         </ul>
       </div>
 
-      <!-- Long-Form -->
       <div class="context-card">
         <div class="context-card__header">
           <div class="context-card__icon">L</div>
@@ -1371,23 +1555,21 @@
         </div>
         <ul class="context-card__rules">
           <li>Full professional register with strategic conversational moments.</li>
-          <li>Comprehensive but structured &mdash; table of contents, clear sections, executive summary.</li>
+          <li>Comprehensive but structured&nbsp;&mdash; table of contents, clear sections, executive summary.</li>
           <li>Include real data, timelines, and process breakdowns.</li>
           <li>Case studies: Situation &rarr; Approach &rarr; Outcome &rarr; Timeline &rarr; Key Metric</li>
         </ul>
       </div>
     </section>
 
-    <!-- =============================================
-         WHAT STAYS CONSTANT — Footer Banner
-         ============================================= -->
+    <!-- ═══════════════════ WHAT STAYS CONSTANT ═══════════════════ -->
     <div class="constants-banner">
-      <div class="page-wrapper" style="padding: 0;">
+      <div style="max-width: var(--content-max-width); margin: 0 auto;">
         <div class="constants-banner__eyebrow">What Stays Constant</div>
         <h2 class="constants-banner__title">Across all formats, always:</h2>
         <div class="constants-grid">
           <div class="constant-item">Be specific over general</div>
-          <div class="constant-item">Respect the reader's time and intelligence</div>
+          <div class="constant-item">Respect the reader&rsquo;s time and intelligence</div>
           <div class="constant-item">Include at least one concrete number or example</div>
           <div class="constant-item">Make the next step clear</div>
           <div class="constant-item">Sound like a person, not a firm</div>
@@ -1395,9 +1577,7 @@
       </div>
     </div>
 
-    <!-- =============================================
-         FOOTER
-         ============================================= -->
+    <!-- ═══════════════════ FOOTER ═══════════════════ -->
     <footer class="site-footer">
       <span>Baseline</span> &middot; Voice &amp; Expression Guide &middot; v1.0
     </footer>

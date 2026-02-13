@@ -3,911 +3,959 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseline — Brand Foundation</title>
+  <title>Baseline &mdash; Brand Foundation &amp; Messaging</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ── Custom Properties ─────────────────────────────────── */
-    :root {
-      --navy: #1B2B4B;
-      --teal: #2A9D8F;
-      --slate: #64748B;
-      --coral: #E8725C;
-      --white: #FFFFFF;
-      --warm-gray: #F8F7F5;
-      --light-gray: #E2E8F0;
-
-      --font-heading: 'Plus Jakarta Sans', sans-serif;
-      --font-body: 'Inter', sans-serif;
-
-      --space-xs: 0.5rem;
-      --space-sm: 0.75rem;
-      --space-md: 1.25rem;
-      --space-lg: 2rem;
-      --space-xl: 3rem;
-      --space-2xl: 4.5rem;
-    }
-
-    /* ── Reset & Base ──────────────────────────────────────── */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: var(--font-body);
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--navy);
-      background-color: var(--white);
-    }
-
-    /* ── Layout ────────────────────────────────────────────── */
-    .page-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: var(--space-xl) var(--space-lg);
-    }
-
-    /* ── Header ────────────────────────────────────────────── */
-    .brand-header {
-      text-align: center;
-      padding: var(--space-2xl) 0 var(--space-xl);
-      border-bottom: 2px solid var(--light-gray);
-      margin-bottom: var(--space-2xl);
-    }
-
-    .brand-header__mark {
-      display: inline-block;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.8125rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-md);
-    }
-
-    .brand-header__name {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 3rem;
-      line-height: 1.1;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-    }
-
-    .brand-header__subtitle {
-      font-family: var(--font-heading);
-      font-weight: 500;
-      font-size: 1.125rem;
-      color: var(--slate);
-      margin-top: var(--space-xs);
-      letter-spacing: 0.01em;
-    }
-
-    .brand-header__meta {
-      font-family: var(--font-body);
-      font-size: 0.8125rem;
-      color: var(--slate);
-      margin-top: var(--space-md);
-      opacity: 0.7;
-    }
-
-    /* ── Table of Contents ─────────────────────────────────── */
-    .toc {
-      background: var(--warm-gray);
-      border-radius: 12px;
-      padding: var(--space-lg) var(--space-xl);
-      margin-bottom: var(--space-2xl);
-    }
-
-    .toc__title {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--slate);
-      margin-bottom: var(--space-md);
-    }
-
-    .toc__list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-xs) var(--space-xl);
-    }
-
-    .toc__item {
-      font-family: var(--font-heading);
-      font-size: 0.9375rem;
-      font-weight: 500;
-    }
-
-    .toc__number {
-      display: inline-block;
-      width: 1.75rem;
-      color: var(--teal);
-      font-weight: 600;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .toc__link {
-      color: var(--navy);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .toc__link:hover {
-      color: var(--teal);
-    }
-
-    /* ── Sections ──────────────────────────────────────────── */
-    .section {
-      margin-bottom: var(--space-2xl);
-      padding-bottom: var(--space-2xl);
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    .section:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-    }
-
-    .section__header {
-      display: flex;
-      align-items: baseline;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-xl);
-    }
-
-    .section__number {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.8125rem;
-      color: var(--teal);
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .section__title {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.75rem;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-      line-height: 1.2;
-    }
-
-    .section__divider {
-      flex: 1;
-      height: 1px;
-      background: var(--light-gray);
-      align-self: center;
-      margin-left: var(--space-sm);
-    }
-
-    /* ── Content Blocks ────────────────────────────────────── */
-    .block {
-      border-left: 3px solid var(--teal);
-      padding-left: var(--space-lg);
-      margin-bottom: var(--space-xl);
-    }
-
-    .block--plain {
-      border-left: none;
-      padding-left: 0;
-    }
-
-    .block__label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-xs);
-    }
-
-    .block__heading {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.1875rem;
-      color: var(--navy);
-      margin-bottom: var(--space-sm);
-      line-height: 1.35;
-    }
-
-    .block p {
-      margin-bottom: var(--space-md);
-      color: var(--navy);
-    }
-
-    .block p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ── Callout / Feature Text ────────────────────────────── */
-    .callout {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 1.3125rem;
-      line-height: 1.55;
-      color: var(--navy);
-      margin-bottom: var(--space-md);
-    }
-
-    .callout--tagline {
-      font-size: 1.625rem;
-      text-align: center;
-      padding: var(--space-xl) 0;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-    }
-
-    /* ── Highlight Box ─────────────────────────────────────── */
-    .highlight-box {
-      background: var(--warm-gray);
-      border-radius: 10px;
-      padding: var(--space-lg);
-      margin-bottom: var(--space-xl);
-    }
-
-    .highlight-box__label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.6875rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-xs);
-    }
-
-    .highlight-box p {
-      margin-bottom: var(--space-md);
-    }
-
-    .highlight-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ── Audience Segments ─────────────────────────────────── */
-    .segment {
-      border-left: 3px solid var(--teal);
-      padding-left: var(--space-lg);
-      margin-bottom: var(--space-xl);
-    }
-
-    .segment__name {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.0625rem;
-      color: var(--navy);
-      margin-bottom: var(--space-xs);
-    }
-
-    .segment__detail {
-      margin-bottom: var(--space-sm);
-    }
-
-    .segment__detail-label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.8125rem;
-      color: var(--slate);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .segment__detail p {
-      margin: 0;
-    }
-
-    .segment__signals {
-      font-style: italic;
-      color: var(--slate);
-      font-size: 0.9375rem;
-    }
-
-    /* ── Anti-Audience ─────────────────────────────────────── */
-    .anti-audience {
-      list-style: none;
-    }
-
-    .anti-audience li {
-      position: relative;
-      padding-left: 1.75rem;
-      margin-bottom: var(--space-md);
-    }
-
-    .anti-audience li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.55em;
-      width: 8px;
-      height: 2px;
-      background: var(--coral);
-    }
-
-    .anti-audience__name {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    /* ── Positioning Grid ──────────────────────────────────── */
-    .positioning-item {
-      border-left: 3px solid var(--teal);
-      padding-left: var(--space-lg);
-      margin-bottom: var(--space-xl);
-    }
-
-    .positioning-item__label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-xs);
-    }
-
-    .positioning-item p {
-      margin-bottom: var(--space-md);
-    }
-
-    .positioning-item p:last-child {
-      margin-bottom: 0;
-    }
-
-    .territory-own {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.1875rem;
-      color: var(--navy);
-      display: inline;
-    }
-
-    /* ── Narrative ─────────────────────────────────────────── */
-    .narrative {
-      background: var(--warm-gray);
-      border-radius: 12px;
-      padding: var(--space-xl);
-      margin-bottom: var(--space-xl);
-    }
-
-    .narrative__label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-md);
-    }
-
-    .narrative p {
-      margin-bottom: var(--space-md);
-    }
-
-    .narrative p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ── Boilerplates ──────────────────────────────────────── */
-    .boilerplate {
-      border-left: 3px solid var(--teal);
-      padding-left: var(--space-lg);
-      margin-bottom: var(--space-xl);
-      position: relative;
-    }
-
-    .boilerplate__header {
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-sm);
-    }
-
-    .boilerplate__length-label {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.9375rem;
-      color: var(--navy);
-    }
-
-    .boilerplate__meter {
-      display: flex;
-      gap: 3px;
-      align-items: center;
-    }
-
-    .boilerplate__meter-pip {
-      width: 18px;
-      height: 5px;
-      border-radius: 2.5px;
-      background: var(--light-gray);
-    }
-
-    .boilerplate__meter-pip--filled {
-      background: var(--teal);
-    }
-
-    .boilerplate p {
-      margin-bottom: var(--space-md);
-    }
-
-    .boilerplate p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* ── Proof Points ──────────────────────────────────────── */
-    .proof-points {
-      list-style: none;
-      counter-reset: proof;
-    }
-
-    .proof-points li {
-      counter-increment: proof;
-      position: relative;
-      padding-left: 3rem;
-      margin-bottom: var(--space-lg);
-    }
-
-    .proof-points li::before {
-      content: counter(proof, decimal-leading-zero);
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.875rem;
-      color: var(--teal);
-      line-height: 1.7;
-    }
-
-    .proof-points__stat {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    /* ── Personality Cards ─────────────────────────────────── */
-    .trait-card {
-      background: var(--white);
-      border: 1px solid var(--light-gray);
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: var(--space-lg);
-    }
-
-    .trait-card__header {
-      background: var(--warm-gray);
-      padding: var(--space-md) var(--space-lg);
-      display: flex;
-      align-items: baseline;
-      gap: var(--space-sm);
-      border-bottom: 1px solid var(--light-gray);
-    }
-
-    .trait-card__number {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.8125rem;
-      color: var(--teal);
-    }
-
-    .trait-card__name {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.0625rem;
-      color: var(--navy);
-    }
-
-    .trait-card__tagline {
-      font-family: var(--font-body);
-      font-size: 0.875rem;
-      color: var(--slate);
-      margin-left: auto;
-    }
-
-    .trait-card__body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .trait-card__col {
-      padding: var(--space-md) var(--space-lg);
-    }
-
-    .trait-card__col:first-child {
-      border-right: 1px solid var(--light-gray);
-    }
-
-    .trait-card__col-label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.6875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-xs);
-    }
-
-    .trait-card__col-label--means {
-      color: var(--teal);
-    }
-
-    .trait-card__col-label--not {
-      color: var(--coral);
-    }
-
-    .trait-card__col p {
-      font-size: 0.9375rem;
-      line-height: 1.6;
-    }
-
-    /* ── Archetype Cards ───────────────────────────────────── */
-    .archetype {
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: var(--space-lg);
-    }
-
-    .archetype--primary {
-      border: 2px solid var(--teal);
-      background: var(--white);
-    }
-
-    .archetype--supporting {
-      border: 1px solid var(--light-gray);
-      background: var(--white);
-    }
-
-    .archetype__header {
-      padding: var(--space-md) var(--space-lg);
-      display: flex;
-      align-items: baseline;
-      gap: var(--space-sm);
-    }
-
-    .archetype--primary .archetype__header {
-      background: var(--teal);
-    }
-
-    .archetype--supporting .archetype__header {
-      background: var(--warm-gray);
-    }
-
-    .archetype__badge {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.6875rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
-
-    .archetype--primary .archetype__badge {
-      background: rgba(255,255,255,0.2);
-      color: var(--white);
-    }
-
-    .archetype--supporting .archetype__badge {
-      background: var(--light-gray);
-      color: var(--slate);
-    }
-
-    .archetype__name {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.125rem;
-    }
-
-    .archetype--primary .archetype__name {
-      color: var(--white);
-    }
-
-    .archetype--supporting .archetype__name {
-      color: var(--navy);
-    }
-
-    .archetype__origin {
-      font-family: var(--font-body);
-      font-size: 0.8125rem;
-      margin-left: auto;
-    }
-
-    .archetype--primary .archetype__origin {
-      color: rgba(255,255,255,0.7);
-    }
-
-    .archetype--supporting .archetype__origin {
-      color: var(--slate);
-    }
-
-    .archetype__body {
-      padding: var(--space-lg);
-    }
-
-    .archetype__detail {
-      margin-bottom: var(--space-md);
-    }
-
-    .archetype__detail:last-child {
-      margin-bottom: 0;
-    }
-
-    .archetype__detail-label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--slate);
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .archetype__detail-label--shadow {
-      color: var(--coral);
-    }
-
-    .archetype__detail p {
-      font-size: 0.9375rem;
-      line-height: 1.6;
-    }
-
-    /* ── Brand World ───────────────────────────────────────── */
-    .brand-world {
-      background: var(--warm-gray);
-      border-radius: 12px;
-      padding: var(--space-xl);
-      margin-bottom: var(--space-xl);
-    }
-
-    .brand-world__label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-xs);
-    }
-
-    .brand-world__name {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--navy);
-      margin-bottom: var(--space-sm);
-    }
-
-    .brand-world p {
-      font-size: 0.9375rem;
-      line-height: 1.7;
-    }
-
-    /* ── Influences ────────────────────────────────────────── */
-    .influences {
-      list-style: none;
-    }
-
-    .influences li {
-      padding-left: 1.5rem;
-      position: relative;
-      margin-bottom: var(--space-md);
-    }
-
-    .influences li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.65em;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    .influences__name {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    /* ── Market of One ─────────────────────────────────────── */
-    .market-of-one {
-      background: var(--warm-gray);
-      border-radius: 12px;
-      padding: var(--space-lg);
-      margin-bottom: var(--space-xl);
-      position: relative;
-    }
-
-    .market-of-one::before {
-      content: '\201C';
-      position: absolute;
-      top: 0.1em;
-      left: 0.85rem;
-      font-family: var(--font-heading);
-      font-size: 4rem;
-      line-height: 1;
-      color: var(--teal);
-      opacity: 0.2;
-    }
-
-    .market-of-one__label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.6875rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: var(--space-xs);
-    }
-
-    .market-of-one p {
-      font-size: 0.9375rem;
-      line-height: 1.7;
-      position: relative;
-    }
-
-    /* ── Footer ────────────────────────────────────────────── */
-    .brand-footer {
-      text-align: center;
-      padding: var(--space-xl) 0 var(--space-lg);
-      margin-top: var(--space-xl);
-      border-top: 2px solid var(--light-gray);
-    }
-
-    .brand-footer__logo {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.125rem;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-    }
-
-    .brand-footer__note {
-      font-size: 0.8125rem;
-      color: var(--slate);
-      margin-top: var(--space-xs);
-    }
-
-    /* ── Print Styles ──────────────────────────────────────── */
-    @media print {
-      html {
-        font-size: 11pt;
-      }
-
-      body {
-        background: white;
-        color: #1B2B4B;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .page-wrapper {
-        max-width: 100%;
-        padding: 0;
-      }
-
-      .toc {
-        background: none;
-        border: 1px solid #E2E8F0;
-        padding: 1rem 1.5rem;
-        page-break-after: avoid;
-      }
-
-      .section {
-        page-break-inside: avoid;
-      }
-
-      .trait-card,
-      .archetype,
-      .narrative,
-      .brand-world,
-      .highlight-box,
-      .market-of-one {
-        page-break-inside: avoid;
-      }
-
-      .narrative,
-      .brand-world,
-      .highlight-box,
-      .market-of-one {
-        background: none;
-        border: 1px solid #E2E8F0;
-      }
-
-      .archetype--primary .archetype__header {
-        background: #2A9D8F !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .trait-card__header {
-        background: none;
-        border-bottom: 1px solid #E2E8F0;
-      }
-
-      .archetype--supporting .archetype__header {
-        background: none;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .brand-footer__note {
-        display: none;
-      }
-    }
-
-    /* ── Small-screen adjustments ──────────────────────────── */
-    @media (max-width: 640px) {
-      .page-wrapper {
-        padding: var(--space-lg) var(--space-md);
-      }
-
-      .brand-header__name {
-        font-size: 2.25rem;
-      }
-
-      .toc__list {
-        grid-template-columns: 1fr;
-      }
-
-      .trait-card__body {
-        grid-template-columns: 1fr;
-      }
-
-      .trait-card__col:first-child {
-        border-right: none;
-        border-bottom: 1px solid var(--light-gray);
-      }
-
-      .trait-card__tagline {
-        display: none;
-      }
-
-      .section__header {
-        flex-wrap: wrap;
-      }
-
-      .section__divider {
-        display: none;
-      }
-    }
+/* ================================================================
+   BASELINE — BRAND FOUNDATION & MESSAGING
+   Self-contained brand specimen. DM Serif Display + Inter.
+   Tokens aligned to color-palette.html and ui-kit.html.
+   ================================================================ */
+
+/* ── Brand Tokens ───────────────────────────────────────────────── */
+:root {
+  --navy: #0F2B3C;
+  --teal: #1A8A7D;
+  --slate: #4A5568;
+  --coral: #E8734A;
+  --white: #FFFFFF;
+  --warm-gray: #F7F5F2;
+  --light-gray: #E2E4E8;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 43, 60, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 43, 60, 0.08);
+  --shadow-lg: 0 8px 24px rgba(15, 43, 60, 0.12);
+
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+
+  --letter-spacing-heading: -0.01em;
+  --letter-spacing-label: 0.1em;
+  --line-height-body: 1.7;
+  --line-height-heading: 1.2;
+  --content-max-width: 900px;
+  --transition-speed: 0.2s;
+}
+
+/* ── Reset ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: var(--line-height-body);
+  color: var(--navy);
+  background: var(--white);
+}
+
+/* ── Page Layout ────────────────────────────────────────────────── */
+.page {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-xl);
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.header {
+  text-align: center;
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  border-bottom: 2px solid var(--light-gray);
+  margin-bottom: var(--space-3xl);
+}
+
+.header__label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-md);
+}
+
+.header__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: var(--line-height-heading);
+  color: var(--navy);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+.header__subtitle {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--slate);
+  margin-top: var(--space-xs);
+  letter-spacing: 0.01em;
+}
+
+.header__meta {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-top: var(--space-md);
+  opacity: 0.6;
+}
+
+/* ── Table of Contents ──────────────────────────────────────────── */
+.toc {
+  background: var(--warm-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.toc__title {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: var(--space-lg);
+}
+
+.toc__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm) var(--space-2xl);
+}
+
+.toc__item {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.toc__number {
+  display: inline-block;
+  width: 1.75rem;
+  color: var(--teal);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8125rem;
+}
+
+.toc__link {
+  color: var(--navy);
+  text-decoration: none;
+  transition: color var(--transition-speed) ease;
+}
+
+.toc__link:hover { color: var(--teal); }
+
+/* ── Sections ───────────────────────────────────────────────────── */
+.section {
+  margin-bottom: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.section__number {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.section__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: var(--navy);
+  letter-spacing: var(--letter-spacing-heading);
+  line-height: var(--line-height-heading);
+}
+
+.section__rule {
+  flex: 1;
+  height: 1px;
+  background: var(--light-gray);
+  align-self: center;
+  margin-left: var(--space-sm);
+}
+
+.section__intro {
+  color: var(--slate);
+  margin-bottom: var(--space-xl);
+  font-size: 0.9375rem;
+  line-height: var(--line-height-body);
+  max-width: 680px;
+}
+
+/* ── Content Blocks ─────────────────────────────────────────────── */
+.block {
+  border-left: 3px solid var(--teal);
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.block--plain {
+  border-left: none;
+  padding-left: 0;
+}
+
+.block__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-xs);
+}
+
+.block__heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.1875rem;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+  line-height: 1.35;
+}
+
+.block p {
+  margin-bottom: var(--space-md);
+  color: var(--navy);
+}
+
+.block p:last-child { margin-bottom: 0; }
+
+/* ── Hero Belief ────────────────────────────────────────────────── */
+.belief-hero {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl) var(--space-2xl);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.belief-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--coral));
+}
+
+.belief-hero__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-lg);
+}
+
+.belief-hero__text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 1.45;
+  color: var(--white);
+}
+
+/* ── Positioning Pull Quote ─────────────────────────────────────── */
+.pull-quote {
+  border-left: 4px solid var(--teal);
+  padding: var(--space-xl) var(--space-xl);
+  margin: var(--space-xl) 0;
+  background: var(--warm-gray);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.pull-quote__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-md);
+}
+
+.pull-quote__text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--navy);
+}
+
+.pull-quote__text strong {
+  color: var(--teal);
+  font-weight: 400;
+  font-family: var(--font-display);
+}
+
+/* ── Tagline Display ────────────────────────────────────────────── */
+.tagline-display {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-xl);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.tagline-display::before,
+.tagline-display::after {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background: var(--teal);
+  margin: 0 auto;
+}
+
+.tagline-display::before { margin-bottom: var(--space-xl); }
+.tagline-display::after { margin-top: var(--space-xl); }
+
+.tagline-display__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-md);
+}
+
+.tagline-display__text {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: var(--line-height-heading);
+  color: var(--navy);
+  letter-spacing: var(--letter-spacing-heading);
+}
+
+/* ── Highlight Box ──────────────────────────────────────────────── */
+.highlight-box {
+  background: var(--warm-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.highlight-box__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-sm);
+}
+
+.highlight-box p { margin-bottom: var(--space-md); }
+.highlight-box p:last-child { margin-bottom: 0; }
+
+/* ── Callout Card ───────────────────────────────────────────────── */
+.callout-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: var(--space-lg) var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.callout-card__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-xs);
+}
+
+.callout-card__heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.callout-card p { margin-bottom: var(--space-md); }
+.callout-card p:last-child { margin-bottom: 0; }
+
+/* ── Audience Segments ──────────────────────────────────────────── */
+.segment {
+  border-left: 3px solid var(--teal);
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.segment__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+}
+
+.segment__detail {
+  margin-bottom: var(--space-sm);
+}
+
+.segment__detail-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.segment__detail p { margin: 0; font-size: 0.9375rem; }
+
+.segment__signals {
+  font-style: italic;
+  color: var(--slate);
+  font-size: 0.9375rem;
+}
+
+/* ── Anti-Audience ──────────────────────────────────────────────── */
+.anti-audience { list-style: none; }
+
+.anti-audience li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: var(--space-md);
+  border-left: 3px solid var(--coral);
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(232, 115, 74, 0.04);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: var(--space-sm);
+}
+
+.anti-audience__name {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ── Market of One ──────────────────────────────────────────────── */
+.market-of-one {
+  background: var(--warm-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.market-of-one::before {
+  content: '\201C';
+  position: absolute;
+  top: 0.25rem;
+  left: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--teal);
+  opacity: 0.15;
+}
+
+.market-of-one__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-sm);
+}
+
+.market-of-one p {
+  font-size: 0.9375rem;
+  line-height: var(--line-height-body);
+  position: relative;
+}
+
+/* ── Positioning Items ──────────────────────────────────────────── */
+.positioning-item {
+  border-left: 3px solid var(--teal);
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.positioning-item__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-xs);
+}
+
+.positioning-item p { margin-bottom: var(--space-md); }
+.positioning-item p:last-child { margin-bottom: 0; }
+
+.territory-own {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.1875rem;
+  color: var(--navy);
+  display: inline;
+}
+
+/* ── Contrarian POV Card ────────────────────────────────────────── */
+.contrarian-card {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.contrarian-card__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-md);
+}
+
+.contrarian-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-md);
+}
+
+.contrarian-card p:last-child { margin-bottom: 0; }
+
+.contrarian-card strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* ── Narrative Block ────────────────────────────────────────────── */
+.narrative {
+  background: var(--warm-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.narrative__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-md);
+}
+
+.narrative p { margin-bottom: var(--space-md); }
+.narrative p:last-child { margin-bottom: 0; }
+
+/* ── Boilerplates ───────────────────────────────────────────────── */
+.boilerplate {
+  border-left: 3px solid var(--teal);
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.boilerplate__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.boilerplate__length-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--navy);
+}
+
+.boilerplate__meter {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.boilerplate__meter-pip {
+  width: 18px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--light-gray);
+}
+
+.boilerplate__meter-pip--filled {
+  background: var(--teal);
+}
+
+.boilerplate p { margin-bottom: var(--space-md); }
+.boilerplate p:last-child { margin-bottom: 0; }
+
+/* ── Proof Points ───────────────────────────────────────────────── */
+.proof-points {
+  list-style: none;
+  counter-reset: proof;
+}
+
+.proof-points li {
+  counter-increment: proof;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: var(--space-lg);
+}
+
+.proof-points li::before {
+  content: counter(proof, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--teal);
+  line-height: var(--line-height-body);
+}
+
+.proof-points__stat {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* ── Trait Cards ─────────────────────────────────────────────────── */
+.trait-card {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+.trait-card__header {
+  background: var(--warm-gray);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.trait-card__number {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--teal);
+}
+
+.trait-card__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  color: var(--navy);
+}
+
+.trait-card__tagline {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-left: auto;
+}
+
+.trait-card__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.trait-card__col {
+  padding: var(--space-md) var(--space-lg);
+}
+
+.trait-card__col:first-child {
+  border-right: 1px solid var(--light-gray);
+}
+
+.trait-card__col-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.trait-card__col-label--means { color: var(--teal); }
+.trait-card__col-label--not { color: var(--coral); }
+
+.trait-card__col p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* ── Archetype Cards ─────────────────────────────────────────────── */
+.archetype {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+.archetype--primary {
+  border: 2px solid var(--teal);
+  background: var(--white);
+}
+
+.archetype--supporting {
+  border: 1px solid var(--light-gray);
+  background: var(--white);
+}
+
+.archetype__header {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.archetype--primary .archetype__header {
+  background: var(--teal);
+}
+
+.archetype--supporting .archetype__header {
+  background: var(--warm-gray);
+}
+
+.archetype__badge {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: var(--letter-spacing-label);
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.archetype--primary .archetype__badge {
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+}
+
+.archetype--supporting .archetype__badge {
+  background: var(--light-gray);
+  color: var(--slate);
+}
+
+.archetype__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.archetype--primary .archetype__name { color: var(--white); }
+.archetype--supporting .archetype__name { color: var(--navy); }
+
+.archetype__origin {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  margin-left: auto;
+}
+
+.archetype--primary .archetype__origin { color: rgba(255,255,255,0.7); }
+.archetype--supporting .archetype__origin { color: var(--slate); }
+
+.archetype__body { padding: var(--space-lg); }
+
+.archetype__detail { margin-bottom: var(--space-md); }
+.archetype__detail:last-child { margin-bottom: 0; }
+
+.archetype__detail-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--slate);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.archetype__detail-label--shadow { color: var(--coral); }
+
+.archetype__detail p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* ── Brand World ─────────────────────────────────────────────────── */
+.brand-world {
+  background: var(--warm-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-2xl);
+  margin-bottom: var(--space-xl);
+}
+
+.brand-world__label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: var(--space-xs);
+}
+
+.brand-world__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--navy);
+  margin-bottom: var(--space-sm);
+}
+
+.brand-world p {
+  font-size: 0.9375rem;
+  line-height: var(--line-height-body);
+}
+
+/* ── Influences ──────────────────────────────────────────────────── */
+.influences { list-style: none; }
+
+.influences li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+
+.influences li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+.influences__name {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  padding: var(--space-xl) 0 var(--space-lg);
+  margin-top: var(--space-xl);
+  border-top: 2px solid var(--light-gray);
+}
+
+.footer__logo {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--navy);
+}
+
+.footer__note {
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-top: var(--space-xs);
+  opacity: 0.6;
+}
+
+/* ── Print ───────────────────────────────────────────────────────── */
+@media print {
+  html { font-size: 11pt; }
+  body { background: white; color: var(--navy); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { max-width: 100%; padding: 0; }
+  .toc { background: none; border: 1px solid var(--light-gray); padding: 1rem 1.5rem; page-break-after: avoid; }
+  .section { page-break-inside: avoid; }
+  .belief-hero { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .contrarian-card { background: var(--navy) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .archetype--primary .archetype__header { background: var(--teal) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .trait-card, .archetype, .narrative, .brand-world, .highlight-box, .market-of-one { page-break-inside: avoid; }
+  .narrative, .brand-world, .highlight-box, .market-of-one { background: none; border: 1px solid var(--light-gray); }
+  a { color: inherit; text-decoration: none; }
+  .footer__note { display: none; }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .page { padding: var(--space-xl) var(--space-md); }
+  .header__name { font-size: 2.5rem; }
+  .toc__list { grid-template-columns: 1fr; }
+  .trait-card__body { grid-template-columns: 1fr; }
+  .trait-card__col:first-child { border-right: none; border-bottom: 1px solid var(--light-gray); }
+  .trait-card__tagline { display: none; }
+  .section__header { flex-wrap: wrap; }
+  .section__rule { display: none; }
+  .belief-hero { padding: var(--space-xl); }
+  .belief-hero__text { font-size: 1.375rem; }
+  .tagline-display__text { font-size: 1.75rem; }
+  .pull-quote__text { font-size: 1.0625rem; }
+}
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
+  <div class="page">
 
     <!-- ═══════════════════ HEADER ═══════════════════ -->
-    <header class="brand-header">
-      <span class="brand-header__mark">Brand Strategy</span>
-      <h1 class="brand-header__name">Baseline</h1>
-      <p class="brand-header__subtitle">Brand Foundation &amp; Messaging</p>
-      <p class="brand-header__meta">Confidential &mdash; Prepared for internal use</p>
+    <header class="header">
+      <span class="header__label">Brand Strategy</span>
+      <h1 class="header__name">Baseline</h1>
+      <p class="header__subtitle">Brand Foundation &amp; Messaging</p>
+      <p class="header__meta">Confidential &mdash; Prepared for internal use</p>
     </header>
 
     <!-- ═══════════════════ TABLE OF CONTENTS ═══════════════════ -->
@@ -916,23 +964,26 @@
       <ol class="toc__list">
         <li class="toc__item"><span class="toc__number">01</span><a class="toc__link" href="#core-belief">Core Belief</a></li>
         <li class="toc__item"><span class="toc__number">02</span><a class="toc__link" href="#audience">Audience</a></li>
-        <li class="toc__item"><span class="toc__number">03</span><a class="toc__link" href="#positioning">Positioning</a></li>
+        <li class="toc__item"><span class="toc__number">03</span><a class="toc__link" href="#positioning">Positioning &amp; Differentiation</a></li>
         <li class="toc__item"><span class="toc__number">04</span><a class="toc__link" href="#messaging">Messaging Architecture</a></li>
         <li class="toc__item"><span class="toc__number">05</span><a class="toc__link" href="#personality">Brand Personality</a></li>
       </ol>
     </nav>
 
-    <!-- ═══════════════════ SECTION 1: CORE BELIEF ═══════════════════ -->
+    <!-- ═══════════════════ 01: CORE BELIEF ═══════════════════ -->
     <section id="core-belief" class="section">
       <div class="section__header">
         <span class="section__number">01</span>
         <h2 class="section__title">Core Belief</h2>
-        <span class="section__divider"></span>
+        <span class="section__rule"></span>
       </div>
 
-      <div class="block">
-        <p class="block__label">Belief Statement</p>
-        <p class="callout">Growing tech companies deserve the same financial infrastructure as enterprises&nbsp;&mdash; they just need it delivered differently. Compliance isn&rsquo;t a barrier to growth; it&rsquo;s the foundation that makes growth sustainable.</p>
+      <p class="section__intro">Every brand starts with a conviction. Not a market opportunity, not a gap analysis&nbsp;&mdash; a belief about how the world should work. This is the belief that Baseline was built on, and every decision in this document flows from it.</p>
+
+      <!-- Hero Belief Statement -->
+      <div class="belief-hero">
+        <p class="belief-hero__label">Belief Statement</p>
+        <p class="belief-hero__text">Growing tech companies deserve the same financial infrastructure as enterprises&nbsp;&mdash; they just need it delivered differently. Compliance isn&rsquo;t a barrier to growth; it&rsquo;s the foundation that makes growth sustainable.</p>
       </div>
 
       <div class="block">
@@ -948,16 +999,18 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ SECTION 2: AUDIENCE ═══════════════════ -->
+    <!-- ═══════════════════ 02: AUDIENCE ═══════════════════ -->
     <section id="audience" class="section">
       <div class="section__header">
         <span class="section__number">02</span>
         <h2 class="section__title">Audience</h2>
-        <span class="section__divider"></span>
+        <span class="section__rule"></span>
       </div>
 
+      <p class="section__intro">A brand that talks to everyone convinces no one. These are the specific people Baseline exists to serve&nbsp;&mdash; defined not by job title or company size, but by the moment they realize compliance just became their problem.</p>
+
       <!-- Segments -->
-      <p class="block__label" style="margin-bottom: var(--space-md);">Segments</p>
+      <p class="block__label" style="margin-bottom: var(--space-lg);">Segments</p>
 
       <div class="segment">
         <p class="segment__name">1. The Scaling CTO</p>
@@ -1010,7 +1063,7 @@
       <!-- Unified Profile -->
       <div class="highlight-box">
         <p class="highlight-box__label">Unified Profile</p>
-        <p><strong style="font-family: var(--font-heading); color: var(--navy);">Infrastructure Builders</strong>&nbsp;&mdash; People responsible for building the financial and compliance backbone of growing tech companies. They&rsquo;re smart, time-constrained, and tired of being sold to by firms that don&rsquo;t understand their world. They value competence over credentials and clarity over complexity.</p>
+        <p><strong style="font-family: var(--font-display); font-weight: 400; color: var(--navy); font-size: 1.0625rem;">Infrastructure Builders</strong>&nbsp;&mdash; People responsible for building the financial and compliance backbone of growing tech companies. They&rsquo;re smart, time-constrained, and tired of being sold to by firms that don&rsquo;t understand their world. They value competence over credentials and clarity over complexity.</p>
       </div>
 
       <!-- Market of One -->
@@ -1020,7 +1073,7 @@
       </div>
 
       <!-- Anti-Audience -->
-      <div class="block--plain" style="margin-bottom: var(--space-xl);">
+      <div style="margin-bottom: var(--space-xl);">
         <p class="block__label" style="margin-bottom: var(--space-md);">Anti-Audience</p>
         <ul class="anti-audience">
           <li><span class="anti-audience__name">Enterprise companies with internal audit teams</span>&nbsp;&mdash; They don&rsquo;t need us. They have the budget and headcount for Big Four.</li>
@@ -1030,52 +1083,59 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ SECTION 3: POSITIONING ═══════════════════ -->
+    <!-- ═══════════════════ 03: POSITIONING ═══════════════════ -->
     <section id="positioning" class="section">
       <div class="section__header">
         <span class="section__number">03</span>
-        <h2 class="section__title">Positioning</h2>
-        <span class="section__divider"></span>
+        <h2 class="section__title">Positioning &amp; Differentiation</h2>
+        <span class="section__rule"></span>
       </div>
 
-      <div class="positioning-item">
-        <p class="positioning-item__label">Positioning Statement</p>
-        <p>For growing tech companies that need enterprise-grade compliance without enterprise-grade budgets, <strong>Baseline</strong> is the accounting firm that speaks your language&nbsp;&mdash; SaaS metrics, cloud infrastructure, startup economics&nbsp;&mdash; so you can get SOC&nbsp;2 certified, PCI compliant, and investor-ready without hiring a Big Four firm.</p>
+      <p class="section__intro">Positioning isn&rsquo;t about being better&nbsp;&mdash; it&rsquo;s about being the obvious choice for a specific audience with a specific problem. Baseline doesn&rsquo;t compete with every accounting firm. It occupies the territory between &ldquo;too expensive&rdquo; and &ldquo;doesn&rsquo;t understand tech.&rdquo;</p>
+
+      <!-- Positioning Statement (Pull Quote) -->
+      <div class="pull-quote">
+        <p class="pull-quote__label">Positioning Statement</p>
+        <p class="pull-quote__text">For growing tech companies that need enterprise-grade compliance without enterprise-grade budgets, <strong>Baseline</strong> is the accounting firm that speaks your language&nbsp;&mdash; SaaS metrics, cloud infrastructure, startup economics&nbsp;&mdash; so you can get SOC&nbsp;2 certified, PCI compliant, and investor-ready without hiring a Big Four firm.</p>
       </div>
 
-      <div class="positioning-item">
-        <p class="positioning-item__label">Value Proposition</p>
+      <div class="callout-card">
+        <p class="callout-card__label">Value Proposition</p>
         <p>Enterprise-grade compliance built for startup-stage companies. SOC&nbsp;2 audits, PCI compliance, and financial infrastructure delivered by accountants who understand SaaS business models, cloud architecture, and the pace of startup growth.</p>
       </div>
 
-      <div class="positioning-item">
-        <p class="positioning-item__label">The Intersection</p>
+      <div class="callout-card">
+        <p class="callout-card__label">The Intersection</p>
         <p>Deep accounting expertise + genuine technology fluency + startup-stage pragmatism. The ability to deliver Big Four-quality audit work with the speed, pricing, and communication style that growing companies actually need.</p>
       </div>
 
-      <div class="positioning-item">
-        <p class="positioning-item__label">Territory to Own</p>
+      <div class="callout-card">
+        <p class="callout-card__label">Territory to Own</p>
         <p><span class="territory-own">&ldquo;Compliance as growth infrastructure&rdquo;</span>&nbsp;&mdash; The idea that good financial systems don&rsquo;t slow you down, they speed you up. A SOC&nbsp;2 report isn&rsquo;t paperwork&nbsp;&mdash; it&rsquo;s the key that unlocks enterprise sales. PCI compliance isn&rsquo;t overhead&nbsp;&mdash; it&rsquo;s what lets you process payments without fear. The companies that treat compliance as infrastructure outgrow the ones that treat it as a checkbox.</p>
       </div>
 
-      <div class="positioning-item">
-        <p class="positioning-item__label">Contrarian Point of View</p>
-        <p>Most accounting firms treat compliance as a cost center&nbsp;&mdash; something companies have to do, an expense to be minimized. We treat it as a growth lever. Every SOC&nbsp;2 report we deliver opens a door to enterprise revenue. Every PCI certification removes a barrier to payment processing. Every audit-ready financial system makes the next fundraise faster. The firms that help you &ldquo;just get through the audit&rdquo; are leaving money on the table. We build the systems that compound.</p>
+      <!-- Contrarian POV as featured dark card -->
+      <div class="contrarian-card">
+        <p class="contrarian-card__label">Contrarian Point of View</p>
+        <p>Most accounting firms treat compliance as a cost center&nbsp;&mdash; something companies have to do, an expense to be minimized. <strong>We treat it as a growth lever.</strong> Every SOC&nbsp;2 report we deliver opens a door to enterprise revenue. Every PCI certification removes a barrier to payment processing. Every audit-ready financial system makes the next fundraise faster.</p>
+        <p>The firms that help you &ldquo;just get through the audit&rdquo; are leaving money on the table. We build the systems that compound.</p>
       </div>
     </section>
 
-    <!-- ═══════════════════ SECTION 4: MESSAGING ═══════════════════ -->
+    <!-- ═══════════════════ 04: MESSAGING ARCHITECTURE ═══════════════════ -->
     <section id="messaging" class="section">
       <div class="section__header">
         <span class="section__number">04</span>
         <h2 class="section__title">Messaging Architecture</h2>
-        <span class="section__divider"></span>
+        <span class="section__rule"></span>
       </div>
 
-      <!-- Tagline -->
-      <div style="background: var(--warm-gray); border-radius: 12px; padding: var(--space-lg); margin-bottom: var(--space-xl); text-align: center;">
-        <p class="highlight-box__label">Tagline</p>
-        <p class="callout--tagline" style="margin: 0;">Compliance that scales with you.</p>
+      <p class="section__intro">Strategy becomes real when it turns into words. This section contains the actual language Baseline uses&nbsp;&mdash; from a seven-word tagline to a three-paragraph description. Every word was chosen. None are filler.</p>
+
+      <!-- Tagline Display -->
+      <div class="tagline-display">
+        <p class="tagline-display__label">Tagline</p>
+        <p class="tagline-display__text">Compliance that scales with you.</p>
       </div>
 
       <!-- Core Narrative -->
@@ -1142,13 +1202,15 @@
       </ol>
     </section>
 
-    <!-- ═══════════════════ SECTION 5: BRAND PERSONALITY ═══════════════════ -->
+    <!-- ═══════════════════ 05: BRAND PERSONALITY ═══════════════════ -->
     <section id="personality" class="section">
       <div class="section__header">
         <span class="section__number">05</span>
         <h2 class="section__title">Brand Personality</h2>
-        <span class="section__divider"></span>
+        <span class="section__rule"></span>
       </div>
+
+      <p class="section__intro">If Baseline were a person, you&rsquo;d trust them with your audit before the first meeting was over. Not because they charmed you&nbsp;&mdash; because every answer was precise, clear, and free of filler. These traits define how that person shows up.</p>
 
       <!-- Personality Traits -->
       <p class="block__label" style="margin-bottom: var(--space-lg);">Personality Traits</p>
@@ -1165,7 +1227,7 @@
             <p>Every deliverable is accurate, complete, and defensible. We catch what others miss.</p>
           </div>
           <div class="trait-card__col">
-            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn&rsquo;t Mean</p>
             <p>Rigid, nitpicky, or unable to move fast. Precision and speed aren&rsquo;t opposites.</p>
           </div>
         </div>
@@ -1183,7 +1245,7 @@
             <p>We teach as we deliver. Clients understand what we&rsquo;re doing and why. No jargon walls.</p>
           </div>
           <div class="trait-card__col">
-            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn&rsquo;t Mean</p>
             <p>Casual, unserious, or overly friendly. We&rsquo;re warm, not buddy-buddy.</p>
           </div>
         </div>
@@ -1201,7 +1263,7 @@
             <p>We build what you need now and design it to grow. No overengineering, no unnecessary complexity.</p>
           </div>
           <div class="trait-card__col">
-            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn&rsquo;t Mean</p>
             <p>Cutting corners or doing the minimum. Pragmatic isn&rsquo;t the same as cheap.</p>
           </div>
         </div>
@@ -1219,7 +1281,7 @@
             <p>We speak your language. We know what AWS, ARR, and a cap table are. You don&rsquo;t have to educate your accountant.</p>
           </div>
           <div class="trait-card__col">
-            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn't Mean</p>
+            <p class="trait-card__col-label trait-card__col-label--not">What It Doesn&rsquo;t Mean</p>
             <p>Trendy, jargon-heavy, or performatively technical. We&rsquo;re fluent, not showing off.</p>
           </div>
         </div>
@@ -1291,9 +1353,9 @@
     </section>
 
     <!-- ═══════════════════ FOOTER ═══════════════════ -->
-    <footer class="brand-footer">
-      <p class="brand-footer__logo">Baseline</p>
-      <p class="brand-footer__note">This document is confidential and intended for internal use only.</p>
+    <footer class="footer">
+      <p class="footer__logo">Baseline</p>
+      <p class="footer__note">This document is confidential and intended for internal use only.</p>
     </footer>
 
   </div>
