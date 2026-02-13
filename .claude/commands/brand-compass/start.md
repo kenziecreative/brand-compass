@@ -139,6 +139,25 @@ unfiltered version is exactly what I need to build a brand that sounds like you,
 not like a marketing template. Don't worry about being polished — raw and real
 is better for this work.
 
+One more thing before we dive in — and this is important. As we go through
+this process, I'm going to ask you a lot of questions about your brand. The
+answers aren't about your personal preferences. They're about what serves
+the brand you're building. Those are different things.
+
+For example, you might love the color blue — but if blue doesn't serve your
+brand's personality and the feeling you want your audience to have, then blue
+isn't the right choice. Your favorite font, your aesthetic preferences, what
+you think looks cool — those are starting points, but they're not the final
+answer. The final answer comes from strategy: who you're trying to reach,
+what you want them to feel, and what makes you different.
+
+I might push back on some of your choices during this process. That's not me
+overriding you — it's me doing my job. A good strategist doesn't just give
+you what you ask for. They help you see what actually works for your brand,
+even when it's not what you expected. You'll always have the final say, but
+I want you to make those decisions with the full picture, not just from gut
+preference.
+
 Run `/brand-compass:phase-1-origin` when you're ready to start Phase 1."
 
 ## Conversation Guidelines
