@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { ChevronDown, FileText } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
@@ -13,7 +14,7 @@ export function PhaseContent({ markdown, title }: { markdown: string; title: str
       </CardHeader>
       <CardContent>
         <div className="prose">
-          <Markdown>{markdown}</Markdown>
+          <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
         </div>
       </CardContent>
     </Card>
@@ -45,7 +46,7 @@ export function AgentOutputSection({
         <CollapsibleContent>
           <CardContent className="pt-0">
             <div className="prose">
-              <Markdown>{markdown}</Markdown>
+              <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
             </div>
           </CardContent>
         </CollapsibleContent>
