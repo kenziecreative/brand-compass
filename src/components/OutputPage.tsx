@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FileText, Code, Download, PackagePlus, Eye } from 'lucide-react'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
@@ -47,26 +48,48 @@ const deliverables = [
 
 export function OutputPage() {
   const state = loadState()
-  const phase8Status = state?.phases[8] ?? 'pending'
-  const isReady = phase8Status === 'completed'
-  const totalFiles = deliverables.reduce((sum, d) => sum + d.files.length, 0)
+  const [fileExists, setFileExists] = useState<Record<string, boolean>>({})
+
+  // Collect all file paths to check (core deliverables + asset packs)
+  const allCorePaths = deliverables.flatMap(d => d.files.map(f => f.filename))
+  const assetPackPaths = (state?.client?.assetPacks ?? [])
+    .map(id => getAssetPack(id)?.outputFile)
+    .filter((p): p is string => !!p)
+  const allPaths = [...allCorePaths, ...assetPackPaths]
+
+  const totalFiles = allPaths.length
+  const readyCount = allPaths.filter(p => fileExists[p]).length
+  const allReady = readyCount === totalFiles && totalFiles > 0
+
+  useEffect(() => {
+    const checks = allPaths.map(path =>
+      fetch(`/${path}`, { method: 'HEAD' })
+        .then(r => [path, r.ok] as const)
+        .catch(() => [path, false] as const),
+    )
+    Promise.all(checks).then(results => {
+      setFileExists(Object.fromEntries(results))
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div>
         <h1 className="font-display text-2xl font-bold tracking-tight">Brand Kit</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          {isReady
+          {allReady
             ? `All ${totalFiles} files are ready for export.`
-            : 'Complete all 8 phases to generate final deliverables.'}
+            : `${readyCount} of ${totalFiles} files generated.`}
         </p>
       </div>
 
       <div className="space-y-4">
         {deliverables.map(d => {
           const Icon = d.icon
+          const anyExist = d.files.some(f => fileExists[f.filename])
           return (
-            <Card key={d.title} className={!isReady ? 'opacity-50' : ''}>
+            <Card key={d.title} className={!anyExist ? 'opacity-50' : ''}>
               <CardHeader>
                 <div className="flex items-center gap-2 mb-1">
                   <Icon className="size-4 text-walnut dark:text-walnut-20" />
@@ -78,7 +101,8 @@ export function OutputPage() {
                 <ul className="space-y-2">
                   {d.files.map(f => {
                     const basename = f.filename.split('/').pop() ?? f.filename
-                    return isReady ? (
+                    const exists = fileExists[f.filename]
+                    return exists ? (
                       <li key={f.filename}>
                         <Link
                           to={`/output/view/${basename}`}
@@ -139,8 +163,10 @@ export function OutputPage() {
             <ul className="space-y-2">
               {state.client.assetPacks.map(id => {
                 const pack = getAssetPack(id)
-                const basename = pack?.outputFile?.split('/').pop()
-                return isReady && basename ? (
+                const outputFile = pack?.outputFile
+                const basename = outputFile?.split('/').pop()
+                const exists = outputFile ? fileExists[outputFile] : false
+                return exists && basename ? (
                   <li key={id}>
                     <Link
                       to={`/output/view/${basename}`}
@@ -151,9 +177,9 @@ export function OutputPage() {
                         <span className="text-sm font-medium text-foreground">
                           {pack?.name ?? id}
                         </span>
-                        {pack?.outputFile && (
+                        {outputFile && (
                           <p className="text-xs text-muted-foreground mt-0.5 font-mono">
-                            {pack.outputFile}
+                            {outputFile}
                           </p>
                         )}
                       </div>
@@ -172,9 +198,9 @@ export function OutputPage() {
                       <span className="text-sm font-medium text-muted-foreground">
                         {pack?.name ?? id}
                       </span>
-                      {pack?.outputFile && (
+                      {outputFile && (
                         <p className="text-xs text-muted-foreground/60 mt-0.5 font-mono">
-                          {pack.outputFile}
+                          {outputFile}
                         </p>
                       )}
                     </div>
@@ -189,7 +215,7 @@ export function OutputPage() {
         </Card>
       )}
 
-      {isReady && (
+      {allReady && (
         <div className="flex justify-end pt-4">
           <Button variant="accent" className="gap-2">
             <Download className="size-4" />

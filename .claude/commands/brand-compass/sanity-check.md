@@ -59,7 +59,7 @@ Answer these questions (output your answers):
 2. **Commands:** How many commands exist in `.claude/commands/brand-compass/`? (Should be at least 16: start, 8 phase commands, 2 checkpoints, resume, save-state, export, sanity-check, verify. Dev-only: verify-build — may not be present in distributed copies.)
 3. **Frontend:** Do the phase content cards in `src/components/cards/` match the type definitions in `src/types/brand.ts`? (Should be 7 cards: Belief, Audience, Positioning, Archetype, Messaging, Voice, VisualDirection)
 4. **Phase config:** Does `src/lib/phase-utils.ts` have entries for all 8 phases with correct names, icons, groups, and discovery output keys?
-5. **Output files:** Does the Document Assembler agent description list all 7 output files? Do the OutputPage deliverable entries match?
+5. **Output files:** Does the Document Assembler agent description list all 8 core output files plus asset pack HTML specimens? Do the OutputPage deliverable entries match?
 6. **Type coverage:** Does `src/types/brand.ts` have content types for all 7 phases in the `PhaseContent` discriminated union?
 
 ### 4. Agent-Command Integration

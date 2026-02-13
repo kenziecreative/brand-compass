@@ -12,7 +12,7 @@ Stop.
 
 ## Step 2: Verify All Output Files
 
-Check that all seven deliverable files exist in the `workspace/output/` directory:
+Check that all core deliverable files exist in the `workspace/output/` directory:
 
 1. `workspace/output/brand-foundation.md` — Brand Foundation (Markdown)
 2. `workspace/output/brand-foundation.html` — Brand Foundation (HTML specimen)
@@ -21,6 +21,9 @@ Check that all seven deliverable files exist in the `workspace/output/` director
 5. `workspace/output/color-palette.html` — Color Palette (Interactive HTML)
 6. `workspace/output/visual-system.html` — Visual System (HTML)
 7. `workspace/output/ui-kit.html` — UI Kit (HTML with brand tokens)
+8. `workspace/output/practical-toolkit.md` — Practical Toolkit (Markdown)
+
+Also check for asset pack HTML specimens. Read `workspace/STATE.md` Client section for selected packs, and verify each has its corresponding HTML file (e.g., `workspace/output/pitch-deck.html`).
 
 If any are missing, flag them:
 
@@ -59,7 +62,7 @@ Verify that research and draft files are preserved:
 
 **Client:** [Client Name]
 
-**Final Deliverables (7 files):**
+**Core Deliverables (8 files):**
 
 | Document | Format | Location |
 |----------|--------|----------|
@@ -70,6 +73,9 @@ Verify that research and draft files are preserved:
 | Color Palette | Interactive HTML | `workspace/output/color-palette.html` |
 | Visual System | HTML | `workspace/output/visual-system.html` |
 | UI Kit | HTML | `workspace/output/ui-kit.html` |
+| Practical Toolkit | Markdown | `workspace/output/practical-toolkit.md` |
+
+[If asset packs were selected, also list each pack's HTML specimen]
 
 **Supporting Research:**
 [List of research/draft files that exist]

@@ -31,6 +31,8 @@ Read everything built across all phases:
 - Phase 7: Color Palette, Typography, Mark, Imagery Style
 - All agent outputs in `workspace/research/` and `workspace/drafts/`
 
+Also read the **Client** section of `workspace/STATE.md` and note which **Asset Packs** were selected during onboarding. These will generate additional deliverables beyond the core eight files.
+
 ## Step 4: Assembly Conversation
 
 This phase is primarily assembly, not new discovery. But some items need client input:
@@ -61,15 +63,30 @@ Any specific scenario you want me to optimize for?"
 - **Never use** — Words and phrases that are off-brand
 - **Substitutions** — 'Instead of [generic], say [on-brand]'"
 
+### Asset Packs
+If the client selected asset packs during onboarding, discuss each one briefly. Asset packs generate standalone HTML specimen files in addition to sections in the practical toolkit.
+
+For each selected pack, confirm any pack-specific details:
+- **Social Media Kit** — "Which platforms are highest priority? Any specific post formats you use most?"
+- **Print Collateral** — "Do you have preferred paper stock or print vendors? Standard business card size or custom?"
+- **Media Kit / EPK** — "Do you have existing headshots? Any specific press contexts to optimize for?"
+- **Merch & Product** — "What products are you planning? T-shirts, mugs, stickers, packaging?"
+- **Pitch Deck** — "Who's the primary audience — investors, clients, partners? How many slides typically?"
+- **App / Dashboard UI** — "What kind of app — SaaS dashboard, mobile app, internal tool?"
+- **Signage & Space** — "What physical spaces — office, retail, event booths, pop-ups?"
+- **Email & Newsletter** — "What email platform? What's your current sending cadence?"
+
+Don't belabor this — quick confirmation is enough. The brand decisions from Phases 1-7 provide the substance.
+
 ## Step 5: Launch Document Assembler
 
 Once all toolkit items are discussed:
 
-"Let me compile everything into your final documents. This generates all seven deliverables from everything we've built."
+"Let me compile everything into your final documents. This generates your core deliverables plus any asset pack specimens from everything we've built."
 
 Update STATE.md Running Agents table.
 
-The Document Assembler produces seven files:
+The Document Assembler produces these **core files** (always):
 1. `workspace/output/brand-foundation.md` — Core belief, audience, positioning, messaging, personality
 2. `workspace/output/brand-foundation.html` — HTML specimen with brand tokens
 3. `workspace/output/voice-guide.md` — Voice summary, style, signature moves, guardrails, scaling
@@ -77,6 +94,39 @@ The Document Assembler produces seven files:
 5. `workspace/output/color-palette.html` — Interactive color specimen with tint scales and CSS variables
 6. `workspace/output/visual-system.html` — Full visual system with examples
 7. `workspace/output/ui-kit.html` — Component library with client's brand tokens
+8. `workspace/output/practical-toolkit.md` — Bios, pitches, decision filter, language bank (includes asset pack sections)
+
+Plus **asset pack HTML specimens** for each selected pack:
+- `workspace/output/social-media-kit.html` — Profile templates, post formats, content calendar
+- `workspace/output/print-collateral.html` — Business card, letterhead, one-pager mockups
+- `workspace/output/media-kit-epk.html` — Press bio variants, headshot specs, press release template
+- `workspace/output/merch-product.html` — Product mockup guidelines, packaging specs
+- `workspace/output/pitch-deck.html` — Slide templates, deck structure, data viz styling
+- `workspace/output/app-dashboard-ui.html` — Extended component library, dashboard patterns
+- `workspace/output/signage-space.html` — Environmental design specs, banner templates
+- `workspace/output/email-newsletter.html` — Email templates, newsletter format, dark mode
+
+## Step 5b: Quality Gate
+
+After the Document Assembler completes, automatically run the Brand Verifier against all output files before presenting results to the client.
+
+"Before we review, I'm running a quality check on all the deliverables. This catches placeholder text, missing sections, and cross-document inconsistencies before you see anything. About 30 seconds."
+
+Update STATE.md Running Agents table.
+
+The Brand Verifier checks:
+- Do all files contain actual brand content (not placeholders or template text)?
+- Are cross-document references consistent (same tagline, same hex codes, same voice tags)?
+- Do HTML specimens match the design system parameters from Phase 7?
+- Were all selected asset packs generated?
+- Is line count reasonable compared to reference templates?
+
+If the verifier finds issues:
+1. Fix them before presenting to the client — relaunch the Document Assembler for specific files if needed
+2. Only escalate to the client if the issue requires a decision (e.g., conflicting information between phases)
+3. Log the verification results in STATE.md Session Log
+
+If clean, proceed to Step 6.
 
 ## Step 6: Review & Confirm
 
@@ -89,6 +139,10 @@ When the Document Assembler completes, read each output file and present a summa
 3. **Color Palette** (HTML) — [number of colors, tint scales, CSS variables]
 4. **Visual System** (HTML) — [typography, imagery, mark direction]
 5. **UI Kit** (HTML) — [component patterns with brand tokens]
+6. **Practical Toolkit** (MD) — bios, pitches, decision filter, language bank
+[If asset packs selected:]
+7. **[Pack Name]** (HTML) — [key elements summary]
+...
 
 Want to review any section, or should we package it for export?"
 
@@ -103,7 +157,7 @@ When confirmed:
    - Check `Toolkit compiled` in Discovery Outputs
    - Set Next Action: "Run /brand-compass:export to package final deliverables"
    - Add Session Log entry
-2. Tell the client: "Phase 8 is complete. Your entire brand system is assembled — seven deliverables covering strategy, messaging, voice, visuals, and practical tools. Run `/brand-compass:export` to package everything for delivery."
+2. Tell the client: "Phase 8 is complete. Your entire brand system is assembled — [N] deliverables covering strategy, messaging, voice, visuals, and practical tools. Run `/brand-compass:export` to package everything for delivery."
 
 ## Conversation Guidelines
 
