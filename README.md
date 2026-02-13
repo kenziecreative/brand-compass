@@ -62,6 +62,22 @@ Then open Claude Code in the project directory and run:
 
 That begins onboarding. From there, the system guides you through each phase. A live dashboard runs in your browser showing your brand being assembled as you go — content cards for each phase, visual previews, and final deliverables.
 
+### Before You Start
+
+The process works best when you come prepared with a few things. You don't need polished answers — just have the raw material accessible so you're not searching mid-session.
+
+**Writing samples (3-5 pieces)** — Anything you've written that sounds like you. Blog posts, newsletters, social captions, artist statements, grant applications, about pages — whatever exists. Have the links or files accessible before you start.
+
+**People you've impacted** — Think of 3-4 specific people whose lives or work changed because of what you do. What were they dealing with before they found you? You'll also be asked to describe one person in detail — name, age, what their day looks like.
+
+**Evidence that you're credible** — What have you done that earns trust? Could be client outcomes, exhibitions, press mentions, years of practice, certifications, community built, anything concrete. Have specifics — not "I've helped a lot of people" but the actual details.
+
+**Others in your space** — 3-5 names of people or organizations doing something similar to you. Not necessarily competitors — peers, influences, anyone occupying adjacent territory.
+
+**Existing materials** — Anything visual or written that currently represents you. A logo, a website, a flyer, an album cover, a business card. Even rough or outdated stuff.
+
+You don't need to prepare answers about your personality, your beliefs, or how you communicate. Those parts of the process work better when they come out of conversation rather than pre-written statements.
+
 ### Speak Your Answers
 
 Brand discovery works best when you talk rather than type. When you type, you edit yourself — filtering, polishing, second-guessing. When you speak, you get closer to how you actually think and communicate. That unfiltered voice is exactly what the system needs.
