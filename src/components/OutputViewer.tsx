@@ -3,6 +3,8 @@ import { ArrowLeft, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { useEffect, useState } from 'react'
+import Markdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const fileTitles: Record<string, string> = {
   'brand-foundation.md': 'Brand Foundation',
@@ -119,9 +121,9 @@ export function OutputViewer() {
             {markdownContent === null ? (
               <p className="text-muted-foreground text-sm">Loading...</p>
             ) : (
-              <pre className="text-sm leading-relaxed whitespace-pre-wrap font-mono text-foreground">
-                {markdownContent}
-              </pre>
+              <div className="prose max-w-none">
+                <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
+              </div>
             )}
           </div>
         ) : (
