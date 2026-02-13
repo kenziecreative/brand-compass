@@ -1,6 +1,6 @@
 # Brand Compass
 
-**A guided brand development system by [Kenzie Creative](https://kenziecreative.com).**
+**A guided brand development system by Kenzie Creative.**
 
 Brand Compass walks you through the same strategic process that professional brand strategists use with their clients — from uncovering your core belief to delivering a complete visual identity system. The difference is that you're having a conversation, not filling out a questionnaire. You talk through your story, your audience, your point of view, and the system listens, challenges, reflects back, and builds your brand from what's real about you.
 
