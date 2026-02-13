@@ -40,6 +40,9 @@ workspace/STATE.md
 # Claude auto-memory (per-machine)
 .claude/plans/
 
+# Dev notes (not part of the distributable)
+memory-architecture.md
+
 # Dev-only tooling (not part of the distributable)
 .claude/agents/implementation-verifier.md
 .claude/commands/brand-compass/verify-build.md
