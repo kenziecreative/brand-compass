@@ -41,26 +41,35 @@ Guide the client through five question groups. Reference the Research Analyst ou
 8. If you owned a bookstore section, what would it be called?
 9. What concept do you want to be known for originating or championing?
 
+### The Unifying Lens
+
+10. You talk about [X], [Y], and [Z]. These seem like different topics. Is there one idea that connects them all? What do they all have in common?
+11. If someone asked "why do you write about such different things?" — what's your answer?
+12. Is there a single lens or framework that makes all your content make sense together?
+
+*Note: This probes for the through-line that makes seemingly different topics coherent. It's distinct from "territory" (what you own) and "intersection" (what you combine). Not every client needs this — skip if they have a narrow focus. But for thought leaders and content creators who span multiple topics, this is often the biggest strategic breakthrough.*
+
 ### The Contrarian View
 
-10. What mainstream advice in your space misses the point?
-11. What do you believe that practitioners often disagree with?
-12. What would you say that might make some uncomfortable but is true?
-13. Complete: "Most experts say ______. I say ______."
+13. What mainstream advice in your space misses the point?
+14. What do you believe that practitioners often disagree with?
+15. What would you say that might make some uncomfortable but is true?
+16. Complete: "Most experts say ______. I say ______."
 
 ### Permission & Credibility
 
-14. What gives you permission to speak on this?
-15. Why should someone trust you over others?
+17. What gives you permission to speak on this?
+18. Why should someone trust you over others?
 
 ## Step 4: Synthesize & Confirm
 
-Synthesize into four outputs:
+Synthesize into five outputs:
 
 1. **Positioning Statement** — The complete "For [audience], I'm the..." statement
 2. **Intersection** — The unique combination they bring (X + Y + Z)
 3. **Territory** — The concept or space they want to own
-4. **Contrarian POV** — Their bold take that challenges conventional thinking
+4. **Unifying Lens** — The single idea that makes all their topics coherent (if applicable — not every client needs this)
+5. **Contrarian POV** — Their bold take that challenges conventional thinking
 
 Present and iterate until the client confirms.
 

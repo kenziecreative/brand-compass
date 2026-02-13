@@ -50,8 +50,9 @@ Guide the client through three question groups. Ask 2-3 questions at a time, don
 9. Who suffers most when this problem goes unsolved?
 10. If you succeed completely, what's different about the world?
 
-## Step 4: Optional Agent — Content Auditor
+## Step 4: Optional Agents
 
+### Content Auditor
 If the client mentions existing content (URLs, articles, newsletters, social profiles), launch the Content Auditor:
 
 "I'm having my Content Auditor analyze your existing content while we continue. They'll find origin story elements, beliefs you've already expressed, and language patterns. About 60 seconds."
@@ -61,6 +62,13 @@ Update STATE.md Running Agents table with the launch.
 When the Content Auditor completes, read `workspace/research/content-audit.md` and share:
 
 "I've analyzed your existing content. You've written about [theme] frequently, and there's a clear belief coming through: [pattern]. Does that resonate as your core, or is there something deeper?"
+
+### Voice Analyzer (Early Voice Seed)
+If the client has provided writing samples (blog posts, newsletters, articles — either during onboarding or in this phase), launch the Voice Analyzer now. Don't wait for Phase 6.
+
+"I'm also having my voice analyst look at how you naturally write. The earlier we capture your voice, the better everything downstream sounds. About 60 seconds."
+
+An early voice fingerprint at `workspace/research/voice-fingerprint.md` becomes a "voice seed" — it prevents the Copywriter (Phase 5) and Document Assembler (Phase 8) from defaulting to a literary/polished register that doesn't match the client. Even a rough fingerprint from 3 pieces is far better than no fingerprint at all. The Voice Analyzer will refine it in Phase 6 when more context is available.
 
 ## Step 5: Synthesize & Confirm
 

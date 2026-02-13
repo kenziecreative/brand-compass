@@ -50,6 +50,12 @@ Guide the client through four question groups.
 13. Who has similar energy in a different field?
 14. Any "shadow faculty" — mentors who shaped your thinking?
 
+### Defining Features
+
+15. Is there something about how you operate, think, or present that doesn't fit neatly into personality traits, archetypes, or influences? Something people always notice or comment on?
+16. Do you have a recurring metaphor, a signature ritual, a collection you reference, or a pattern that keeps showing up in your work?
+17. If someone were imitating you, what's the one thing they'd HAVE to include to make it recognizable?
+
 ## Step 4: Launch Archetype Analyst
 
 After the initial personality discussion (at least traits and archetype questions answered), launch the Archetype Analyst:
@@ -64,12 +70,13 @@ When the Archetype Analyst completes, read `workspace/research/archetype-assessm
 
 ## Step 5: Synthesize & Confirm
 
-Synthesize into four outputs:
+Synthesize into five outputs:
 
 1. **Personality Traits** — 4-6 traits with what-it-means and what-it-doesn't-mean for each
 2. **Archetypes** — Primary and supporting archetypes with custom names, how they show up, and shadow to guard against
 3. **Brand World** — Physical space description, metaphor, sensory qualities
 4. **Brand Character** — One paragraph summary of who this brand IS as a character
+5. **Defining Features** — Any unique brand characteristics that don't fit standard categories (if present — not every brand has these, and that's fine)
 
 Present and iterate until the client confirms.
 

@@ -129,7 +129,7 @@ Modular deliverable add-ons selected during onboarding. Stored in `STATE.md` Cli
 | Content Auditor | Client provides existing content (URLs, files, pasted text) | Content URLs or text | `workspace/research/content-audit.md` | No |
 | Archetype Analyst | Phase 4 begins OR personality traits surface in conversation | Responses from Phases 1-3, personality discussion | `workspace/research/archetype-assessment.md` | No |
 | Copywriter | Discovery for messaging section completes | Discovery notes from Phase 5 | `workspace/drafts/messaging-options.md` | No |
-| Voice Analyzer | Client provides writing samples OR Phase 6 begins | Writing samples (3+ pieces) | `workspace/research/voice-fingerprint.md` | No |
+| Voice Analyzer | Client provides writing samples (as early as Phase 0/1) OR Phase 6 begins | Writing samples (3+ pieces) | `workspace/research/voice-fingerprint.md` | No |
 | Visual Director | Phase 7 begins, Phases 1-6 complete | All Phase 1-6 outputs | `workspace/drafts/visual-direction.md` | **Yes** |
 | Image Generator | Visual direction approved by client | Approved visual direction | `workspace/assets/[type]/` | No |
 | Document Assembler | Phase completes OR client requests current state OR end of process | All completed outputs | `workspace/output/[document].md` | No |
@@ -209,6 +209,8 @@ Do not ask the client to re-explain. State has it. If it doesn't, that's a previ
 **Populates:** Core Belief section of Brand Foundation document
 
 **Optional agent:** If client mentions existing content → Launch Content Auditor to find origin story elements, beliefs already expressed, language patterns
+
+**Optional agent:** If client provides writing samples (blog posts, newsletters, articles) during Phase 0 or Phase 1 → Launch Voice Analyzer immediately. Don't wait for Phase 6. An early voice fingerprint becomes a "voice seed" that prevents downstream agents (Copywriter, Document Assembler) from defaulting to literary/polished register. Even a rough fingerprint from 3 pieces is better than none.
 
 **Discovery Questions:**
 
@@ -299,17 +301,23 @@ The Territory:
 8. If you owned a bookstore section, what would it be called?
 9. What concept do you want to be known for originating or championing?
 
+The Unifying Lens:
+10. You talk about [X], [Y], and [Z]. These seem like different topics. Is there one idea that connects them all?
+11. If someone asked "why do you write about such different things?" — what's your answer?
+12. Is there a single lens or framework that makes all your content make sense together?
+*(Skip if the client has a narrow focus. But for thought leaders and content creators who span multiple topics, this is often the biggest strategic breakthrough.)*
+
 The Contrarian View:
-10. What mainstream advice in your space misses the point?
-11. What do you believe that practitioners often disagree with?
-12. What would you say that might make some uncomfortable but is true?
-13. Complete: "Most experts say ______. I say ______."
+13. What mainstream advice in your space misses the point?
+14. What do you believe that practitioners often disagree with?
+15. What would you say that might make some uncomfortable but is true?
+16. Complete: "Most experts say ______. I say ______."
 
 Permission & Credibility:
-14. What gives you permission to speak on this?
-15. Why should someone trust you over others?
+17. What gives you permission to speak on this?
+18. Why should someone trust you over others?
 
-**Phase complete when:** Positioning statement drafted, intersection clear, territory claimed, contrarian POV articulated.
+**Phase complete when:** Positioning statement drafted, intersection clear, territory claimed, unifying lens identified (if applicable), contrarian POV articulated.
 
 **CHECKPOINT A:** Before proceeding to Phase 4, confirm Phases 1-3 are solid. Strategic foundation must be right before personality work.
 
@@ -347,13 +355,19 @@ Influences:
 13. Who has similar energy in a different field?
 14. Any "shadow faculty" — mentors who shaped your thinking?
 
+Defining Features:
+15. Is there something about how you operate that doesn't fit neatly into personality traits, archetypes, or influences? Something people always notice or comment on?
+16. Do you have a recurring metaphor, a signature ritual, a collection you reference, or a pattern that keeps showing up?
+17. If someone were imitating you, what's the one thing they'd HAVE to include?
+*(Not every brand has these. Skip if nothing surfaces. But the brands that do have defining features — a "Shadow Faculty," a signature ritual, a recurring metaphor — are exactly the ones this process should capture well.)*
+
 **Launch prompt:**
 > "Based on what you've shared, I'm having my archetype specialist analyze the patterns. They'll map your responses to classic archetypes and suggest custom names. About 60 seconds."
 
 **Check-in prompt after Archetype Analyst completes:**
 > "The analysis suggests your primary energy is [X] — classically called [Y], but for you it shows up as [behavior]. Supporting energy is [Z]. Does that feel right?"
 
-**Phase complete when:** 4-6 traits defined with what-it-means/doesn't-mean, archetypes mapped with custom names, brand world described.
+**Phase complete when:** 4-6 traits defined with what-it-means/doesn't-mean, archetypes mapped with custom names, brand world described, defining features captured (if present).
 
 ---
 
@@ -592,7 +606,7 @@ If conversation ends mid-process:
 
 ## Final Deliverables
 
-At completion, client receives seven files in two formats:
+At completion, client receives eight core files plus standalone HTML specimens for each selected asset pack:
 
 ### Markdown Documents
 
@@ -602,7 +616,6 @@ At completion, client receives seven files in two formats:
    - Positioning Statement, Intersection, Territory, Contrarian POV
    - Brand Personality, Archetypes, Brand Character
    - Messaging Architecture: Tagline, Narrative, Boilerplates, Proof Points
-   - Practical Toolkit: Bio Bank, Elevator Pitches, Decision Filter, Content Territories, Language Bank
 
 2. **Voice & Expression Guide** (`workspace/output/voice-guide.md`)
    - Philosophical Anchor
@@ -611,25 +624,36 @@ At completion, client receives seven files in two formats:
    - Signature Moves (with frequency and examples)
    - Guardrails (cringe list, banned phrases, scaling by context)
 
+3. **Practical Toolkit** (`workspace/output/practical-toolkit.md`)
+   - Bio Bank, Elevator Pitches, Decision Filter, Content Territories, Language Bank
+   - Quick Reference Card
+   - Asset pack sections (for each selected pack)
+
 ### HTML Specimens
 
-3. **Brand Foundation** (`workspace/output/brand-foundation.html`)
+4. **Brand Foundation** (`workspace/output/brand-foundation.html`)
    - Same content as markdown, rendered with client's brand tokens
 
-4. **Voice & Expression Guide** (`workspace/output/voice-guide.html`)
+5. **Voice & Expression Guide** (`workspace/output/voice-guide.html`)
    - Same content as markdown, rendered with client's brand tokens
 
-5. **Color Palette** (`workspace/output/color-palette.html`)
+6. **Color Palette** (`workspace/output/color-palette.html`)
    - Interactive color specimen with tint scales (50-900)
    - CSS custom properties ready to copy
    - Accessibility contrast ratios
 
-6. **Visual System** (`workspace/output/visual-system.html`)
+7. **Visual System** (`workspace/output/visual-system.html`)
    - Typography system (scale, weights, hierarchy)
    - Logo & Mark (variations, clear space, applications)
    - Imagery & Illustration (style, subjects, AI prompts)
 
-7. **UI Kit** (`workspace/output/ui-kit.html`)
+8. **UI Kit** (`workspace/output/ui-kit.html`)
    - Component library built with client's brand tokens
    - Buttons, cards, badges, form elements
    - Spacing, radius, shadow system
+
+### Asset Pack HTML Specimens (per selection)
+
+Each selected asset pack generates a standalone HTML file at `workspace/output/[pack-id].html`:
+- Social Media Kit, Print Collateral, Media Kit / EPK, Merch & Product
+- Pitch Deck, App / Dashboard UI, Signage & Space, Email & Newsletter
