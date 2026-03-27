@@ -105,7 +105,12 @@ Phase 0 runs via `/brand-compass:start`. It captures the client profile before d
 - Description of what they do
 - Where they show up (platforms)
 - Existing brand assets
+- Named competitors (for Research Analyst input)
+- Prior brand history (what's been tried, what worked, what didn't)
+- Perception gap (how they're described vs. how they want to be described)
 - Asset Pack selection (modular add-on deliverables)
+
+**Note:** Full onboarding question set — including brand history, named competitors, and perception gap questions — is defined in the `/brand-compass:start` command file. The Phase 0 summary above reflects what gets captured, not the question sequence.
 
 Phase 0 must be complete before Phase 1 can begin.
 
@@ -302,18 +307,21 @@ Finding the Common Thread:
 4. What do all these people have in common — values, not demographics?
 5. What transformation are they seeking? Where are they vs. where do they want to be?
 6. What's their real problem — not the symptom, the underlying issue?
-7. What moment triggers them to seek help?
+7. What would your customers use or do if you didn't exist? (What's the alternative they fall back on — another service, doing it themselves, ignoring the problem?)
+8. What moment triggers them to seek help?
 
 Market of One:
-8. Pick one specific person. Name, age, role, company, location. Describe their Tuesday.
-9. What keeps them up at night?
-10. When they find you and it works, what do they say?
-11. Why you specifically?
+9. Pick one specific person. Name, age, role, company, location. Describe their Tuesday.
+10. What keeps them up at night?
+11. What were they doing before you — and why did that stop working? (The push/habit force: what broke down in their old approach?)
+12. What almost stopped them from choosing you? (The anxiety force: what doubt or hesitation did they have to push past?)
+13. When they find you and it works, what do they say?
+14. Why you specifically?
 
 Anti-Audience:
-12. Who should NOT work with you? What mindset makes someone a bad fit?
-13. What type of client have you learned to avoid?
-14. Who will be frustrated by your approach?
+15. Who should NOT work with you? What mindset makes someone a bad fit?
+16. What type of client have you learned to avoid?
+17. Who will be frustrated by your approach?
 
 **Check-in prompt after Research Analyst completes:**
 > "I looked at how others in your space talk about their audience. Most use language like [X]. You might differentiate by [Y]. Does that match who you actually want to reach?"
@@ -346,30 +354,31 @@ The Territory:
 7. What word or phrase do you want associated with your name?
 8. If you owned a bookstore section, what would it be called?
 9. What concept do you want to be known for originating or championing?
+10. What category does your audience currently put you in? Is that the right category — or are you being filed next to the wrong competitors?
 
 The Unifying Lens:
-10. You talk about [X], [Y], and [Z]. These seem like different topics. Is there one idea that connects them all?
-11. If someone asked "why do you write about such different things?" — what's your answer?
-12. Is there a single lens or framework that makes all your content make sense together?
+11. You talk about [X], [Y], and [Z]. These seem like different topics. Is there one idea that connects them all?
+12. If someone asked "why do you write about such different things?" — what's your answer?
+13. Is there a single lens or framework that makes all your content make sense together?
 *(Skip if the client has a narrow focus. But for thought leaders and content creators who span multiple topics, this is often the biggest strategic breakthrough.)*
 
 The Contrarian View:
-13. What mainstream advice in your space misses the point?
-14. What do you believe that practitioners often disagree with?
-15. What would you say that might make some uncomfortable but is true?
-16. Complete: "Most experts say ______. I say ______."
+14. What mainstream advice in your space misses the point?
+15. What do you believe that practitioners often disagree with?
+16. What would you say that might make some uncomfortable but is true?
+17. Complete: "Most experts say ______. I say ______."
 
 Permission & Credibility:
-17. What gives you permission to speak on this?
-18. Why should someone trust you over others?
+18. What gives you permission to speak on this?
+19. Why should someone trust you over others?
 
 Service Definition:
 *(Ask these only if the client's entity type is a business, organization, company, nonprofit, startup, or agency. Skip for solo creators and personal brands — for individuals, the Positioning Statement and Intersection already capture what they offer.)*
 
-19. What are the core services or products you offer? List them as a client would describe them, not as internal categories.
-20. For each: what is the specific outcome the client gets?
-21. Are there tiers, packages, or a natural sequence — do clients typically start with one thing and expand?
-22. What do you NOT do that people often assume you do? Where do you draw the line?
+20. What are the core services or products you offer? List them as a client would describe them, not as internal categories.
+21. For each: what is the specific outcome the client gets?
+22. Are there tiers, packages, or a natural sequence — do clients typically start with one thing and expand?
+23. What do you NOT do that people often assume you do? Where do you draw the line?
 
 **Phase complete when:** Positioning statement drafted, intersection clear, territory claimed, unifying lens identified (if applicable), contrarian POV articulated. For business/organization entity types: service definition documented.
 
@@ -546,38 +555,44 @@ Scaling:
 
 **Discovery Questions:**
 
+Accessibility Constraints:
+*(Ask these first — they establish design constraints before any aesthetic discussion begins.)*
+1. Does your audience include people with visual impairments or other disabilities? (Think: older audience, professional context, healthcare adjacent)
+2. Are you subject to any accessibility compliance requirements — government, education, healthcare, or similar regulated sectors?
+3. Which of your platforms carries the most accessibility risk? Where would an inaccessible design hurt you most?
+
 Visual Direction:
-1. Looking at personality and archetypes, what visual qualities would express these?
-2. What tension does your brand embody? How might it appear visually?
-3. Collect 5-10 images that feel like your brand. What do they share?
-4. Collect 5-10 that are NOT your brand. What are you avoiding?
+4. Looking at personality and archetypes, what visual qualities would express these?
+5. What tension does your brand embody? How might it appear visually?
+6. Collect 5-10 images that feel like your brand. What do they share?
+7. Collect 5-10 that are NOT your brand. What are you avoiding?
 
 Color:
-5. What colors feel right? Gut instinct.
-6. What mood should the palette convey?
-7. What's overused in your industry?
-8. Any colors with personal significance?
+8. What colors feel right? Gut instinct.
+9. What mood should the palette convey?
+10. What's overused in your industry?
+11. Any colors with personal significance?
 
 Typography:
-9. What feeling should type convey?
-10. Balance of personality vs. readability?
-11. Should headlines feel different from body?
+12. What feeling should type convey?
+13. Balance of personality vs. readability?
+14. Should headlines feel different from body?
 
 Mark/Logo:
-12. Symbol or wordmark-only?
-13. If symbol: What metaphor or object captures your brand?
-14. What existing marks do you admire?
-15. What style fits?
+15. Symbol or wordmark-only?
+16. If symbol: What metaphor or object captures your brand?
+17. What existing marks do you admire?
+18. What style fits?
 
 Imagery:
-16. Photography or illustration?
-17. If illustration, what style?
-18. What subjects appear? What never appears?
-19. What does the brand world contain visually?
+19. Photography or illustration?
+20. If illustration, what style?
+21. What subjects appear? What never appears?
+22. What does the brand world contain visually?
 
 Application:
-20. Where does your brand appear most?
-21. What templates do you need?
+23. Where does your brand appear most?
+24. What templates do you need?
 
 **Launch prompt:**
 > "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction. This takes a couple minutes. I'll share the full direction for review before we generate anything."
