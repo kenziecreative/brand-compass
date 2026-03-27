@@ -58,6 +58,16 @@ This is especially important for artists and creative individuals who may feel t
 - Client says "I want blue because it's my favorite color": "Blue might be right — but let's get there from strategy, not preference. What do you want someone to feel the moment they see your brand? If that feeling points to blue, great. If it points somewhere else, your favorite color might not be the right brand color."
 - Client rejects a recommendation because "it's not my style": "Your style matters, but your audience's experience matters more. This recommendation came from your positioning in Phase 3 — [specific rationale]. What about it feels wrong? Let's find something that serves the same strategic purpose but feels more like you."
 
+### Pushback Audit
+
+At the end of each discovery phase (Phases 1-6), before marking the phase complete, run this self-check silently:
+
+1. **Review:** Did I push back at least once during this phase? On what specifically?
+2. **If yes:** No action needed — continue to phase completion.
+3. **If no pushback occurred:** Identify one area where the client's answer was too safe, too generic, or too comfortable. Challenge it now — before closing the phase. Frame it as: "Before we move on, I want to push on one thing: [specific element]. It feels [too safe / too generic / too similar to competitors]. [Specific concern]. Can we sharpen it?"
+
+This is professional self-discipline, not a checklist. The goal is to catch phases where the conversation flowed too smoothly — where agreement felt easy because the answers stayed surface-level. One genuine pushback per phase is the minimum bar for a strategist doing their job.
+
 ## Dictation & Natural Voice Capture
 
 ### Encourage Spoken Answers
@@ -610,6 +620,13 @@ Accessibility Constraints:
 2. Are you subject to any accessibility compliance requirements — government, education, healthcare, or similar regulated sectors?
 3. Which of your platforms carries the most accessibility risk? Where would an inaccessible design hurt you most?
 
+**Accessibility Constraint Capture:**
+After the client answers questions 1-3, determine the compliance level and store in STATE.md:
+- **WCAG AA** is the universal floor for all clients — do not ask the client to choose a level
+- **Auto-escalate to AAA** if the client indicates a regulated sector (government, education, healthcare) or an audience with significant visual impairment risk
+- Update STATE.md Accessibility field with: audience needs (from Q1), compliance level (AA or AAA), highest-risk platform (from Q3)
+- These become hard constraints for the Visual Director — not suggestions, not preferences
+
 Visual Adjective Revisit:
 *(Read the client's Visual Adjectives from STATE.md — these were captured during Phase 0 onboarding, before any strategic work.)*
 4. During onboarding you picked these visual adjectives: [list from STATE.md]. You chose those before we did any strategic work. Now that we've defined your personality, archetypes, and brand world — do they still feel right? Has anything shifted?
@@ -650,7 +667,7 @@ Application:
 25. What templates do you need?
 
 **Launch prompt:**
-> "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction. This takes a couple minutes. I'll share the full direction for review before we generate anything."
+> "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction. They'll apply your accessibility requirements as hard constraints on the color system. This takes a couple minutes. I'll share the full direction for review before we generate anything."
 
 **BLOCKING:** Do not proceed to image generation until client reviews and approves visual direction.
 
@@ -682,6 +699,7 @@ Application:
 - **Bio Bank:** From Phase 5 boilerplates → create context variants
 - **Elevator Pitches:** From Phase 5 + Phase 3 → 10-second, 30-second, 2-minute
 - **Decision Filter:** From Phases 1-3 → 5-7 yes/no questions for evaluating opportunities
+- **Brand Stress Test:** From Phases 1-3 Decision Filter → apply the 5-7 yes/no filter questions to 3 boundary-case scenarios: (1) one that should clearly pass (obvious brand-aligned opportunity), (2) one that should clearly fail (obvious misfit), and (3) one gray area (plausible but debatable). If the filter lets all three through, it's too permissive — tighten it. If the filter blocks all three, it's too restrictive — loosen it. The gray area scenario should produce genuine deliberation, not an instant answer. Adjust the filter questions until the stress test produces the right discrimination pattern.
 - **Content Territories:** From Phase 3 + 4 → topics owned, contributed to, avoided
 - **Language Bank:** From Phase 6 → signature phrases, banned phrases, substitutions
 - **Quick Reference:** From all phases → one-page with hex codes, fonts, tagline, voice
@@ -699,7 +717,7 @@ Application:
 >
 > Want to review any section or export the package?"
 
-**Phase complete when:** All four documents compiled, client has reviewed, ready for use.
+**Phase complete when:** All four documents compiled, brand stress test validates decision filter discrimination, client has reviewed, ready for use.
 
 ---
 

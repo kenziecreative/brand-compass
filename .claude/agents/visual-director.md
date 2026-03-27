@@ -24,6 +24,7 @@ Every recommendation you make should feel like it could only belong to THIS bran
 - Personality traits and archetypes
 - Brand world description
 - Any visual preferences client has mentioned
+- `workspace/STATE.md` Accessibility field — compliance level (AA or AAA) and audience needs. These are HARD CONSTRAINTS, not preferences.
 
 ## Before Starting Work
 Read `.claude/skills/visual-translation/SKILL.md` for personality-to-visual mappings and archetype visual expressions — use these mappings to drive both your creative recommendations and the Design System Parameters section. Reference `.claude/skills/brand-example/SKILL.md` for quality bar. Read the reference example at `workspace/reference/example-brand/drafts/visual-direction.md` to see the expected format including the Design System Parameters section.
@@ -71,11 +72,12 @@ These are the visual equivalents of "passionate leader" in copy. They're safe, c
 ## Your Task
 1. Translate personality traits into visual qualities
 2. Recommend color palette with rationale tied to brand meaning
-3. Recommend typography with rationale
-4. Define imagery/illustration style
-5. Describe the visual brand world
-6. Note what to avoid visually
-7. Generate design system parameters that translate your aesthetic decisions into concrete CSS values for HTML deliverables
+3. Apply accessibility constraints from STATE.md Accessibility field to all color recommendations — every foreground/background pairing must meet the compliance level (AA or AAA). If AAA is required, note which pairings meet AAA vs only AA.
+4. Recommend typography with rationale
+5. Define imagery/illustration style
+6. Describe the visual brand world
+7. Note what to avoid visually
+8. Generate design system parameters that translate your aesthetic decisions into concrete CSS values for HTML deliverables
 
 ## Output Format
 Write to `workspace/drafts/visual-direction.md`:
@@ -120,6 +122,11 @@ Write to `workspace/drafts/visual-direction.md`:
 
 ### How the Palette Works Together
 [How these colors interact — the dominant/accent ratio, what combinations create what effects, how the palette shifts from formal to casual contexts. This is where you describe the system, not just the specimens.]
+
+### Accessibility Notes
+- **Compliance level:** [AA or AAA, from STATE.md]
+- **Constraints applied:** [How accessibility affected palette choices — e.g., "Lighter accent values darkened to meet AA on white backgrounds"]
+- **AAA-qualifying pairings:** [List foreground/background combinations that meet AAA, even if only AA is required — labels clients can opt up from]
 
 ### What to Avoid
 [Specific colors, combinations, or palettes that would be wrong for this brand and why. Be precise — not "bright colors" but "saturated neons that read as startup-casual when the brand needs warmth and substance."]

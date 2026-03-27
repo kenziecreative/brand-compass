@@ -8,6 +8,7 @@
 - **Existing Assets:** [Existing brand materials]
 - **Competitors:** [Named competitors from onboarding]
 - **Visual Adjectives:** [Selected visual adjectives from onboarding]
+- **Accessibility:** [Audience needs: ___ | Compliance level: AA/AAA | Highest-risk platform: ___]
 - **Asset Packs:** [Selected asset pack IDs]
 
 ## Current Position

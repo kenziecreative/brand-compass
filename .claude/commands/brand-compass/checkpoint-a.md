@@ -74,7 +74,15 @@ If the client confirms it holds together:
 
 ## Step 5: Challenge the Weakest Element
 
-Before passing, identify the single weakest element in Phases 1-3 — the one most likely to cause problems downstream. This might be a core belief that's too generic, a positioning statement that doesn't actually differentiate, an audience definition that's too broad, or a contrarian POV that's too safe. Challenge the client on it directly: explain why it's weak and propose how to strengthen it. The client can accept the challenge and revise, or defend their choice — but they must engage with the critique before the checkpoint passes.
+Before passing, run this 4-step challenge protocol on Phases 1-3:
+
+**5a. Identify:** Name the single weakest element in Phases 1-3 — the one most likely to cause problems downstream. Candidates: a core belief that's too generic to differentiate, a positioning statement that could belong to a competitor, an audience definition too broad to build messaging for, a contrarian POV that's too safe to be memorable, values that read like corporate wallpaper.
+
+**5b. Diagnose:** State specifically WHY it's weak. Not "this could be stronger" but "this positioning statement uses the same language as [competitor pattern] and doesn't capture your [specific differentiator from Phase 3 discussion]." Ground the critique in the client's own discovery material.
+
+**5c. Propose:** Offer a concrete stronger alternative. Not "make it more specific" but "what if your positioning emphasized [specific element] instead of [current element]? That would capture the [quality] that came through clearly in your origin story."
+
+**5d. Engage:** The client must respond — they can accept the revision, defend their current version with reasoning, or propose a third option. "Sounds good" without engagement is not sufficient. If the client accepts without reasoning, ask: "What specifically about the current version works better for you than the alternative?" The goal is not to force a change but to ensure the choice is deliberate, not passive.
 
 ## Step 6: Pass Checkpoint
 
