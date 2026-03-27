@@ -31,7 +31,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. CLAUDE.md Phase 0 onboarding section includes brand history question, named competitors field (3-4 with URLs), and perception gap question; STATE.md template has the competitors field
   4. CLAUDE.md Phase 3 includes outside-in category question and Phase 7 includes 2-3 accessibility discovery questions before the color/typography discussion
   5. CLAUDE.md Research Analyst trigger is changed to required (launches between Phase 2 and Phase 3); Checkpoint A and Checkpoint B sections include a structural challenge requirement; Phase 5 includes a devil's advocate pass requirement before messaging is finalized
-**Plans**: TBD
+**Plans:** 3 plans
+Plans:
+- [ ] 01-01-PLAN.md — Commit baseline (tracked changes + research archive + force-push)
+- [ ] 01-02-PLAN.md — CLAUDE.md quick wins (discovery questions, agent trigger, devil's advocate)
+- [ ] 01-03-PLAN.md — Onboarding + checkpoint quick wins (start.md, checkpoints, STATE template)
 
 ### Phase 2: Discovery Pipeline Reframe
 **Goal**: Make competitive analysis structurally required before Phase 3, expand Phase 0 onboarding with systematic pre-seeding questions, and reframe Phase 3 positioning from a fill-in-the-blank exercise to a component-by-component exploration sequence
@@ -94,7 +98,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Baseline + Quick Wins | 0/TBD | Not started | - |
+| 1. Baseline + Quick Wins | 0/3 | Not started | - |
 | 2. Discovery Pipeline Reframe | 0/TBD | Not started | - |
 | 3. Output Quality | 0/TBD | Not started | - |
 | 4. Deliverable Expansions | 0/TBD | Not started | - |
