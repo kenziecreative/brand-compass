@@ -601,38 +601,44 @@ Accessibility Constraints:
 2. Are you subject to any accessibility compliance requirements — government, education, healthcare, or similar regulated sectors?
 3. Which of your platforms carries the most accessibility risk? Where would an inaccessible design hurt you most?
 
+Visual Adjective Revisit:
+*(Read the client's Visual Adjectives from STATE.md — these were captured during Phase 0 onboarding, before any strategic work.)*
+4. During onboarding you picked these visual adjectives: [list from STATE.md]. You chose those before we did any strategic work. Now that we've defined your personality, archetypes, and brand world — do they still feel right? Has anything shifted?
+
+*(Use this as a bridge: if the adjectives align with the strategic work, confirm and proceed. If they diverge, name the gap — "You picked 'minimal' and 'refined' early on, but your brand personality is 'provocative' and 'raw.' Those point in different directions. Which feels more true to the brand we've built?" This is a preference-vs-strategy moment.)*
+
 Visual Direction:
-4. Looking at personality and archetypes, what visual qualities would express these?
-5. What tension does your brand embody? How might it appear visually?
-6. Collect 5-10 images that feel like your brand. What do they share?
-7. Collect 5-10 that are NOT your brand. What are you avoiding?
+5. Looking at personality and archetypes, what visual qualities would express these?
+6. What tension does your brand embody? How might it appear visually?
+7. Collect 5-10 images that feel like your brand. What do they share?
+8. Collect 5-10 that are NOT your brand. What are you avoiding?
 
 Color:
-8. What colors feel right? Gut instinct.
-9. What mood should the palette convey?
-10. What's overused in your industry?
-11. Any colors with personal significance?
+9. What colors feel right? Gut instinct.
+10. What mood should the palette convey?
+11. What's overused in your industry?
+12. Any colors with personal significance?
 
 Typography:
-12. What feeling should type convey?
-13. Balance of personality vs. readability?
-14. Should headlines feel different from body?
+13. What feeling should type convey?
+14. Balance of personality vs. readability?
+15. Should headlines feel different from body?
 
 Mark/Logo:
-15. Symbol or wordmark-only?
-16. If symbol: What metaphor or object captures your brand?
-17. What existing marks do you admire?
-18. What style fits?
+16. Symbol or wordmark-only?
+17. If symbol: What metaphor or object captures your brand?
+18. What existing marks do you admire?
+19. What style fits?
 
 Imagery:
-19. Photography or illustration?
-20. If illustration, what style?
-21. What subjects appear? What never appears?
-22. What does the brand world contain visually?
+20. Photography or illustration?
+21. If illustration, what style?
+22. What subjects appear? What never appears?
+23. What does the brand world contain visually?
 
 Application:
-23. Where does your brand appear most?
-24. What templates do you need?
+24. Where does your brand appear most?
+25. What templates do you need?
 
 **Launch prompt:**
 > "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction. This takes a couple minutes. I'll share the full direction for review before we generate anything."
