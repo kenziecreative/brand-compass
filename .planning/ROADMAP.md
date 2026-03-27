@@ -59,7 +59,10 @@ Plans:
   2. CLAUDE.md Phase 7 section feeds accessibility discovery answers to the Visual Director as constraints, and the Visual Identity System HTML template includes an approved accessible color combinations section
   3. CLAUDE.md contains structural anti-sycophancy mechanisms: a checkpoint challenge protocol requiring the facilitator to identify and challenge the weakest strategic element, a pushback audit trigger, and a brand stress test reference in Phase 8
   4. The Brand Verifier agent definition includes a voice compliance check that compares generated output against the captured voice fingerprint and flags divergence
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Customer-hero story framework (Phase 5 + Copywriter) + voice compliance check (Brand Verifier)
+- [ ] 03-02-PLAN.md — Accessibility constraint flow (STATE.md + Visual Director) + anti-sycophancy mechanisms (checkpoints + pushback audit + stress test)
 
 ### Phase 4: Deliverable Expansions
 **Goal**: Add new deliverable sections and outputs — motion direction, Brand Compass Card, activation layer, semantic tokens, content pillars, do/dont examples, accessible color combinations, strategic quick reference card, and brand stress test
@@ -71,7 +74,10 @@ Plans:
   3. CLAUDE.md Phase 8 section includes a brand activation layer deliverable — 30-day timeline, implementation priority list, self-audit checklist, and internal brief for org entity types
   4. The Visual Identity System HTML template includes a semantic design token section with purpose-based naming and a DTCG-format JSON export block
   5. CLAUDE.md Phase 8 Content Territories section is expanded with 3-5 content pillars, and the Voice Guide HTML template includes a channel-voice matrix; HTML specimens across color, imagery, and voice sections contain systematic do/dont examples with rationale; Phase 8 includes a strategic quick reference card distinct from the implementation card; Phase 8 includes a brand stress test section applying the decision filter to 3 boundary-case scenarios
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Customer-hero story framework (Phase 5 + Copywriter) + voice compliance check (Brand Verifier)
+- [ ] 03-02-PLAN.md — Accessibility constraint flow (STATE.md + Visual Director) + anti-sycophancy mechanisms (checkpoints + pushback audit + stress test)
 
 ### Phase 5: Process Refinements
 **Goal**: Refine existing processes with conditional logic and codified mappings — brand architecture for multi-offer clients, client dynamic state tracking, anti-anchoring across discovery questions, verbal-to-visual translation reference, stakeholder mapping for orgs, and core+flex thinking in Phase 7
@@ -83,7 +89,10 @@ Plans:
   3. Discovery questions across Phases 1-4 in CLAUDE.md are audited and updated to use open-ended framing before structured framing, remove leading number specifications, and offer multiple frames rather than single prompts
   4. A reference file exists at a documented path containing verbal-to-visual translation mappings — archetype to visual properties, voice register to visual register, personality trait to color family; CLAUDE.md Phase 7 references this file
   5. CLAUDE.md Phase 2 contains a stakeholder mapping question conditional on org entity types; CLAUDE.md Phase 7 includes core+flex framing — fixed vs. flexible brand elements — and an AI-generation rules section
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Customer-hero story framework (Phase 5 + Copywriter) + voice compliance check (Brand Verifier)
+- [ ] 03-02-PLAN.md — Accessibility constraint flow (STATE.md + Visual Director) + anti-sycophancy mechanisms (checkpoints + pushback audit + stress test)
 
 ### Phase 6: Forward-Looking Additions
 **Goal**: Add GEO-ready brand outputs for AI search visibility and graphic device direction to the visual system, both of which extend existing deliverables without depending on Wave 4 changes
@@ -92,7 +101,10 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. CLAUDE.md Phase 8 toolkit section includes a GEO-ready outputs deliverable — entity consistency guide, citation-optimized brand statements, and platform distribution guidance; Document Assembler agent template includes this section
   2. CLAUDE.md Phase 7 section includes graphic device discovery questions; Visual Director agent definition includes pattern direction output; Image Generator is directed to produce 1-3 brand patterns; Visual Identity System HTML template includes a graphic devices section
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Customer-hero story framework (Phase 5 + Copywriter) + voice compliance check (Brand Verifier)
+- [ ] 03-02-PLAN.md — Accessibility constraint flow (STATE.md + Visual Director) + anti-sycophancy mechanisms (checkpoints + pushback audit + stress test)
 
 ## Progress
 
