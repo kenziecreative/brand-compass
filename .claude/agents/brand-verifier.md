@@ -39,7 +39,7 @@ Check that expected files exist for each completed phase.
   - Phase 1: `workspace/research/content-audit.md` (optional — only if Content Auditor was used)
   - Phase 2: `workspace/research/competitive-brief.md` (optional — only if Research Analyst was used)
   - Phase 4: `workspace/research/archetype-assessment.md`
-  - Phase 6: `workspace/research/voice-fingerprint.md`
+  - Phase 6: `workspace/research/voice-fingerprint.md` (optional — may be generated as early as Phase 1 if writing samples were provided; skip if absent)
 - Draft files:
   - Phase 5: `workspace/drafts/messaging-options.md`
   - Phase 7: `workspace/drafts/visual-direction.md`
@@ -132,6 +132,7 @@ For each checked discovery output in STATE.md, verify the corresponding content 
 - `Tagline options generated` → brand-foundation.md Section 4 has tagline
 - `Core narrative drafted` → brand-foundation.md Section 4 has narrative
 - `Voice analyzed` → voice-guide.md has voice summary
+- `Voice fingerprint generated` → `workspace/research/voice-fingerprint.md` exists (conditional — only if writing samples were provided)
 - `Writing style codified` → voice-guide.md has writing style section
 - `Guardrails set` → voice-guide.md has guardrails section
 - `Color palette finalized` → color-palette.html exists with colors
@@ -191,6 +192,38 @@ Verify that all five HTML files use the same personality tokens:
 
 Report any file that deviates from the majority value.
 
+### Level 6: Voice Compliance
+
+Compare generated output (all files in `workspace/output/`) against the voice fingerprint (`workspace/research/voice-fingerprint.md`). Skip this level if the voice fingerprint doesn't exist (note "Voice compliance skipped — no voice fingerprint available" as Info).
+
+**Check 6A: Sentence Length Distribution**
+- Extract average sentence length and range from the voice fingerprint
+- Measure average sentence length in the brand-foundation.md and voice-guide.md prose sections (skip headers, lists, and short labels)
+- Flag if the output average is more than 30% above or below the fingerprint average
+- Report: fingerprint average, output average, percentage difference
+
+**Check 6B: Signature Move Presence**
+- Extract identified signature moves from the voice fingerprint (e.g., em dashes, single-sentence paragraphs, rhetorical questions, specific phrases)
+- In longer outputs (brand-foundation.md, voice-guide.md, practical-toolkit.md), check that each signature move appears at least once
+- Flag missing signature moves by name
+- Report: list of expected signatures, which were found, which were missing
+
+**Check 6C: Banned Phrase Scan**
+- Extract the "never use" / guardrails phrase list from the voice fingerprint and voice-guide.md guardrails section
+- Scan ALL output files for any banned phrase
+- Flag each occurrence with: file path, line number or section, the banned phrase found
+- Report: total violations, list with locations
+
+**Check 6D: Vocabulary Register**
+- Extract the polished-to-conversational ratio from the voice fingerprint (e.g., "70% conversational / 30% polished")
+- Assess the register of output prose — look for indicators:
+  - Formal markers: passive voice, "Furthermore/Moreover/Additionally", nominalizations, third-person references
+  - Casual markers: contractions, first/second person, fragments, colloquialisms
+- Flag if the output register significantly mismatches the fingerprint ratio (e.g., fingerprint says 70% conversational but output reads 80%+ formal)
+- Report: fingerprint ratio, assessed output ratio, specific examples of mismatch
+
+**Divergence handling:** Voice compliance issues are flagged for human review — the facilitator decides whether to revise or accept. Do NOT auto-reject or auto-regenerate. Present metrics with specific examples so the facilitator can make an informed judgment. Minor drift in toolkit/reference sections is expected and should be noted as Info, not Warning.
+
 ## Output Format
 
 Return a structured report:
@@ -211,6 +244,7 @@ Return a structured report:
 | Consistency | N issues | [mismatches found] |
 | Coverage | N/M outputs | [gaps if any] |
 | Personality | N/M tokens | [mismatches found] |
+| Voice Compliance | N issues | [divergence details] |
 
 ## Overall Status: PASS | ISSUES FOUND | INCOMPLETE
 
