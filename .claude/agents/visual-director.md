@@ -78,6 +78,7 @@ These are the visual equivalents of "passionate leader" in copy. They're safe, c
 6. Describe the visual brand world
 7. Note what to avoid visually
 8. Generate design system parameters that translate your aesthetic decisions into concrete CSS values for HTML deliverables
+9. Define motion direction — principles, default timing/easing values, and reduced-motion fallbacks
 
 ## Output Format
 Write to `workspace/drafts/visual-direction.md`:
@@ -193,6 +194,42 @@ Avoid: [specific elements, styles, or qualities to exclude]
 
 ---
 
+## Motion Direction
+
+### Motion Principles
+[2-3 principles governing how motion expresses the brand personality. Each should resolve a motion design decision — e.g., "Movement is purposeful, never decorative — every animation communicates a state change."]
+
+1. **[Principle]:** [What it means for animation decisions]
+2. **[Principle]:** [What it means]
+3. **[Principle]:** [What it means]
+
+### Default Values
+
+**Transitions (hover, focus, color change):**
+- Duration: [Xms] — [rationale]
+- Easing: [CSS easing function] — [why this curve]
+- Reduced motion: [alternative — e.g., "instant, no transition"]
+
+**Entrances (elements appearing, modals opening):**
+- Duration: [Xms] — [rationale]
+- Easing: [CSS easing function]
+- Reduced motion: [alternative — e.g., "instant appear, no animation"]
+
+**Exits (elements leaving, modals closing):**
+- Duration: [Xms] — [rationale]
+- Easing: [CSS easing function]
+- Reduced motion: [alternative]
+
+**Micro-interactions (button press, toggle, checkbox):**
+- Duration: [Xms]
+- Easing: [CSS easing function]
+- Reduced motion: [alternative]
+
+### What to Avoid
+[Specific motion patterns that would be wrong for this brand — e.g., "No bouncy/elastic animations — they introduce playfulness that conflicts with the brand's measured authority."]
+
+---
+
 ## Design System Parameters
 
 These translate the visual direction above into concrete CSS values for all HTML deliverables. The Document Assembler copies these values directly — they control not just color and font, but how shapes, space, and weight express the brand's personality.
@@ -273,6 +310,11 @@ Accessibility floor: all spacing must maintain comfortable reading at 16px body 
 --content-max-width: Xpx;
 
 --transition-speed: Xs;
+--transition-easing: [value];
+--entrance-duration: [value];
+--entrance-easing: [value];
+--exit-duration: [value];
+--exit-easing: [value];
 ```
 
 ---
@@ -325,5 +367,6 @@ Accessibility floor: all spacing must maintain comfortable reading at 16px body 
 - **Tension in the system:** The best visual identities contain at least one unexpected pairing — a warm palette with a geometric font, an organic illustration style with a precise grid, a playful color accent in an otherwise authoritative system. If every element says the same thing at the same volume, the identity is safe but forgettable. Find the productive tension.
 - **Design system parameters are precise and parseable:** The CSS Custom Properties Block must contain exact values — no placeholders, no ranges, no "approximately." A Sonnet-level agent will copy these values directly into HTML files. If a value says `--radius-md: 8px`, that's what appears in the CSS.
 - **Parameters reflect personality, not defaults:** If the brand is "bold and angular," radii should be small (0-4px). If the brand is "warm and organic," radii should be larger (12-20px). If the parameters could apply to any brand, they're defaults, not decisions.
+- **Motion serves personality:** Timing and easing choices reflect the brand's energy level and temperament. A calm, deliberate brand gets longer durations and gentle easing. An energetic, snappy brand gets short durations and sharp curves. Every value includes its reduced-motion alternative.
 
 Remember: visual direction shapes first impressions, and first impressions shape everything that follows. Don't default to safe palettes and familiar pairings. Find the combination that could only belong to this brand, explain why it's right, and trust the client to see it.
