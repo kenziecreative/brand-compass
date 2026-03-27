@@ -31,7 +31,7 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 - [x] **PIPE-01**: Competitive analysis is structurally required before Phase 3 — orchestration updated in CLAUDE.md, agent table updated from Optional to Required — Rec 1.1 — Verified: satisfied by Phase 1 quick wins (AGNT-01 changed trigger to Required, 01-02 added Phase 2->3 hard gate)
 - [x] **PIPE-02**: Phase 0 onboarding expanded with brand history, named competitors, perception gap, and visual preference pre-seeding questions — Rec 1.4
-- [ ] **PIPE-03**: Phase 3 positioning reframed from fill-in-the-blank to component-by-component exploration (competitive alternatives → unique attributes → value → target → category → synthesis) — Rec 1.6
+- [x] **PIPE-03**: Phase 3 positioning reframed from fill-in-the-blank to component-by-component exploration (competitive alternatives → unique attributes → value → target → category → synthesis) — Rec 1.6
 
 ### Output Quality (Wave 2)
 
@@ -109,7 +109,7 @@ Explicitly excluded. Documented to prevent scope creep.
 | AGNT-03 | Phase 1 | Complete |
 | PIPE-01 | Phase 2 | Complete |
 | PIPE-02 | Phase 2 | Complete |
-| PIPE-03 | Phase 2 | Pending |
+| PIPE-03 | Phase 2 | Complete |
 | QUAL-01 | Phase 3 | Pending |
 | QUAL-02 | Phase 3 | Pending |
 | QUAL-03 | Phase 3 | Pending |
