@@ -108,6 +108,7 @@ Phase 0 runs via `/brand-compass:start`. It captures the client profile before d
 - Named competitors (for Research Analyst input)
 - Prior brand history (what's been tried, what worked, what didn't)
 - Perception gap (how they're described vs. how they want to be described)
+- Visual preference instincts (gut-reaction adjective selection before strategic work begins)
 - Asset Pack selection (modular add-on deliverables)
 
 **Note:** Full onboarding question set — including brand history, named competitors, and perception gap questions — is defined in the `/brand-compass:start` command file. The Phase 0 summary above reflects what gets captured, not the question sequence.
