@@ -705,9 +705,12 @@ Motion:
 - **Elevator Pitches:** From Phase 5 + Phase 3 → 10-second, 30-second, 2-minute
 - **Decision Filter:** From Phases 1-3 → 5-7 yes/no questions for evaluating opportunities
 - **Brand Stress Test:** From Phases 1-3 Decision Filter → apply the 5-7 yes/no filter questions to 3 boundary-case scenarios: (1) one that should clearly pass (obvious brand-aligned opportunity), (2) one that should clearly fail (obvious misfit), and (3) one gray area (plausible but debatable). If the filter lets all three through, it's too permissive — tighten it. If the filter blocks all three, it's too restrictive — loosen it. The gray area scenario should produce genuine deliberation, not an instant answer. Adjust the filter questions until the stress test produces the right discrimination pattern.
-- **Content Territories:** From Phase 3 + 4 → topics owned, contributed to, avoided
+- **Brand Compass Card:** From all phases → 9-element strategic synthesis rendered as a visual HTML diagram within brand-foundation.html. Center element (core belief) surrounded by: audience, positioning, personality, tagline, territory, contrarian POV, values, and brand world. Based on the Unilever Brand Key model. One-glance strategic identity.
+- **Activation Layer:** From all phases → prioritized implementation checklist ordered by impact, self-audit checklist for ongoing brand consistency. For business/organization entity types: also include internal brief template and stakeholder rollout guidance. Lives in practical-toolkit.md. No fixed timeline — client works through priorities at their own pace.
+- **Content Territories:** From Phase 3 + 4 → topics owned, contributed to, avoided. Include 3-5 named content pillars: each pillar gets a name, description, and example topics. Pillars build on "Topics I Own" — they're the recurring themes, not one-off topics.
 - **Language Bank:** From Phase 6 → signature phrases, banned phrases, substitutions
-- **Quick Reference:** From all phases → one-page with hex codes, fonts, tagline, voice
+- **Strategic Quick Reference:** From all phases → one-page strategic summary: core belief, positioning statement, audience in one sentence, tagline, 3 personality traits, contrarian POV, and territory. The "remind me who I am" card. Distinct from the implementation Quick Reference (hex codes, fonts) — this is strategic identity, not design specs.
+- **Implementation Quick Reference:** From all phases → one-page implementation card with hex codes, fonts, tagline, one-sentence bio, voice in 3 words.
 
 **Launch prompt:**
 > "Let me compile everything into your final documents. This generates all four deliverables from everything we've built."
@@ -718,11 +721,11 @@ Motion:
 > 1. **Brand Foundation & Messaging** — [summary]
 > 2. **Voice & Expression Guide** — [summary]
 > 3. **Visual Identity System** — [summary]
-> 4. **Practical Toolkit** — bios, pitches, decision filter ready
+> 4. **Practical Toolkit** — bios, pitches, decision filter, brand compass card, activation layer ready
 >
 > Want to review any section or export the package?"
 
-**Phase complete when:** All four documents compiled, brand stress test validates decision filter discrimination, client has reviewed, ready for use.
+**Phase complete when:** All four documents compiled, brand stress test validates decision filter discrimination, brand compass card renders strategic synthesis, client has reviewed, ready for use.
 
 ---
 
