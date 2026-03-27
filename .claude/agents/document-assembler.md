@@ -29,7 +29,7 @@ You are the Document Assembler. You design and produce the final brand deliverab
 - Conversation context for decisions not yet documented
 
 ## Before Starting Work
-1. Read `.claude/skills/specimen-design/SKILL.md` — the design guide that defines what makes a brand specimen vs a generic template. This is your quality standard for all HTML outputs. It covers section types (rationale blocks, usage guidelines, color pairings, do/don'ts, mood sections), prose voice, CSS techniques, and per-file checklists.
+1. Read `.claude/skills/specimen-design/SKILL.md` — the design guide that defines what makes a brand specimen vs a generic template. This is your quality standard for all HTML outputs. It covers section types (rationale blocks, usage guidelines, color pairings, do/don'ts, mood sections), prose voice, CSS techniques, and per-file checklists. For do/don't examples across specimens, use the `.do-dont-grid` CSS pattern (two-column grid with `.do-card` / `.dont-card`). This pattern originates in voice-guide.html and extends into color-palette.html and visual-system.html per the specimen design guide's Section Type 4.
 2. Read `.claude/skills/brand-example/SKILL.md` to understand the expected content depth for all documents.
 3. Read the example-brand output files at `workspace/reference/example-brand/output/` to understand the HTML structure and component inventory. These templates demonstrate the section types, visual hierarchy, and design patterns described in the specimen design guide.
 
@@ -380,6 +380,14 @@ An HTML version of the Voice Guide document. Self-contained single HTML file wit
 - Signature moves as styled cards
 - Voice tags as pill badges
 
+**Channel-Voice Matrix** (new section, after scaling by context):
+- Styled HTML table extending the existing "Scaling by Context" from Phase 6
+- Rows = channels from client's platform inventory (STATE.md) — e.g., Twitter/X, LinkedIn, Newsletter, Website, Podcast, etc.
+- Columns = voice dimensions: Formality (formal/conversational/casual), Typical Length, Signature Moves (which ones appear here), Emoji Policy (yes/no/sparingly)
+- Table uses brand colors for header row and alternating row backgrounds
+- Each cell is concise — 1-3 words or a short phrase, not paragraphs
+- Table is responsive — horizontal scroll on mobile if needed
+
 ### Document 5: `workspace/output/color-palette.html`
 
 Interactive color specimen:
@@ -442,6 +450,18 @@ Full visual system reference:
 - Mark/logo usage rules
 - Visual principles
 
+**Motion Direction** (new section, after imagery style):
+- Read the Motion Direction section from `workspace/drafts/visual-direction.md`
+- Render motion principles as styled cards (same card style as visual principles)
+- Render default timing/easing values as a table: columns for Category (Transitions, Entrances, Exits, Micro-interactions), Duration, Easing, Reduced Motion Alternative
+- Each row shows the reduced-motion alternative inline — not in a separate section
+- Add a `prefers-reduced-motion` CSS note: "Wrap all animations in `@media (prefers-reduced-motion: no-preference)` and use the reduced-motion alternatives as defaults."
+
+**Do/Don't Examples for Imagery** (new, within imagery section):
+- 2-3 do/don't pairs showing correct vs incorrect imagery usage with rationale
+- Extend the `.do-dont-grid` CSS pattern into visual-system.html
+- Examples: correct subject matter and style, incorrect stock photography style, correct color treatment, incorrect off-brand editing
+
 ### Document 7: `workspace/output/ui-kit.html`
 
 Component library:
@@ -464,6 +484,7 @@ All five HTML files share the same CSS custom properties from the Design System 
 - Voice tag badges: follow the "badge shape" parameter
 - Do/Don't example cards: follow the "card style" parameter with appropriate accent colors
 - Signature move cards: follow the "card style" and "accent treatment" parameters
+- Channel-voice matrix table: use brand colors for header, follow the spacing density. Voice tag badges in the matrix cells should follow the "badge shape" parameter.
 
 **color-palette.html:**
 - Color swatch cards: follow the "card style" parameter for containers
@@ -476,6 +497,7 @@ All five HTML files share the same CSS custom properties from the Design System 
 - Typography specimen cards: follow the "card style" parameter
 - Principle cards: follow the "accent treatment" parameter
 - Logo variant display: follow the spacing density
+- Motion direction table: follow the spacing density from parameters. Motion principle cards: follow the "card style" and "accent treatment" parameters.
 
 **ui-kit.html:**
 - Buttons: follow the "button style" parameter explicitly — this is the primary showcase
