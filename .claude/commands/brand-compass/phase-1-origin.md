@@ -50,6 +50,20 @@ Guide the client through three question groups. Ask 2-3 questions at a time, don
 9. Who suffers most when this problem goes unsolved?
 10. If you succeed completely, what's different about the world?
 
+### The Values
+
+11. Based on everything you've told me, what principles guide how you do the work — not what you do, but how you show up?
+12. If you had to give a new hire three rules that capture your standards, what would they be?
+13. What would make you walk away from a paying client or a good opportunity?
+14. Complete this: "We will always ______. We will never ______."
+
+### Mission & Vision
+
+*(Ask these only if the client's entity type is a business, organization, company, nonprofit, startup, or agency. Skip for solo creators, individual practitioners, artists, and personal brands — for those entities, the Core Belief serves the same strategic function as a mission statement.)*
+
+15. What is your organization's job — the specific change you exist to make, for whom? Not your tagline, but the operational mandate.
+16. If your organization succeeds completely over the next 5-10 years, what does the world look like? What has changed?
+
 ## Step 4: Optional Agents
 
 ### Content Auditor
@@ -72,11 +86,14 @@ An early voice fingerprint at `workspace/research/voice-fingerprint.md` becomes 
 
 ## Step 5: Synthesize & Confirm
 
-After the conversation, synthesize what you've heard into three outputs:
+After the conversation, synthesize what you've heard into these outputs:
 
 1. **Core Belief** — One clear statement of what the client believes
 2. **Origin Story** — The narrative of how this belief became their life's work
 3. **Problem Addressed** — What happens when this belief is ignored, and what changes when it's honored
+4. **Core Values** — 3-5 named values with one-sentence definitions each
+5. **Mission Statement** — (business/org only) The operational mandate in 1-2 sentences
+6. **Vision Statement** — (business/org only) What the world looks like if they succeed, in 1-2 sentences
 
 Present these to the client and ask: "Does this capture it? Is there anything that doesn't feel right, or something missing?"
 
@@ -88,10 +105,11 @@ When the client confirms the outputs are right:
 
 1. Update STATE.md:
    - Check `Phase 1: Origin & Belief` as complete
-   - Check `Core Belief documented` in Discovery Outputs
+   - Check `Core Belief documented` and `Core Values documented` in Discovery Outputs
+   - If business/org entity type: also check `Mission statement drafted` and `Vision statement drafted`
    - Set Next Action: "Begin Phase 2: Audience discovery questions"
    - Add Session Log entry
-2. Tell the client: "Phase 1 is solid. Your core belief, origin story, and the problem you're solving are documented. Run `/brand-compass:phase-2-audience` when you're ready to define who you serve."
+2. Tell the client: "Phase 1 is solid. Your core belief, origin story, values, and the problem you're solving are documented. Run `/brand-compass:phase-2-audience` when you're ready to define who you serve."
 
 ## Conversation Guidelines
 

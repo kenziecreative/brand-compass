@@ -1,6 +1,6 @@
 # Brand Foundation & Messaging
 
-## Section 1: Core Belief
+## Section 1: Core Belief & Foundation
 
 ### Belief Statement
 Growing tech companies deserve the same financial infrastructure as enterprises — they just need it delivered differently. Compliance isn't a barrier to growth; it's the foundation that makes growth sustainable.
@@ -14,6 +14,26 @@ The breaking point was watching a 30-person startup burn four months and $180K o
 Small tech companies face a compliance cliff. They're fine running on QuickBooks and a part-time bookkeeper until their first enterprise client asks for a SOC 2 report, or a payment processor requires PCI compliance, or an investor wants audited financials. Then they're scrambling — overpaying for expertise that doesn't understand their business, getting advice from accountants who've never seen a SaaS P&L, and treating compliance as a fire drill instead of a growth investment.
 
 The options are broken: Big Four firms are overbuilt and overpriced for companies under 100 people. Generalist accounting firms don't understand technology businesses. Compliance software platforms (Vanta, Drata) automate evidence collection but can't replace professional judgment. There's a gap between "too expensive" and "doesn't understand us" — and that's where Baseline operates.
+
+### Core Values
+
+1. **Precision First** — Every number, every report, every deliverable is accurate and defensible. We don't estimate when we can measure, and we don't approximate when we can verify.
+
+2. **Clarity Over Complexity** — We explain what we do and why. Jargon walls don't build trust — clear language does. If a client can't understand the deliverable, the deliverable failed.
+
+3. **Infrastructure Mindset** — We build systems that compound. Every engagement leaves the client with more capability than they had before, not just a document that expires.
+
+4. **Right-Sized Rigor** — Enterprise quality doesn't require enterprise overhead. We match the depth and formality to what the company actually needs right now, designed to grow with them.
+
+5. **Earned Trust** — We don't ask for trust; we earn it through consistent delivery. Referrals are our primary growth channel because our work speaks louder than our marketing.
+
+### Mission Statement
+
+To make enterprise-grade financial compliance accessible and affordable for growing technology companies, so that a SOC 2 audit, a PCI certification, or investor-ready financials is never the thing that stalls a startup's growth.
+
+### Vision Statement
+
+A world where every growing technology company has the financial infrastructure to compete for enterprise clients, close institutional funding, and scale with confidence — regardless of their headcount or budget.
 
 ---
 
@@ -65,6 +85,27 @@ Deep accounting expertise + genuine technology fluency + startup-stage pragmatis
 
 ### Contrarian Point of View
 Most accounting firms treat compliance as a cost center — something companies have to do, an expense to be minimized. We treat it as a growth lever. Every SOC 2 report we deliver opens a door to enterprise revenue. Every PCI certification removes a barrier to payment processing. Every audit-ready financial system makes the next fundraise faster. The firms that help you "just get through the audit" are leaving money on the table. We build the systems that compound.
+
+### Service Definition
+
+**Core Services:**
+
+1. **SOC 2 Audits** — Full Type I and Type II assessments for SaaS, fintech, and healthtech companies. Outcome: audit report that unlocks enterprise sales and satisfies procurement requirements. Average timeline: 8 weeks.
+
+2. **PCI Compliance** — PCI DSS assessment, gap analysis, and remediation guidance for companies handling payment data. Outcome: PCI certification that removes barriers to payment processing.
+
+3. **Financial Infrastructure** — Audit-ready bookkeeping, investor-grade financial reporting, and cap table management. Outcome: financials that pass board scrutiny and accelerate fundraising.
+
+4. **Bookkeeping Boot Camp** — 6-week program for first finance hires building their company's accounting function from scratch. Outcome: a functioning finance operation with proper processes and controls.
+
+**Service Boundaries:**
+- We do not provide general tax advice — we refer to specialized tax partners
+- We do not handle personal finance or individual tax returns
+- We do not offer cryptocurrency accounting services
+- We are not a bookkeeping-only service — we require engagement with the compliance infrastructure
+
+**Typical Engagement Progression:**
+Clients most often enter through a SOC 2 audit triggered by an enterprise sales requirement. From there, engagements naturally expand to ongoing compliance management, financial infrastructure, and partner-network referrals for privacy, international tax, and HR compliance needs.
 
 ---
 

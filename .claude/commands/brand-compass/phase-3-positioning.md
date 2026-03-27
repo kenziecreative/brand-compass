@@ -61,15 +61,25 @@ Guide the client through five question groups. Reference the Research Analyst ou
 17. What gives you permission to speak on this?
 18. Why should someone trust you over others?
 
+### Service Definition
+
+*(Ask these only if the client's entity type is a business, organization, company, nonprofit, startup, or agency. Skip for solo creators and personal brands — for individuals, the Positioning Statement and Intersection already capture what they offer.)*
+
+19. What are the core services or products you offer? List them as a client would describe them, not as internal categories.
+20. For each: what is the specific outcome the client gets?
+21. Are there tiers, packages, or a natural sequence — do clients typically start with one thing and expand?
+22. What do you NOT do that people often assume you do? Where do you draw the line?
+
 ## Step 4: Synthesize & Confirm
 
-Synthesize into five outputs:
+Synthesize into these outputs:
 
 1. **Positioning Statement** — The complete "For [audience], I'm the..." statement
 2. **Intersection** — The unique combination they bring (X + Y + Z)
 3. **Territory** — The concept or space they want to own
 4. **Unifying Lens** — The single idea that makes all their topics coherent (if applicable — not every client needs this)
 5. **Contrarian POV** — Their bold take that challenges conventional thinking
+6. **Service Definition** — (business/org only) Core services with outcomes, boundaries, and typical progression
 
 Present and iterate until the client confirms.
 
@@ -80,6 +90,7 @@ When confirmed:
 1. Update STATE.md:
    - Check `Phase 3: Positioning & Differentiation` as complete
    - Check `Positioning statement drafted`, `Intersection identified`, `Territory claimed`, `Contrarian POV articulated` in Discovery Outputs
+   - If business/org entity type: also check `Service definition documented`
    - Set Next Action: "Run Checkpoint A to validate strategic foundation before Phase 4"
    - Add Session Log entry
 2. Tell the client: "Phase 3 is solid. Your positioning is clear — who you serve, how you're different, and what territory you own. Run `/brand-compass:checkpoint-a` to validate your strategic foundation before we move into personality and identity work."

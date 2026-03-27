@@ -19,9 +19,11 @@ If Checkpoint A is already passed, say: "Checkpoint A is already passed. Run `/b
 ## Step 2: Review the Foundation
 
 Read all relevant outputs:
-- Core Belief, Origin Story, Problem Addressed (from Phase 1)
+- Core Belief, Origin Story, Problem Addressed, Core Values (from Phase 1)
+- Mission Statement, Vision Statement (from Phase 1 — if business/org entity type)
 - Audience Segments, Market of One, Anti-Audience (from Phase 2)
 - Positioning Statement, Intersection, Territory, Contrarian POV (from Phase 3)
+- Service Definition (from Phase 3 — if business/org entity type)
 - Any agent outputs: `workspace/research/content-audit.md`, `workspace/research/competitive-brief.md`
 
 ## Step 3: Present the Foundation Summary
@@ -34,6 +36,12 @@ Before we move into personality, messaging, and visual work, let's make sure the
 
 **Core Belief:** [statement]
 
+**Core Values:** [3-5 named values]
+
+**Mission:** [mission statement — if business/org type]
+
+**Vision:** [vision statement — if business/org type]
+
 **Audience:** [unified description — who they serve and what they need]
 
 **Positioning:** [positioning statement]
@@ -43,6 +51,8 @@ Before we move into personality, messaging, and visual work, let's make sure the
 **Territory You Own:** [concept/phrase]
 
 **Contrarian POV:** [bold take]
+
+**Services:** [service summary — if business/org type]
 
 Does this hold together? When you read it as a whole, does it feel like YOU — not just accurate, but energizing?"
 

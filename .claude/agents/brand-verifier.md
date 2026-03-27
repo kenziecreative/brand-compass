@@ -122,9 +122,13 @@ For each checked discovery output in STATE.md, verify the corresponding content 
 
 - `Client profile captured` → Client section in STATE.md is filled
 - `Core Belief documented` → brand-foundation.md Section 1 has content
+- `Core Values documented` → brand-foundation.md Section 1 has Core Values
+- `Mission statement drafted` → brand-foundation.md Section 1 has Mission Statement (conditional — only if entity type is business/org)
+- `Vision statement drafted` → brand-foundation.md Section 1 has Vision Statement (conditional — only if entity type is business/org)
 - `Audience segments defined` → brand-foundation.md Section 2 has segments
 - `Market of One created` → brand-foundation.md Section 2 has Market of One
 - `Positioning statement drafted` → brand-foundation.md Section 3 has statement
+- `Service definition documented` → brand-foundation.md Section 3 has Service Definition (conditional — only if entity type is business/org)
 - `Tagline options generated` → brand-foundation.md Section 4 has tagline
 - `Core narrative drafted` → brand-foundation.md Section 4 has narrative
 - `Voice analyzed` → voice-guide.md has voice summary

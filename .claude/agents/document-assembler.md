@@ -194,7 +194,7 @@ Write to `workspace/output/` directory:
 ```markdown
 # Brand Foundation & Messaging
 
-## Section 1: Core Belief
+## Section 1: Core Belief & Foundation
 
 ### Belief Statement
 [From Phase 1]
@@ -204,6 +204,15 @@ Write to `workspace/output/` directory:
 
 ### The Problem This Addresses
 [From Phase 1]
+
+### Core Values
+[From Phase 1 — 3-5 named values with one-sentence definitions]
+
+### Mission Statement
+[From Phase 1 — if entity type is business/organization. Omit section entirely for solo creators/artists.]
+
+### Vision Statement
+[From Phase 1 — if entity type is business/organization. Omit section entirely for solo creators/artists.]
 
 ---
 
@@ -239,6 +248,9 @@ Write to `workspace/output/` directory:
 
 ### Contrarian Point of View
 [From Phase 3]
+
+### Service Definition
+[From Phase 3 — if entity type is business/organization. Omit section entirely for solo creators/artists. Include core services with outcomes, service boundaries, and typical engagement progression.]
 
 ---
 

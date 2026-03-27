@@ -46,6 +46,9 @@
 - [ ] Client profile captured
 - [ ] Asset packs selected
 - [ ] Core Belief documented
+- [ ] Core Values documented
+- [ ] Mission statement drafted
+- [ ] Vision statement drafted
 - [ ] Audience segments defined
 - [ ] Market of One created
 - [ ] Anti-audience defined
@@ -53,6 +56,7 @@
 - [ ] Intersection identified
 - [ ] Territory claimed
 - [ ] Contrarian POV articulated
+- [ ] Service definition documented
 - [ ] Personality traits defined
 - [ ] Archetypes mapped
 - [ ] Brand world described
