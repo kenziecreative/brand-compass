@@ -498,8 +498,16 @@ Proof Points:
 13. What do clients say about working with you?
 14. What credentials support your credibility?
 
+Customer-Hero Story:
+*(The Market of One from Phase 2 is the protagonist. These questions fill in the guide/plan/success beats that Phase 2's problem-focused discovery didn't capture.)*
+
+15. How does your ideal client first encounter you — what are they doing, where are they, what makes them notice you in the first place?
+16. What's the moment of clarity — when do they realize this is different from what they've tried before? What shifts for them?
+17. What's the concrete path or plan you offer? When someone says "okay, I'm in" — what happens next? What's the step that makes the transformation feel achievable rather than overwhelming?
+18. When it works, how does your client describe the outcome to a friend? Not your marketing language — their words, their frame, what they actually say.
+
 **Launch prompt:**
-> "I have enough to work with. Let me have my copywriter generate options — tagline variations, story angles, bio drafts. We'll pick and refine rather than start blank."
+> "I have enough to work with. Let me have my copywriter generate options — tagline variations, story angles including a customer-hero narrative, bio drafts. We'll pick and refine rather than start blank."
 
 **Check-in prompt after Copywriter completes:**
 > "Here are the options:
@@ -524,7 +532,7 @@ Before finalizing messaging, challenge the client's chosen direction. After they
 
 The client may choose their preferred option after seeing the alternative. That's fine. What's not acceptable: finalizing messaging without this moment of tension.
 
-**Phase complete when:** Tagline selected (after devil's advocate pass), core narrative drafted, boilerplates at three lengths, proof points listed.
+**Phase complete when:** Tagline selected (after devil's advocate pass), core narrative drafted, customer-hero narrative drafted, boilerplates at three lengths, proof points listed.
 
 ---
 
