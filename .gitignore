@@ -46,3 +46,6 @@ memory-architecture.md
 # Dev-only tooling (not part of the distributable)
 .claude/agents/implementation-verifier.md
 .claude/commands/brand-compass/verify-build.md
+
+# Research archive — committed once as baseline, future changes stay local
+feature-support/
