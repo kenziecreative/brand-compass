@@ -141,7 +141,7 @@ Modular deliverable add-ons selected during onboarding. Stored in `STATE.md` Cli
 
 | Agent | Trigger | Input | Output Location | Blocking? |
 |-------|---------|-------|-----------------|-----------|
-| Research Analyst | Required — auto-launches at Phase 2 completion | Named competitors from Phase 0, audience segments from Phase 2, client's industry/domain | `workspace/research/competitive-brief.md` | No (runs in background, but must complete before Phase 3 begins) |
+| Research Analyst | Required — auto-launches at Phase 2 completion | Named competitors (STATE.md), audience segments (Phase 2), entity type (STATE.md), industry/domain | `workspace/research/competitive-brief.md` | No (runs in background, but must complete before Phase 3 begins) |
 | Content Auditor | Client provides existing content (URLs, files, pasted text) | Content URLs or text | `workspace/research/content-audit.md` | No |
 | Archetype Analyst | Phase 4 begins OR personality traits surface in conversation | Responses from Phases 1-3, personality discussion | `workspace/research/archetype-assessment.md` | No |
 | Copywriter | Discovery for messaging section completes | Discovery notes from Phase 5 | `workspace/drafts/messaging-options.md` | No |
