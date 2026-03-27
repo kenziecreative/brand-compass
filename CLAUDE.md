@@ -141,7 +141,7 @@ Modular deliverable add-ons selected during onboarding. Stored in `STATE.md` Cli
 
 | Agent | Trigger | Input | Output Location | Blocking? |
 |-------|---------|-------|-----------------|-----------|
-| Research Analyst | Client mentions competitors/industry OR you need market context | Industry, competitor names, client's domain | `workspace/research/competitive-brief.md` | No |
+| Research Analyst | Required — auto-launches at Phase 2 completion | Named competitors from Phase 0, audience segments from Phase 2, client's industry/domain | `workspace/research/competitive-brief.md` | No (runs in background, but must complete before Phase 3 begins) |
 | Content Auditor | Client provides existing content (URLs, files, pasted text) | Content URLs or text | `workspace/research/content-audit.md` | No |
 | Archetype Analyst | Phase 4 begins OR personality traits surface in conversation | Responses from Phases 1-3, personality discussion | `workspace/research/archetype-assessment.md` | No |
 | Copywriter | Discovery for messaging section completes | Discovery notes from Phase 5 | `workspace/drafts/messaging-options.md` | No |
@@ -294,7 +294,7 @@ Mission & Vision:
 
 **Populates:** Audience section of Brand Foundation document
 
-**Optional agent:** If industry/domain is clear → Launch Research Analyst for competitive context (how others describe the audience, language patterns, gaps)
+**Required agent:** Research Analyst — auto-launches at Phase 2 completion. Use named competitors from Phase 0 and audience segments just discovered. Do not wait for the client to mention competitors — launch automatically.
 
 **Discovery Questions:**
 
@@ -328,6 +328,8 @@ Anti-Audience:
 
 **Phase complete when:** Segments defined, unified profile clear, Market of One detailed, anti-audience articulated.
 
+**Phase 2 → Phase 3 Gate:** Research Analyst MUST complete before Phase 3 begins. No escape hatch. When Phase 2 wraps, launch the Research Analyst immediately using named competitors from Phase 0 and the audience segments just defined. If the agent is still running when Phase 2 work is done, tell the client: "Waiting on competitive analysis — should have results in [X] seconds." Do not start Phase 3 positioning questions until the Research Analyst output is in hand.
+
 ---
 
 ### Phase 3: Positioning & Differentiation
@@ -336,7 +338,7 @@ Anti-Audience:
 
 **Populates:** Positioning section of Brand Foundation document
 
-**Required input:** Research Analyst output (if run) should inform differentiation discussion
+**Required input:** Research Analyst output MUST be complete before Phase 3 begins (see Phase 2 → Phase 3 gate above). Use competitive brief to inform differentiation discussion — what competitors claim, what language they use, where the gaps are.
 
 **Discovery Questions:**
 
@@ -483,7 +485,16 @@ Proof Points:
 >
 > What's pulling you?"
 
-**Phase complete when:** Tagline selected, core narrative drafted, boilerplates at three lengths, proof points listed.
+**Devil's Advocate Pass (Required):**
+Before finalizing messaging, challenge the client's chosen direction. After they've selected a preferred tagline, narrative, and boilerplate from the Copywriter options:
+
+1. Check the chosen tagline against the Phase 3 positioning statement. Does it actually capture the differentiation? Or does it smooth off the edges that made the positioning distinctive?
+2. Generate one alternative that contradicts the client's comfort zone — the version that leans harder into the contrarian POV, or the one that's more direct about who it's NOT for.
+3. Present it: "Here's the version that challenges your preferred direction — [alternative]. The version you chose does [X] well but plays it safe on [Y]. This alternative [what it does differently]. You may still prefer yours — but I want you to see this one first."
+
+The client may choose their preferred option after seeing the alternative. That's fine. What's not acceptable: finalizing messaging without this moment of tension.
+
+**Phase complete when:** Tagline selected (after devil's advocate pass), core narrative drafted, boilerplates at three lengths, proof points listed.
 
 ---
 
