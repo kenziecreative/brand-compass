@@ -389,6 +389,49 @@ Interactive color specimen:
 - Copyable CSS variable blocks
 - Dark mode preview
 
+**Semantic Design Tokens** (new section, after tint scales):
+- Purpose-based color tokens mapped to the brand's palette values: `--color-surface`, `--color-surface-raised`, `--color-text-primary`, `--color-text-secondary`, `--color-text-on-action`, `--color-action`, `--color-action-hover`, `--color-border`, `--color-border-strong`, `--color-feedback-success`, `--color-feedback-warning`, `--color-feedback-error`, `--color-feedback-info`
+- Rendered as a two-column card grid: left side shows token name and purpose description, right side shows the mapped color swatch with hex value
+- DTCG-format JSON export block — a copyable `<pre>` code block containing ALL tokens in Design Tokens Community Group format. Include BOTH semantic color tokens AND structural tokens (radii, shadows, spacing, font weights from the Design System Parameters). Example structure:
+```json
+{
+  "color": {
+    "surface": { "$value": "#FFFFFF", "$type": "color", "$description": "Default page/card background" },
+    "action": { "$value": "#XXXXXX", "$type": "color", "$description": "Primary interactive elements" }
+  },
+  "size": {
+    "radius": {
+      "sm": { "$value": "4px", "$type": "dimension" },
+      "md": { "$value": "8px", "$type": "dimension" }
+    },
+    "spacing": {
+      "sm": { "$value": "0.5rem", "$type": "dimension" },
+      "md": { "$value": "1rem", "$type": "dimension" }
+    }
+  },
+  "shadow": {
+    "sm": { "$value": "0 1px 3px rgba(0,0,0,0.08)", "$type": "shadow" }
+  },
+  "fontWeight": {
+    "heading": { "$value": "700", "$type": "fontWeight" },
+    "body": { "$value": "400", "$type": "fontWeight" }
+  }
+}
+```
+- The JSON block should be comprehensive enough that a developer can import the entire brand system in one block
+
+**Accessible Color Combinations** (new section, after semantic tokens):
+- Visual pairing cards: each card shows a foreground/background color combination rendered as a mini text sample (actual text on actual background)
+- Each card displays: foreground color name + hex, background color name + hex, contrast ratio (e.g., "7.2:1"), pass/fail badges for AA and AAA levels (styled as pills: green for pass, red for fail)
+- Include all common foreground/background pairings from the palette — text colors on surface colors, action colors on backgrounds, text on action colors
+- Use the `.do-dont-grid` CSS pattern from voice-guide.html extended for color pairing cards — two-column responsive grid, each card self-contained
+- Cards that fail the client's compliance level (AA or AAA from STATE.md) should be visually flagged as "Do Not Use" with a red border treatment
+
+**Do/Don't Examples for Color** (new, after accessible combinations):
+- 2-3 do/don't pairs showing correct vs incorrect color usage with rationale
+- Extend the `.do-dont-grid` CSS pattern: `.do-card` / `.dont-card` with green/red accent borders
+- Examples: correct text-on-background contrast, incorrect low-contrast pairing, correct accent usage, incorrect overuse of accent color
+
 ### Document 6: `workspace/output/visual-system.html`
 
 Full visual system reference:
@@ -426,6 +469,8 @@ All five HTML files share the same CSS custom properties from the Design System 
 - Color swatch cards: follow the "card style" parameter for containers
 - Tint scale rows: use the brand's spacing density from parameters
 - Code block styling: use the brand's radius and shadow values
+- Semantic token cards and accessible combination cards: follow the "card style" parameter. DTCG JSON block: use the brand's radius and spacing values for the code container.
+- Do/don't examples for color usage: follow the "card style" parameter with green/red accent.
 
 **visual-system.html:**
 - Typography specimen cards: follow the "card style" parameter
