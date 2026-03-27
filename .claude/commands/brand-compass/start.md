@@ -65,7 +65,20 @@ Listen, reflect back, ask a follow-up if anything is vague. Then proceed.
    website, business cards, content library, style guide, anything — or
    "starting from scratch" is a perfectly valid answer)
 
-### Group 3: Asset Packs
+### Group 3: Brand Context
+
+"Before we get into the practical setup, a few questions that will shape the direction of the work:"
+
+6. **Have you done brand work before?** What worked? What didn't? What would you absolutely not want to repeat?
+   *(If they're starting from scratch, that's valuable too — ask what made them decide to start fresh now.)*
+
+7. **Name 3-4 brands, companies, or people your audience might consider instead of you.** They don't have to be direct competitors — just anyone your potential clients might look at alongside you. Include URLs if you have them.
+
+8. **How do people currently describe what you do** — and how is that different from how you'd want them to describe it? If you've ever cringed at how someone introduced you, tell me about that.
+
+Listen and probe. The gap between how they're perceived and how they want to be perceived is often the most useful thing uncovered before discovery begins.
+
+### Group 4: Asset Packs
 
 Based on their type and platforms, suggest relevant asset packs:
 
@@ -112,6 +125,7 @@ After all groups are covered, present the captured profile back to the client:
 **What you do:** [Description]
 **Platforms:** [comma-separated list]
 **Existing assets:** [What they have]
+**Competitors:** [listed competitors]
 **Asset packs:** [Selected packs]
 
 Does this look right?"
@@ -129,7 +143,7 @@ When confirmed, proceed.
 When the client confirms the profile:
 
 1. Update STATE.md:
-   - Fill in the complete Client section with all six fields
+   - Fill in the complete Client section with all fields, including Competitors
    - Check `Phase 0: Onboarding` as complete
    - Check `Client profile captured` in Discovery Outputs
    - Check `Asset packs selected` in Discovery Outputs
