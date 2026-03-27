@@ -370,6 +370,7 @@ An HTML version of the Brand Foundation document. Self-contained single HTML fil
 - Structured sections matching the markdown content
 - Print-friendly styling
 - Responsive layout
+- Includes Brand Compass Card — a 9-element visual diagram (center: core belief, surrounded by: audience, positioning, personality, tagline, territory, contrarian POV, values, brand world) rendered as a branded HTML layout based on the Unilever Brand Key model.
 
 ### Document 4: `workspace/output/voice-guide.html`
 
@@ -578,10 +579,35 @@ If it's not a clear yes on 4+, it's a no.
 
 ---
 
+## Brand Stress Test
+
+Apply the Decision Filter to three boundary-case scenarios to validate its discrimination power:
+
+### Scenario 1: Clear Pass
+[Generate an opportunity that obviously aligns with the brand — audience match, values alignment, territory fit. The filter should pass this easily. If it doesn't, the filter is too restrictive.]
+
+### Scenario 2: Clear Fail
+[Generate an opportunity that obviously misaligns — wrong audience, conflicts with values, off-territory. The filter should reject this. If it passes, the filter is too permissive.]
+
+### Scenario 3: Gray Area
+[Generate a plausible opportunity that sits on the boundary — some elements align, others don't. The filter should produce genuine deliberation, not an instant answer. This scenario tests whether the filter has enough nuance to handle real decisions.]
+
+### Filter Calibration
+[If all three pass: filter is too permissive — tighten questions. If all three fail: filter is too restrictive — loosen questions. If gray area produces instant answer either way: questions lack nuance — add specificity.]
+
+---
+
 ## Content Territories
 
 ### Topics I Own
 [From positioning + archetypes]
+
+### Content Pillars
+[3-5 named recurring themes that structure ongoing content creation. Each pillar builds on "Topics I Own" — these are the deep wells, not one-off topics.]
+
+1. **[Pillar Name]:** [Description — what this theme covers and why it matters to the brand's audience. Example topics: topic A, topic B, topic C.]
+2. **[Pillar Name]:** [Description. Example topics: ...]
+3. **[Pillar Name]:** [Description. Example topics: ...]
 
 ### Topics I Contribute To
 [Adjacent topics]
@@ -604,13 +630,71 @@ If it's not a clear yes on 4+, it's a no.
 
 ---
 
-## Quick Reference Card
+## Strategic Quick Reference
+
+The "remind me who I am" card — strategic identity at a glance.
+
+- **Core Belief:** [One sentence from Phase 1]
+- **Positioning:** [Positioning statement from Phase 3]
+- **Audience:** [One-sentence unified profile from Phase 2]
+- **Tagline:** [From Phase 5]
+- **Personality:** [Top 3 traits from Phase 4]
+- **Contrarian POV:** [One sentence from Phase 3]
+- **Territory:** [What you own from Phase 3]
+
+---
+
+## Implementation Quick Reference
+
+Design specs at a glance — for anyone implementing the brand visually.
 
 - **Primary colors:** [Hex codes]
 - **Fonts:** [Names]
 - **Tagline:** [The tagline]
 - **One-sentence bio:** [The sentence]
 - **Voice in 3 words:** [Three words]
+
+---
+
+## Activation Layer
+
+### Implementation Priorities
+[Ordered by impact — highest-impact brand touchpoints first. Client works through these at their own pace.]
+
+1. **[Touchpoint]:** [What to update and why it matters most] — Impact: High
+2. **[Touchpoint]:** [What to update] — Impact: High
+3. **[Touchpoint]:** [What to update] — Impact: Medium
+4. **[Touchpoint]:** [What to update] — Impact: Medium
+5. **[Touchpoint]:** [What to update] — Impact: Low
+
+### Self-Audit Checklist
+[Ongoing brand consistency check — revisit quarterly or after major changes]
+
+- [ ] Visual identity matches approved color palette and typography
+- [ ] Bio and boilerplate are current across all platforms
+- [ ] Content aligns with content pillars and territories
+- [ ] Voice matches guardrails — no banned phrases, signatures present
+- [ ] Decision filter applied to recent opportunities
+- [ ] Brand stress test still produces correct discrimination pattern
+
+### Internal Brief Template
+[For business/organization entity types only. Omit for solo creators/artists.]
+
+**Brand Brief: [Brand Name]**
+- **Who we are:** [Core belief + positioning, 2 sentences]
+- **Who we serve:** [Unified audience profile, 1 sentence]
+- **How we sound:** [Voice summary + 3 voice tags]
+- **How we look:** [Visual direction summary, 2 sentences]
+- **What we never do:** [Top 3 guardrails]
+- **Decision test:** [Simplified 3-question filter for quick team decisions]
+
+### Stakeholder Rollout Guidance
+[For business/organization entity types only. Omit for solo creators/artists.]
+
+1. **Leadership alignment:** [Share Brand Foundation + Strategic Quick Reference]
+2. **Team onboarding:** [Share Voice Guide + Internal Brief]
+3. **External partners:** [Share Visual System + Implementation Quick Reference]
+4. **Ongoing governance:** [Quarterly self-audit, annual brand review]
 ```
 
 ## Quality Bar
