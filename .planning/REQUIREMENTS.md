@@ -9,7 +9,7 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 ### Baseline
 
-- [ ] **BASE-01**: Existing uncommitted local changes (Phase 1 values/mission/vision, Phase 3 service definition, checkpoint-a, brand-verifier, document-assembler, STATE-template, example-brand outputs) are committed as a clean baseline
+- [x] **BASE-01**: Existing uncommitted local changes (Phase 1 values/mission/vision, Phase 3 service definition, checkpoint-a, brand-verifier, document-assembler, STATE-template, example-brand outputs) are committed as a clean baseline
 
 ### Discovery Pipeline — Quick Wins
 
@@ -96,7 +96,7 @@ Explicitly excluded. Documented to prevent scope creep.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BASE-01 | Phase 1 | Pending |
+| BASE-01 | Phase 1 | Complete |
 | DSCV-01 | Phase 1 | Pending |
 | DSCV-02 | Phase 1 | Pending |
 | DSCV-03 | Phase 1 | Pending |
