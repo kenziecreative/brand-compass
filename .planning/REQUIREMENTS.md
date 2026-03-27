@@ -36,8 +36,8 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 ### Output Quality (Wave 2)
 
 - [x] **QUAL-01**: Customer-hero story framework added to Phase 5 discovery and/or Phase 8 toolkit — structured narrative with customer as protagonist, brand as guide — Rec 1.2
-- [ ] **QUAL-02**: Phase 7 includes accessibility as design input — questions feed Visual Director as constraints, color palette includes approved accessible combinations — Rec 1.3
-- [ ] **QUAL-03**: Structural anti-sycophancy mechanisms added — checkpoint challenge protocol, pushback audit, devil's advocate pass, brand stress test — Rec 1.5
+- [x] **QUAL-02**: Phase 7 includes accessibility as design input — questions feed Visual Director as constraints, color palette includes approved accessible combinations — Rec 1.3
+- [x] **QUAL-03**: Structural anti-sycophancy mechanisms added — checkpoint challenge protocol, pushback audit, devil's advocate pass, brand stress test — Rec 1.5
 - [x] **QUAL-04**: Voice compliance check verifies generated output against captured voice fingerprint — divergence flagged for revision — Rec 2.5
 
 ### Deliverable Expansions (Wave 3)
@@ -111,8 +111,8 @@ Explicitly excluded. Documented to prevent scope creep.
 | PIPE-02 | Phase 2 | Complete |
 | PIPE-03 | Phase 2 | Complete |
 | QUAL-01 | Phase 3 | Complete |
-| QUAL-02 | Phase 3 | Pending |
-| QUAL-03 | Phase 3 | Pending |
+| QUAL-02 | Phase 3 | Complete |
+| QUAL-03 | Phase 3 | Complete |
 | QUAL-04 | Phase 3 | Complete |
 | DLVR-01 | Phase 4 | Pending |
 | DLVR-02 | Phase 4 | Pending |
