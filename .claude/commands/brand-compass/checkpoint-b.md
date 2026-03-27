@@ -79,7 +79,11 @@ If the client identifies issues:
 
 If the client confirms it holds together:
 
-## Step 6: Pass Checkpoint
+## Step 6: Challenge the Weakest Element
+
+Before passing, identify the single weakest element in Phases 4-6 — the one most likely to cause problems when visual identity work begins. Scope this to the verbal brand only, not the strategic foundation already validated at Checkpoint A. Candidates include: personality traits that feel generic or interchangeable, messaging that doesn't reflect the positioning, a voice guide with guardrails that are too loose to be actionable, or archetypes that don't appear anywhere in the brand world. Challenge the client on it directly: explain why it's weak and propose how to strengthen it. The client can accept the challenge and revise, or defend their choice — but they must engage with the critique before the checkpoint passes.
+
+## Step 7: Pass Checkpoint
 
 1. Update STATE.md:
    - Check `Checkpoint B: Phases 1-6 complete` as passed

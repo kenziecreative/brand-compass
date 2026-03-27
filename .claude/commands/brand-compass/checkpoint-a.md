@@ -60,7 +60,7 @@ Use AskUserQuestion:
   question: "Does your strategic foundation hold together?"
   options:
     - "Solid — let's move forward" (proceed to Step 5)
-    - "Mostly right but something needs adjusting" (iterate on specific items)
+    - "Mostly right but something needs adjusting" (iterate on specific items, then Step 5)
     - "Something feels off — let's revisit" (redirect to relevant phase)
 
 ## Step 4: Validate or Iterate
@@ -72,7 +72,11 @@ If the client identifies issues:
 
 If the client confirms it holds together:
 
-## Step 5: Pass Checkpoint
+## Step 5: Challenge the Weakest Element
+
+Before passing, identify the single weakest element in Phases 1-3 — the one most likely to cause problems downstream. This might be a core belief that's too generic, a positioning statement that doesn't actually differentiate, an audience definition that's too broad, or a contrarian POV that's too safe. Challenge the client on it directly: explain why it's weak and propose how to strengthen it. The client can accept the challenge and revise, or defend their choice — but they must engage with the critique before the checkpoint passes.
+
+## Step 6: Pass Checkpoint
 
 1. Update STATE.md:
    - Check `Checkpoint A: Phases 1-3 solid` as passed
