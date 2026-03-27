@@ -342,47 +342,76 @@ Anti-Audience:
 
 **Discovery Questions:**
 
-The Positioning:
-1. Complete: "For [audience], I'm the [category] who [does what differently] so they can [outcome]."
-2. In one sentence: What do you help people do, and what changes?
-3. If someone remembered one thing about what you do, what should it be?
+Positioning — Component Exploration:
+*(Build the positioning from its parts before attempting a statement. Reference the Research Analyst competitive brief throughout -- weave findings into the conversation, don't treat them as a separate deliverable to review.)*
+
+Competitive Alternatives:
+*(What the client's audience would do if the client didn't exist. This is NOT about listing competitors -- it's about understanding the real alternatives from the audience's perspective.)*
+
+**Business/org framing:**
+1. Your Research Analyst identified these players in your space: [reference competitive brief]. Looking at how they position themselves, what do you offer that they genuinely can't or don't?
+2. When a potential client is evaluating you against alternatives, what's the real comparison they're making? Is it another company, doing it themselves, or ignoring the problem entirely?
+
+**Personal brand/creator framing:**
+1. If your audience couldn't engage with your work, what would they turn to instead? Another creator, a book, a course, doing nothing?
+2. What do those alternatives get right -- and where do they fall short for the kind of person you serve?
+
+*(Use the entity type from STATE.md to select the appropriate framing. Don't ask both sets.)*
+
+Unique Attributes:
+3. Based on what the alternatives lack, what specific capabilities, approaches, or qualities do you bring that genuinely differentiate you? Not "better" -- different.
+4. Which of these would be hardest for someone else to replicate? That's your moat.
+
+Value Enabled:
+5. What do those unique attributes make possible for your audience that the alternatives can't deliver?
+6. What's the transformation -- where does someone start vs where do they end up because of what only you provide?
+
+Category Framing:
+*(Reference the outside-in category question from Territory if already answered, or explore it here.)*
+7. What category does your audience put you in today? Is that the right frame -- or does it set up the wrong comparisons?
+8. If you could define your own category, what would it be? What would you be the obvious leader of?
+
+Positioning Synthesis:
+*(NOW, with all components explored, synthesize into a statement. This should write itself from the components above.)*
+9. Based on everything we've just explored -- your alternatives, your unique attributes, the value you enable, and the category you want to own -- complete this: "For [audience from Phase 2], I'm the [category] who [does what differently] so they can [outcome]."
+10. Read it back. Does it feel true and differentiated, or does it sound like it could belong to someone else in your space?
 
 The Intersection:
-4. What do you combine that others keep separate? Your "X + Y + Z"?
-5. What worlds do you have credibility in that most only have one of?
-6. What unusual combination do you bring?
+11. What do you combine that others keep separate? Your "X + Y + Z"?
+12. What worlds do you have credibility in that most only have one of?
+13. What unusual combination do you bring?
 
 The Territory:
-7. What word or phrase do you want associated with your name?
-8. If you owned a bookstore section, what would it be called?
-9. What concept do you want to be known for originating or championing?
-10. What category does your audience currently put you in? Is that the right category — or are you being filed next to the wrong competitors?
+14. What word or phrase do you want associated with your name?
+15. If you owned a bookstore section, what would it be called?
+16. What concept do you want to be known for originating or championing?
+17. What category does your audience currently put you in? Is that the right category — or are you being filed next to the wrong competitors?
 
 The Unifying Lens:
-11. You talk about [X], [Y], and [Z]. These seem like different topics. Is there one idea that connects them all?
-12. If someone asked "why do you write about such different things?" — what's your answer?
-13. Is there a single lens or framework that makes all your content make sense together?
+18. You talk about [X], [Y], and [Z]. These seem like different topics. Is there one idea that connects them all?
+19. If someone asked "why do you write about such different things?" — what's your answer?
+20. Is there a single lens or framework that makes all your content make sense together?
 *(Skip if the client has a narrow focus. But for thought leaders and content creators who span multiple topics, this is often the biggest strategic breakthrough.)*
 
 The Contrarian View:
-14. What mainstream advice in your space misses the point?
-15. What do you believe that practitioners often disagree with?
-16. What would you say that might make some uncomfortable but is true?
-17. Complete: "Most experts say ______. I say ______."
+21. What mainstream advice in your space misses the point?
+22. What do you believe that practitioners often disagree with?
+23. What would you say that might make some uncomfortable but is true?
+24. Complete: "Most experts say ______. I say ______."
 
 Permission & Credibility:
-18. What gives you permission to speak on this?
-19. Why should someone trust you over others?
+25. What gives you permission to speak on this?
+26. Why should someone trust you over others?
 
 Service Definition:
 *(Ask these only if the client's entity type is a business, organization, company, nonprofit, startup, or agency. Skip for solo creators and personal brands — for individuals, the Positioning Statement and Intersection already capture what they offer.)*
 
-20. What are the core services or products you offer? List them as a client would describe them, not as internal categories.
-21. For each: what is the specific outcome the client gets?
-22. Are there tiers, packages, or a natural sequence — do clients typically start with one thing and expand?
-23. What do you NOT do that people often assume you do? Where do you draw the line?
+27. What are the core services or products you offer? List them as a client would describe them, not as internal categories.
+28. For each: what is the specific outcome the client gets?
+29. Are there tiers, packages, or a natural sequence — do clients typically start with one thing and expand?
+30. What do you NOT do that people often assume you do? Where do you draw the line?
 
-**Phase complete when:** Positioning statement drafted, intersection clear, territory claimed, unifying lens identified (if applicable), contrarian POV articulated. For business/organization entity types: service definition documented.
+**Phase complete when:** Positioning components explored (competitive alternatives, unique attributes, value, category), positioning statement drafted, intersection clear, territory claimed, unifying lens identified (if applicable), contrarian POV articulated. For business/organization entity types: service definition documented.
 
 **CHECKPOINT A:** Before proceeding to Phase 4, confirm Phases 1-3 are solid. Strategic foundation must be right before personality work.
 
