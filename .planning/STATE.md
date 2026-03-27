@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 4 context gathered
-last_updated: "2026-03-27T21:40:34.923Z"
+stopped_at: Completed 04-deliverable-expansions-01-PLAN.md
+last_updated: "2026-03-27T21:54:51.195Z"
 last_activity: 2026-03-26 — Roadmap created for v1.0
 progress:
   total_phases: 6
   completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 10
+  completed_plans: 8
   percent: 0
 ---
 
@@ -57,6 +57,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 02-discovery-pipeline-reframe P02 | 2 | 2 tasks | 2 files |
 | Phase 03-output-quality P01 | 2 | 2 tasks | 3 files |
 | Phase 03-output-quality P02 | 8 | 1 tasks | 5 files |
+| Phase 04-deliverable-expansions P01 | 2 | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -84,6 +85,9 @@ Recent decisions affecting current work:
 - [Phase 03-output-quality]: Voice compliance divergence is advisory (human review), not blocking — flagged with metrics, not auto-rejected
 - [Phase 03-output-quality]: Accessibility is a hard constraint chain from Phase 7 discovery through STATE.md to Visual Director output; WCAG AA universal floor with AAA auto-escalation for regulated sectors
 - [Phase 03-output-quality]: Checkpoint challenge protocol is structured 4-step (Identify/Diagnose/Propose/Engage) requiring client engagement; Pushback Audit is silent self-check at phase closing; Brand Stress Test validates decision filter with 3 boundary scenarios
+- [Phase 04-deliverable-expansions]: Motion discovery uses 3 questions in Phase 7 (Q26-28): interaction pace, movement spectrum, transition personality — feeding directly into Visual Director input
+- [Phase 04-deliverable-expansions]: Reduced-motion fallbacks specified inline with each motion default value type in Visual Director output, not in a separate section
+- [Phase 04-deliverable-expansions]: Motion CSS tokens extend existing --transition-speed with 5 new tokens: --transition-easing, --entrance-duration, --entrance-easing, --exit-duration, --exit-easing
 
 ### Pending Todos
 
@@ -95,6 +99,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T21:40:34.920Z
-Stopped at: Phase 4 context gathered
-Resume file: .planning/phases/04-deliverable-expansions/04-CONTEXT.md
+Last session: 2026-03-27T21:54:51.192Z
+Stopped at: Completed 04-deliverable-expansions-01-PLAN.md
+Resume file: None

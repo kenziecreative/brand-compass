@@ -42,7 +42,7 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 ### Deliverable Expansions (Wave 3)
 
-- [ ] **DLVR-01**: Motion direction section added to Phase 7 discovery and Visual Identity System HTML — principles, timing, easing, reduced motion guidance — Rec 2.1
+- [x] **DLVR-01**: Motion direction section added to Phase 7 discovery and Visual Identity System HTML — principles, timing, easing, reduced motion guidance — Rec 2.1
 - [ ] **DLVR-02**: One-page Brand Compass Card added to Phase 8 output — 9-element strategic synthesis based on Unilever Brand Key model — Rec 2.2
 - [ ] **DLVR-03**: Brand activation layer added to Phase 8 — 30-day timeline, implementation priority list, self-audit checklist, internal brief for orgs — Rec 2.3
 - [ ] **DLVR-04**: Semantic design token output — purpose-based naming layer in Visual Identity System HTML + DTCG-format JSON export — Rec 2.4
@@ -114,7 +114,7 @@ Explicitly excluded. Documented to prevent scope creep.
 | QUAL-02 | Phase 3 | Complete |
 | QUAL-03 | Phase 3 | Complete |
 | QUAL-04 | Phase 3 | Complete |
-| DLVR-01 | Phase 4 | Pending |
+| DLVR-01 | Phase 4 | Complete |
 | DLVR-02 | Phase 4 | Pending |
 | DLVR-03 | Phase 4 | Pending |
 | DLVR-04 | Phase 4 | Pending |

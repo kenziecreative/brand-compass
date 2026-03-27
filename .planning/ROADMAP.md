@@ -74,7 +74,7 @@ Plans:
   3. CLAUDE.md Phase 8 section includes a brand activation layer deliverable — 30-day timeline, implementation priority list, self-audit checklist, and internal brief for org entity types
   4. The Visual Identity System HTML template includes a semantic design token section with purpose-based naming and a DTCG-format JSON export block
   5. CLAUDE.md Phase 8 Content Territories section is expanded with 3-5 content pillars, and the Voice Guide HTML template includes a channel-voice matrix; HTML specimens across color, imagery, and voice sections contain systematic do/dont examples with rationale; Phase 8 includes a strategic quick reference card distinct from the implementation card; Phase 8 includes a brand stress test section applying the decision filter to 3 boundary-case scenarios
-**Plans:** 3 plans
+**Plans:** 2/3 plans executed
 Plans:
 - [ ] 04-01-PLAN.md — Motion direction pipeline (Phase 7 discovery questions + Visual Director output section)
 - [ ] 04-02-PLAN.md — Phase 8 toolkit expansions (Brand Compass Card, activation layer, content pillars, strategic quick ref, brand stress test)
@@ -111,6 +111,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 1. Baseline + Quick Wins | 3/3 | Complete   | 2026-03-27 |
 | 2. Discovery Pipeline Reframe | 2/2 | Complete   | 2026-03-27 |
 | 3. Output Quality | 2/2 | Complete   | 2026-03-27 |
-| 4. Deliverable Expansions | 0/3 | Not started | - |
+| 4. Deliverable Expansions | 2/3 | In Progress|  |
 | 5. Process Refinements | 0/TBD | Not started | - |
 | 6. Forward-Looking Additions | 0/TBD | Not started | - |
