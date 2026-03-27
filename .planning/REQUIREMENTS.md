@@ -15,16 +15,16 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 - [x] **DSCV-01**: Phase 2 or early Phase 3 includes competitive alternatives question ("What would your customers use or do if you didn't exist?") — QW-1
 - [x] **DSCV-02**: Phase 2 Market of One includes anxiety + habit force questions (push/habit force, anxiety force) — QW-2
-- [ ] **DSCV-03**: Phase 0 onboarding includes brand history question — QW-3
-- [ ] **DSCV-04**: Phase 0 onboarding captures named competitors (3-4 with URLs) and STATE.md template has the field — QW-4
-- [ ] **DSCV-05**: Phase 0 onboarding includes perception gap question — QW-5
+- [x] **DSCV-03**: Phase 0 onboarding includes brand history question — QW-3
+- [x] **DSCV-04**: Phase 0 onboarding captures named competitors (3-4 with URLs) and STATE.md template has the field — QW-4
+- [x] **DSCV-05**: Phase 0 onboarding includes perception gap question — QW-5
 - [x] **DSCV-06**: Phase 3 includes outside-in category question — QW-6
 - [x] **DSCV-07**: Phase 7 includes 2-3 accessibility discovery questions before color/typography discussion — QW-7
 
 ### Agent Capability — Quick Wins
 
 - [x] **AGNT-01**: Research Analyst trigger changed from passive ("client mentions competitors") to required (launches between Phase 2 and Phase 3) — QW-8
-- [ ] **AGNT-02**: Checkpoint A and Checkpoint B include structural challenge requirement ("identify weakest element and challenge client") — QW-9
+- [x] **AGNT-02**: Checkpoint A and Checkpoint B include structural challenge requirement ("identify weakest element and challenge client") — QW-9
 - [x] **AGNT-03**: Phase 5 includes devil's advocate pass requirement before finalizing messaging — QW-10
 
 ### Discovery Pipeline — Structural Changes (Wave 1)
@@ -99,13 +99,13 @@ Explicitly excluded. Documented to prevent scope creep.
 | BASE-01 | Phase 1 | Complete |
 | DSCV-01 | Phase 1 | Complete |
 | DSCV-02 | Phase 1 | Complete |
-| DSCV-03 | Phase 1 | Pending |
-| DSCV-04 | Phase 1 | Pending |
-| DSCV-05 | Phase 1 | Pending |
+| DSCV-03 | Phase 1 | Complete |
+| DSCV-04 | Phase 1 | Complete |
+| DSCV-05 | Phase 1 | Complete |
 | DSCV-06 | Phase 1 | Complete |
 | DSCV-07 | Phase 1 | Complete |
 | AGNT-01 | Phase 1 | Complete |
-| AGNT-02 | Phase 1 | Pending |
+| AGNT-02 | Phase 1 | Complete |
 | AGNT-03 | Phase 1 | Complete |
 | PIPE-01 | Phase 2 | Pending |
 | PIPE-02 | Phase 2 | Pending |
