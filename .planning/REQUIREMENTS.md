@@ -94,51 +94,49 @@ Explicitly excluded. Documented to prevent scope creep.
 
 ## Traceability
 
-Updated during roadmap creation.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BASE-01 | — | Pending |
-| DSCV-01 | — | Pending |
-| DSCV-02 | — | Pending |
-| DSCV-03 | — | Pending |
-| DSCV-04 | — | Pending |
-| DSCV-05 | — | Pending |
-| DSCV-06 | — | Pending |
-| DSCV-07 | — | Pending |
-| AGNT-01 | — | Pending |
-| AGNT-02 | — | Pending |
-| AGNT-03 | — | Pending |
-| PIPE-01 | — | Pending |
-| PIPE-02 | — | Pending |
-| PIPE-03 | — | Pending |
-| QUAL-01 | — | Pending |
-| QUAL-02 | — | Pending |
-| QUAL-03 | — | Pending |
-| QUAL-04 | — | Pending |
-| DLVR-01 | — | Pending |
-| DLVR-02 | — | Pending |
-| DLVR-03 | — | Pending |
-| DLVR-04 | — | Pending |
-| DLVR-05 | — | Pending |
-| DLVR-06 | — | Pending |
-| DLVR-07 | — | Pending |
-| DLVR-08 | — | Pending |
-| DLVR-09 | — | Pending |
-| PROC-01 | — | Pending |
-| PROC-02 | — | Pending |
-| PROC-03 | — | Pending |
-| PROC-04 | — | Pending |
-| PROC-05 | — | Pending |
-| PROC-06 | — | Pending |
-| FUTR-01 | — | Pending |
-| FUTR-02 | — | Pending |
+| BASE-01 | Phase 1 | Pending |
+| DSCV-01 | Phase 1 | Pending |
+| DSCV-02 | Phase 1 | Pending |
+| DSCV-03 | Phase 1 | Pending |
+| DSCV-04 | Phase 1 | Pending |
+| DSCV-05 | Phase 1 | Pending |
+| DSCV-06 | Phase 1 | Pending |
+| DSCV-07 | Phase 1 | Pending |
+| AGNT-01 | Phase 1 | Pending |
+| AGNT-02 | Phase 1 | Pending |
+| AGNT-03 | Phase 1 | Pending |
+| PIPE-01 | Phase 2 | Pending |
+| PIPE-02 | Phase 2 | Pending |
+| PIPE-03 | Phase 2 | Pending |
+| QUAL-01 | Phase 3 | Pending |
+| QUAL-02 | Phase 3 | Pending |
+| QUAL-03 | Phase 3 | Pending |
+| QUAL-04 | Phase 3 | Pending |
+| DLVR-01 | Phase 4 | Pending |
+| DLVR-02 | Phase 4 | Pending |
+| DLVR-03 | Phase 4 | Pending |
+| DLVR-04 | Phase 4 | Pending |
+| DLVR-05 | Phase 4 | Pending |
+| DLVR-06 | Phase 4 | Pending |
+| DLVR-07 | Phase 4 | Pending |
+| DLVR-08 | Phase 4 | Pending |
+| DLVR-09 | Phase 4 | Pending |
+| PROC-01 | Phase 5 | Pending |
+| PROC-02 | Phase 5 | Pending |
+| PROC-03 | Phase 5 | Pending |
+| PROC-04 | Phase 5 | Pending |
+| PROC-05 | Phase 5 | Pending |
+| PROC-06 | Phase 5 | Pending |
+| FUTR-01 | Phase 6 | Pending |
+| FUTR-02 | Phase 6 | Pending |
 
 **Coverage:**
 - v1.0 requirements: 35 total
-- Mapped to phases: 0
-- Unmapped: 35
+- Mapped to phases: 35
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-26*
-*Last updated: 2026-03-26 after initial definition*
+*Last updated: 2026-03-26 after roadmap creation*
