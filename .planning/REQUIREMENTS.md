@@ -45,10 +45,10 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 - [x] **DLVR-01**: Motion direction section added to Phase 7 discovery and Visual Identity System HTML — principles, timing, easing, reduced motion guidance — Rec 2.1
 - [x] **DLVR-02**: One-page Brand Compass Card added to Phase 8 output — 9-element strategic synthesis based on Unilever Brand Key model — Rec 2.2
 - [x] **DLVR-03**: Brand activation layer added to Phase 8 — 30-day timeline, implementation priority list, self-audit checklist, internal brief for orgs — Rec 2.3
-- [ ] **DLVR-04**: Semantic design token output — purpose-based naming layer in Visual Identity System HTML + DTCG-format JSON export — Rec 2.4
+- [x] **DLVR-04**: Semantic design token output — purpose-based naming layer in Visual Identity System HTML + DTCG-format JSON export — Rec 2.4
 - [x] **DLVR-05**: Content pillars (3-5 recurring themes) and channel-voice matrix added — extends Content Territories in Phase 8, channel-voice matrix in Voice Guide — Rec 2.6
-- [ ] **DLVR-06**: Systematic do/don't examples added across all guideline sections in HTML specimens — color, imagery, voice-by-context, with rationale — Rec 2.7
-- [ ] **DLVR-07**: Approved accessible color combinations section added to color palette HTML — QW-11
+- [x] **DLVR-06**: Systematic do/don't examples added across all guideline sections in HTML specimens — color, imagery, voice-by-context, with rationale — Rec 2.7
+- [x] **DLVR-07**: Approved accessible color combinations section added to color palette HTML — QW-11
 - [x] **DLVR-08**: Strategic quick reference card added to Phase 8 — one-page strategic summary distinct from implementation quick reference — QW-12
 - [x] **DLVR-09**: Brand stress test added to Phase 8 — apply decision filter to 3 boundary-case scenarios, flag if too permissive — QW-13
 
@@ -117,10 +117,10 @@ Explicitly excluded. Documented to prevent scope creep.
 | DLVR-01 | Phase 4 | Complete |
 | DLVR-02 | Phase 4 | Complete |
 | DLVR-03 | Phase 4 | Complete |
-| DLVR-04 | Phase 4 | Pending |
+| DLVR-04 | Phase 4 | Complete |
 | DLVR-05 | Phase 4 | Complete |
-| DLVR-06 | Phase 4 | Pending |
-| DLVR-07 | Phase 4 | Pending |
+| DLVR-06 | Phase 4 | Complete |
+| DLVR-07 | Phase 4 | Complete |
 | DLVR-08 | Phase 4 | Complete |
 | DLVR-09 | Phase 4 | Complete |
 | PROC-01 | Phase 5 | Pending |

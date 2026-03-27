@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-03-27T21:55:23.300Z"
+stopped_at: Completed 04-03-PLAN.md
+last_updated: "2026-03-27T23:14:03.525Z"
 last_activity: 2026-03-26 — Roadmap created for v1.0
 progress:
   total_phases: 6
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 10
-  completed_plans: 9
+  completed_plans: 10
   percent: 0
 ---
 
@@ -59,6 +59,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03-output-quality P02 | 8 | 1 tasks | 5 files |
 | Phase 04-deliverable-expansions P01 | 2 | 2 tasks | 2 files |
 | Phase 04-deliverable-expansions P02 | 2 | 2 tasks | 2 files |
+| Phase 04-deliverable-expansions P03 | 5 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -92,6 +93,9 @@ Recent decisions affecting current work:
 - [Phase 04-deliverable-expansions]: Brand Compass Card lives in brand-foundation.html as a visual HTML diagram (not a separate file)
 - [Phase 04-deliverable-expansions]: Activation Layer org-only conditionals (internal brief, stakeholder rollout) follow established Phase 1/3 entity-type conditional pattern
 - [Phase 04-deliverable-expansions]: Strategic Quick Reference is explicitly distinct from Implementation Quick Reference — strategic identity card vs. design specs card
+- [Phase 04-deliverable-expansions]: Semantic tokens use 13 purpose-based names covering surface, text, action, border, and feedback categories
+- [Phase 04-deliverable-expansions]: DTCG JSON export block is comprehensive (color + structural tokens) so developers import entire brand system in one block
+- [Phase 04-deliverable-expansions]: Channel-Voice Matrix draws platform rows from client STATE.md platform inventory, not a static list
 
 ### Pending Todos
 
@@ -103,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T21:55:23.297Z
-Stopped at: Completed 04-02-PLAN.md
+Last session: 2026-03-27T23:14:03.521Z
+Stopped at: Completed 04-03-PLAN.md
 Resume file: None
