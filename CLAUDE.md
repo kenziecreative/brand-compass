@@ -666,8 +666,13 @@ Application:
 24. Where does your brand appear most?
 25. What templates do you need?
 
+Motion:
+26. Should interactions feel snappy and immediate, or smooth and easing? When someone clicks a button or opens a menu, what's the pace?
+27. How much movement is appropriate for your brand? Think of a spectrum from "almost nothing moves" to "things glide and animate frequently."
+28. When content appears or changes, should it feel like a quick cut (instant, decisive) or a dissolve (gradual, flowing)?
+
 **Launch prompt:**
-> "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction. They'll apply your accessibility requirements as hard constraints on the color system. This takes a couple minutes. I'll share the full direction for review before we generate anything."
+> "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction including motion principles. They'll apply your accessibility requirements as hard constraints on the color system. This takes a couple minutes. I'll share the full direction for review before we generate anything."
 
 **BLOCKING:** Do not proceed to image generation until client reviews and approves visual direction.
 
@@ -682,7 +687,7 @@ Application:
 
 **After approval:** Launch Image Generator for specific assets.
 
-**Phase complete when:** Visual direction approved, color palette finalized, typography selected, mark created, imagery style defined.
+**Phase complete when:** Visual direction approved, color palette finalized, typography selected, mark created, imagery style defined, motion direction defined.
 
 ---
 
