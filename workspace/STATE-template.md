@@ -7,6 +7,7 @@
 - **Platforms:** [Platform 1], [Platform 2]
 - **Existing Assets:** [Existing brand materials]
 - **Competitors:** [Named competitors from onboarding]
+- **Visual Adjectives:** [Selected visual adjectives from onboarding]
 - **Asset Packs:** [Selected asset pack IDs]
 
 ## Current Position

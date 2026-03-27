@@ -78,6 +78,34 @@ Listen, reflect back, ask a follow-up if anything is vague. Then proceed.
 
 Listen and probe. The gap between how they're perceived and how they want to be perceived is often the most useful thing uncovered before discovery begins.
 
+### Group 3.5: Visual First Impressions
+
+"One last thing before we talk about deliverables. I want to capture your visual instincts before we do any strategic work — we'll revisit these later to see how they hold up.
+
+Look at these words and **pick 3-5 that feel like your brand** — don't overthink it, go with your gut:"
+
+Present using AskUserQuestion with multiSelect: true:
+- Bold
+- Minimal
+- Warm
+- Industrial
+- Playful
+- Refined
+- Raw
+- Geometric
+- Organic
+- Luxurious
+- Gritty
+- Ethereal
+- Retro
+- Futuristic
+- Earthy
+- Sharp
+- Soft
+- Maximalist
+
+After selection: "Got it — [selections]. We'll come back to these in Phase 7 to see if they still fit after we've defined your brand strategy."
+
 ### Group 4: Asset Packs
 
 Based on their type and platforms, suggest relevant asset packs:
@@ -126,6 +154,7 @@ After all groups are covered, present the captured profile back to the client:
 **Platforms:** [comma-separated list]
 **Existing assets:** [What they have]
 **Competitors:** [listed competitors]
+**Visual instincts:** [Selected adjectives]
 **Asset packs:** [Selected packs]
 
 Does this look right?"
@@ -143,7 +172,7 @@ When confirmed, proceed.
 When the client confirms the profile:
 
 1. Update STATE.md:
-   - Fill in the complete Client section with all fields, including Competitors
+   - Fill in the complete Client section with all fields, including Competitors and Visual Adjectives
    - Check `Phase 0: Onboarding` as complete
    - Check `Client profile captured` in Discovery Outputs
    - Check `Asset packs selected` in Discovery Outputs
