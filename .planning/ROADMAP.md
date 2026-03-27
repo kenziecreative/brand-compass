@@ -45,7 +45,7 @@ Plans:
   1. CLAUDE.md agent table lists Research Analyst as Required (not Optional), and the Phase 2/3 transition section specifies that the Research Analyst must complete before Phase 3 begins
   2. CLAUDE.md Phase 0 section contains four expanded onboarding questions: brand history, named competitors (3-4 with URLs), perception gap, and visual preference pre-seeding
   3. CLAUDE.md Phase 3 positioning section uses a component-by-component discovery sequence — competitive alternatives, unique attributes, value, target, category, synthesis — rather than a single fill-in-the-blank positioning statement prompt
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
 - [ ] 02-01-PLAN.md — Verify PIPE-01 closure + visual pre-seeding in onboarding and Phase 7
 - [ ] 02-02-PLAN.md — Positioning reframe (component exploration) + Research Analyst structured output
@@ -102,7 +102,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Baseline + Quick Wins | 3/3 | Complete   | 2026-03-27 |
-| 2. Discovery Pipeline Reframe | 0/2 | Not started | - |
+| 2. Discovery Pipeline Reframe | 1/2 | In Progress|  |
 | 3. Output Quality | 0/TBD | Not started | - |
 | 4. Deliverable Expansions | 0/TBD | Not started | - |
 | 5. Process Refinements | 0/TBD | Not started | - |
