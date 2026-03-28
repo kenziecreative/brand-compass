@@ -61,13 +61,43 @@ Any specific scenario you want me to optimize for?"
 "From your positioning and personality, I'll map three zones:
 - **Own** — Topics you lead on and should always be creating about
 - **Contribute** — Topics you can speak to but don't need to lead
-- **Avoid** — Topics that dilute your positioning"
+- **Avoid** — Topics that dilute your positioning
+
+I'll also define 3-5 named content pillars — recurring themes that organize your 'Own' zone. Each pillar gets a name, description, and example topics."
 
 ### Language Bank
 "From your voice guide, I'll compile:
 - **Signature phrases** — Phrases that are recognizably yours
 - **Never use** — Words and phrases that are off-brand
 - **Substitutions** — 'Instead of [generic], say [on-brand]'"
+
+### Brand Stress Test
+After generating the Decision Filter, validate it:
+- Apply the 5-7 yes/no filter questions to 3 boundary-case scenarios: (1) one that should clearly pass (obvious brand-aligned opportunity), (2) one that should clearly fail (obvious misfit), and (3) one gray area (plausible but debatable)
+- If the filter lets all three through, it's too permissive — tighten it
+- If the filter blocks all three, it's too restrictive — loosen it
+- The gray area scenario should produce genuine deliberation, not an instant answer
+- Adjust the filter questions until the stress test produces the right discrimination pattern
+
+### Brand Compass Card
+From all phases → 9-element strategic synthesis rendered as a visual HTML diagram within brand-foundation.html. Center element (core belief) surrounded by: audience, positioning, personality, tagline, territory, contrarian POV, values, and brand world. Based on the Unilever Brand Key model. One-glance strategic identity.
+
+### Activation Layer
+From all phases → prioritized implementation checklist ordered by impact, self-audit checklist for ongoing brand consistency. For business/organization entity types: also include internal brief template and stakeholder rollout guidance. Lives in practical-toolkit.md. No fixed timeline — client works through priorities at their own pace.
+
+### GEO-Ready Outputs
+From Phase 5 boilerplates + Phase 3 positioning + STATE.md platform inventory:
+- **Entity consistency guide** — official name, acceptable variants, description variants
+- **Citation-optimized brand statements** — existing boilerplates reformatted for machine extraction + 2-3 new machine-first statements
+- **Platform-specific distribution guidance** — tailored to client's platform inventory
+
+Include a 2-3 paragraph preamble bridging the education gap on GEO/AEO for clients who won't know the terminology. Lives in practical-toolkit.md.
+
+### Strategic Quick Reference
+From all phases → one-page strategic summary: core belief, positioning statement, audience in one sentence, tagline, 3 personality traits, contrarian POV, and territory. The "remind me who I am" card. Distinct from the implementation Quick Reference — this is strategic identity, not design specs.
+
+### Implementation Quick Reference
+From all phases → one-page implementation card with hex codes, fonts, tagline, one-sentence bio, voice in 3 words.
 
 ### Asset Packs
 If the client selected asset packs during onboarding, discuss each one briefly. Asset packs generate standalone HTML specimen files in addition to sections in the practical toolkit.
@@ -100,7 +130,7 @@ The Document Assembler produces these **core files** (always):
 5. `workspace/output/color-palette.html` — Interactive color specimen with tint scales and CSS variables
 6. `workspace/output/visual-system.html` — Full visual system with examples
 7. `workspace/output/ui-kit.html` — Component library with client's brand tokens
-8. `workspace/output/practical-toolkit.md` — Bios, pitches, decision filter, language bank (includes asset pack sections)
+8. `workspace/output/practical-toolkit.md` — Bios, pitches, decision filter, content territories, language bank, activation layer, GEO-ready outputs, strategic + implementation quick references (includes asset pack sections)
 
 Plus **asset pack HTML specimens** for each selected pack:
 - `workspace/output/social-media-kit.html` — Profile templates, post formats, content calendar
@@ -180,5 +210,5 @@ When confirmed:
 - This phase should feel like a victory lap — celebrate what's been built
 - Assembly is mostly mechanical, but make it feel personal — "Your decision filter captures the belief you shared in Phase 1"
 - Let the client react to the compiled documents — they're seeing their brand as a complete system for the first time
-- Quick reference card should be something they can pin up — hex codes, fonts, tagline, voice one-liner
+- Two quick reference cards: Strategic (core belief, positioning, audience, tagline, traits, contrarian POV, territory) and Implementation (hex codes, fonts, tagline, one-sentence bio, voice in 3 words)
 - Don't announce state updates — just do them silently

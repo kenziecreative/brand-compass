@@ -58,6 +58,8 @@ Guide the client through four question groups.
 
 ### Defining Features
 
+*(Not every brand has these. Skip if nothing surfaces. But the brands that do have defining features — a "Shadow Faculty," a signature ritual, a recurring metaphor — are exactly the ones this process should capture well.)*
+
 15. Is there something about how you operate, think, or present that doesn't fit neatly into personality traits, archetypes, or influences? Something people always notice or comment on?
 16. Do you have a recurring metaphor, a signature ritual, a collection you reference, or a pattern that keeps showing up in your work?
 17. If someone were imitating you, what's the one thing they'd HAVE to include to make it recognizable?

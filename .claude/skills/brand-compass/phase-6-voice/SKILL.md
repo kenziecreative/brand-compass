@@ -43,12 +43,12 @@ Guide the client through six question groups.
 
 1. How do you think? Your process for making sense of things?
 2. How do you relate to your audience? The dynamic?
-3. What never changes about how you communicate? 3-5 non-negotiables?
+3. What never changes about how you communicate? What are your non-negotiables?
 
 ### Voice Definition
 
-4. Complete: "I write like a [noun] who [verb phrase]."
-5. List 6-10 words that describe your voice.
+4. Complete: "I write like a [noun] who [verb phrase]." If that format feels forced, just describe how your writing feels — what would someone say after reading your work?
+5. What words describe your voice?
 6. How do people feel after engaging with your work?
 
 ### Writing Style
