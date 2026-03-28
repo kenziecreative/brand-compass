@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Discovery Pipeline Reframe** - Structural changes that make competitive analysis required and reframe Phase 3 positioning from fill-in-the-blank to component-by-component exploration (completed 2026-03-27)
 - [x] **Phase 3: Output Quality** - Anti-sycophancy mechanisms, customer-hero story, accessibility as design input, voice compliance check (completed 2026-03-27)
 - [x] **Phase 4: Deliverable Expansions** - Motion direction, Brand Compass Card, activation layer, semantic tokens, content pillars, do/don't examples, plus deliverable quick wins (completed 2026-03-27)
-- [ ] **Phase 5: Process Refinements** - Brand architecture conditional, client dynamic state, anti-anchoring, verbal-to-visual mappings, stakeholder mapping, core+flex
+- [x] **Phase 5: Process Refinements** - Brand architecture conditional, client dynamic state, anti-anchoring, verbal-to-visual mappings, stakeholder mapping, core+flex (completed 2026-03-28)
 - [ ] **Phase 6: Forward-Looking Additions** - GEO-ready outputs and graphic device direction
 
 ## Phase Details
@@ -90,7 +90,7 @@ Plans:
   3. Discovery questions across Phases 1-4 in CLAUDE.md are audited and updated to use open-ended framing before structured framing, remove leading number specifications, and offer multiple frames rather than single prompts
   4. A reference file exists at a documented path containing verbal-to-visual translation mappings — archetype to visual properties, voice register to visual register, personality trait to color family; CLAUDE.md Phase 7 references this file
   5. CLAUDE.md Phase 2 contains a stakeholder mapping question conditional on org entity types; CLAUDE.md Phase 7 includes core+flex framing — fixed vs. flexible brand elements — and an AI-generation rules section
-**Plans:** 2/3 plans executed
+**Plans:** 3/3 plans complete
 Plans:
 - [ ] 05-01-PLAN.md — Brand architecture conditional + client dynamic state (start.md, STATE-template, CLAUDE.md)
 - [ ] 05-02-PLAN.md — Anti-anchoring audit (Phases 1-4 discovery questions) + stakeholder mapping (Phase 2)
@@ -116,5 +116,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 2. Discovery Pipeline Reframe | 2/2 | Complete   | 2026-03-27 |
 | 3. Output Quality | 2/2 | Complete   | 2026-03-27 |
 | 4. Deliverable Expansions | 3/3 | Complete   | 2026-03-27 |
-| 5. Process Refinements | 2/3 | In Progress|  |
+| 5. Process Refinements | 3/3 | Complete   | 2026-03-28 |
 | 6. Forward-Looking Additions | 0/TBD | Not started | - |
