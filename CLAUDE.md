@@ -675,26 +675,29 @@ Imagery:
 22. What subjects appear? What never appears?
 23. What does the brand world contain visually?
 
-Application:
-24. Where does your brand appear most?
-25. What templates do you need?
+Graphic Devices:
+24. Where does your brand need visual texture — backgrounds, section dividers, social media frames, presentation slides, packaging? What surfaces feel too plain right now?
+25. When you imagine those surfaces with pattern or texture, what feeling should it carry? Should it reinforce the brand's energy or provide a quiet backdrop?
+26. Are there any recurring visual motifs in your work or world — grids, organic shapes, hand-drawn marks, geometric repetition — that feel like they belong to your brand?
+
+*(Not every brand needs graphic devices. If the client's brand world is minimal and the discovery answers don't surface a need, the Visual Director can note "no graphic devices recommended" and skip pattern generation. Always ask — some clients discover a need they didn't know they had.)*
 
 Motion:
-26. Should interactions feel snappy and immediate, or smooth and easing? When someone clicks a button or opens a menu, what's the pace?
-27. How much movement is appropriate for your brand? Think of a spectrum from "almost nothing moves" to "things glide and animate frequently."
-28. When content appears or changes, should it feel like a quick cut (instant, decisive) or a dissolve (gradual, flowing)?
+27. Should interactions feel snappy and immediate, or smooth and easing? When someone clicks a button or opens a menu, what's the pace?
+28. How much movement is appropriate for your brand? Think of a spectrum from "almost nothing moves" to "things glide and animate frequently."
+29. When content appears or changes, should it feel like a quick cut (instant, decisive) or a dissolve (gradual, flowing)?
 
 Core + Flex:
-29. Looking at everything we're building — colors, fonts, logo, imagery style, voice — which elements feel like they should NEVER change, no matter the context? And which ones should flex depending on the platform, audience, or content type?
-30. If you imagine your brand on Instagram versus a conference stage versus a formal proposal — what stays exactly the same, and what adapts?
+30. Looking at everything we're building — colors, fonts, logo, imagery style, voice — which elements feel like they should NEVER change, no matter the context? And which ones should flex depending on the platform, audience, or content type?
+31. If you imagine your brand on Instagram versus a conference stage versus a formal proposal — what stays exactly the same, and what adapts?
 
 *(Use the client's answers to classify each visual element as Core (fixed) or Flex (adaptable). Core elements: primary logo, primary color palette, primary typeface, tagline. Flex elements: secondary colors, photography style, illustration tone, layout density, voice formality. This classification feeds the Visual Director's output and becomes part of the Visual Identity System.)*
 
 AI-Generation Rules:
 *(Capture these as part of the visual direction — they become guardrails for clients using AI image generation tools like Midjourney, DALL-E, or Stable Diffusion.)*
 
-31. Do you or your team use AI tools to generate images, illustrations, or design assets? If so, which tools?
-32. What visual qualities should AI-generated content always have? What should it never have?
+32. Do you or your team use AI tools to generate images, illustrations, or design assets? If so, which tools?
+33. What visual qualities should AI-generated content always have? What should it never have?
 
 *(After the Visual Director produces the visual direction, compile AI-generation rules from the approved direction:*
 - *Required style keywords (derived from imagery direction and brand world)*
@@ -704,8 +707,12 @@ AI-Generation Rules:
 
 *These rules live in the Visual Identity System output under a dedicated "AI-Generation Guidelines" section.)*
 
+Application:
+34. Where does your brand appear most?
+35. What templates do you need?
+
 **Launch prompt:**
-> "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction including motion principles. They'll apply your accessibility requirements as hard constraints on the color system. This takes a couple minutes. I'll share the full direction for review before we generate anything."
+> "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction including motion principles and graphic device direction (if applicable). They'll apply your accessibility requirements as hard constraints on the color system. This takes a couple minutes. I'll share the full direction for review before we generate anything."
 
 **BLOCKING:** Do not proceed to image generation until client reviews and approves visual direction.
 
@@ -720,7 +727,7 @@ AI-Generation Rules:
 
 **After approval:** Launch Image Generator for specific assets.
 
-**Phase complete when:** Visual direction approved, color palette finalized, typography selected, mark created, imagery style defined, motion direction defined, core+flex elements classified, AI-generation rules captured (if applicable).
+**Phase complete when:** Visual direction approved, color palette finalized, typography selected, mark created, imagery style defined, graphic devices specified (if applicable), motion direction defined, core+flex elements classified, AI-generation rules captured (if applicable).
 
 ---
 
