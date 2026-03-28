@@ -103,7 +103,10 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. CLAUDE.md Phase 8 toolkit section includes a GEO-ready outputs deliverable — entity consistency guide, citation-optimized brand statements, and platform distribution guidance; Document Assembler agent template includes this section
   2. CLAUDE.md Phase 7 section includes graphic device discovery questions; Visual Director agent definition includes pattern direction output; Image Generator is directed to produce 1-3 brand patterns; Visual Identity System HTML template includes a graphic devices section
-**Plans**: [To be planned]
+**Plans:** 2 plans
+Plans:
+- [ ] 06-01-PLAN.md — Graphic device pipeline (Phase 7 discovery + Visual Director + Image Generator + Document Assembler visual-system.html)
+- [ ] 06-02-PLAN.md — GEO-ready outputs (Phase 8 toolkit + Document Assembler practical-toolkit.md)
 
 ## Progress
 
@@ -117,4 +120,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 3. Output Quality | 2/2 | Complete   | 2026-03-27 |
 | 4. Deliverable Expansions | 3/3 | Complete   | 2026-03-27 |
 | 5. Process Refinements | 3/3 | Complete   | 2026-03-28 |
-| 6. Forward-Looking Additions | 0/TBD | Not started | - |
+| 6. Forward-Looking Additions | 0/2 | Not started | - |
