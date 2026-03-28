@@ -18,6 +18,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Deliverable Expansions** - Motion direction, Brand Compass Card, activation layer, semantic tokens, content pillars, do/don't examples, plus deliverable quick wins (completed 2026-03-27)
 - [x] **Phase 5: Process Refinements** - Brand architecture conditional, client dynamic state, anti-anchoring, verbal-to-visual mappings, stakeholder mapping, core+flex (completed 2026-03-28)
 - [x] **Phase 6: Forward-Looking Additions** - GEO-ready outputs and graphic device direction (completed 2026-03-28)
+- [ ] **Phase 7: Sync Phase 2 & Phase 5 Commands** - Update phase-2-audience.md and phase-5-messaging.md command files to match CLAUDE.md spec; add customer-hero slot to Document Assembler template
+- [ ] **Phase 8: Sync Phase 7 Visual Command** - Update phase-7-visual.md command file with all 7 milestone additions (accessibility, visual adjective revisit, graphic devices, motion, core+flex, AI-generation rules, verbal-to-visual reference)
 
 ## Phase Details
 
@@ -108,6 +110,32 @@ Plans:
 - [ ] 06-01-PLAN.md — Graphic device pipeline (Phase 7 discovery + Visual Director + Image Generator + Document Assembler visual-system.html)
 - [ ] 06-02-PLAN.md — GEO-ready outputs (Phase 8 toolkit + Document Assembler practical-toolkit.md)
 
+### Phase 7: Sync Phase 2 & Phase 5 Commands
+**Goal**: Update phase-2-audience.md and phase-5-messaging.md command files to match CLAUDE.md spec — add missing discovery questions, fix agent language, add customer-hero narrative slot to Document Assembler brand-foundation template
+**Depends on**: Phase 6
+**Requirements**: DSCV-01, DSCV-02, AGNT-01, PIPE-01, PROC-05, QUAL-01
+**Gap Closure:** Closes integration gaps from v1.0 audit (phase-2-audience.md + phase-5-messaging.md + document-assembler.md)
+**Success Criteria** (what must be TRUE):
+  1. phase-2-audience.md includes competitive alternatives Q7, push/habit Q11, anxiety Q12, stakeholder mapping Q18-19 (org conditional), and Research Analyst is marked Required with Phase 3 hard gate
+  2. phase-5-messaging.md includes customer-hero story discovery Q15-18 and updated Copywriter launch prompt referencing customer-hero narrative
+  3. Document Assembler brand-foundation template Section 4 includes a customer-hero narrative slot
+  4. E2E flow: Customer-Hero Pipeline (Phase 5 → Copywriter → Document Assembler) fully wired
+
+### Phase 8: Sync Phase 7 Visual Command
+**Goal**: Update phase-7-visual.md command file with all 7 milestone additions that exist in CLAUDE.md Phase 7 but are absent from the command file
+**Depends on**: Phase 7
+**Requirements**: DSCV-07, QUAL-02, DLVR-01, PROC-06, FUTR-02, PIPE-02, PROC-04
+**Gap Closure:** Closes integration gaps from v1.0 audit (phase-7-visual.md command divergence)
+**Success Criteria** (what must be TRUE):
+  1. phase-7-visual.md includes accessibility constraint questions (Q1-3) before color/typography discussion
+  2. phase-7-visual.md includes visual adjective revisit (Q4) bridging Phase 0 pre-seeding
+  3. phase-7-visual.md includes graphic device questions (Q24-26)
+  4. phase-7-visual.md includes motion questions (Q27-29)
+  5. phase-7-visual.md includes core+flex questions (Q30-31) and AI-generation rules (Q32-33)
+  6. phase-7-visual.md includes verbal-to-visual reference directive
+  7. Launch prompt and phase-complete criteria updated to reflect all additions
+  8. E2E flow: Visual Pipeline (Phase 7 → Visual Director → Image Generator → Document Assembler) fully wired
+
 ## Progress
 
 **Execution Order:**
@@ -121,3 +149,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
 | 4. Deliverable Expansions | 3/3 | Complete   | 2026-03-27 |
 | 5. Process Refinements | 3/3 | Complete   | 2026-03-28 |
 | 6. Forward-Looking Additions | 2/2 | Complete   | 2026-03-28 |
+| 7. Sync Phase 2 & Phase 5 Commands | 0/0 | Not Started | — |
+| 8. Sync Phase 7 Visual Command | 0/0 | Not Started | — |
