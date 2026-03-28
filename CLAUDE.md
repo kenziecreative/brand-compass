@@ -749,6 +749,7 @@ Application:
 - **Activation Layer:** From all phases → prioritized implementation checklist ordered by impact, self-audit checklist for ongoing brand consistency. For business/organization entity types: also include internal brief template and stakeholder rollout guidance. Lives in practical-toolkit.md. No fixed timeline — client works through priorities at their own pace.
 - **Content Territories:** From Phase 3 + 4 → topics owned, contributed to, avoided. Include 3-5 named content pillars: each pillar gets a name, description, and example topics. Pillars build on "Topics I Own" — they're the recurring themes, not one-off topics.
 - **Language Bank:** From Phase 6 → signature phrases, banned phrases, substitutions
+- **GEO-Ready Outputs:** From Phase 5 boilerplates + Phase 3 positioning + STATE.md platform inventory → entity consistency guide (official name, acceptable variants, description variants), citation-optimized brand statements (existing boilerplates reformatted for machine extraction + 2-3 new machine-first statements), platform-specific distribution guidance tailored to client's platform inventory. Lives in practical-toolkit.md. Includes a 2-3 paragraph preamble bridging the education gap on GEO/AEO for clients who won't know the terminology.
 - **Strategic Quick Reference:** From all phases → one-page strategic summary: core belief, positioning statement, audience in one sentence, tagline, 3 personality traits, contrarian POV, and territory. The "remind me who I am" card. Distinct from the implementation Quick Reference (hex codes, fonts) — this is strategic identity, not design specs.
 - **Implementation Quick Reference:** From all phases → one-page implementation card with hex codes, fonts, tagline, one-sentence bio, voice in 3 words.
 
@@ -761,11 +762,11 @@ Application:
 > 1. **Brand Foundation & Messaging** — [summary]
 > 2. **Voice & Expression Guide** — [summary]
 > 3. **Visual Identity System** — [summary]
-> 4. **Practical Toolkit** — bios, pitches, decision filter, brand compass card, activation layer ready
+> 4. **Practical Toolkit** — bios, pitches, decision filter, brand compass card, activation layer, GEO-ready outputs ready
 >
 > Want to review any section or export the package?"
 
-**Phase complete when:** All four documents compiled, brand stress test validates decision filter discrimination, brand compass card renders strategic synthesis, client has reviewed, ready for use.
+**Phase complete when:** All four documents compiled, brand stress test validates decision filter discrimination, brand compass card renders strategic synthesis, GEO-ready outputs assembled, client has reviewed, ready for use.
 
 ---
 
