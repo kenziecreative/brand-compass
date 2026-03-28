@@ -20,6 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 6: Forward-Looking Additions** - GEO-ready outputs and graphic device direction (completed 2026-03-28)
 - [x] **Phase 7: Sync Phase 2 & Phase 5 Commands** - Update phase-2-audience.md and phase-5-messaging.md command files to match CLAUDE.md spec; add customer-hero slot to Document Assembler template (completed 2026-03-28)
 - [x] **Phase 8: Sync Phase 7 Visual Command** - Update phase-7-visual.md command file with all 7 milestone additions (accessibility, visual adjective revisit, graphic devices, motion, core+flex, AI-generation rules, verbal-to-visual reference) (completed 2026-03-28)
+- [ ] **Phase 9: Sync Remaining Command Files** - Sync phase-3-positioning.md, phase-4-personality.md, 5 pushback audit additions, STATE-template.md checkboxes — closes all audit gaps
 
 ## Phase Details
 
@@ -143,10 +144,28 @@ Plans:
 Plans:
 - [ ] 08-01-PLAN.md — Sync phase-7-visual.md with CLAUDE.md Phase 7 (all 12 question groups, prompts, completion criteria)
 
+### Phase 9: Sync Remaining Command Files
+**Goal**: Close all remaining audit gaps by syncing phase-3-positioning.md with CLAUDE.md component-by-component structure, removing count anchors from phase-4-personality.md, adding Pushback Audit to 5 command files, and adding missing discovery checkboxes to STATE-template.md
+**Depends on**: Phase 8
+**Requirements**: PIPE-03, PIPE-01, DSCV-01, DSCV-06, PROC-03, QUAL-03
+**Gap Closure:** Closes all remaining gaps from v1.0 audit
+**Success Criteria** (what must be TRUE):
+  1. phase-3-positioning.md uses component-by-component discovery structure matching CLAUDE.md Phase 3 (competitive alternatives → unique attributes → value → category → synthesis), not legacy 22-question fill-in-the-blank
+  2. phase-3-positioning.md Step 1 checks for competitive-brief.md and blocks if Research Analyst hasn't completed
+  3. phase-3-positioning.md weaves competitive brief findings into conversation rather than treating as separate deliverable
+  4. phase-3-positioning.md includes competitive alternatives question and outside-in category question
+  5. phase-4-personality.md count anchors removed ("4-6 adjectives", "2-3 feel like home", "4-6 traits" → open-ended framing)
+  6. Pushback Audit self-check added to Mark Complete steps in phase-1-origin.md, phase-2-audience.md, phase-3-positioning.md, phase-4-personality.md, phase-6-voice.md
+  7. STATE-template.md includes discovery output checkboxes for: customer-hero narrative, stakeholders mapped, graphic devices, motion direction, core+flex, AI-generation rules
+  8. E2E flows restored: Discovery Pipeline (Phase 3 entry) and Anti-Sycophancy Chain (all 6 phases)
+**Plans:** 0/0 plans complete
+Plans:
+- (none yet)
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -158,3 +177,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 6. Forward-Looking Additions | 2/2 | Complete   | 2026-03-28 |
 | 7. Sync Phase 2 & Phase 5 Commands | 2/2 | Complete   | 2026-03-28 |
 | 8. Sync Phase 7 Visual Command | 1/1 | Complete   | 2026-03-28 |
+| 9. Sync Remaining Command Files | 0/0 | Not Started | — |
