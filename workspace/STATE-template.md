@@ -74,6 +74,7 @@
 - [ ] Territory claimed
 - [ ] Contrarian POV articulated
 - [ ] Service definition documented
+- [ ] Stakeholders mapped (if org)
 - [ ] Personality traits defined
 - [ ] Archetypes mapped
 - [ ] Brand world described
@@ -81,6 +82,7 @@
 - [ ] Core narrative drafted
 - [ ] Boilerplates written
 - [ ] Proof points listed
+- [ ] Customer-hero narrative drafted
 - [ ] Voice analyzed
 - [ ] Writing style codified
 - [ ] Guardrails set
@@ -88,6 +90,10 @@
 - [ ] Color palette finalized
 - [ ] Typography selected
 - [ ] Mark/logo created
+- [ ] Graphic devices specified (if applicable)
+- [ ] Motion direction defined
+- [ ] Core+flex elements classified
+- [ ] AI-generation rules captured (if applicable)
 - [ ] Toolkit compiled
 
 ## Next Action

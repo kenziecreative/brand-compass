@@ -101,6 +101,8 @@ Iterate until confirmed.
 
 ## Step 7: Mark Complete
 
+Before marking complete, run the Pushback Audit self-check: Did you push back at least once during this phase? If not, read the Pushback Calibration level from STATE.md Client Dynamic section. Identify one area where the client's answer was too safe, too generic, or too comfortable and challenge it now — before closing the phase.
+
 When confirmed:
 
 1. Update STATE.md:
