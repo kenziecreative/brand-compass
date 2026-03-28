@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Deliverable Expansions** - Motion direction, Brand Compass Card, activation layer, semantic tokens, content pillars, do/don't examples, plus deliverable quick wins (completed 2026-03-27)
 - [x] **Phase 5: Process Refinements** - Brand architecture conditional, client dynamic state, anti-anchoring, verbal-to-visual mappings, stakeholder mapping, core+flex (completed 2026-03-28)
 - [x] **Phase 6: Forward-Looking Additions** - GEO-ready outputs and graphic device direction (completed 2026-03-28)
-- [ ] **Phase 7: Sync Phase 2 & Phase 5 Commands** - Update phase-2-audience.md and phase-5-messaging.md command files to match CLAUDE.md spec; add customer-hero slot to Document Assembler template
+- [x] **Phase 7: Sync Phase 2 & Phase 5 Commands** - Update phase-2-audience.md and phase-5-messaging.md command files to match CLAUDE.md spec; add customer-hero slot to Document Assembler template (completed 2026-03-28)
 - [ ] **Phase 8: Sync Phase 7 Visual Command** - Update phase-7-visual.md command file with all 7 milestone additions (accessibility, visual adjective revisit, graphic devices, motion, core+flex, AI-generation rules, verbal-to-visual reference)
 
 ## Phase Details
@@ -120,7 +120,7 @@ Plans:
   2. phase-5-messaging.md includes customer-hero story discovery Q15-18 and updated Copywriter launch prompt referencing customer-hero narrative
   3. Document Assembler brand-foundation template Section 4 includes a customer-hero narrative slot
   4. E2E flow: Customer-Hero Pipeline (Phase 5 -> Copywriter -> Document Assembler) fully wired
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 Plans:
 - [ ] 07-01-PLAN.md — Sync phase-2-audience.md + Document Assembler customer-hero slot
 - [ ] 07-02-PLAN.md — Sync phase-5-messaging.md (customer-hero, devil's advocate, anti-anchoring)
@@ -153,5 +153,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 4. Deliverable Expansions | 3/3 | Complete   | 2026-03-27 |
 | 5. Process Refinements | 3/3 | Complete   | 2026-03-28 |
 | 6. Forward-Looking Additions | 2/2 | Complete   | 2026-03-28 |
-| 7. Sync Phase 2 & Phase 5 Commands | 0/2 | Not Started | — |
+| 7. Sync Phase 2 & Phase 5 Commands | 2/2 | Complete   | 2026-03-28 |
 | 8. Sync Phase 7 Visual Command | 0/0 | Not Started | — |
