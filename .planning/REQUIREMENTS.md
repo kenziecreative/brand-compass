@@ -13,12 +13,12 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 ### Discovery Pipeline — Quick Wins
 
-- [ ] **DSCV-01**: Phase 2 or early Phase 3 includes competitive alternatives question ("What would your customers use or do if you didn't exist?") — QW-1
+- [x] **DSCV-01**: Phase 2 or early Phase 3 includes competitive alternatives question ("What would your customers use or do if you didn't exist?") — QW-1
 - [x] **DSCV-02**: Phase 2 Market of One includes anxiety + habit force questions (push/habit force, anxiety force) — QW-2
 - [x] **DSCV-03**: Phase 0 onboarding includes brand history question — QW-3
 - [x] **DSCV-04**: Phase 0 onboarding captures named competitors (3-4 with URLs) and STATE.md template has the field — QW-4
 - [x] **DSCV-05**: Phase 0 onboarding includes perception gap question — QW-5
-- [ ] **DSCV-06**: Phase 3 includes outside-in category question — QW-6
+- [x] **DSCV-06**: Phase 3 includes outside-in category question — QW-6
 - [x] **DSCV-07**: Phase 7 includes 2-3 accessibility discovery questions before color/typography discussion — QW-7
 
 ### Agent Capability — Quick Wins
@@ -29,15 +29,15 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 ### Discovery Pipeline — Structural Changes (Wave 1)
 
-- [ ] **PIPE-01**: Competitive analysis is structurally required before Phase 3 — orchestration updated in CLAUDE.md, agent table updated from Optional to Required — Rec 1.1 — Verified: satisfied by Phase 1 quick wins (AGNT-01 changed trigger to Required, 01-02 added Phase 2->3 hard gate)
+- [x] **PIPE-01**: Competitive analysis is structurally required before Phase 3 — orchestration updated in CLAUDE.md, agent table updated from Optional to Required — Rec 1.1 — Verified: satisfied by Phase 1 quick wins (AGNT-01 changed trigger to Required, 01-02 added Phase 2->3 hard gate)
 - [x] **PIPE-02**: Phase 0 onboarding expanded with brand history, named competitors, perception gap, and visual preference pre-seeding questions — Rec 1.4
-- [ ] **PIPE-03**: Phase 3 positioning reframed from fill-in-the-blank to component-by-component exploration (competitive alternatives → unique attributes → value → target → category → synthesis) — Rec 1.6
+- [x] **PIPE-03**: Phase 3 positioning reframed from fill-in-the-blank to component-by-component exploration (competitive alternatives → unique attributes → value → target → category → synthesis) — Rec 1.6
 
 ### Output Quality (Wave 2)
 
 - [x] **QUAL-01**: Customer-hero story framework added to Phase 5 discovery and/or Phase 8 toolkit — structured narrative with customer as protagonist, brand as guide — Rec 1.2
 - [x] **QUAL-02**: Phase 7 includes accessibility as design input — questions feed Visual Director as constraints, color palette includes approved accessible combinations — Rec 1.3
-- [ ] **QUAL-03**: Structural anti-sycophancy mechanisms added — checkpoint challenge protocol, pushback audit, devil's advocate pass, brand stress test — Rec 1.5
+- [x] **QUAL-03**: Structural anti-sycophancy mechanisms added — checkpoint challenge protocol, pushback audit, devil's advocate pass, brand stress test — Rec 1.5
 - [x] **QUAL-04**: Voice compliance check verifies generated output against captured voice fingerprint — divergence flagged for revision — Rec 2.5
 
 ### Deliverable Expansions (Wave 3)
@@ -97,22 +97,22 @@ Explicitly excluded. Documented to prevent scope creep.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | BASE-01 | Phase 1 | Complete |
-| DSCV-01 | Phase 9 | Pending |
+| DSCV-01 | Phase 9 | Complete |
 | DSCV-02 | Phase 7 | Complete |
 | DSCV-03 | Phase 1 | Complete |
 | DSCV-04 | Phase 1 | Complete |
 | DSCV-05 | Phase 1 | Complete |
-| DSCV-06 | Phase 9 | Pending |
+| DSCV-06 | Phase 9 | Complete |
 | DSCV-07 | Phase 8 | Complete |
 | AGNT-01 | Phase 7 | Complete |
 | AGNT-02 | Phase 1 | Complete |
 | AGNT-03 | Phase 1 | Complete |
-| PIPE-01 | Phase 9 | Pending |
+| PIPE-01 | Phase 9 | Complete |
 | PIPE-02 | Phase 8 | Complete |
-| PIPE-03 | Phase 9 | Pending |
+| PIPE-03 | Phase 9 | Complete |
 | QUAL-01 | Phase 7 | Complete |
 | QUAL-02 | Phase 8 | Complete |
-| QUAL-03 | Phase 9 | Pending |
+| QUAL-03 | Phase 9 | Complete |
 | QUAL-04 | Phase 3 | Complete |
 | DLVR-01 | Phase 8 | Complete |
 | DLVR-02 | Phase 4 | Complete |

@@ -20,7 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 6: Forward-Looking Additions** - GEO-ready outputs and graphic device direction (completed 2026-03-28)
 - [x] **Phase 7: Sync Phase 2 & Phase 5 Commands** - Update phase-2-audience.md and phase-5-messaging.md command files to match CLAUDE.md spec; add customer-hero slot to Document Assembler template (completed 2026-03-28)
 - [x] **Phase 8: Sync Phase 7 Visual Command** - Update phase-7-visual.md command file with all 7 milestone additions (accessibility, visual adjective revisit, graphic devices, motion, core+flex, AI-generation rules, verbal-to-visual reference) (completed 2026-03-28)
-- [ ] **Phase 9: Sync Remaining Command Files** - Sync phase-3-positioning.md, phase-4-personality.md, 5 pushback audit additions, STATE-template.md checkboxes — closes all audit gaps
+- [x] **Phase 9: Sync Remaining Command Files** - Sync phase-3-positioning.md, phase-4-personality.md, 5 pushback audit additions, STATE-template.md checkboxes — closes all audit gaps (completed 2026-03-28)
 
 ## Phase Details
 
@@ -158,7 +158,7 @@ Plans:
   6. Pushback Audit self-check added to Mark Complete steps in phase-1-origin.md, phase-2-audience.md, phase-3-positioning.md, phase-4-personality.md, phase-6-voice.md
   7. STATE-template.md includes discovery output checkboxes for: customer-hero narrative, stakeholders mapped, graphic devices, motion direction, core+flex, AI-generation rules
   8. E2E flows restored: Discovery Pipeline (Phase 3 entry) and Anti-Sycophancy Chain (all 6 phases)
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 Plans:
 - [ ] 09-01-PLAN.md — Rewrite phase-3-positioning.md to CLAUDE.md component-by-component structure (competitive brief gate + 30 questions + Pushback Audit)
 - [ ] 09-02-PLAN.md — Phase 4 count anchor removal + Pushback Audit for phases 1/2/4/6 + STATE-template.md discovery checkboxes
@@ -178,4 +178,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 6. Forward-Looking Additions | 2/2 | Complete   | 2026-03-28 |
 | 7. Sync Phase 2 & Phase 5 Commands | 2/2 | Complete   | 2026-03-28 |
 | 8. Sync Phase 7 Visual Command | 1/1 | Complete   | 2026-03-28 |
-| 9. Sync Remaining Command Files | 0/2 | Not Started | — |
+| 9. Sync Remaining Command Files | 2/2 | Complete   | 2026-03-28 |
