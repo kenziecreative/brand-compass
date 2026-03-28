@@ -315,7 +315,7 @@ Mission & Vision:
 **Discovery Questions:**
 
 Identifying Segments:
-1. Think of 3-4 different people you've helped. What was each struggling with when they found you?
+1. Think of the different people you've helped — as many as come to mind. What was each struggling with when they found you?
 2. For each: What do they say that signals they need what you offer?
 3. What name would you give each type? (Descriptive names, not job titles)
 
@@ -444,13 +444,13 @@ Service Definition:
 **Discovery Questions:**
 
 Personality Traits:
-1. If your brand were a person at a dinner party, how would guests describe them? What 4-6 adjectives?
+1. If your brand were a person at a dinner party, how would guests describe them? What words come to mind? Or if that metaphor doesn't land: what energy does your brand bring to a room?
 2. For each: What does it mean? What does it NOT mean?
 3. What's the vibe when people interact with your work?
 4. What would be off-brand?
 
 Archetypes:
-5. Review the 12 archetypes. Which 2-3 feel like home — not aspirational, but how you already operate?
+5. Review the 12 archetypes. Which feel like home — not aspirational, but how you already operate?
 6. How does your primary archetype show up in your work?
 7. What would you rename it to fit your specific expression?
 8. What's the shadow side to guard against?
@@ -477,7 +477,7 @@ Defining Features:
 **Check-in prompt after Archetype Analyst completes:**
 > "The analysis suggests your primary energy is [X] — classically called [Y], but for you it shows up as [behavior]. Supporting energy is [Z]. Does that feel right?"
 
-**Phase complete when:** 4-6 traits defined with what-it-means/doesn't-mean, archetypes mapped with custom names, brand world described, defining features captured (if present).
+**Phase complete when:** Key traits defined with what-it-means/doesn't-mean, archetypes mapped with custom names, brand world described, defining features captured (if present).
 
 ---
 
@@ -492,7 +492,7 @@ Defining Features:
 **Discovery Questions:**
 
 Tagline:
-1. In 3-7 words, what's the essence of what you offer or believe?
+1. In a few words, what's the essence of what you offer or believe?
 2. If your brand had a motto?
 3. What phrase would people remember and repeat?
 
@@ -508,7 +508,7 @@ Boilerplates:
 10. Expand to three paragraphs — full about page.
 
 Proof Points:
-11. What have you done that earns trust? 4-6 specific things.
+11. What have you done that earns trust? What specific things?
 12. Can you add concrete details? Numbers, names, outcomes?
 13. What do clients say about working with you?
 14. What credentials support your credibility?
@@ -564,11 +564,11 @@ The client may choose their preferred option after seeing the alternative. That'
 Philosophical Anchor:
 1. How do you think? Your process for making sense of things?
 2. How do you relate to your audience? The dynamic?
-3. What never changes about how you communicate? 3-5 non-negotiables?
+3. What never changes about how you communicate? What are your non-negotiables?
 
 Voice Definition:
-4. Complete: "I write like a [noun] who [verb phrase]."
-5. List 6-10 words that describe your voice.
+4. Complete: "I write like a [noun] who [verb phrase]." If that format feels forced, just describe how your writing feels — what would someone say after reading your work?
+5. What words describe your voice?
 6. How do people feel after engaging with your work?
 
 Writing Style:
