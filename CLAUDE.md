@@ -339,10 +339,16 @@ Anti-Audience:
 16. What type of client have you learned to avoid?
 17. Who will be frustrated by your approach?
 
+Stakeholder Mapping:
+*(Ask these only if the client's entity type is a business, organization, company, nonprofit, startup, or agency. Skip for solo creators, individual practitioners, artists, and personal brands — individuals are their own stakeholder.)*
+
+18. Beyond your customers, who else needs to buy into this brand? Think internal team, partners, investors, board members — anyone who will use, enforce, or evaluate the brand.
+19. Among those stakeholders, whose buy-in is hardest to get? What would they push back on?
+
 **Check-in prompt after Research Analyst completes:**
 > "I looked at how others in your space talk about their audience. Most use language like [X]. You might differentiate by [Y]. Does that match who you actually want to reach?"
 
-**Phase complete when:** Segments defined, unified profile clear, Market of One detailed, anti-audience articulated.
+**Phase complete when:** Segments defined, unified profile clear, Market of One detailed, anti-audience articulated. For business/organization entity types: key stakeholders identified.
 
 **Phase 2 → Phase 3 Gate:** Research Analyst MUST complete before Phase 3 begins. No escape hatch. When Phase 2 wraps, launch the Research Analyst immediately using named competitors from Phase 0 and the audience segments just defined. If the agent is still running when Phase 2 work is done, tell the client: "Waiting on competitive analysis — should have results in [X] seconds." Do not start Phase 3 positioning questions until the Research Analyst output is in hand.
 
