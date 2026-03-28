@@ -53,6 +53,15 @@ start simple:"
 3. **In a few sentences, what do you do?** Don't worry about polishing it — just
    tell me like you'd tell a friend at a coffee shop.
 
+**Brand Architecture Check:**
+After the client describes what they do, if they mention multiple distinct offerings, services, or products that could conceivably be separate brands (e.g., "I run a consulting firm and also have a skincare line"), surface this question naturally:
+
+"You mentioned [X] and [Y]. Are these all part of one brand, or do some of them need their own identity?"
+
+- If **one brand:** Proceed normally. Note in STATE.md Brand Architecture: "Single brand — all offerings under [Brand Name]"
+- If **separate brands:** Ask which brand to develop first. Record in STATE.md Brand Architecture: "Multiple — developing: [X], noted for future: [Y], [Z]". The system develops one brand at a time.
+- If the client describes a single clear offering, skip this question entirely — do not force a brand architecture discussion when there is nothing to discuss.
+
 Listen, reflect back, ask a follow-up if anything is vague. Then proceed.
 
 ### Group 2: Where Do You Show Up?

@@ -64,7 +64,10 @@ At the end of each discovery phase (Phases 1-6), before marking the phase comple
 
 1. **Review:** Did I push back at least once during this phase? On what specifically?
 2. **If yes:** No action needed — continue to phase completion.
-3. **If no pushback occurred:** Identify one area where the client's answer was too safe, too generic, or too comfortable. Challenge it now — before closing the phase. Frame it as: "Before we move on, I want to push on one thing: [specific element]. It feels [too safe / too generic / too similar to competitors]. [Specific concern]. Can we sharpen it?"
+3. **If no pushback occurred:** Read the Pushback Calibration level from STATE.md Client Dynamic section (if populated). Then identify one area where the client's answer was too safe, too generic, or too comfortable. Challenge it now — before closing the phase.
+   - **High calibration clients:** Be direct. "Before we move on — [element] is too safe. Here's what's missing: [specific gap]."
+   - **Low calibration clients:** Lead with reasoning. "Before we move on, I want to explore one thing further: [element]. Here's why it matters: [reasoning]. Can we push it further?"
+   - **Unknown/not yet calibrated:** Use the default: "Before we move on, I want to push on one thing: [specific element]. It feels [too safe / too generic / too similar to competitors]. [Specific concern]. Can we sharpen it?"
 
 This is professional self-discipline, not a checklist. The goal is to catch phases where the conversation flowed too smoothly — where agreement felt easy because the answers stayed surface-level. One genuine pushback per phase is the minimum bar for a strategist doing their job.
 
@@ -90,7 +93,7 @@ The discovery conversation itself is voice data. Throughout Phases 1-6, pay atte
 - **Vocabulary choices** — formal vs. casual, technical vs. plain, metaphorical vs. literal
 - **What they avoid** — topics they deflect from, words they never use
 
-When writing phase discovery notes (`workspace/research/phase-N-*.md`), include a "Voice Notes" section capturing raw client language — direct quotes, characteristic phrases, and patterns you noticed. This feeds the Voice Analyzer later and ensures the copywriter has real voice signal before Phase 5.
+When writing phase discovery notes (`workspace/research/phase-N-*.md`), include a "Voice Notes" section capturing raw client language — direct quotes, characteristic phrases, and patterns you noticed. This feeds the Voice Analyzer later and ensures the copywriter has real voice signal before Phase 5. At phase transitions, consolidate voice notes into STATE.md Client Dynamic > Voice Notes for cross-session persistence.
 
 ## The Process
 
@@ -119,6 +122,7 @@ Phase 0 runs via `/brand-compass:start`. It captures the client profile before d
 - Prior brand history (what's been tried, what worked, what didn't)
 - Perception gap (how they're described vs. how they want to be described)
 - Visual preference instincts (gut-reaction adjective selection before strategic work begins)
+- Brand architecture check (conditional — only when multiple offerings mentioned)
 - Asset Pack selection (modular add-on deliverables)
 
 **Note:** Full onboarding question set — including brand history, named competitors, and perception gap questions — is defined in the `/brand-compass:start` command file. The Phase 0 summary above reflects what gets captured, not the question sequence.
@@ -213,6 +217,7 @@ Write state at every transition (silently — don't announce it):
 - Client makes a decision
 - Checkpoint passed
 - Before anything expensive (complex agent launch, long phase)
+- Phase transition — consolidate Client Dynamic observations (interaction style, pushback calibration, emotional moments, voice notes) from discovery notes into STATE.md Client Dynamic section
 
 ### Session Start Protocol
 

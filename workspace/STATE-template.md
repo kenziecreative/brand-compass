@@ -10,6 +10,20 @@
 - **Visual Adjectives:** [Selected visual adjectives from onboarding]
 - **Accessibility:** [Audience needs: ___ | Compliance level: AA/AAA | Highest-risk platform: ___]
 - **Asset Packs:** [Selected asset pack IDs]
+- **Brand Architecture:** [Single brand / Multiple — developing: X, noted for future: Y, Z]
+
+## Client Dynamic
+
+*Updated at phase transitions. Facilitator's private notebook — not shared with client.*
+
+- **Interaction Style:** [How the client communicates — e.g., "verbose, prefers options over open questions, thinks out loud"]
+- **Pushback Calibration:** [Level + reasoning — e.g., "medium-high — responds well to direct challenge but needs the reasoning spelled out first"]
+- **Emotional Moments:**
+  [Timestamped list of moments where the client lit up, got defensive, or showed strong energy]
+  - [Phase X] [moment description]
+- **Voice Notes:**
+  [Running list of raw quotes, distinctive vocabulary, recurring metaphors — feeds Voice Analyzer]
+  - "[exact quote]" — [context]
 
 ## Current Position
 - Phase: 0
