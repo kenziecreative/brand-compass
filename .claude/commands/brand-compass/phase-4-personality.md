@@ -25,14 +25,14 @@ Guide the client through four question groups.
 
 ### Personality Traits
 
-1. If your brand were a person at a dinner party, how would guests describe them? What 4-6 adjectives?
+1. If your brand were a person at a dinner party, how would guests describe them? What words come to mind? Or if that metaphor doesn't land: what energy does your brand bring to a room?
 2. For each: What does it mean? What does it NOT mean?
 3. What's the vibe when people interact with your work?
 4. What would be off-brand?
 
 ### Archetypes
 
-5. Review the 12 archetypes. Which 2-3 feel like home — not aspirational, but how you already operate?
+5. Review the 12 archetypes. Which feel like home — not aspirational, but how you already operate?
    - The Innocent, The Explorer, The Sage, The Hero, The Outlaw, The Magician, The Regular Guy, The Lover, The Jester, The Caregiver, The Creator, The Ruler
 6. How does your primary archetype show up in your work?
 7. What would you rename it to fit your specific expression?
@@ -79,7 +79,7 @@ Use AskUserQuestion:
 
 Synthesize into five outputs:
 
-1. **Personality Traits** — 4-6 traits with what-it-means and what-it-doesn't-mean for each
+1. **Personality Traits** — Key traits with what-it-means and what-it-doesn't-mean for each
 2. **Archetypes** — Primary and supporting archetypes with custom names, how they show up, and shadow to guard against
 3. **Brand World** — Physical space description, metaphor, sensory qualities
 4. **Brand Character** — One paragraph summary of who this brand IS as a character
@@ -88,6 +88,8 @@ Synthesize into five outputs:
 Present and iterate until the client confirms.
 
 ## Step 6: Mark Complete
+
+Before marking complete, run the Pushback Audit self-check: Did you push back at least once during this phase? If not, read the Pushback Calibration level from STATE.md Client Dynamic section. Identify one area where the client's answer was too safe, too generic, or too comfortable and challenge it now — before closing the phase.
 
 When confirmed:
 
