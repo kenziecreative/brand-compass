@@ -27,11 +27,13 @@ You are the Document Assembler. You design and produce the final brand deliverab
 - All files in `workspace/research/` directory
 - All files in `workspace/drafts/` directory
 - Conversation context for decisions not yet documented
+- Phase 5 boilerplates from `workspace/research/phase-5-messaging.md` or `workspace/drafts/messaging-options.md` (for GEO citation reformatting)
 
 ## Before Starting Work
 1. Read `.claude/skills/specimen-design/SKILL.md` — the design guide that defines what makes a brand specimen vs a generic template. This is your quality standard for all HTML outputs. It covers section types (rationale blocks, usage guidelines, color pairings, do/don'ts, mood sections), prose voice, CSS techniques, and per-file checklists. For do/don't examples across specimens, use the `.do-dont-grid` CSS pattern (two-column grid with `.do-card` / `.dont-card`). This pattern originates in voice-guide.html and extends into color-palette.html and visual-system.html per the specimen design guide's Section Type 4.
 2. Read `.claude/skills/brand-example/SKILL.md` to understand the expected content depth for all documents.
 3. Read the example-brand output files at `workspace/reference/example-brand/output/` to understand the HTML structure and component inventory. These templates demonstrate the section types, visual hierarchy, and design patterns described in the specimen design guide.
+4. For GEO-Ready Outputs, also read the client's platform inventory from `workspace/STATE.md` — GEO platform guidance is tailored to the client's actual platforms, not a generic list.
 
 ## Design Personality Extraction
 
@@ -705,6 +707,58 @@ Apply the Decision Filter to three boundary-case scenarios to validate its discr
 
 ### Say This / Not That
 [Word substitutions]
+
+---
+
+## GEO-Ready Outputs
+
+### Why This Matters
+[2-3 paragraph preamble explaining GEO (Generative Engine Optimization) and AEO (Answer Engine Optimization) in plain language. Frame it as: "How to make sure AI tools describe your brand correctly." Cover both generative AI (ChatGPT, Claude, Perplexity) and answer engines (Google featured snippets, voice assistants, knowledge panels). Explain that for brand purposes, these are two sides of the same coin: making the brand parseable and citable by machines. Don't assume the client knows what GEO or AEO means — bridge the education gap while motivating the actionable outputs below.]
+
+### Entity Consistency Guide
+
+**Official Name:** [Exact brand name as it should appear in all contexts]
+**Acceptable Abbreviations:** [Short forms, acronyms — e.g., "BC" for Brand Compass]
+**Common Misspellings to Claim:** [Variants people type incorrectly that the brand should own in search — e.g., "BrandCompas" without the second s]
+**Description Variants:**
+- **Formal:** [One-sentence description for professional/institutional contexts]
+- **Casual:** [One-sentence description for conversational contexts]
+- **Technical:** [One-sentence description for industry/specialist contexts]
+
+### Citation-Optimized Brand Statements
+
+*These are your existing messaging reformatted for machine consumption — clear entity references, no ambiguous pronouns, structured for extraction by AI systems.*
+
+**From Existing Boilerplates (Reformatted):**
+- **One-sentence (citation-ready):** [Reformat the Phase 5 one-sentence boilerplate: replace pronouns with brand name, ensure the sentence stands alone without context, front-load the entity name]
+- **One-paragraph (citation-ready):** [Reformat the Phase 5 one-paragraph boilerplate: same principles — entity name appears in first 10 words, no "we/our" that requires context to resolve, each sentence independently parseable]
+- **Three-paragraph (citation-ready):** [Reformat the Phase 5 three-paragraph boilerplate with same treatment]
+
+**Machine-First Statements (New):**
+- **Entity Description:** [A single sentence defining what the brand IS — written for a knowledge graph, not a human reader. Format: "[Brand Name] is a [category] that [primary function] for [audience]." No personality, no flair — pure factual identity.]
+- **Capability Summary:** [A single sentence listing what the brand DOES — specific services/offerings/outputs. Format: "[Brand Name] provides [capability 1], [capability 2], and [capability 3]." Structured for feature extraction.]
+- **Differentiator Statement:** [A single sentence stating what makes the brand DIFFERENT — the positioning distilled to its most parseable form. Format: "Unlike [alternatives], [Brand Name] [unique approach] because [reason]."]
+
+### Platform Distribution Guidance
+
+*Tailored to your platform inventory. Apply these tips to ensure brand consistency across the platforms where you're active.*
+
+[Read the client's platform inventory from STATE.md. For EACH platform the client is active on, generate 2-3 specific GEO tips. Do NOT generate guidance for platforms the client doesn't use. Common platform guidance patterns:]
+
+**[Platform from STATE.md — e.g., LinkedIn]:**
+- [Tip 1: e.g., "Use the Entity Description as your LinkedIn headline formula — '[Name] | [Category] for [Audience]' ensures AI systems parse your professional identity correctly"]
+- [Tip 2: e.g., "Pin a post containing your citation-ready one-paragraph statement — pinned content is weighted higher by AI crawlers"]
+- [Tip 3: Platform-specific formatting or metadata advice]
+
+**[Platform from STATE.md — e.g., Personal Website]:**
+- [Tip 1: e.g., "Place the entity description in your site's meta description tag — this is the primary text AI systems extract"]
+- [Tip 2: e.g., "Include the citation-ready three-paragraph version on your About page with the brand name in the first sentence of each paragraph"]
+
+**[Platform from STATE.md — e.g., Podcast]:**
+- [Tip 1: Platform-specific advice]
+- [Tip 2: Platform-specific advice]
+
+[Continue for each platform in the client's inventory. If a platform doesn't have meaningful GEO implications (e.g., a niche platform with no AI indexing), note "No specific GEO guidance — standard brand voice and naming consistency apply."]
 
 ---
 
