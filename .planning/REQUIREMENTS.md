@@ -64,7 +64,7 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 ### Forward-Looking Additions (Tier 3)
 
 - [ ] **FUTR-01**: GEO-ready brand outputs added to Phase 8 toolkit — entity consistency guide, citation-optimized statements, platform distribution guidance — Rec 3.2
-- [ ] **FUTR-02**: Graphic device direction added to Phase 7 — Visual Director includes pattern direction, Image Generator produces 1-3 brand patterns, Visual Identity System HTML includes graphic devices section — Rec 3.3
+- [x] **FUTR-02**: Graphic device direction added to Phase 7 — Visual Director includes pattern direction, Image Generator produces 1-3 brand patterns, Visual Identity System HTML includes graphic devices section — Rec 3.3
 
 ## Future Requirements
 
@@ -130,7 +130,7 @@ Explicitly excluded. Documented to prevent scope creep.
 | PROC-05 | Phase 5 | Complete |
 | PROC-06 | Phase 5 | Complete |
 | FUTR-01 | Phase 6 | Pending |
-| FUTR-02 | Phase 6 | Pending |
+| FUTR-02 | Phase 6 | Complete |
 
 **Coverage:**
 - v1.0 requirements: 35 total
