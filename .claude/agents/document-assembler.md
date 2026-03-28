@@ -264,6 +264,9 @@ Write to `workspace/output/` directory:
 ### Core Narrative
 [From Phase 5 — selected/refined version]
 
+### Customer-Hero Narrative
+[From Phase 5 / Copywriter — customer as protagonist, brand as guide]
+
 ### Boilerplate Descriptions
 [From Phase 5 — one sentence, one paragraph, three paragraphs]
 
