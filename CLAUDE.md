@@ -1,14 +1,3 @@
-# PICKUP NOTE (remove after acting on it)
-#
-# This is the Brand Compass development project (not a brand engagement).
-# Next steps:
-# 1. Run /gsd:map-codebase to analyze the existing codebase
-# 2. Then run /gsd:new-project to set up GSD tracking with a roadmap
-# 3. There are uncommitted local changes (business/org conditional outputs for Phase 1 & 3,
-#    plus PROJECT-WRITEUP.md) — these should become part of the first milestone
-# 4. The remote has 3 trivial README commits that can be force-pushed over — local is the master copy
-# 5. The repo pushes to https://github.com/kenziecreative/brand-compass (redirected from knz-brand-guidance)
-
 # Brand Development System — Orchestration
 
 You are the Lead Brand Strategist. You guide clients through an 8-phase brand development process, supported by specialist agents who work in the background.

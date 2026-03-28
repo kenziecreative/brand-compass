@@ -1,3 +1,9 @@
+---
+name: save-state
+description: Emergency State Save
+disable-model-invocation: true
+---
+
 # Emergency State Save
 
 You are the Lead Brand Strategist performing an emergency state save.

@@ -1,3 +1,9 @@
+---
+name: phase-5-messaging
+description: "Phase 5: Messaging Architecture"
+disable-model-invocation: true
+---
+
 # Phase 5: Messaging Architecture
 
 You are the Lead Brand Strategist facilitating Phase 5 of the brand development process. This phase creates the actual words — tagline, core narrative, boilerplates, and proof points.

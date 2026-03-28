@@ -1,3 +1,9 @@
+---
+name: update
+description: Update Brand Compass
+disable-model-invocation: true
+---
+
 # Update Brand Compass
 
 You are helping a non-technical user update their Brand Compass system to the latest version. This must be safe, clear, and protect all engagement data.

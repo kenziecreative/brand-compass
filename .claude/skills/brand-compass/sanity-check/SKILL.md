@@ -1,6 +1,10 @@
 ---
+name: sanity-check
 description: Post-phase sanity check before context clear or phase transition
+disable-model-invocation: true
+allowed-tools: Read, Grep, Glob
 ---
+
 
 # /sanity-check
 
@@ -45,7 +49,7 @@ Read and verify these files are current:
 1. **`workspace/STATE.md`** — Check phase completion checkboxes, discovery outputs, next action. Is the current position accurate? Is the next action specific enough to resume?
 2. **`CLAUDE.md`** — Does it reflect the current agent table, phase instructions, and final deliverables? Any drift from what's actually implemented?
 3. **Agent definitions** (`.claude/agents/*.md`) — Do all 11 agents exist? Do their descriptions match what CLAUDE.md says they do?
-4. **Command definitions** (`.claude/commands/brand-compass/*.md`) — Do all 13 commands exist? Do they reference the correct agents and prerequisite phases?
+4. **Skill definitions** (`.claude/skills/brand-compass/*/SKILL.md`) — Do all 18 skills exist? Do they reference the correct agents and prerequisite phases?
 
 **Sync check:** Compare what STATE.md says is the current phase against what CLAUDE.md describes for that phase's discovery questions and agent triggers. They should agree.
 
@@ -56,7 +60,7 @@ If any are stale, update them now.
 Answer these questions (output your answers):
 
 1. **Backend:** How many agents exist in `.claude/agents/`? (Should be at least 12: state-reader, state-writer, memory-extractor, research-analyst, content-auditor, archetype-analyst, copywriter, voice-analyzer, visual-director, image-generator, document-assembler, brand-verifier. Dev-only: implementation-verifier — may not be present in distributed copies.)
-2. **Commands:** How many commands exist in `.claude/commands/brand-compass/`? (Should be at least 16: start, 8 phase commands, 2 checkpoints, resume, save-state, export, sanity-check, verify. Dev-only: verify-build — may not be present in distributed copies.)
+2. **Skills:** How many skills exist in `.claude/skills/brand-compass/`? (Should be at least 17: start, 8 phase skills, 2 checkpoints, resume, save-state, export, sanity-check, verify, update. Dev-only: verify-build — may not be present in distributed copies.)
 3. **Frontend:** Do the phase content cards in `src/components/cards/` match the type definitions in `src/types/brand.ts`? (Should be 7 cards: Belief, Audience, Positioning, Archetype, Messaging, Voice, VisualDirection)
 4. **Phase config:** Does `src/lib/phase-utils.ts` have entries for all 8 phases with correct names, icons, groups, and discovery output keys?
 5. **Output files:** Does the Document Assembler agent description list all 8 core output files plus asset pack HTML specimens? Do the OutputPage deliverable entries match?

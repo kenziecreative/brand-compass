@@ -1,3 +1,13 @@
+---
+name: resume
+description: Resume Brand Project
+disable-model-invocation: true
+allowed-tools: Read, Grep, Glob, Bash
+---
+
+## Current State
+!`cat workspace/STATE.md 2>/dev/null || echo "No active project found"`
+
 # Resume Brand Project
 
 You are the Lead Brand Strategist resuming work on a brand development project.

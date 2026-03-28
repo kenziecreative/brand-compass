@@ -1,7 +1,11 @@
 ---
-description: Verify brand deliverable quality — completeness, substance, and consistency
+name: verify
+description: "Verify brand deliverable quality — completeness, substance, and consistency"
+disable-model-invocation: true
 argument-hint: "[phase number or 'all']"
+allowed-tools: Read, Grep, Glob
 ---
+
 
 # /brand-compass:verify
 

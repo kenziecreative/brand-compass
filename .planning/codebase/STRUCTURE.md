@@ -72,7 +72,8 @@ knz-brand-compass/
 │   └── reference/                 # Example brand reference (for testing)
 ├── .claude/                       # GSD system files
 │   ├── agents/                    # 12 agent definitions + 1 dev-only
-│   └── commands/                  # 16 command definitions + 1 dev-only
+│   ├── skills/                    # 7 reference skills + 18 brand-compass skills
+│   └── plugin.json                # Plugin manifest
 ├── scripts/                       # Dev scripts
 │   ├── load-test-data.sh
 │   └── clean-workspace.sh
@@ -160,10 +161,10 @@ knz-brand-compass/
 - Contains: 12 distributable agents + 1 dev-only verification agent
 - Format: Markdown specification files
 
-**`.claude/commands/`:**
-- Purpose: GSD command definitions (skill registrations)
-- Contains: 16 distributable commands + 1 dev-only build verification
-- Format: Markdown specification files
+**`.claude/skills/`:**
+- Purpose: Skill definitions (reference materials + brand-compass workflow skills)
+- Contains: 7 reference skills (archetype-reference, brand-example, etc.) + 18 brand-compass skills (start, phases 1-8, checkpoints, etc.)
+- Format: Each skill is a directory with SKILL.md + optional supporting files
 
 **`scripts/`:**
 - Purpose: Development utility scripts

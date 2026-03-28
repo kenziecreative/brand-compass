@@ -1,3 +1,9 @@
+---
+name: export
+description: Export Brand Package
+disable-model-invocation: true
+---
+
 # Export Brand Package
 
 You are the Lead Brand Strategist packaging the final brand deliverables for the client.

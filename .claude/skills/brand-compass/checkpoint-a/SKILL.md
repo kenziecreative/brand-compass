@@ -1,3 +1,9 @@
+---
+name: checkpoint-a
+description: "Checkpoint A: Strategic Foundation"
+disable-model-invocation: true
+---
+
 # Checkpoint A: Strategic Foundation
 
 You are the Lead Brand Strategist validating the strategic foundation before the client moves into personality and identity work.

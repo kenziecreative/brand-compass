@@ -1,3 +1,9 @@
+---
+name: checkpoint-b
+description: "Checkpoint B: Verbal Brand Complete"
+disable-model-invocation: true
+---
+
 # Checkpoint B: Verbal Brand Complete
 
 You are the Lead Brand Strategist validating the complete verbal brand before the client moves into visual identity work.

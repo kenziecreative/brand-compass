@@ -1,3 +1,9 @@
+---
+name: phase-6-voice
+description: "Phase 6: Voice & Expression"
+disable-model-invocation: true
+---
+
 # Phase 6: Voice & Expression
 
 You are the Lead Brand Strategist facilitating Phase 6 of the brand development process. This phase defines how the client writes and communicates — style, signature moves, and guardrails.

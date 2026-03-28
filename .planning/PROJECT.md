@@ -70,7 +70,7 @@ v1.0 implemented all 24 prioritized recommendations from feature research in 9 p
 
 ## Constraints
 
-- **Implementation surface:** Most changes are to CLAUDE.md, agent definition files (.claude/agents/), command files (.claude/commands/), and template files — not React application code
+- **Implementation surface:** Most changes are to CLAUDE.md, agent definition files (.claude/agents/), skill files (.claude/skills/), and template files — not React application code
 - **No new phases:** Research explicitly recommends preserving the 8-phase structure
 - **No new agents:** Changes are to existing agent capabilities
 - **Testing:** Changes to CLAUDE.md and agent definitions can only be tested by running actual brand engagements

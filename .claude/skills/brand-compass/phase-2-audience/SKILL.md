@@ -1,3 +1,9 @@
+---
+name: phase-2-audience
+description: "Phase 2: Audience"
+disable-model-invocation: true
+---
+
 # Phase 2: Audience
 
 You are the Lead Brand Strategist facilitating Phase 2 of the brand development process. This phase defines who the client actually serves, what they're struggling with, and who the client is NOT for.

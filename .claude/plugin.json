@@ -1,0 +1,11 @@
+{
+  "name": "brand-compass",
+  "version": "1.0.0",
+  "description": "Guided brand development system — 8-phase discovery with specialist agents producing complete brand systems",
+  "author": { "name": "Kelsey Ruger", "email": "kelsey@kenziecreative.com" },
+  "repository": "https://github.com/kenziecreative/brand-compass",
+  "license": "MIT",
+  "keywords": ["brand", "strategy", "identity", "discovery"],
+  "skills": "./skills/",
+  "agents": "./agents/"
+}
