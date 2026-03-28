@@ -13,8 +13,8 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 ### Discovery Pipeline — Quick Wins
 
-- [ ] **DSCV-01**: Phase 2 or early Phase 3 includes competitive alternatives question ("What would your customers use or do if you didn't exist?") — QW-1
-- [ ] **DSCV-02**: Phase 2 Market of One includes anxiety + habit force questions (push/habit force, anxiety force) — QW-2
+- [x] **DSCV-01**: Phase 2 or early Phase 3 includes competitive alternatives question ("What would your customers use or do if you didn't exist?") — QW-1
+- [x] **DSCV-02**: Phase 2 Market of One includes anxiety + habit force questions (push/habit force, anxiety force) — QW-2
 - [x] **DSCV-03**: Phase 0 onboarding includes brand history question — QW-3
 - [x] **DSCV-04**: Phase 0 onboarding captures named competitors (3-4 with URLs) and STATE.md template has the field — QW-4
 - [x] **DSCV-05**: Phase 0 onboarding includes perception gap question — QW-5
@@ -23,13 +23,13 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 ### Agent Capability — Quick Wins
 
-- [ ] **AGNT-01**: Research Analyst trigger changed from passive ("client mentions competitors") to required (launches between Phase 2 and Phase 3) — QW-8
+- [x] **AGNT-01**: Research Analyst trigger changed from passive ("client mentions competitors") to required (launches between Phase 2 and Phase 3) — QW-8
 - [x] **AGNT-02**: Checkpoint A and Checkpoint B include structural challenge requirement ("identify weakest element and challenge client") — QW-9
 - [x] **AGNT-03**: Phase 5 includes devil's advocate pass requirement before finalizing messaging — QW-10
 
 ### Discovery Pipeline — Structural Changes (Wave 1)
 
-- [ ] **PIPE-01**: Competitive analysis is structurally required before Phase 3 — orchestration updated in CLAUDE.md, agent table updated from Optional to Required — Rec 1.1 — Verified: satisfied by Phase 1 quick wins (AGNT-01 changed trigger to Required, 01-02 added Phase 2->3 hard gate)
+- [x] **PIPE-01**: Competitive analysis is structurally required before Phase 3 — orchestration updated in CLAUDE.md, agent table updated from Optional to Required — Rec 1.1 — Verified: satisfied by Phase 1 quick wins (AGNT-01 changed trigger to Required, 01-02 added Phase 2->3 hard gate)
 - [ ] **PIPE-02**: Phase 0 onboarding expanded with brand history, named competitors, perception gap, and visual preference pre-seeding questions — Rec 1.4
 - [x] **PIPE-03**: Phase 3 positioning reframed from fill-in-the-blank to component-by-component exploration (competitive alternatives → unique attributes → value → target → category → synthesis) — Rec 1.6
 
@@ -58,7 +58,7 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 - [x] **PROC-02**: Client dynamic section added to STATE.md template — interaction style, pushback calibration, emotional moments, voice notes — Rec 3.4
 - [x] **PROC-03**: Anti-anchoring principles applied across discovery questions — open-ended before structured, remove number specifications, multiple frames — Rec 3.5
 - [ ] **PROC-04**: Verbal-to-visual translation mappings codified in reference file — archetype → visual properties, voice register → visual register, personality → color — Rec 3.6
-- [ ] **PROC-05**: Stakeholder mapping question added for org entity types — conditional in Phase 2 — Rec 3.7
+- [x] **PROC-05**: Stakeholder mapping question added for org entity types — conditional in Phase 2 — Rec 3.7
 - [ ] **PROC-06**: Core + flex thinking added to Phase 7 — define fixed vs. flexible elements, add AI-generation rules section — Rec 3.8
 
 ### Forward-Looking Additions (Tier 3)
@@ -97,17 +97,17 @@ Explicitly excluded. Documented to prevent scope creep.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | BASE-01 | Phase 1 | Complete |
-| DSCV-01 | Phase 7 | Pending |
-| DSCV-02 | Phase 7 | Pending |
+| DSCV-01 | Phase 7 | Complete |
+| DSCV-02 | Phase 7 | Complete |
 | DSCV-03 | Phase 1 | Complete |
 | DSCV-04 | Phase 1 | Complete |
 | DSCV-05 | Phase 1 | Complete |
 | DSCV-06 | Phase 1 | Complete |
 | DSCV-07 | Phase 8 | Pending |
-| AGNT-01 | Phase 7 | Pending |
+| AGNT-01 | Phase 7 | Complete |
 | AGNT-02 | Phase 1 | Complete |
 | AGNT-03 | Phase 1 | Complete |
-| PIPE-01 | Phase 7 | Pending |
+| PIPE-01 | Phase 7 | Complete |
 | PIPE-02 | Phase 8 | Pending |
 | PIPE-03 | Phase 2 | Complete |
 | QUAL-01 | Phase 7 | Complete |
@@ -127,7 +127,7 @@ Explicitly excluded. Documented to prevent scope creep.
 | PROC-02 | Phase 5 | Complete |
 | PROC-03 | Phase 5 | Complete |
 | PROC-04 | Phase 8 | Pending |
-| PROC-05 | Phase 7 | Pending |
+| PROC-05 | Phase 7 | Complete |
 | PROC-06 | Phase 8 | Pending |
 | FUTR-01 | Phase 6 | Complete |
 | FUTR-02 | Phase 8 | Pending |
