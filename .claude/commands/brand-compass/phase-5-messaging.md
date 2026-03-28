@@ -21,11 +21,11 @@ Update STATE.md:
 
 ## Step 3: Discovery Conversation
 
-Guide the client through four question groups.
+Guide the client through five question groups.
 
 ### Tagline
 
-1. In 3-7 words, what's the essence of what you offer or believe?
+1. In a few words, what's the essence of what you offer or believe?
 2. If your brand had a motto?
 3. What phrase would people remember and repeat?
 
@@ -34,7 +34,7 @@ Guide the client through four question groups.
 4. What's the origin story?
 5. What tension set you on this path?
 6. What transformation do you make possible?
-7. Tell it in 100-200 words: origin, tension, resolution.
+7. Tell it in 100-200 words: origin → tension → resolution.
 
 ### Boilerplates
 
@@ -44,16 +44,25 @@ Guide the client through four question groups.
 
 ### Proof Points
 
-11. What have you done that earns trust? 4-6 specific things.
+11. What have you done that earns trust? What specific things?
 12. Can you add concrete details? Numbers, names, outcomes?
 13. What do clients say about working with you?
 14. What credentials support your credibility?
 
+### Customer-Hero Story
+
+*(The Market of One from Phase 2 is the protagonist. These questions fill in the guide/plan/success beats that Phase 2's problem-focused discovery didn't capture.)*
+
+15. How does your ideal client first encounter you — what are they doing, where are they, what makes them notice you in the first place?
+16. What's the moment of clarity — when do they realize this is different from what they've tried before? What shifts for them?
+17. What's the concrete path or plan you offer? When someone says "okay, I'm in" — what happens next? What's the step that makes the transformation feel achievable rather than overwhelming?
+18. When it works, how does your client describe the outcome to a friend? Not your marketing language — their words, their frame, what they actually say.
+
 ## Step 4: Launch Copywriter
 
-After discovery is complete (all four groups addressed), launch the Copywriter:
+After discovery is complete (all five groups addressed), launch the Copywriter:
 
-"I have enough to work with. Let me have my copywriter generate options — tagline variations, story angles, bio drafts. We'll pick and refine rather than start blank."
+"I have enough to work with. Let me have my copywriter generate options — tagline variations, story angles including a customer-hero narrative, bio drafts. We'll pick and refine rather than start blank."
 
 Update STATE.md Running Agents table.
 
@@ -75,16 +84,28 @@ Work with the client to:
 
 Present final versions and iterate until confirmed.
 
-## Step 6: Mark Complete
+## Step 6: Devil's Advocate Pass (Required)
+
+Before finalizing messaging, challenge the client's chosen direction. After they've selected a preferred tagline, narrative, and boilerplate:
+
+1. **Check against positioning:** Compare the chosen tagline against the Phase 3 positioning statement. Does it actually capture the differentiation? Or does it smooth off the edges that made the positioning distinctive?
+2. **Generate a contradicting alternative:** Create one version that leans harder into the contrarian POV from Phase 3, or is more direct about who the brand is NOT for — the version that contradicts the client's comfort zone.
+3. **Present the tradeoff:** "Here's the version that challenges your preferred direction — [alternative]. The version you chose does [X] well but plays it safe on [Y]. This alternative [what it does differently]. You may still prefer yours — but I want you to see this one first."
+
+The client may choose their preferred option after seeing the alternative. That's fine. What's not acceptable: finalizing messaging without this moment of tension.
+
+## Step 7: Mark Complete
+
+Before marking complete, run the Pushback Audit self-check: Did you push back at least once during this phase? If not, identify one area where the client's answer was too safe, too generic, or too comfortable and challenge it now.
 
 When confirmed:
 
 1. Update STATE.md:
    - Check `Phase 5: Messaging Architecture` as complete
-   - Check `Tagline options generated`, `Core narrative drafted`, `Boilerplates written`, `Proof points listed` in Discovery Outputs
+   - Check `Tagline options generated`, `Core narrative drafted`, `Customer-hero narrative drafted`, `Boilerplates written`, `Proof points listed` in Discovery Outputs
    - Set Next Action: "Begin Phase 6: Voice & Expression"
    - Add Session Log entry
-2. Tell the client: "Phase 5 is solid. You have a tagline, a story, bios at three lengths, and proof points. Run `/brand-compass:phase-6-voice` when you're ready to define how you write."
+2. Tell the client: "Phase 5 is solid. You have a tagline, a story, a customer-hero narrative, bios at three lengths, and proof points. Run `/brand-compass:phase-6-voice` when you're ready to define how you write."
 
 ## Conversation Guidelines
 
@@ -92,4 +113,6 @@ When confirmed:
 - Push the client to choose — "You don't need all the options. Which one makes you say 'yes, that's us'?"
 - Boilerplates should sound like the brand character from Phase 4, not corporate templates
 - Proof points need specifics — "What was the actual number? The client name? The outcome?"
+- Challenge safe choices — if the client picks the blandest option, push back before accepting. The devil's advocate pass is mandatory, not optional.
+- Capture voice signal — note how the client describes their story, their customers' words, and emotional language for Voice Notes.
 - Don't announce state updates — just do them silently
