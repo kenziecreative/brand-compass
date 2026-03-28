@@ -158,9 +158,10 @@ Plans:
   6. Pushback Audit self-check added to Mark Complete steps in phase-1-origin.md, phase-2-audience.md, phase-3-positioning.md, phase-4-personality.md, phase-6-voice.md
   7. STATE-template.md includes discovery output checkboxes for: customer-hero narrative, stakeholders mapped, graphic devices, motion direction, core+flex, AI-generation rules
   8. E2E flows restored: Discovery Pipeline (Phase 3 entry) and Anti-Sycophancy Chain (all 6 phases)
-**Plans:** 0/0 plans complete
+**Plans:** 2 plans
 Plans:
-- (none yet)
+- [ ] 09-01-PLAN.md — Rewrite phase-3-positioning.md to CLAUDE.md component-by-component structure (competitive brief gate + 30 questions + Pushback Audit)
+- [ ] 09-02-PLAN.md — Phase 4 count anchor removal + Pushback Audit for phases 1/2/4/6 + STATE-template.md discovery checkboxes
 
 ## Progress
 
@@ -177,4 +178,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9
 | 6. Forward-Looking Additions | 2/2 | Complete   | 2026-03-28 |
 | 7. Sync Phase 2 & Phase 5 Commands | 2/2 | Complete   | 2026-03-28 |
 | 8. Sync Phase 7 Visual Command | 1/1 | Complete   | 2026-03-28 |
-| 9. Sync Remaining Command Files | 0/0 | Not Started | — |
+| 9. Sync Remaining Command Files | 0/2 | Not Started | — |
