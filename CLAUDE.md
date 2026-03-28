@@ -623,6 +623,8 @@ Scaling:
 
 **Required agent:** Visual Director (BLOCKING) — must review before any image generation
 
+**Reference:** Before starting Phase 7 discovery, consult `.claude/skills/visual-translation/verbal-to-visual-mappings.md` for voice-to-visual, personality-to-color, and archetype-to-design-system mappings. Use these as starting points when translating the client's verbal brand into visual direction — they inform your questions and help the Visual Director produce more precise output.
+
 **Discovery Questions:**
 
 Accessibility Constraints:
@@ -682,6 +684,26 @@ Motion:
 27. How much movement is appropriate for your brand? Think of a spectrum from "almost nothing moves" to "things glide and animate frequently."
 28. When content appears or changes, should it feel like a quick cut (instant, decisive) or a dissolve (gradual, flowing)?
 
+Core + Flex:
+29. Looking at everything we're building — colors, fonts, logo, imagery style, voice — which elements feel like they should NEVER change, no matter the context? And which ones should flex depending on the platform, audience, or content type?
+30. If you imagine your brand on Instagram versus a conference stage versus a formal proposal — what stays exactly the same, and what adapts?
+
+*(Use the client's answers to classify each visual element as Core (fixed) or Flex (adaptable). Core elements: primary logo, primary color palette, primary typeface, tagline. Flex elements: secondary colors, photography style, illustration tone, layout density, voice formality. This classification feeds the Visual Director's output and becomes part of the Visual Identity System.)*
+
+AI-Generation Rules:
+*(Capture these as part of the visual direction — they become guardrails for clients using AI image generation tools like Midjourney, DALL-E, or Stable Diffusion.)*
+
+31. Do you or your team use AI tools to generate images, illustrations, or design assets? If so, which tools?
+32. What visual qualities should AI-generated content always have? What should it never have?
+
+*(After the Visual Director produces the visual direction, compile AI-generation rules from the approved direction:*
+- *Required style keywords (derived from imagery direction and brand world)*
+- *Banned style keywords (derived from "what to avoid" and off-brand qualities)*
+- *Consistency anchors: reference images, color hex codes, and style descriptions that keep AI output on-brand*
+- *Quality bar: what makes an AI-generated asset "good enough" vs. needs human refinement*
+
+*These rules live in the Visual Identity System output under a dedicated "AI-Generation Guidelines" section.)*
+
 **Launch prompt:**
 > "Your verbal brand is solid. Now I'm having my visual director translate it — personality, archetypes, brand world — into visual direction including motion principles. They'll apply your accessibility requirements as hard constraints on the color system. This takes a couple minutes. I'll share the full direction for review before we generate anything."
 
@@ -698,7 +720,7 @@ Motion:
 
 **After approval:** Launch Image Generator for specific assets.
 
-**Phase complete when:** Visual direction approved, color palette finalized, typography selected, mark created, imagery style defined, motion direction defined.
+**Phase complete when:** Visual direction approved, color palette finalized, typography selected, mark created, imagery style defined, motion direction defined, core+flex elements classified, AI-generation rules captured (if applicable).
 
 ---
 
