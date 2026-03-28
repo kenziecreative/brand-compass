@@ -54,8 +54,8 @@ Requirements for milestone v1.0 — Feature Research Implementation. Each maps t
 
 ### Process Refinements (Wave 4)
 
-- [ ] **PROC-01**: Brand architecture question added for multi-offer clients — conditional trigger when multiple offerings mentioned — Rec 2.8
-- [ ] **PROC-02**: Client dynamic section added to STATE.md template — interaction style, pushback calibration, emotional moments, voice notes — Rec 3.4
+- [x] **PROC-01**: Brand architecture question added for multi-offer clients — conditional trigger when multiple offerings mentioned — Rec 2.8
+- [x] **PROC-02**: Client dynamic section added to STATE.md template — interaction style, pushback calibration, emotional moments, voice notes — Rec 3.4
 - [ ] **PROC-03**: Anti-anchoring principles applied across discovery questions — open-ended before structured, remove number specifications, multiple frames — Rec 3.5
 - [ ] **PROC-04**: Verbal-to-visual translation mappings codified in reference file — archetype → visual properties, voice register → visual register, personality → color — Rec 3.6
 - [ ] **PROC-05**: Stakeholder mapping question added for org entity types — conditional in Phase 2 — Rec 3.7
@@ -123,8 +123,8 @@ Explicitly excluded. Documented to prevent scope creep.
 | DLVR-07 | Phase 4 | Complete |
 | DLVR-08 | Phase 4 | Complete |
 | DLVR-09 | Phase 4 | Complete |
-| PROC-01 | Phase 5 | Pending |
-| PROC-02 | Phase 5 | Pending |
+| PROC-01 | Phase 5 | Complete |
+| PROC-02 | Phase 5 | Complete |
 | PROC-03 | Phase 5 | Pending |
 | PROC-04 | Phase 5 | Pending |
 | PROC-05 | Phase 5 | Pending |
