@@ -462,6 +462,16 @@ Full visual system reference:
 - Extend the `.do-dont-grid` CSS pattern into visual-system.html
 - Examples: correct subject matter and style, incorrect stock photography style, correct color treatment, incorrect off-brand editing
 
+**Graphic Devices** (new section, after motion direction):
+- Read the Pattern Direction section from `workspace/drafts/visual-direction.md`
+- If Pattern Direction says "No graphic devices recommended," omit this section entirely
+- If patterns exist, render as a dedicated section with:
+  - Pattern style description as a rationale card (same style as visual principles cards)
+  - Pattern specimens: display each generated pattern from `workspace/assets/brand-patterns/` as image cards with name, description, and recommended applications
+  - Application guidance: a grid showing pattern at different scales/contexts (background, divider, accent)
+  - Color usage rules: which palette colors the patterns use and why
+  - Do/don't examples using the `.do-dont-grid` pattern: correct pattern usage (subtle background, divider accent) vs incorrect (overwhelming density, wrong color variant, competing with content)
+
 ### Document 7: `workspace/output/ui-kit.html`
 
 Component library:
@@ -498,6 +508,7 @@ All five HTML files share the same CSS custom properties from the Design System 
 - Principle cards: follow the "accent treatment" parameter
 - Logo variant display: follow the spacing density
 - Motion direction table: follow the spacing density from parameters. Motion principle cards: follow the "card style" and "accent treatment" parameters.
+- Graphic device cards: follow the "card style" parameter. Pattern specimens displayed at actual rendering size where practical.
 
 **ui-kit.html:**
 - Buttons: follow the "button style" parameter explicitly — this is the primary showcase

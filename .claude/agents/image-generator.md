@@ -40,11 +40,20 @@ Generate visual assets that match the approved direction.
 - Cover different subject matter the brand might need
 - Test the style block prompt
 
+### For Brand Patterns
+- Read the Pattern Direction section from `workspace/drafts/visual-direction.md`
+- Generate 1-3 seamless/tileable patterns based on the suggested motifs
+- Each pattern should work at multiple scales (full background, divider strip, accent element)
+- Use the palette constraints from Pattern Direction's color usage guidance
+- Include one pattern that's subtle enough for backgrounds and one that's bold enough for feature use
+- If Pattern Direction says "No graphic devices recommended," skip pattern generation entirely
+
 ## Output Location
 Write to `workspace/assets/[type]/`:
 - `workspace/assets/mark-explorations/`
 - `workspace/assets/color-specimens/`
 - `workspace/assets/illustration-samples/`
+- `workspace/assets/brand-patterns/`
 
 ## Output Format
 
@@ -65,6 +74,8 @@ For each generated asset, include a markdown file with:
 ## File
 [Link to generated image file]
 ```
+
+For brand patterns, also include: scale recommendations (what size works for backgrounds vs. dividers), tile dimensions, and color variant notes.
 
 ## Quality Bar
 - Every asset traceable to approved direction

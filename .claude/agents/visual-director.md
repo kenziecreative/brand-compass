@@ -79,6 +79,7 @@ These are the visual equivalents of "passionate leader" in copy. They're safe, c
 7. Note what to avoid visually
 8. Generate design system parameters that translate your aesthetic decisions into concrete CSS values for HTML deliverables
 9. Define motion direction — principles, default timing/easing values, and reduced-motion fallbacks
+10. Define graphic device direction — pattern style, motifs, color usage, and application guidance (if brand calls for it). If the brand world is minimal and doesn't warrant graphic devices, note "No graphic devices recommended for this brand" and skip.
 
 ## Output Format
 Write to `workspace/drafts/visual-direction.md`:
@@ -191,6 +192,29 @@ Mood: [emotional quality]
 Camera/perspective: [if photographic style]
 Texture: [grain, smoothness, paper quality]
 Avoid: [specific elements, styles, or qualities to exclude]
+
+---
+
+## Pattern Direction
+
+*(Include this section if graphic devices are appropriate for this brand. If not, write: "No graphic devices recommended — [brief rationale, e.g., 'the brand's minimal aesthetic relies on white space and typography contrast, not decorative elements'].")*
+
+### Style
+[Geometric, organic, textural, illustrative, or hybrid — and WHY this style for this brand. Ground it in the brand world: "The repeating angular forms echo the precision of the brand's workshop metaphor."]
+
+### Suggested Motifs
+[2-3 specific motif concepts tied to the brand world, personality, or core metaphor. Not generic descriptions — specific enough that the Image Generator can execute.]
+- **[Motif 1]:** [Description and connection to brand]
+- **[Motif 2]:** [Description and connection to brand]
+
+### Color Usage
+[How patterns use the palette — monochromatic using a single tint scale? Multi-color from accent palette? Tone-on-tone with primary colors? What opacity/density?]
+
+### Application Guidance
+[Where these patterns should appear (backgrounds, dividers, social frames, presentation slides) and at what density. Include scaling notes — a pattern used as a full-bleed background needs different density than one used as a thin divider strip.]
+
+### What to Avoid
+[Pattern styles that would be wrong for this brand — e.g., "No paisley or floral motifs — too decorative for the brand's utilitarian personality."]
 
 ---
 
@@ -368,5 +392,6 @@ Accessibility floor: all spacing must maintain comfortable reading at 16px body 
 - **Design system parameters are precise and parseable:** The CSS Custom Properties Block must contain exact values — no placeholders, no ranges, no "approximately." A Sonnet-level agent will copy these values directly into HTML files. If a value says `--radius-md: 8px`, that's what appears in the CSS.
 - **Parameters reflect personality, not defaults:** If the brand is "bold and angular," radii should be small (0-4px). If the brand is "warm and organic," radii should be larger (12-20px). If the parameters could apply to any brand, they're defaults, not decisions.
 - **Motion serves personality:** Timing and easing choices reflect the brand's energy level and temperament. A calm, deliberate brand gets longer durations and gentle easing. An energetic, snappy brand gets short durations and sharp curves. Every value includes its reduced-motion alternative.
+- **Pattern direction grounded in brand world:** If graphic devices are included, motifs should trace back to the brand's physical metaphor or personality traits — not decorative filler. If devices aren't included, the rationale should explain why.
 
 Remember: visual direction shapes first impressions, and first impressions shape everything that follows. Don't default to safe palettes and familiar pairings. Find the combination that could only belong to this brand, explain why it's right, and trust the client to see it.
