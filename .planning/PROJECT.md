@@ -43,9 +43,32 @@ The discovery conversation must produce brand outputs that are specific to the c
 - Stakeholder mapping for org entity types — v1.0
 - Full command-CLAUDE.md parity across all 7 discovery command files — v1.0
 
-### Active
+### Active (v2.0)
 
-(None yet — define in next milestone)
+- Three-bundle output model: client package, agent skill bundle, design kit
+- Token externalization as single source of truth for design-kit consumers
+- Skill bundle for Claude Code/Cowork agent surfaces
+- Design kit shaped for Claude Design org onboarding
+- Client specimens remain self-contained (no external token dependency)
+- Document Assembler voice-fingerprint.md input fix (from backlog)
+- Output directory restructured into client/, skill-bundle/, design-kit/ subfolders
+- Two new packager agents (skill-bundle-packager, design-kit-packager)
+- Updated export, verifier, Phase 8 orchestration, and CLAUDE.md for three-bundle model
+- Frontend dashboard updated for new output paths
+
+## Current Milestone: v2.0 Multi-Bundle Output
+
+**Goal:** Add two new output bundles (Agent Skill Bundle + Design Kit) alongside the existing client package, so Brand Compass output feeds directly into Claude Code/Cowork and Claude Design.
+
+**Target features:**
+- Token externalization as single source of truth for design-kit consumers
+- Agent Skill Bundle (SKILL.md, brand-prompt.md, source files) for Claude Code/Cowork
+- Design Kit (tokens, atomized components, preview cards, specimens, HANDOFF.md) for Claude Design
+- Output directory restructured into client/, skill-bundle/, design-kit/ subfolders
+- Two new packager agents (skill-bundle-packager, design-kit-packager)
+- Updated export, verifier, Phase 8, and CLAUDE.md for three-bundle model
+- Voice-fingerprint backlog fix in Document Assembler
+- Frontend dashboard updated for new output paths
 
 ### Out of Scope
 
@@ -66,14 +89,15 @@ Tech stack: React + TypeScript + Vite + Tailwind CSS v4 (dashboard viewer), Clau
 The actual brand development happens via slash commands and agent conversations — the React app is a viewer, not the primary interface.
 Feature research produced 7 research phases, 35 sources, 37 cross-reference patterns, and 7 audit-verified output documents.
 v1.0 implemented all 24 prioritized recommendations from feature research in 9 phases (20 plans, 131 commits, 45 days).
-8 tech debt items carried forward — most notable: Document Assembler missing voice-fingerprint.md input (Voice Pipeline partial break).
+v2.0 motivated by Claude Code, Cowork, and Claude Design becoming primary downstream consumers of brand data. Brand Compass output needs to feed those tools directly rather than requiring manual re-upload of source material. PRD authored by Claude Webb, reviewed and adjusted for implementation (8 adjustments documented in v2.0-REQUIREMENTS.md).
 
 ## Constraints
 
-- **Implementation surface:** Most changes are to CLAUDE.md, agent definition files (.claude/agents/), skill files (.claude/skills/), and template files — not React application code
-- **No new phases:** Research explicitly recommends preserving the 8-phase structure
-- **No new agents:** Changes are to existing agent capabilities
-- **Testing:** Changes to CLAUDE.md and agent definitions can only be tested by running actual brand engagements
+- **Implementation surface:** Changes span agent definitions (.claude/agents/), skill files (.claude/skills/), CLAUDE.md, and React frontend code (output path references)
+- **No new discovery phases:** The 8-phase discovery structure is unchanged; changes are output-layer only
+- **Two new agents:** skill-bundle-packager and design-kit-packager (both sonnet, Read/Write/Glob/Grep)
+- **Client specimens self-contained:** Client bundle HTML must render standalone without external dependencies; design-kit specimens may link external tokens
+- **Testing:** Agent definitions and skill changes can only be tested by running actual brand engagements
 
 ## Key Decisions
 
@@ -90,5 +114,22 @@ v1.0 implemented all 24 prioritized recommendations from feature research in 9 p
 | Activation layer "no fixed timeline" vs "30-day" | Clients work at their own pace; arbitrary timelines create pressure without value | ⚠️ Revisit — evaluate with real engagements |
 | Pushback calibration three-path (high/low/unknown) | Different clients need different challenge intensity | — Pending — needs engagement testing |
 
+## Evolution
+
+This document evolves at phase transitions and milestone boundaries.
+
+**After each phase transition** (via `/gsd-transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd-complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
+
 ---
-*Last updated: 2026-03-28 after v1.0 milestone*
+*Last updated: 2026-04-19 after v2.0 milestone started*

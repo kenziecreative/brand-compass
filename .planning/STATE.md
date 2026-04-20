@@ -1,43 +1,47 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: Feature Research Implementation
-status: completed
-stopped_at: Milestone v1.0 archived
-last_updated: "2026-03-28T19:30:00.000Z"
-last_activity: 2026-03-28 — v1.0 milestone completed and archived
+milestone: v2.0
+milestone_name: Multi-Bundle Output
+status: defining_requirements
+stopped_at: Defining requirements
+last_updated: "2026-04-19T12:00:00.000Z"
+last_activity: 2026-04-19 — Milestone v2.0 started
 progress:
-  total_phases: 9
-  completed_phases: 9
-  total_plans: 20
-  completed_plans: 20
-  percent: 100
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-28)
+See: .planning/PROJECT.md (updated 2026-04-19)
 
 **Core value:** Discovery conversation produces brand outputs specific to the client, not generic templates
-**Current focus:** Planning next milestone
+**Current focus:** Defining requirements for v2.0 Multi-Bundle Output
 
 ## Current Position
 
-Phase: — (milestone complete)
+Phase: Not started (defining requirements)
 Plan: —
-Status: v1.0 shipped, ready for next milestone
-Last activity: 2026-03-28 — v1.0 milestone completed and archived
+Status: Defining requirements
+Last activity: 2026-04-19 — Milestone v2.0 started
 
-Progress: [██████████] 100%
+Progress: [░░░░░░░░░░] 0%
 
 ## Accumulated Context
 
 ### Decisions
 
-Decisions are logged in PROJECT.md Key Decisions table.
-v1.0 decisions archived to milestones/v1.0-ROADMAP.md.
+- Client specimens stay self-contained (inline tokens); design-kit specimens link external tokens
+- ui-kit.html stays standalone — no assembly relationship with atomized components
+- PPTX generation (D6) deferred to follow-up milestone
+- Both new agents use sonnet model with Read/Write/Glob/Grep tools
+- Sequential milestone structure (Foundation → Skill Bundle → Design Kit → Integration)
+- Voice-fingerprint backlog fix bundled into this milestone
 
 ### Pending Todos
 
@@ -49,6 +53,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-03-28
-Stopped at: Milestone v1.0 archived
+Last session: 2026-04-19
+Stopped at: Defining requirements
 Resume file: None
