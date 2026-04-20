@@ -73,8 +73,9 @@ Plans:
   3. Preview cards for colors, type, spacing, components, and brand groups render visually at 150-500px width without layout breakage
   4. Design kit root contains README.md written in brand voice, a valid package.json, and HANDOFF.md with usage instructions
   5. Reference specimens include brand-foundation.html, color-palette.html, and a new landing-page.html, all linked to external tokens
-**Plans**: TBD
-**UI hint**: yes
+**Plans:** 1 plan
+Plans:
+- [ ] 12-01-PLAN.md — Complete design-kit-packager agent definition (frontmatter, pre-flight checks, Task 1 components, Task 2 previews + root files, Task 3 landing page, output listing, quality bar)
 
 ### Phase 13: Integration
 **Goal**: All three bundles are fully wired into the system — export command, verifier, Phase 8 orchestration, CLAUDE.md, and the React frontend all reflect the three-bundle model
@@ -103,5 +104,5 @@ Plans:
 | 9. Sync Remaining Command Files | v1.0 | 2/2 | Complete | 2026-03-28 |
 | 10. Output Foundation | v2.0 | 2/2 | Complete    | 2026-04-20 |
 | 11. Agent Skill Bundle | v2.0 | 1/1 | Complete    | 2026-04-20 |
-| 12. Design Kit | v2.0 | 0/TBD | Not started | - |
+| 12. Design Kit | v2.0 | 0/1 | Not started | - |
 | 13. Integration | v2.0 | 0/TBD | Not started | - |
