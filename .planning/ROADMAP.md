@@ -59,7 +59,9 @@ Plans:
   2. `skill-bundle/SKILL.md` contains valid frontmatter and all required sections (voice definition, signature moves, guardrails, language bank, positioning summary)
   3. `skill-bundle/brand-prompt.md` is 150-300 words of flowing prose with no headings or bullets
   4. `skill-bundle/source/` contains voice-rules.md, guardrails.md, and language-bank.md lifted from the client package
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 11-01-PLAN.md — Complete skill-bundle-packager agent definition (frontmatter, pre-flight checks, Task 1 source extraction, Task 2 bundle synthesis with translation rule)
 
 ### Phase 12: Design Kit
 **Goal**: The design-kit-packager agent exists and produces a complete design kit at `workspace/output/design-kit/` that a designer or tool can consume directly
@@ -100,6 +102,6 @@ Plans:
 | 8. Sync Phase 7 Visual Command | v1.0 | 1/1 | Complete | 2026-03-28 |
 | 9. Sync Remaining Command Files | v1.0 | 2/2 | Complete | 2026-03-28 |
 | 10. Output Foundation | v2.0 | 2/2 | Complete    | 2026-04-20 |
-| 11. Agent Skill Bundle | v2.0 | 0/TBD | Not started | - |
+| 11. Agent Skill Bundle | v2.0 | 0/1 | Not started | - |
 | 12. Design Kit | v2.0 | 0/TBD | Not started | - |
 | 13. Integration | v2.0 | 0/TBD | Not started | - |
