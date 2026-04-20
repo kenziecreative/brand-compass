@@ -529,17 +529,13 @@ consuming agent holds. NOT strategy rationale or discovery backstory.]
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **SKILL.md frontmatter: what fields beyond name/description?**
-   - What we know: All existing .claude/agents/ frontmatter uses name, description, model, tools. Skill files (not agents) may have a different convention.
-   - What's unclear: Whether the generated SKILL.md should include a `triggers` field, a `tools` field, or other metadata.
-   - Recommendation: Read one existing .claude/skills/brand-compass/ SKILL.md file to confirm the frontmatter format during planning. The phase-1-origin/SKILL.md is a good reference. This can be verified in Wave 0.
+   - RESOLVED: PATTERNS.md Pattern 8 confirms the generated SKILL.md uses `name` and `description` fields only. The `disable-model-invocation: true` field must NOT be included (it would prevent the skill from being used). No `triggers` or `tools` fields needed — the SKILL.md is consumed by the end user's Claude Code instance, not by Brand Compass.
 
 2. **Should the agent write a README.md or index file in skill-bundle/?**
-   - What we know: CONTEXT.md specifies exactly three output files (SKILL.md, brand-prompt.md) plus three source/ files. No README or index is mentioned.
-   - What's unclear: Whether downstream Phase 13 integration will need a manifest or index file.
-   - Recommendation: Scope this phase to the five specified files only. If Phase 13 needs a manifest, it will be added then.
+   - RESOLVED: Scope is five files only (SKILL.md, brand-prompt.md, source/voice-rules.md, source/guardrails.md, source/language-bank.md) per CONTEXT.md decisions. If Phase 13 needs a manifest, it will be added then.
 
 ---
 
