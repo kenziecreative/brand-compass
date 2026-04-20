@@ -141,7 +141,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'Social',
     description: 'Profile templates, post formats, hashtag strategy, content calendar framework',
     icon: 'Share2',
-    outputFile: 'workspace/output/social-media-kit.html',
+    outputFile: 'workspace/output/client/social-media-kit.html',
   },
   {
     id: 'print-collateral',
@@ -149,7 +149,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'Print',
     description: 'Business cards, letterhead, one-pager, brochure specs',
     icon: 'Printer',
-    outputFile: 'workspace/output/print-collateral.html',
+    outputFile: 'workspace/output/client/print-collateral.html',
   },
   {
     id: 'media-kit-epk',
@@ -157,7 +157,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'Media Kit',
     description: 'Press-ready bio, headshots spec, press release template, fact sheet',
     icon: 'Newspaper',
-    outputFile: 'workspace/output/media-kit-epk.html',
+    outputFile: 'workspace/output/client/media-kit-epk.html',
   },
   {
     id: 'merch-product',
@@ -165,7 +165,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'Merch',
     description: 'Product mockup guidelines, packaging specs, merchandise templates',
     icon: 'ShoppingBag',
-    outputFile: 'workspace/output/merch-product.html',
+    outputFile: 'workspace/output/client/merch-product.html',
   },
   {
     id: 'pitch-deck',
@@ -173,7 +173,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'Pitch Deck',
     description: 'Slide templates, investor/client deck structure, presentation guidelines',
     icon: 'Presentation',
-    outputFile: 'workspace/output/pitch-deck.html',
+    outputFile: 'workspace/output/client/pitch-deck.html',
   },
   {
     id: 'app-dashboard-ui',
@@ -181,7 +181,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'App UI',
     description: 'Extended component library, dashboard patterns, app-specific tokens',
     icon: 'LayoutDashboard',
-    outputFile: 'workspace/output/app-dashboard-ui.html',
+    outputFile: 'workspace/output/client/app-dashboard-ui.html',
   },
   {
     id: 'signage-space',
@@ -189,7 +189,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'Signage',
     description: 'Environmental design specs, banner templates, booth design',
     icon: 'MapPin',
-    outputFile: 'workspace/output/signage-space.html',
+    outputFile: 'workspace/output/client/signage-space.html',
   },
   {
     id: 'email-newsletter',
@@ -197,7 +197,7 @@ export const ASSET_PACKS: AssetPackConfig[] = [
     shortName: 'Email',
     description: 'Email templates, newsletter format, drip campaign voice guide',
     icon: 'Mail',
-    outputFile: 'workspace/output/email-newsletter.html',
+    outputFile: 'workspace/output/client/email-newsletter.html',
   },
 ]
 
