@@ -30,7 +30,7 @@ Full details: milestones/v1.0-ROADMAP.md
 
 - [x] **Phase 10: Output Foundation** - Restructure output directory, externalize tokens, fix voice-fingerprint backlog item (completed 2026-04-20)
 - [x] **Phase 11: Agent Skill Bundle** - Create skill-bundle-packager agent and all three skill bundle output files (completed 2026-04-20)
-- [ ] **Phase 12: Design Kit** - Create design-kit-packager agent and all design kit outputs (components, previews, specimens)
+- [x] **Phase 12: Design Kit** - Create design-kit-packager agent and all design kit outputs (components, previews, specimens) (completed 2026-04-20)
 - [ ] **Phase 13: Integration** - Wire all three bundles into export, verifier, Phase 8, CLAUDE.md, and React frontend
 
 ## Phase Details
@@ -73,9 +73,9 @@ Plans:
   3. Preview cards for colors, type, spacing, components, and brand groups render visually at 150-500px width without layout breakage
   4. Design kit root contains README.md written in brand voice, a valid package.json, and HANDOFF.md with usage instructions
   5. Reference specimens include brand-foundation.html, color-palette.html, and a new landing-page.html, all linked to external tokens
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 Plans:
-- [ ] 12-01-PLAN.md — Complete design-kit-packager agent definition (frontmatter, pre-flight checks, Task 1 components, Task 2 previews + root files, Task 3 landing page, output listing, quality bar)
+- [x] 12-01-PLAN.md — Complete design-kit-packager agent definition (frontmatter, pre-flight checks, Task 1 components, Task 2 previews + root files, Task 3 landing page, output listing, quality bar)
 
 ### Phase 13: Integration
 **Goal**: All three bundles are fully wired into the system — export command, verifier, Phase 8 orchestration, CLAUDE.md, and the React frontend all reflect the three-bundle model
@@ -104,5 +104,5 @@ Plans:
 | 9. Sync Remaining Command Files | v1.0 | 2/2 | Complete | 2026-03-28 |
 | 10. Output Foundation | v2.0 | 2/2 | Complete    | 2026-04-20 |
 | 11. Agent Skill Bundle | v2.0 | 1/1 | Complete    | 2026-04-20 |
-| 12. Design Kit | v2.0 | 0/1 | Not started | - |
+| 12. Design Kit | v2.0 | 1/1 | Complete   | 2026-04-20 |
 | 13. Integration | v2.0 | 0/TBD | Not started | - |
