@@ -123,39 +123,67 @@ Once all toolkit items are discussed:
 Update STATE.md Running Agents table.
 
 The Document Assembler produces these **core files** (always):
-1. `workspace/output/brand-foundation.md` — Core belief, audience, positioning, messaging, personality
-2. `workspace/output/brand-foundation.html` — HTML specimen with brand tokens
-3. `workspace/output/voice-guide.md` — Voice summary, style, signature moves, guardrails, scaling
-4. `workspace/output/voice-guide.html` — HTML specimen with brand tokens
-5. `workspace/output/color-palette.html` — Interactive color specimen with tint scales and CSS variables
-6. `workspace/output/visual-system.html` — Full visual system with examples
-7. `workspace/output/ui-kit.html` — Component library with client's brand tokens
-8. `workspace/output/practical-toolkit.md` — Bios, pitches, decision filter, content territories, language bank, activation layer, GEO-ready outputs, strategic + implementation quick references (includes asset pack sections)
+1. `workspace/output/client/brand-foundation.md` — Core belief, audience, positioning, messaging, personality
+2. `workspace/output/client/brand-foundation.html` — HTML specimen with brand tokens
+3. `workspace/output/client/voice-guide.md` — Voice summary, style, signature moves, guardrails, scaling
+4. `workspace/output/client/voice-guide.html` — HTML specimen with brand tokens
+5. `workspace/output/client/color-palette.html` — Interactive color specimen with tint scales and CSS variables
+6. `workspace/output/client/visual-system.html` — Full visual system with examples
+7. `workspace/output/client/ui-kit.html` — Component library with client's brand tokens
+8. `workspace/output/client/practical-toolkit.md` — Bios, pitches, decision filter, content territories, language bank, activation layer, GEO-ready outputs, strategic + implementation quick references (includes asset pack sections)
 
 Plus **asset pack HTML specimens** for each selected pack:
-- `workspace/output/social-media-kit.html` — Profile templates, post formats, content calendar
-- `workspace/output/print-collateral.html` — Business card, letterhead, one-pager mockups
-- `workspace/output/media-kit-epk.html` — Press bio variants, headshot specs, press release template
-- `workspace/output/merch-product.html` — Product mockup guidelines, packaging specs
-- `workspace/output/pitch-deck.html` — Slide templates, deck structure, data viz styling
-- `workspace/output/app-dashboard-ui.html` — Extended component library, dashboard patterns
-- `workspace/output/signage-space.html` — Environmental design specs, banner templates
-- `workspace/output/email-newsletter.html` — Email templates, newsletter format, dark mode
+- `workspace/output/client/social-media-kit.html` — Profile templates, post formats, content calendar
+- `workspace/output/client/print-collateral.html` — Business card, letterhead, one-pager mockups
+- `workspace/output/client/media-kit-epk.html` — Press bio variants, headshot specs, press release template
+- `workspace/output/client/merch-product.html` — Product mockup guidelines, packaging specs
+- `workspace/output/client/pitch-deck.html` — Slide templates, deck structure, data viz styling
+- `workspace/output/client/app-dashboard-ui.html` — Extended component library, dashboard patterns
+- `workspace/output/client/signage-space.html` — Environmental design specs, banner templates
+- `workspace/output/client/email-newsletter.html` — Email templates, newsletter format, dark mode
 
-## Step 5b: Quality Gate
+## Step 5b: Launch skill-bundle-packager
 
-After the Document Assembler completes, automatically run the Brand Verifier against all output files before presenting results to the client.
+After Document Assembler completes:
+
+"Now I'm packaging your brand into a reusable Claude Code skill — your voice, guardrails, and positioning as an agent-ready format. About 60-90 seconds."
+
+Update STATE.md Running Agents table.
+
+## Step 5c: Launch design-kit-foundation
+
+After skill-bundle-packager completes:
+
+"Now extracting your design tokens and post-processing the brand specimens for the design kit. About 60 seconds."
+
+Update STATE.md Running Agents table.
+
+## Step 5d: Launch design-kit-packager
+
+After design-kit-foundation completes. If design-kit-foundation failed, skip this step and tell the client: "The design kit foundation step did not complete — design-kit-packager will be skipped. I can retry after we review the other deliverables."
+
+If skill-bundle-packager failed independently, that does not block this step.
+
+"Building the component library, preview cards, and landing page from your design tokens. About 2 minutes."
+
+Update STATE.md Running Agents table.
+
+## Step 5e: Quality Gate
+
+After all packager agents complete, automatically run the Brand Verifier against all output files before presenting results to the client.
 
 "Before we review, I'm running a quality check on all the deliverables. This catches placeholder text, missing sections, and cross-document inconsistencies before you see anything. About 30 seconds."
 
 Update STATE.md Running Agents table.
 
-The Brand Verifier checks:
+The Brand Verifier checks all three bundles (client, skill-bundle, design-kit):
 - Do all files contain actual brand content (not placeholders or template text)?
 - Are cross-document references consistent (same tagline, same hex codes, same voice tags)?
 - Do HTML specimens match the design system parameters from Phase 7?
 - Were all selected asset packs generated?
 - Is line count reasonable compared to reference templates?
+- Does the skill bundle meet quality bar (SKILL.md 200+ lines, brand-prompt.md 150-300 words, source files non-empty)?
+- Does the design kit have all expected token files, components, previews, and root files?
 
 If the verifier finds issues:
 1. Fix them before presenting to the client — relaunch the Document Assembler for specific files if needed
@@ -168,21 +196,21 @@ If clean, proceed to Step 6.
 
 When the Document Assembler completes, read each output file and present a summary. Announce files explicitly with name, path, one-line description, and line count:
 
-"Your brand system is assembled. [N] files written to workspace/output/:
+"Your brand system is assembled. [N] files written to workspace/output/client/:
 
 **Core Deliverables:**
-1. brand-foundation.md — Strategy, positioning, messaging, personality ([X] lines)
-2. brand-foundation.html — Same content with brand visual tokens ([X] lines)
-3. voice-guide.md — Voice system, guardrails, language bank ([X] lines)
-4. voice-guide.html — Same content with brand visual tokens ([X] lines)
-5. color-palette.html — Interactive specimen with tint scales, CSS variables ([X] lines)
-6. visual-system.html — Typography, mark/logo, imagery direction ([X] lines)
-7. ui-kit.html — Component library with brand tokens ([X] lines)
-8. practical-toolkit.md — Bios, pitches, decision filter, language bank ([X] lines)
+1. workspace/output/client/brand-foundation.md — Strategy, positioning, messaging, personality ([X] lines)
+2. workspace/output/client/brand-foundation.html — Same content with brand visual tokens ([X] lines)
+3. workspace/output/client/voice-guide.md — Voice system, guardrails, language bank ([X] lines)
+4. workspace/output/client/voice-guide.html — Same content with brand visual tokens ([X] lines)
+5. workspace/output/client/color-palette.html — Interactive specimen with tint scales, CSS variables ([X] lines)
+6. workspace/output/client/visual-system.html — Typography, mark/logo, imagery direction ([X] lines)
+7. workspace/output/client/ui-kit.html — Component library with brand tokens ([X] lines)
+8. workspace/output/client/practical-toolkit.md — Bios, pitches, decision filter, language bank ([X] lines)
 
 [If asset packs selected:]
 **Asset Packs:**
-9. [pack-id].html — [description] ([X] lines)
+9. workspace/output/client/[pack-id].html — [description] ([X] lines)
 ..."
 
 Then use AskUserQuestion:
