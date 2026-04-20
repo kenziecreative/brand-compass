@@ -2,8 +2,8 @@
 phase: 12
 slug: design-kit
 status: draft
-nyquist_compliant: false
-wave_0_complete: false
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-04-20
 ---
 
@@ -38,11 +38,11 @@ created: 2026-04-20
 
 | Task ID | Plan | Wave | Requirement | Threat Ref | Secure Behavior | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|------------|-----------------|-----------|-------------------|-------------|--------|
-| 12-01-01 | 01 | 1 | DKIT-01 | — | N/A | file-check | `test -f .claude/agents/design-kit-packager.md` | ❌ W0 | ⬜ pending |
-| 12-01-02 | 01 | 1 | DKIT-02 | — | N/A | content-check | `grep -q "components/" .claude/agents/design-kit-packager.md` | ❌ W0 | ⬜ pending |
-| 12-01-03 | 01 | 1 | DKIT-03 | — | N/A | content-check | `grep -q "previews/" .claude/agents/design-kit-packager.md` | ❌ W0 | ⬜ pending |
-| 12-01-04 | 01 | 1 | DKIT-04 | — | N/A | content-check | `grep -q "README.md" .claude/agents/design-kit-packager.md` | ❌ W0 | ⬜ pending |
-| 12-01-05 | 01 | 1 | DKIT-05 | — | N/A | content-check | `grep -q "landing-page.html" .claude/agents/design-kit-packager.md` | ❌ W0 | ⬜ pending |
+| 12-01-01 | 01 | 1 | DKIT-01 | — | N/A | file-check | `test -f .claude/agents/design-kit-packager.md` | N/A (Wave 0 is the deliverable itself) | ⬜ pending |
+| 12-01-02 | 01 | 1 | DKIT-02 | — | N/A | content-check | `grep -q "components/" .claude/agents/design-kit-packager.md` | N/A | ⬜ pending |
+| 12-01-03 | 01 | 1 | DKIT-03 | — | N/A | content-check | `grep -q "previews/" .claude/agents/design-kit-packager.md` | N/A | ⬜ pending |
+| 12-01-04 | 01 | 1 | DKIT-04 | — | N/A | content-check | `grep -q "README.md" .claude/agents/design-kit-packager.md` | N/A | ⬜ pending |
+| 12-01-05 | 01 | 1 | DKIT-05 | — | N/A | content-check | `grep -q "landing-page.html" .claude/agents/design-kit-packager.md` | N/A | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -50,7 +50,7 @@ created: 2026-04-20
 
 ## Wave 0 Requirements
 
-*Existing infrastructure covers all phase requirements — deliverable is a single agent definition file.*
+*Wave 0 is N/A for this phase — the deliverable IS the agent definition file itself. There is no pre-existing test infrastructure to set up; the file-existence and content-grep checks above serve as the automated verification layer. Both tasks in Plan 01 have valid `<automated>` verify commands that run in under 1 second.*
 
 ---
 
@@ -66,11 +66,11 @@ created: 2026-04-20
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 1s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
+- [x] No watch-mode flags
+- [x] Feedback latency < 1s
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** pending
+**Approval:** approved

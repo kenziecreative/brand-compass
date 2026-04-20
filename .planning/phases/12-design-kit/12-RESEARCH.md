@@ -236,9 +236,11 @@ a landing page. You run after design-kit-foundation has completed.
 1. `workspace/output/design-kit/tokens/colors.css` — if not found, stop and report: "design-kit-foundation has not run. tokens/colors.css not found. Run design-kit-foundation before design-kit-packager."
 2. `workspace/output/design-kit/tokens/typography.css` — same stop message pattern
 3. `workspace/output/design-kit/tokens/spacing.css` — same
-4. `workspace/drafts/visual-direction.md` — if not found, stop and report: "visual-direction.md not found. Component Personality cannot be read without this file."
-5. `workspace/output/client/brand-foundation.md` — if not found, stop and report: "brand-foundation.md not found. Landing page requires real brand copy."
-6. `workspace/STATE.md` — if not found, stop and report: "STATE.md not found. Entity type required for landing page conditional."
+4. `workspace/output/design-kit/brand-foundation.html` — if not found, stop and report: "design-kit-foundation has not run. brand-foundation.html not found. Run design-kit-foundation before design-kit-packager."
+5. `workspace/output/design-kit/color-palette.html` — if not found, stop and report: "design-kit-foundation has not run. color-palette.html not found. Run design-kit-foundation before design-kit-packager."
+6. `workspace/drafts/visual-direction.md` — if not found, stop and report: "visual-direction.md not found. Component Personality cannot be read without this file."
+7. `workspace/output/client/brand-foundation.md` — if not found, stop and report: "brand-foundation.md not found. Landing page requires real brand copy."
+8. `workspace/STATE.md` — if not found, stop and report: "STATE.md not found. Entity type required for landing page conditional."
 
 **After checks pass:** Read visual-direction.md §8 Component Personality, brand-foundation.md (tagline, core narrative boilerplate, proof points), and STATE.md (entity type). Do not read visual-direction.md for token values — token values are already in the `tokens/` files.
 
@@ -419,20 +421,18 @@ Brand slug = brand name lowercased, spaces replaced with hyphens (same conventio
 
 **Entity type detection from STATE.md:**
 ```markdown
-Read the `entity_type` field from workspace/STATE.md Client section.
-If entity_type is "individual", "artist", "creator", or "solo" → use Individual template.
-If entity_type is "business", "organization", "agency", "studio", or "brand" → use Org template.
-If entity_type is absent or ambiguous → default to Org template.
+Read the `**Type:**` field from workspace/STATE.md Client section.
+If value contains individual keywords (individual, artist, creator, solo, freelance, photographer, musician, writer, coach, consultant) → use Individual template.
+If value contains org keywords (agency, studio, firm, company, services, organization, business, nonprofit, startup, brand) → use Org template.
+If entity type is absent or ambiguous → default to Org template.
 ```
-
-[ASSUMED] — The exact field name and value set for entity type in STATE.md is inferred from workspace/STATE-template.md patterns and existing agent behavior. The planner should verify the exact STATE.md entity type field format against the actual STATE-template.md or an example STATE.md.
 
 ### Anti-Patterns to Avoid
 
 - **Token re-extraction:** Packager must NOT read visual-direction.md CSS Custom Properties Block for token values. Tokens are already in `tokens/` files from Phase 10. Only read visual-direction.md §8 Component Personality section (D-12).
 - **Inline `:root` blocks:** No inline CSS custom property declarations in component or preview HTML files. All token values come from external link tags. Any `:root {}` that slips in would bypass the token files.
 - **Wrong relative paths for `../tokens/`:** Components and previews are in subdirectories — their paths to tokens/ are `../../tokens/`, not `../tokens/`. Root-level files use `../tokens/`. Getting this wrong silently breaks all token rendering.
-- **Placeholder copy in landing page:** D-07 prohibits lorem ipsum or template placeholder text. Landing page must wait for brand-foundation.md to exist — pre-flight check #5 enforces this.
+- **Placeholder copy in landing page:** D-07 prohibits lorem ipsum or template placeholder text. Landing page must wait for brand-foundation.md to exist — pre-flight check #7 enforces this.
 - **Overwriting Phase 10 output:** Packager must never write to `workspace/output/design-kit/*.html` at the root level — those post-processed specimens are owned by design-kit-foundation. Packager only writes to `components/`, `previews/`, and new root-level files it is explicitly responsible for.
 
 ---
@@ -658,9 +658,9 @@ Not applicable — this is a greenfield agent definition phase with no rename/re
 ```markdown
 ### Landing Page Entity-Type Conditional
 
-Read `entity_type` from `workspace/STATE.md` Client section.
+Read `**Type:**` from `workspace/STATE.md` Client section.
 
-**If individual / artist / creator / solo → Individual Template:**
+**If individual / artist / creator / solo / freelance → Individual Template:**
 
 Hero section:
 - `<h1>` set to tagline (from brand-foundation.md Section 4 > Tagline)
@@ -684,7 +684,7 @@ Content sections:
 - Core narrative as brand narrative (Section 4 > Core Narrative)
 - About / mission section
 
-**If entity_type is absent or ambiguous:** use Org template as default.
+**If entity type is absent or ambiguous:** use Org template as default.
 ```
 
 ---
@@ -705,24 +705,22 @@ Content sections:
 | # | Claim | Section | Risk if Wrong |
 |---|-------|---------|---------------|
 | A1 | Components and previews in subdirectories use `../../tokens/` relative path; root-level files use `../tokens/` | Pattern 3: Token Link Pattern | Tokens don't load; all var() calls render as unset. Low risk — straightforward HTML relative path math. |
-| A2 | Entity type in STATE.md is checked against values: individual/artist/creator/solo (individual template) vs org/business/agency/studio/brand (org template) | Pattern 7: Landing Page Specimen | Wrong template applied for edge-case entity types. Medium risk — should verify exact field values from STATE-template.md before implementing. |
+| A2 | ~~Entity type in STATE.md is checked against values: individual/artist/creator/solo (individual template) vs org/business/agency/studio/brand (org template)~~ | ~~Pattern 7: Landing Page Specimen~~ | RESOLVED — see Open Questions below. Field is `**Type:**` under `## Client` section. |
 | A3 | form-field, nav, and modal Component Personality behaviors are inferred from token values, not explicitly stated in visual-direction.md §8 | Pattern 4: Component Anatomy | Components don't faithfully implement the brand's Component Personality. Low risk for this phase — agent reads the actual client visual-direction.md at runtime. |
 | A4 | Preview card content for brand-groups.html uses wordmark text + tagline + primary color swatch as "brand lockup" | Pattern 5: Preview Card Structure | Brand group preview doesn't capture what designer needs. Medium risk — the agent definition should specify what "brand lockup" means in the absence of a real mark file. |
 | A5 | button.html example code uses `var(--color-background, #fff)` fallback | Code Examples | Minor — the fallback is a safe default. No real risk. |
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **What is the exact entity_type field name and value set in STATE.md?**
-   - What we know: STATE.md has an entity type field used by Document Assembler to conditionally include/exclude sections (e.g., Mission/Vision for org only)
-   - What's unclear: The exact field path inside STATE.md (e.g., `Client.entity_type` vs `entity_type` at root) and the canonical value set
-   - Recommendation: Read `workspace/STATE-template.md` or any example STATE.md (workspace/reference/example-brand/STATE.md) to confirm before writing the agent definition. Low effort, eliminates A2.
+1. **What is the exact entity_type field name and value set in STATE.md?** (RESOLVED)
+   - **Resolution:** Verified against `workspace/STATE-template.md` lines 4-5 and `workspace/reference/example-brand/STATE.md` line 4. The field is `**Type:**` under `## Client` section — NOT `entity_type`. Example value: "Accounting & Compliance Services". Classification uses keyword matching against individual vs. org keyword sets.
+   - **Resolution source:** 12-PATTERNS.md Pattern 5
 
-2. **Should brand-groups.html preview card include a text-based wordmark or a placeholder mark area?**
-   - What we know: Phase 7 produces a mark concept but not necessarily an SVG file; the image-generator.md agent produces mark explorations at `workspace/assets/mark-explorations/`
-   - What's unclear: Whether the packager should Glob for a mark asset or fall back to text-only lockup when no mark SVG exists
-   - Recommendation: Default to text-based brand lockup (brand name in display font + tagline) with a Glob check for any mark asset at `workspace/assets/mark-explorations/`. If found, embed the first one.
+2. **Should brand-groups.html preview card include a text-based wordmark or a placeholder mark area?** (RESOLVED)
+   - **Resolution:** Default to text-based brand lockup (brand name in display font + tagline). Agent definition includes a Glob check for `workspace/assets/mark-explorations/` — if a mark asset is found, embed the first one; otherwise use text-only lockup.
+   - **Resolution source:** 12-PATTERNS.md Pattern 9
 
 ---
 
@@ -749,11 +747,11 @@ Step 2.6: SKIPPED (no external dependencies — this phase is agent definition a
 
 | Req ID | Behavior | Test Type | Automated Command | File Exists? |
 |--------|----------|-----------|-------------------|-------------|
-| DKIT-01 | Agent definition file exists with valid frontmatter | manual-only | `ls .claude/agents/design-kit-packager.md` | ❌ Wave 0 (the file to create) |
-| DKIT-02 | 7 component HTML files exist and render in browser | manual | `open workspace/output/design-kit/components/*.html` | ❌ Wave 0 |
-| DKIT-03 | 5 preview cards render at 150-500px without breakage | manual | Browser DevTools responsive mode at 150px, 280px, 400px, 500px | ❌ Wave 0 |
-| DKIT-04 | README.md, package.json, HANDOFF.md exist at design-kit root | smoke | `ls workspace/output/design-kit/README.md workspace/output/design-kit/package.json workspace/output/design-kit/HANDOFF.md` | ❌ Wave 0 |
-| DKIT-05 | landing-page.html exists and contains real brand copy | manual | `grep -c "\[" workspace/output/design-kit/landing-page.html` (should return 0 — no placeholder brackets) | ❌ Wave 0 |
+| DKIT-01 | Agent definition file exists with valid frontmatter | manual-only | `ls .claude/agents/design-kit-packager.md` | Wave 0 (the file to create) |
+| DKIT-02 | 7 component HTML files exist and render in browser | manual | `open workspace/output/design-kit/components/*.html` | Wave 0 |
+| DKIT-03 | 5 preview cards render at 150-500px without breakage | manual | Browser DevTools responsive mode at 150px, 280px, 400px, 500px | Wave 0 |
+| DKIT-04 | README.md, package.json, HANDOFF.md exist at design-kit root | smoke | `ls workspace/output/design-kit/README.md workspace/output/design-kit/package.json workspace/output/design-kit/HANDOFF.md` | Wave 0 |
+| DKIT-05 | landing-page.html exists and contains real brand copy | manual | `grep -c "\[" workspace/output/design-kit/landing-page.html` (should return 0 — no placeholder brackets) | Wave 0 |
 
 ### Sampling Rate
 
@@ -792,7 +790,7 @@ No security domain applicable — this phase creates an agent definition file (m
 
 ### Tertiary (LOW confidence / ASSUMED)
 - Relative path calculation for `../../tokens/` from subdirectories — derived from HTML path mechanics; verified against stated directory structure but not tested at runtime
-- STATE.md entity_type field name and value set — inferred from document-assembler conditional behavior; not directly verified from STATE-template.md
+- STATE.md entity_type field name and value set — ~~inferred from document-assembler conditional behavior; not directly verified from STATE-template.md~~ RESOLVED: verified as `**Type:**` field under `## Client` (see Open Questions)
 
 ---
 
@@ -802,7 +800,7 @@ No security domain applicable — this phase creates an agent definition file (m
 - Standard stack: HIGH — single-file deliverable using established codebase patterns
 - Architecture: HIGH — all design decisions locked in CONTEXT.md; output structure clearly defined
 - Pitfalls: HIGH — derived from verified patterns and explicit constraints in CONTEXT.md
-- Landing page entity-type conditional: MEDIUM — field name/values need one verify step against STATE-template.md
+- Landing page entity-type conditional: HIGH — field name verified against STATE-template.md (was MEDIUM before resolution)
 
 **Research date:** 2026-04-20
 **Valid until:** 2026-05-20 (stable domain — no external library versions in play)
