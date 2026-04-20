@@ -653,17 +653,19 @@ Not applicable. This phase edits local markdown files, TypeScript source files, 
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Does the Document Assembler need to explicitly trigger the token extractor/post-processor, or is that a separate Phase 8 orchestration step?**
    - What we know: D-01 says the extraction step is "owned by Phase 10" but doesn't specify its trigger mechanism
    - What's unclear: Whether the extractor runs automatically after Phase 7 (similar to how Visual Director is blocking) or is manually invoked
    - Recommendation: The planner should define the trigger in the Document Assembler definition OR in the Phase 8 skill file. Given Phase 10's scope, just establish the agent — Phase 13 (Integration) is where Phase 8 skill orchestration is updated (INTG-04).
+   - RESOLVED: Plan 01 Task 2 Category 7 adds a "Post-Assembly: Design Kit Foundation" section to the Document Assembler that instructs it to notify the Lead Strategist to run the design-kit-foundation agent after client HTML specimens are complete. The agent itself is established in Phase 10; Phase 13 (INTG-04) handles full Phase 8 skill orchestration wiring.
 
 2. **Should `workspace/output/skill-bundle/` and `workspace/output/design-kit/` directories be created as empty directories in the workspace now?**
    - What we know: Git does not track empty directories; Vite glob will return `{}` gracefully for empty dirs
    - What's unclear: Whether creating `.gitkeep` files is needed
    - Recommendation: Add `.gitkeep` to `skill-bundle/` and `design-kit/tokens/` so the directory structure is visible in the repo before Phases 11/12 run. Not strictly required but helpful.
+   - RESOLVED: Per D-06, empty subdirectories are handled gracefully in the frontend -- import.meta.glob returns `{}` for empty directories (no crash). Plan 02 Task 2 adds empty-state placeholder cards for Skill Bundle (Phase 11) and Design Kit (Phase 12) with dimmed/dashed styling. Directory creation with .gitkeep files is not strictly required since the agents will create the directories when they first write output files.
 
 ---
 
