@@ -59,10 +59,10 @@ Write 7 component HTML files to `workspace/output/design-kit/components/`. Creat
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[Brand Name] — [Component Name] Component</title>
   <!-- Google Fonts link if the font requires it (read font name from typography.css) -->
-  <!-- Design Kit Token Files — TWO levels up because components/ is a subdirectory -->
-  <link rel="stylesheet" href="../../tokens/colors.css">
-  <link rel="stylesheet" href="../../tokens/typography.css">
-  <link rel="stylesheet" href="../../tokens/spacing.css">
+  <!-- Design Kit Token Files — ONE level up because components/ is a direct child of design-kit/ -->
+  <link rel="stylesheet" href="../tokens/colors.css">
+  <link rel="stylesheet" href="../tokens/typography.css">
+  <link rel="stylesheet" href="../tokens/spacing.css">
   <style>
     /* Component: [Name]
      * Tokens: all var() references below come from linked token files
@@ -81,7 +81,7 @@ Write 7 component HTML files to `workspace/output/design-kit/components/`. Creat
 </html>
 ```
 
-**CRITICAL path rule:** Files in `components/` sit two directory levels below the `workspace/output/design-kit/` root. Token link tags must use `href="../../tokens/[file].css"` — not `../tokens/`. Using one level up will cause all `var()` references to render as empty strings.
+**CRITICAL path rule:** Files in `components/` sit one directory level below the `workspace/output/design-kit/` root. Token link tags must use `href="../tokens/[file].css"` — one level up from `components/` to `design-kit/`, then into `tokens/`. Using `../../tokens/` would resolve to `output/tokens/` which does not exist, causing all `var()` references to render as empty strings.
 
 **CRITICAL annotation rule:** Every CSS declaration in every component `<style>` block must carry one of two annotations:
 - `/* [TOKEN: --var-name] */` — for values sourced from linked token files via `var()`
@@ -194,7 +194,7 @@ Rendered examples: all badge variants in a grid, and a usage note distinguishing
 
 **Preview Cards:** Write 5 preview card HTML files to `workspace/output/design-kit/previews/`. Create the directory if it does not exist.
 
-**CRITICAL path rule:** Files in `previews/` sit two directory levels below the `workspace/output/design-kit/` root. Token link tags must use `href="../../tokens/[file].css"` — same as components/.
+**CRITICAL path rule:** Files in `previews/` sit one directory level below the `workspace/output/design-kit/` root. Token link tags must use `href="../tokens/[file].css"` — same as components/.
 
 **CSS constraints for all preview cards (implement these in each file):**
 
@@ -481,10 +481,10 @@ Token links: `../tokens/colors.css`, `../tokens/typography.css`, `../tokens/spac
 ## Quality Bar
 
 - **All 7 component HTML files exist** at `workspace/output/design-kit/components/` and contain no `:root {}` declarations — all custom property values must come from the linked external token files, not from inline declarations
-- **Component `<link>` tags use `../../tokens/`** not `../tokens/` — subdirectory files are two levels from the tokens directory; getting this wrong causes silent token load failure
+- **Component `<link>` tags use `../tokens/`** not `../../tokens/` — subdirectory files are one level below `design-kit/`, so one `../` reaches the `tokens/` sibling directory; using two levels up resolves to `output/tokens/` which does not exist
 - **CSS annotation present on every declaration** in component `<style>` blocks — every property must carry either `/* [TOKEN: --var-name] */` or `/* [BRAND PERSONALITY: reason] */`; no unannotated declarations
 - **All 5 preview cards contain `min-width: 150px`** on `.preview-card` and `overflow: hidden` on `.token-layer` — floor behavior clips, does not remove content
-- **Preview `<link>` tags use `../../tokens/`** not `../tokens/` — same subdirectory rule as components
+- **Preview `<link>` tags use `../tokens/`** not `../../tokens/` — same subdirectory rule as components
 - **landing-page.html contains no `[bracket]` placeholder text** and no lorem ipsum — every piece of copy must be real brand copy sourced from brand-foundation.md Section 4
 - **landing-page.html `<link>` tags use `../tokens/`** (one level up, not two) — landing-page.html is at design-kit root, not in a subdirectory
 - **`package.json` parses as valid JSON** — no trailing commas, no comments, no single-quoted strings
