@@ -72,32 +72,32 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUN-01 | — | Pending |
-| FOUN-02 | — | Pending |
-| FOUN-03 | — | Pending |
-| FOUN-04 | — | Pending |
-| FOUN-05 | — | Pending |
-| SKIL-01 | — | Pending |
-| SKIL-02 | — | Pending |
-| SKIL-03 | — | Pending |
-| SKIL-04 | — | Pending |
-| DKIT-01 | — | Pending |
-| DKIT-02 | — | Pending |
-| DKIT-03 | — | Pending |
-| DKIT-04 | — | Pending |
-| DKIT-05 | — | Pending |
-| INTG-01 | — | Pending |
-| INTG-02 | — | Pending |
-| INTG-03 | — | Pending |
-| INTG-04 | — | Pending |
-| INTG-05 | — | Pending |
-| INTG-06 | — | Pending |
+| FOUN-01 | Phase 10 | Pending |
+| FOUN-02 | Phase 10 | Pending |
+| FOUN-03 | Phase 10 | Pending |
+| FOUN-04 | Phase 10 | Pending |
+| FOUN-05 | Phase 10 | Pending |
+| SKIL-01 | Phase 11 | Pending |
+| SKIL-02 | Phase 11 | Pending |
+| SKIL-03 | Phase 11 | Pending |
+| SKIL-04 | Phase 11 | Pending |
+| DKIT-01 | Phase 12 | Pending |
+| DKIT-02 | Phase 12 | Pending |
+| DKIT-03 | Phase 12 | Pending |
+| DKIT-04 | Phase 12 | Pending |
+| DKIT-05 | Phase 12 | Pending |
+| INTG-01 | Phase 13 | Pending |
+| INTG-02 | Phase 13 | Pending |
+| INTG-03 | Phase 13 | Pending |
+| INTG-04 | Phase 13 | Pending |
+| INTG-05 | Phase 13 | Pending |
+| INTG-06 | Phase 13 | Pending |
 
 **Coverage:**
 - v2.0 requirements: 21 total
-- Mapped to phases: 0
-- Unmapped: 21 ⚠️
+- Mapped to phases: 21
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-04-19*
-*Last updated: 2026-04-19 after initial definition*
+*Last updated: 2026-04-19 — traceability complete after roadmap creation*
