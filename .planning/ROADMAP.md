@@ -29,7 +29,7 @@ Full details: milestones/v1.0-ROADMAP.md
 **Milestone Goal:** Add two new output bundles (Agent Skill Bundle + Design Kit) alongside the existing client package, so Brand Compass output feeds directly into Claude Code/Cowork and Claude Design.
 
 - [x] **Phase 10: Output Foundation** - Restructure output directory, externalize tokens, fix voice-fingerprint backlog item (completed 2026-04-20)
-- [ ] **Phase 11: Agent Skill Bundle** - Create skill-bundle-packager agent and all three skill bundle output files
+- [x] **Phase 11: Agent Skill Bundle** - Create skill-bundle-packager agent and all three skill bundle output files (completed 2026-04-20)
 - [ ] **Phase 12: Design Kit** - Create design-kit-packager agent and all design kit outputs (components, previews, specimens)
 - [ ] **Phase 13: Integration** - Wire all three bundles into export, verifier, Phase 8, CLAUDE.md, and React frontend
 
@@ -59,9 +59,9 @@ Plans:
   2. `skill-bundle/SKILL.md` contains valid frontmatter and all required sections (voice definition, signature moves, guardrails, language bank, positioning summary)
   3. `skill-bundle/brand-prompt.md` is 150-300 words of flowing prose with no headings or bullets
   4. `skill-bundle/source/` contains voice-rules.md, guardrails.md, and language-bank.md lifted from the client package
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 Plans:
-- [ ] 11-01-PLAN.md — Complete skill-bundle-packager agent definition (frontmatter, pre-flight checks, Task 1 source extraction, Task 2 bundle synthesis with translation rule)
+- [x] 11-01-PLAN.md — Complete skill-bundle-packager agent definition (frontmatter, pre-flight checks, Task 1 source extraction, Task 2 bundle synthesis with translation rule)
 
 ### Phase 12: Design Kit
 **Goal**: The design-kit-packager agent exists and produces a complete design kit at `workspace/output/design-kit/` that a designer or tool can consume directly
@@ -102,6 +102,6 @@ Plans:
 | 8. Sync Phase 7 Visual Command | v1.0 | 1/1 | Complete | 2026-03-28 |
 | 9. Sync Remaining Command Files | v1.0 | 2/2 | Complete | 2026-03-28 |
 | 10. Output Foundation | v2.0 | 2/2 | Complete    | 2026-04-20 |
-| 11. Agent Skill Bundle | v2.0 | 0/1 | Not started | - |
+| 11. Agent Skill Bundle | v2.0 | 1/1 | Complete   | 2026-04-20 |
 | 12. Design Kit | v2.0 | 0/TBD | Not started | - |
 | 13. Integration | v2.0 | 0/TBD | Not started | - |
