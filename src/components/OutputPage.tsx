@@ -11,8 +11,8 @@ const deliverables = [
   {
     title: 'Brand Foundation',
     files: [
-      { filename: 'workspace/output/brand-foundation.md', format: 'MD' },
-      { filename: 'workspace/output/brand-foundation.html', format: 'HTML' },
+      { filename: 'workspace/output/client/brand-foundation.md', format: 'MD' },
+      { filename: 'workspace/output/client/brand-foundation.html', format: 'HTML' },
     ],
     description: 'Core belief, positioning, personality, archetypes — the strategic DNA.',
     icon: FileText,
@@ -20,27 +20,27 @@ const deliverables = [
   {
     title: 'Voice Guide',
     files: [
-      { filename: 'workspace/output/voice-guide.md', format: 'MD' },
-      { filename: 'workspace/output/voice-guide.html', format: 'HTML' },
+      { filename: 'workspace/output/client/voice-guide.md', format: 'MD' },
+      { filename: 'workspace/output/client/voice-guide.html', format: 'HTML' },
     ],
     description: "Voice fingerprint, do/don't examples, tone spectrum, signature moves.",
     icon: FileText,
   },
   {
     title: 'Color Palette',
-    files: [{ filename: 'workspace/output/color-palette.html', format: 'HTML' }],
+    files: [{ filename: 'workspace/output/client/color-palette.html', format: 'HTML' }],
     description: 'Color swatches, tint scales, CSS custom properties, contrast ratios.',
     icon: Code,
   },
   {
     title: 'Visual System',
-    files: [{ filename: 'workspace/output/visual-system.html', format: 'HTML' }],
+    files: [{ filename: 'workspace/output/client/visual-system.html', format: 'HTML' }],
     description: 'Typography specimens, imagery style, AI generation prompts, mark direction.',
     icon: Code,
   },
   {
     title: 'UI Kit',
-    files: [{ filename: 'workspace/output/ui-kit.html', format: 'HTML' }],
+    files: [{ filename: 'workspace/output/client/ui-kit.html', format: 'HTML' }],
     description: "Component library with client's brand tokens — buttons, cards, forms.",
     icon: Code,
   },
@@ -105,7 +105,7 @@ export function OutputPage() {
                     return exists ? (
                       <li key={f.filename}>
                         <Link
-                          to={`/output/view/${basename}`}
+                          to={`/output/view/${f.filename.replace('workspace/output/', '')}`}
                           className="flex items-start gap-3 px-3 py-2 rounded-md border border-border/50 hover:border-border hover:bg-muted/40 transition-colors"
                         >
                           <Eye className="size-3.5 shrink-0 mt-0.5 text-walnut/60 dark:text-walnut-20/60" />
@@ -147,6 +147,33 @@ export function OutputPage() {
         })}
       </div>
 
+      {/* Future Bundle Placeholders */}
+      <Card className="opacity-50 border-dashed">
+        <CardHeader>
+          <div className="flex items-center gap-2 mb-1">
+            <FileText className="size-4 text-muted-foreground" />
+            <CardTitle className="text-base flex-1">Agent Skill Bundle</CardTitle>
+            <Badge variant="outline" className="text-[10px]">Phase 11</Badge>
+          </div>
+          <CardDescription>
+            Claude Code skill definition, brand prompt, and voice source files.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+
+      <Card className="opacity-50 border-dashed">
+        <CardHeader>
+          <div className="flex items-center gap-2 mb-1">
+            <Code className="size-4 text-muted-foreground" />
+            <CardTitle className="text-base flex-1">Design Kit</CardTitle>
+            <Badge variant="outline" className="text-[10px]">Phase 12</Badge>
+          </div>
+          <CardDescription>
+            Atomized components, design tokens, preview cards, and reference specimens.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+
       {/* Asset Pack info */}
       {state?.client?.assetPacks && state.client.assetPacks.length > 0 && (
         <Card className="border-dashed">
@@ -169,7 +196,7 @@ export function OutputPage() {
                 return exists && basename ? (
                   <li key={id}>
                     <Link
-                      to={`/output/view/${basename}`}
+                      to={`/output/view/${outputFile?.replace('workspace/output/', '') ?? ''}`}
                       className="flex items-start gap-3 px-3 py-2 rounded-md border border-border/50 hover:border-border hover:bg-muted/40 transition-colors"
                     >
                       <Eye className="size-3.5 shrink-0 mt-0.5 text-walnut/60 dark:text-walnut-20/60" />

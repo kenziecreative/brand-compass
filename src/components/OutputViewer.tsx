@@ -34,7 +34,7 @@ export function OutputViewer() {
   const filename = filePath?.split('/').pop() ?? ''
   const ext = filename.split('.').pop() ?? ''
   const title = fileTitles[filename] ?? filename
-  const srcUrl = `/workspace/output/${filename}`
+  const srcUrl = `/workspace/output/${filePath}`
 
   useEffect(() => {
     if (ext === 'md') {
@@ -72,7 +72,7 @@ export function OutputViewer() {
         </Link>
         <div className="flex-1 min-w-0">
           <h1 className="font-display text-lg font-bold tracking-tight truncate">{title}</h1>
-          <p className="text-xs font-mono text-muted-foreground">{`workspace/output/${filename}`}</p>
+          <p className="text-xs font-mono text-muted-foreground">{`workspace/output/${filePath}`}</p>
         </div>
         <Badge variant="outline" className="text-[10px] shrink-0">
           {ext.toUpperCase()}

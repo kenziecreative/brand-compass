@@ -77,7 +77,7 @@ const PHASE_CONTENT_MAP: Record<number, PhaseContentMap> = {
     draftFile: '/workspace/drafts/messaging-options.md',
   },
   6: {
-    outputFile: '/workspace/output/voice-guide.md',
+    outputFile: '/workspace/output/client/voice-guide.md',
     discoveryFile: '/workspace/research/phase-6-voice.md',
     researchFile: '/workspace/research/voice-fingerprint.md',
   },
@@ -86,7 +86,7 @@ const PHASE_CONTENT_MAP: Record<number, PhaseContentMap> = {
     discoveryFile: '/workspace/research/phase-7-visual.md',
   },
   8: {
-    outputFile: '/workspace/output/practical-toolkit.md',
+    outputFile: '/workspace/output/client/practical-toolkit.md',
   },
 }
 
@@ -108,7 +108,7 @@ export function getPhaseContent(phaseNumber: number): PhaseContentResult {
   if (mapping.outputFile) {
     primary = getFile(mapping.outputFile)
   } else if (mapping.foundationSection) {
-    const foundation = getFile('/workspace/output/brand-foundation.md')
+    const foundation = getFile('/workspace/output/client/brand-foundation.md')
     if (foundation) {
       primary = extractSection(foundation, mapping.foundationSection)
     }
