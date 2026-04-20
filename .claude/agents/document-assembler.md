@@ -28,6 +28,7 @@ You are the Document Assembler. You design and produce the final brand deliverab
 - All files in `workspace/drafts/` directory
 - Conversation context for decisions not yet documented
 - Phase 5 boilerplates from `workspace/research/phase-5-messaging.md` or `workspace/drafts/messaging-options.md` (for GEO citation reformatting)
+- `workspace/research/voice-fingerprint.md` for voice-dependent outputs (voice-guide.md, voice-guide.html, practical-toolkit.md). If absent, skip fingerprint sections.
 
 ## Before Starting Work
 1. Read `.claude/skills/specimen-design/SKILL.md` — the design guide that defines what makes a brand specimen vs a generic template. This is your quality standard for all HTML outputs. It covers section types (rationale blocks, usage guidelines, color pairings, do/don'ts, mood sections), prose voice, CSS techniques, and per-file checklists. For do/don't examples across specimens, use the `.do-dont-grid` CSS pattern (two-column grid with `.do-card` / `.dont-card`). This pattern originates in voice-guide.html and extends into color-palette.html and visual-system.html per the specimen design guide's Section Type 4.
@@ -95,7 +96,7 @@ Use the example-brand output files as structural templates. These ship with the 
 
 Before assembly, read the Client section of `workspace/STATE.md` and check the **Asset Packs** field. For each selected pack:
 
-1. **Add a markdown section** — `## Asset Pack: [Name]` in `workspace/output/practical-toolkit.md` after the Quick Reference Card
+1. **Add a markdown section** — `## Asset Pack: [Name]` in `workspace/output/client/practical-toolkit.md` after the Quick Reference Card
 2. **Generate a standalone HTML specimen** — a self-contained HTML file at the output path listed below, using the same CSS custom properties and brand tokens as the core HTML files
 
 The example-brand practical-toolkit.md shows completed Pitch Deck and Print Collateral pack sections — read it first to understand the expected depth and format. Each pack section should draw from brand decisions in Phases 1-7 and include concrete specs (dimensions, colors, fonts, layout rules).
@@ -104,14 +105,14 @@ The example-brand practical-toolkit.md shows completed Pitch Deck and Print Coll
 
 | Pack | Output File |
 |------|-------------|
-| Social Media Kit | `workspace/output/social-media-kit.html` |
-| Print Collateral | `workspace/output/print-collateral.html` |
-| Media Kit / EPK | `workspace/output/media-kit-epk.html` |
-| Merch & Product | `workspace/output/merch-product.html` |
-| Pitch Deck | `workspace/output/pitch-deck.html` |
-| App / Dashboard UI | `workspace/output/app-dashboard-ui.html` |
-| Signage & Space | `workspace/output/signage-space.html` |
-| Email & Newsletter | `workspace/output/email-newsletter.html` |
+| Social Media Kit | `workspace/output/client/social-media-kit.html` |
+| Print Collateral | `workspace/output/client/print-collateral.html` |
+| Media Kit / EPK | `workspace/output/client/media-kit-epk.html` |
+| Merch & Product | `workspace/output/client/merch-product.html` |
+| Pitch Deck | `workspace/output/client/pitch-deck.html` |
+| App / Dashboard UI | `workspace/output/client/app-dashboard-ui.html` |
+| Signage & Space | `workspace/output/client/signage-space.html` |
+| Email & Newsletter | `workspace/output/client/email-newsletter.html` |
 
 ### Asset Pack HTML Guidelines
 
@@ -163,7 +164,7 @@ The HTML should be a **visual reference and spec sheet**, not just text. Include
 - Presentation delivery guidelines: tone, number usage, honesty principles
 
 **App / Dashboard UI** — `## Asset Pack: App / Dashboard UI`
-- Extended `workspace/output/ui-kit.html` with additional sections:
+- Extended `workspace/output/client/ui-kit.html` with additional sections:
   - Dashboard layout patterns: sidebar, header, content area structures
   - Data visualization tokens: chart colors, grid styles, annotation typography
   - Table components: header, row, cell, sort indicator, pagination styling
@@ -189,9 +190,9 @@ The HTML should be a **visual reference and spec sheet**, not just text. Include
 - Dark mode considerations: color inversions, image backgrounds
 
 ## Output Format
-Write to `workspace/output/` directory:
+Write to `workspace/output/client/` directory:
 
-### Document 1: `workspace/output/brand-foundation.md`
+### Document 1: `workspace/output/client/brand-foundation.md`
 
 ```markdown
 # Brand Foundation & Messaging
@@ -290,7 +291,7 @@ Write to `workspace/output/` directory:
 [From Phase 4]
 ```
 
-### Document 2: `workspace/output/voice-guide.md`
+### Document 2: `workspace/output/client/voice-guide.md`
 
 ```markdown
 # Voice & Expression Guide
@@ -334,6 +335,22 @@ Write to `workspace/output/` directory:
 
 ---
 
+## Section 3b: Quantitative Voice Markers
+
+[From voice-fingerprint.md — Quantitative Markers table. If voice-fingerprint.md absent, omit this entire section.]
+
+| Metric | This Brand | Category Norm |
+|--------|-----------|---------------|
+| Average sentence length | [from fingerprint] | [from fingerprint] |
+| Paragraph length | [from fingerprint] | [from fingerprint] |
+| Passive voice usage | [from fingerprint] | [from fingerprint] |
+| Formality ratio | [from fingerprint] | [from fingerprint] |
+| Reading level | [from fingerprint] | [from fingerprint] |
+
+**Analysis:** [Summarize the fingerprint's analysis paragraph — what makes this voice structurally distinctive compared to category norms.]
+
+---
+
 ## Section 4: Signature Moves
 
 [From Phase 6 / Voice Analyzer — each with when to use and frequency]
@@ -353,6 +370,22 @@ Write to `workspace/output/` directory:
 
 ---
 
+## Section 5b: Voice Calibration Table
+
+[From voice-fingerprint.md — Voice Calibration Guide table. If voice-fingerprint.md absent, omit this entire section.]
+
+| Dimension | Too Cold | Just Right | Too Warm |
+|-----------|----------|-----------|---------|
+| [from fingerprint — e.g., Formality] | [from fingerprint] | [from fingerprint] | [from fingerprint] |
+| [from fingerprint — e.g., Authority] | [from fingerprint] | [from fingerprint] | [from fingerprint] |
+| [from fingerprint — e.g., Humor] | [from fingerprint] | [from fingerprint] | [from fingerprint] |
+| [from fingerprint — e.g., Complexity] | [from fingerprint] | [from fingerprint] | [from fingerprint] |
+| [from fingerprint — e.g., Directness] | [from fingerprint] | [from fingerprint] | [from fingerprint] |
+
+Use this table as a quick-reference calibration tool when writing in the brand voice. The "Just Right" column is the target register.
+
+---
+
 ## Section 6: Scaling by Context
 
 ### Short-Form
@@ -368,7 +401,7 @@ Write to `workspace/output/` directory:
 [From Phase 6]
 ```
 
-### Document 3: `workspace/output/brand-foundation.html`
+### Document 3: `workspace/output/client/brand-foundation.html`
 
 An HTML version of the Brand Foundation document. Self-contained single HTML file with:
 - Embedded CSS using the client's brand colors, typography, and spacing
@@ -377,7 +410,7 @@ An HTML version of the Brand Foundation document. Self-contained single HTML fil
 - Responsive layout
 - Includes Brand Compass Card — a 9-element visual diagram (center: core belief, surrounded by: audience, positioning, personality, tagline, territory, contrarian POV, values, brand world) rendered as a branded HTML layout based on the Unilever Brand Key model.
 
-### Document 4: `workspace/output/voice-guide.html`
+### Document 4: `workspace/output/client/voice-guide.html`
 
 An HTML version of the Voice Guide document. Self-contained single HTML file with:
 - Embedded CSS using the client's brand tokens
@@ -393,7 +426,7 @@ An HTML version of the Voice Guide document. Self-contained single HTML file wit
 - Each cell is concise — 1-3 words or a short phrase, not paragraphs
 - Table is responsive — horizontal scroll on mobile if needed
 
-### Document 5: `workspace/output/color-palette.html`
+### Document 5: `workspace/output/client/color-palette.html`
 
 Interactive color specimen:
 - Base colors with hex, RGB, HSL values
@@ -445,7 +478,7 @@ Interactive color specimen:
 - Extend the `.do-dont-grid` CSS pattern: `.do-card` / `.dont-card` with green/red accent borders
 - Examples: correct text-on-background contrast, incorrect low-contrast pairing, correct accent usage, incorrect overuse of accent color
 
-### Document 6: `workspace/output/visual-system.html`
+### Document 6: `workspace/output/client/visual-system.html`
 
 Full visual system reference:
 - Typography specimens with the client's font pairings
@@ -477,7 +510,7 @@ Full visual system reference:
   - Color usage rules: which palette colors the patterns use and why
   - Do/don't examples using the `.do-dont-grid` pattern: correct pattern usage (subtle background, divider accent) vs incorrect (overwhelming density, wrong color variant, competing with content)
 
-### Document 7: `workspace/output/ui-kit.html`
+### Document 7: `workspace/output/client/ui-kit.html`
 
 Component library:
 - Client's CSS custom properties (colors, spacing, radii, shadows, fonts)
@@ -611,7 +644,7 @@ All five HTML files share the same CSS custom properties from the Design System 
 [From Phase 7]
 ```
 
-### Document 4: `workspace/output/practical-toolkit.md`
+### Document 4: `workspace/output/client/practical-toolkit.md`
 
 ```markdown
 # Practical Brand Toolkit
@@ -702,14 +735,16 @@ Apply the Decision Filter to three boundary-case scenarios to validate its discr
 
 ## Language Bank
 
-### Phrases I Use
-[From voice analysis + signature moves]
+[If voice-fingerprint.md exists, use the Codify/Retire classification below. If absent, fall back to the original "Phrases I Use / Phrases I Never Use" structure derived from voice analysis and guardrails.]
 
-### Phrases I Never Use
-[From guardrails]
+### Codify (use these — they appear frequently and work well)
+[From voice-fingerprint.md — Recurring Phrases: Codify list. Each phrase with a brief usage note — e.g., "max once per piece" or "core to the voice".]
+
+### Retire (avoid these — they appear frequently but don't serve the brand)
+[From voice-fingerprint.md — Recurring Phrases: Retire list. Each phrase with what to replace it with — e.g., "'Solutions' → replace with the actual thing being offered every time".]
 
 ### Say This / Not That
-[Word substitutions]
+[Generate word substitutions derived from the Retire list above. Format as a two-column reference: left column is the retired phrase, right column is the preferred replacement or rewrite strategy.]
 
 ---
 
@@ -832,6 +867,14 @@ Design specs at a glance — for anyone implementing the brand visually.
 4. **Ongoing governance:** [Quarterly self-audit, annual brand review]
 ```
 
+### Voice Gap Detection
+
+When voice-fingerprint.md data conflicts with Phase 6 discovery intent (e.g., fingerprint measures "80/20 formal/conversational" but Phase 6 discovery says "fully conversational voice"), surface the gap explicitly in voice-guide.md as an inline callout:
+
+> **Voice Gap Note:** Phase 6 discovery targeted [X] register. Corpus analysis (voice-fingerprint.md) measured [Y] in existing writing. Both are documented above. Choose one as the target, or use discovery intent as the aspiration and fingerprint data as the baseline.
+
+Do not silently pick one source over the other. The client needs to see the gap and decide which direction to pursue.
+
 ## Quality Bar
 - **Complete** — don't leave sections blank if input exists
 - **Consistent** — formatting and structure uniform across documents
@@ -841,3 +884,11 @@ Design specs at a glance — for anyone implementing the brand visually.
 - **Personality-consistent** — all HTML files share the same personality tokens; a "sharp, geometric" brand looks sharp and geometric across every document
 - **Parameters copied exactly** — if visual-direction.md says `--radius-md: 2px`, the HTML says `--radius-md: 2px`, not `--radius-md: 8px` from the example
 - **Specimen, not template** — HTML files should feel like they belong to THIS brand (see `.claude/skills/specimen-design/SKILL.md`). Include rationale blocks, usage guidelines, color pairings in real UI context, do/don'ts, visual hierarchy, and brand-voiced prose. The per-file checklists in the specimen design guide define the minimum section inventory for each file type.
+
+## Post-Assembly: Design Kit Foundation
+
+After completing all client HTML specimens, notify the Lead Strategist that the design-kit-foundation agent should run. The design-kit-foundation agent reads the completed client HTML files from `workspace/output/client/` and produces:
+- Token files at `workspace/output/design-kit/tokens/` (extracted from visual-direction.md)
+- Design-kit HTML specimens at `workspace/output/design-kit/` (client HTML with external token links)
+
+This step is separate from the Document Assembler's work (per design decision D-01). Do not attempt to write token files or design-kit specimens yourself.
