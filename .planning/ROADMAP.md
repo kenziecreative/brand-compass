@@ -45,7 +45,10 @@ Full details: milestones/v1.0-ROADMAP.md
   3. Client-bundle HTML specimens are fully self-contained and render without any external file references
   4. Design-kit specimens link to the external token files rather than inlining tokens
   5. Document Assembler reads voice-fingerprint.md and incorporates it into voice-dependent outputs
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 10-01-PLAN.md — Agent definitions and skill updates (design-kit-foundation agent, Document Assembler voice-fingerprint weave, path migration for agents/skills)
+- [ ] 10-02-PLAN.md — Frontend path migration and empty-state handling (content-loader globs, path strings, OutputViewer fix, bundle placeholders)
 
 ### Phase 11: Agent Skill Bundle
 **Goal**: The skill-bundle-packager agent exists and produces a complete, usable skill bundle at `workspace/output/skill-bundle/`
@@ -96,7 +99,7 @@ Full details: milestones/v1.0-ROADMAP.md
 | 7. Sync Phase 2 & Phase 5 Commands | v1.0 | 2/2 | Complete | 2026-03-28 |
 | 8. Sync Phase 7 Visual Command | v1.0 | 1/1 | Complete | 2026-03-28 |
 | 9. Sync Remaining Command Files | v1.0 | 2/2 | Complete | 2026-03-28 |
-| 10. Output Foundation | v2.0 | 0/TBD | Not started | - |
+| 10. Output Foundation | v2.0 | 0/2 | Planning complete | - |
 | 11. Agent Skill Bundle | v2.0 | 0/TBD | Not started | - |
 | 12. Design Kit | v2.0 | 0/TBD | Not started | - |
 | 13. Integration | v2.0 | 0/TBD | Not started | - |
