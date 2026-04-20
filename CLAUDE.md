@@ -152,8 +152,38 @@ Modular deliverable add-ons selected during onboarding. Stored in `STATE.md` Cli
 | Voice Analyzer | Client provides writing samples (as early as Phase 0/1) OR Phase 6 begins | Writing samples (3+ pieces) | `workspace/research/voice-fingerprint.md` | No |
 | Visual Director | Phase 7 begins, Phases 1-6 complete | All Phase 1-6 outputs | `workspace/drafts/visual-direction.md` | **Yes** |
 | Image Generator | Visual direction approved by client | Approved visual direction | `workspace/assets/[type]/` | No |
-| Document Assembler | Phase completes OR client requests current state OR end of process | All completed outputs | `workspace/output/[document].md` | No |
+| Document Assembler | Phase completes OR client requests current state OR end of process | All completed outputs | `workspace/output/client/[document].md` | No |
+| design-kit-foundation | Phase 8 assembly complete — launched from Phase 8 Step 5c | workspace/output/client/*.html (specimens to post-process), Phase 7 visual direction | `workspace/output/design-kit/tokens/`, `workspace/output/design-kit/*.html` (copied specimens) | No |
+| skill-bundle-packager | Phase 8 assembly complete — launched from Phase 8 Step 5b | workspace/output/client/ outputs (voice guide, brand foundation, practical toolkit) | `workspace/output/skill-bundle/` | No |
+| design-kit-packager | design-kit-foundation completes — launched from Phase 8 Step 5d | workspace/output/design-kit/tokens/, workspace/output/design-kit/*.html (foundation output) | `workspace/output/design-kit/components/`, `previews/`, root files | No |
 | Brand Verifier | `/brand-compass:verify` OR before export | Completed workspace files | Verification report (returned, not saved) | No |
+
+---
+
+## Workspace Structure
+
+```
+workspace/
+├── research/          — Agent research outputs (competitive brief, archetypes, voice fingerprint)
+├── drafts/            — Draft content for review (messaging options, visual direction)
+├── assets/            — Mark explorations, imagery
+└── output/
+    ├── client/        — Client brand package (Document Assembler output)
+    ├── skill-bundle/  — Agent skill bundle (skill-bundle-packager output)
+    └── design-kit/    — Component design kit (design-kit-foundation + design-kit-packager output)
+```
+
+---
+
+## Multi-Bundle Output
+
+Three bundles are produced at end of engagement:
+
+| Bundle | Contents | Downstream Consumer |
+|--------|----------|---------------------|
+| client/ | brand-foundation.md/html, voice-guide.md/html, color-palette.html, visual-system.html, ui-kit.html, practical-toolkit.md, asset pack specimens | Human client — shareable deliverables |
+| skill-bundle/ | SKILL.md, brand-prompt.md, source/ files | Claude Code agents — ingest via skill or system prompt |
+| design-kit/ | tokens/*.css/json/js, components/*.html, previews/*.html, landing-page.html, README.md, HANDOFF.md, package.json | Designer/developer — implementation reference |
 
 ---
 
