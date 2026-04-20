@@ -1,5 +1,5 @@
 /**
- * Loads markdown and HTML files from research/, drafts/, and output/ directories
+ * Loads markdown and HTML files from research/, drafts/, and client/, skill-bundle/, and design-kit/ subdirectories under output/
  * at build time using import.meta.glob.
  */
 
@@ -16,13 +16,25 @@ const draftFiles = import.meta.glob('/workspace/drafts/*.md', {
   eager: true,
 }) as Record<string, string>
 
-const outputMdFiles = import.meta.glob('/workspace/output/*.md', {
+const clientMdFiles = import.meta.glob('/workspace/output/client/*.md', {
   query: '?raw',
   import: 'default',
   eager: true,
 }) as Record<string, string>
 
-const outputHtmlFiles = import.meta.glob('/workspace/output/*.html', {
+const clientHtmlFiles = import.meta.glob('/workspace/output/client/*.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>
+
+const skillBundleFiles = import.meta.glob('/workspace/output/skill-bundle/**/*.{html,md}', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>
+
+const designKitFiles = import.meta.glob('/workspace/output/design-kit/**/*.{html,md}', {
   query: '?raw',
   import: 'default',
   eager: true,
@@ -60,15 +72,38 @@ export function loadDraftFiles(): ContentFile[] {
 }
 
 export function loadOutputFiles(): ContentFile[] {
-  return [
-    ...toContentFiles(outputMdFiles, 'output', 'md'),
-    ...toContentFiles(outputHtmlFiles, 'output', 'html'),
-  ]
+  const clientMd = toContentFiles(clientMdFiles, 'output', 'md')
+  const clientHtml = toContentFiles(clientHtmlFiles, 'output', 'html')
+
+  // For mixed-extension globs, derive format from path
+  const skillBundle = Object.entries(skillBundleFiles).map(([path, content]) => ({
+    path,
+    filename: path.split('/').pop() ?? path,
+    content,
+    directory: 'output' as const,
+    format: (path.endsWith('.html') ? 'html' : 'md') as ContentFile['format'],
+  }))
+
+  const designKit = Object.entries(designKitFiles).map(([path, content]) => ({
+    path,
+    filename: path.split('/').pop() ?? path,
+    content,
+    directory: 'output' as const,
+    format: (path.endsWith('.html') ? 'html' : 'md') as ContentFile['format'],
+  }))
+
+  return [...clientMd, ...clientHtml, ...skillBundle, ...designKit]
 }
 
 export function getFile(path: string): string | null {
   return (
-    researchFiles[path] ?? draftFiles[path] ?? outputMdFiles[path] ?? outputHtmlFiles[path] ?? null
+    researchFiles[path] ??
+    draftFiles[path] ??
+    clientMdFiles[path] ??
+    clientHtmlFiles[path] ??
+    skillBundleFiles[path] ??
+    designKitFiles[path] ??
+    null
   )
 }
 
@@ -81,5 +116,10 @@ export function hasDraftFiles(): boolean {
 }
 
 export function hasOutputFiles(): boolean {
-  return Object.keys(outputMdFiles).length > 0 || Object.keys(outputHtmlFiles).length > 0
+  return (
+    Object.keys(clientMdFiles).length > 0 ||
+    Object.keys(clientHtmlFiles).length > 0 ||
+    Object.keys(skillBundleFiles).length > 0 ||
+    Object.keys(designKitFiles).length > 0
+  )
 }
