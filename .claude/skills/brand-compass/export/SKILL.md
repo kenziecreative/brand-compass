@@ -18,18 +18,18 @@ Stop.
 
 ## Step 2: Verify All Output Files
 
-Check that all core deliverable files exist in the `workspace/output/` directory:
+Check that all core deliverable files exist in the `workspace/output/client/` directory:
 
-1. `workspace/output/brand-foundation.md` — Brand Foundation (Markdown)
-2. `workspace/output/brand-foundation.html` — Brand Foundation (HTML specimen)
-3. `workspace/output/voice-guide.md` — Voice & Expression Guide (Markdown)
-4. `workspace/output/voice-guide.html` — Voice & Expression Guide (HTML specimen)
-5. `workspace/output/color-palette.html` — Color Palette (Interactive HTML)
-6. `workspace/output/visual-system.html` — Visual System (HTML)
-7. `workspace/output/ui-kit.html` — UI Kit (HTML with brand tokens)
-8. `workspace/output/practical-toolkit.md` — Practical Toolkit (Markdown)
+1. `workspace/output/client/brand-foundation.md` — Brand Foundation (Markdown)
+2. `workspace/output/client/brand-foundation.html` — Brand Foundation (HTML specimen)
+3. `workspace/output/client/voice-guide.md` — Voice & Expression Guide (Markdown)
+4. `workspace/output/client/voice-guide.html` — Voice & Expression Guide (HTML specimen)
+5. `workspace/output/client/color-palette.html` — Color Palette (Interactive HTML)
+6. `workspace/output/client/visual-system.html` — Visual System (HTML)
+7. `workspace/output/client/ui-kit.html` — UI Kit (HTML with brand tokens)
+8. `workspace/output/client/practical-toolkit.md` — Practical Toolkit (Markdown)
 
-Also check for asset pack HTML specimens. Read `workspace/STATE.md` Client section for selected packs, and verify each has its corresponding HTML file (e.g., `workspace/output/pitch-deck.html`).
+Also check for asset pack HTML specimens. Read `workspace/STATE.md` Client section for selected packs, and verify each has its corresponding HTML file (e.g., `workspace/output/client/pitch-deck.html`).
 
 If any are missing, flag them:
 
@@ -72,14 +72,14 @@ Verify that research and draft files are preserved:
 
 | Document | Format | Location |
 |----------|--------|----------|
-| Brand Foundation | Markdown | `workspace/output/brand-foundation.md` |
-| Brand Foundation | HTML Specimen | `workspace/output/brand-foundation.html` |
-| Voice & Expression Guide | Markdown | `workspace/output/voice-guide.md` |
-| Voice & Expression Guide | HTML Specimen | `workspace/output/voice-guide.html` |
-| Color Palette | Interactive HTML | `workspace/output/color-palette.html` |
-| Visual System | HTML | `workspace/output/visual-system.html` |
-| UI Kit | HTML | `workspace/output/ui-kit.html` |
-| Practical Toolkit | Markdown | `workspace/output/practical-toolkit.md` |
+| Brand Foundation | Markdown | `workspace/output/client/brand-foundation.md` |
+| Brand Foundation | HTML Specimen | `workspace/output/client/brand-foundation.html` |
+| Voice & Expression Guide | Markdown | `workspace/output/client/voice-guide.md` |
+| Voice & Expression Guide | HTML Specimen | `workspace/output/client/voice-guide.html` |
+| Color Palette | Interactive HTML | `workspace/output/client/color-palette.html` |
+| Visual System | HTML | `workspace/output/client/visual-system.html` |
+| UI Kit | HTML | `workspace/output/client/ui-kit.html` |
+| Practical Toolkit | Markdown | `workspace/output/client/practical-toolkit.md` |
 
 [If asset packs were selected, also list each pack's HTML specimen]
 
