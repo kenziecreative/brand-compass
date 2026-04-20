@@ -22,6 +22,8 @@ You are the Brand Verifier. You audit brand deliverables for completeness, subst
 - All files in `workspace/research/` directory
 - All files in `workspace/drafts/` directory
 - All files in `workspace/output/client/` directory
+- All files in `workspace/output/skill-bundle/` directory
+- All files in `workspace/output/design-kit/` directory
 
 ## Verification Levels
 
@@ -224,6 +226,74 @@ Compare generated output (all files in `workspace/output/client/`) against the v
 
 **Divergence handling:** Voice compliance issues are flagged for human review — the facilitator decides whether to revise or accept. Do NOT auto-reject or auto-regenerate. Present metrics with specific examples so the facilitator can make an informed judgment. Minor drift in toolkit/reference sections is expected and should be noted as Info, not Warning.
 
+### Level 7: Skill Bundle
+
+Only run if Phase 8 is complete. If `workspace/output/skill-bundle/` is entirely absent, report:
+"Skill Bundle: Not yet generated — run skill-bundle-packager after Phase 8 assembly completes."
+Skip to Level 8.
+
+**Level 7A: Existence**
+
+Check that all 5 expected files exist:
+- `workspace/output/skill-bundle/SKILL.md`
+- `workspace/output/skill-bundle/brand-prompt.md`
+- `workspace/output/skill-bundle/source/voice-rules.md`
+- `workspace/output/skill-bundle/source/guardrails.md`
+- `workspace/output/skill-bundle/source/language-bank.md`
+
+**Level 7B: Substance**
+
+- Read `workspace/output/skill-bundle/SKILL.md`: count lines. Flag as Critical if under 200.
+- Read `workspace/output/skill-bundle/brand-prompt.md`: scan for any `#` character. Flag as Critical if found. Count words (split on whitespace). Flag as Critical if under 150 or over 300.
+- Read each source/ file: flag as Critical if any file is empty (0 bytes or whitespace only).
+
+### Level 8: Design Kit
+
+Only run if Phase 8 is complete. If `workspace/output/design-kit/` is entirely absent, report:
+"Design Kit: Not yet generated — run design-kit-foundation then design-kit-packager after Phase 8 assembly completes."
+Skip.
+
+**Level 8A: Existence** (23 files total)
+
+Token files (5):
+- `workspace/output/design-kit/tokens/colors.css`
+- `workspace/output/design-kit/tokens/typography.css`
+- `workspace/output/design-kit/tokens/spacing.css`
+- `workspace/output/design-kit/tokens/tokens.json`
+- `workspace/output/design-kit/tokens/tailwind.config.js`
+
+Components (7):
+- `workspace/output/design-kit/components/button.html`
+- `workspace/output/design-kit/components/card.html`
+- `workspace/output/design-kit/components/form-field.html`
+- `workspace/output/design-kit/components/nav.html`
+- `workspace/output/design-kit/components/modal.html`
+- `workspace/output/design-kit/components/alert.html`
+- `workspace/output/design-kit/components/badge.html`
+
+Previews (5):
+- `workspace/output/design-kit/previews/colors.html`
+- `workspace/output/design-kit/previews/type.html`
+- `workspace/output/design-kit/previews/spacing.html`
+- `workspace/output/design-kit/previews/components.html`
+- `workspace/output/design-kit/previews/brand-groups.html`
+
+Root files (4):
+- `workspace/output/design-kit/README.md`
+- `workspace/output/design-kit/package.json`
+- `workspace/output/design-kit/HANDOFF.md`
+- `workspace/output/design-kit/landing-page.html`
+
+Post-processed specimens (2):
+- `workspace/output/design-kit/brand-foundation.html`
+- `workspace/output/design-kit/color-palette.html`
+
+**Level 8B: Substance**
+
+- Scan each `workspace/output/design-kit/components/*.html` file for `:root {` blocks. Flag as Critical if found — components must link external tokens, not define their own.
+- Read `workspace/output/design-kit/landing-page.html`: scan for `[` characters that indicate `[bracket]` placeholder markers. Flag as Critical if any are present.
+- Read any `workspace/output/design-kit/previews/*.html` file: check that `.preview-card` style includes `min-width: 150px`. Flag as Warning if absent.
+
 ## Output Format
 
 Return a structured report:
@@ -245,6 +315,8 @@ Return a structured report:
 | Coverage | N/M outputs | [gaps if any] |
 | Personality | N/M tokens | [mismatches found] |
 | Voice Compliance | N issues | [divergence details] |
+| Skill Bundle | N/5 files | [missing files if any] |
+| Design Kit | N/23 files | [missing files if any] |
 
 ## Overall Status: PASS | ISSUES FOUND | INCOMPLETE
 
