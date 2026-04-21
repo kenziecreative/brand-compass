@@ -46,7 +46,7 @@ The discovery conversation must produce brand outputs that are specific to the c
 ### Active (v2.0)
 
 - Three-bundle output model: client package, agent skill bundle, design kit
-- Token externalization as single source of truth for design-kit consumers — Validated in Phase 10 (agent definition)
+- Token externalization as single source of truth for design-kit consumers — Validated in Phase 10 (agent definition), token paths corrected in Phase 14
 - Skill bundle for Claude Code/Cowork agent surfaces — Validated in Phase 11 (agent definition)
 - Design kit shaped for Claude Design org onboarding — Validated in Phase 12 (agent definition)
 - Client specimens remain self-contained (no external token dependency) — Validated in Phase 10
@@ -134,4 +134,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-21 after Phase 13 (Integration) completed — v2.0 milestone complete*
+*Last updated: 2026-04-21 after Phase 14 (Token Path Fix) completed — v2.0 milestone gap closure complete*
