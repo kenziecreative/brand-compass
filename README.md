@@ -144,6 +144,8 @@ The process works best when you come prepared with a few things. You don't need 
 
 You don't need to prepare answers about your personality, your beliefs, or how you communicate. Those parts of the process work better when they come out of conversation rather than pre-written statements.
 
+**Want to go deeper before you start?** [Research Agent](https://github.com/kenziecreative/research-agent) can do the competitive and audience homework for you. Run a Competitive Analysis to get a sourced landscape of who's in your space and how they position themselves — every claim traced to evidence with confidence scoring. Run a Customer Safari to map where your audience gathers, what language they use, and what they actually care about. Brand Compass has its own Research Analyst that handles competitive context during the process, but if you want richer input going in — particularly for positioning and audience work — Research Agent produces the kind of structured, audited research that makes those phases sharper.
+
 ### Speak Your Answers
 
 Brand discovery works best when you talk rather than type. When you type, you edit yourself — filtering, polishing, second-guessing. When you speak, you get closer to how you actually think and communicate. That unfiltered voice is exactly what the system needs.
