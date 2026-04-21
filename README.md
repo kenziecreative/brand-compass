@@ -234,4 +234,4 @@ Brand Compass was inspired by [Design OS](https://buildermethods.com/design-os) 
 
 ## License
 
-Proprietary. Copyright Kenzie Creative.
+MIT
