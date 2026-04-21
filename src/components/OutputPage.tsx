@@ -44,6 +44,28 @@ const deliverables = [
     description: "Component library with client's brand tokens — buttons, cards, forms.",
     icon: Code,
   },
+  {
+    title: 'Agent Skill Bundle',
+    files: [
+      { filename: 'workspace/output/skill-bundle/SKILL.md', format: 'MD' },
+      { filename: 'workspace/output/skill-bundle/brand-prompt.md', format: 'MD' },
+      { filename: 'workspace/output/skill-bundle/source/voice-rules.md', format: 'MD' },
+      { filename: 'workspace/output/skill-bundle/source/guardrails.md', format: 'MD' },
+      { filename: 'workspace/output/skill-bundle/source/language-bank.md', format: 'MD' },
+    ],
+    description: 'Claude Code skill definition, brand prompt, and voice source files.',
+    icon: FileText,
+  },
+  {
+    title: 'Design Kit',
+    files: [
+      { filename: 'workspace/output/design-kit/landing-page.html', format: 'HTML' },
+      { filename: 'workspace/output/design-kit/README.md', format: 'MD' },
+      { filename: 'workspace/output/design-kit/HANDOFF.md', format: 'MD' },
+    ],
+    description: 'Atomized components, design tokens, preview cards, and reference specimens.',
+    icon: Code,
+  },
 ]
 
 export function OutputPage() {
@@ -146,33 +168,6 @@ export function OutputPage() {
           )
         })}
       </div>
-
-      {/* Future Bundle Placeholders */}
-      <Card className="opacity-50 border-dashed">
-        <CardHeader>
-          <div className="flex items-center gap-2 mb-1">
-            <FileText className="size-4 text-muted-foreground" />
-            <CardTitle className="text-base flex-1">Agent Skill Bundle</CardTitle>
-            <Badge variant="outline" className="text-[10px]">Phase 11</Badge>
-          </div>
-          <CardDescription>
-            Claude Code skill definition, brand prompt, and voice source files.
-          </CardDescription>
-        </CardHeader>
-      </Card>
-
-      <Card className="opacity-50 border-dashed">
-        <CardHeader>
-          <div className="flex items-center gap-2 mb-1">
-            <Code className="size-4 text-muted-foreground" />
-            <CardTitle className="text-base flex-1">Design Kit</CardTitle>
-            <Badge variant="outline" className="text-[10px]">Phase 12</Badge>
-          </div>
-          <CardDescription>
-            Atomized components, design tokens, preview cards, and reference specimens.
-          </CardDescription>
-        </CardHeader>
-      </Card>
 
       {/* Asset Pack info */}
       {state?.client?.assetPacks && state.client.assetPacks.length > 0 && (

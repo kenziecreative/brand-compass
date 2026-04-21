@@ -23,6 +23,14 @@ const fileTitles: Record<string, string> = {
   'app-dashboard-ui.html': 'App / Dashboard UI',
   'signage-space.html': 'Signage & Space',
   'email-newsletter.html': 'Email & Newsletter',
+  'SKILL.md': 'Agent Skill Definition',
+  'brand-prompt.md': 'Brand Prompt',
+  'voice-rules.md': 'Voice Rules',
+  'guardrails.md': 'Guardrails',
+  'language-bank.md': 'Language Bank',
+  'landing-page.html': 'Design Kit Landing Page',
+  'README.md': 'Design Kit README',
+  'HANDOFF.md': 'Design Kit Handoff Guide',
 }
 
 export function OutputViewer() {
