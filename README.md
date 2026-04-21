@@ -47,7 +47,7 @@ You don't need design experience. You don't need marketing language. You need [C
 
 - **Three-bundle output.** Brand Compass now produces three distinct output bundles: a client package (markdown + HTML specimens), an agent skill bundle for Claude Code and Cowork, and a design kit for developers and designers. Each bundle is shaped for its downstream consumer rather than being a one-size-fits-all export.
 - **Agent skill bundle.** A complete skill definition (`SKILL.md`, `brand-prompt.md`, and `source/` files) that any Claude Code agent can ingest to write in your brand voice. Voice rules, guardrails, and language bank are extracted from the client package and translated into behavioral instructions.
-- **Design kit.** Externalized design tokens (CSS, JSON DTCG, Tailwind config), atomized HTML components (button, card, nav, modal, alert, badge, form field), preview cards, and a branded landing page. Everything links to shared token files so changes propagate automatically.
+- **Design kit.** A complete design kit you can import directly into Claude Design — tokens (CSS, JSON DTCG, Tailwind config), atomized HTML components, preview cards, and a branded landing page. Claude Design gets your colors, typography, spacing, and component patterns as structured inputs rather than screenshots or style guides it has to interpret.
 - **Token externalization.** Colors, typography, and spacing are extracted into standalone token files that serve as the single source of truth for all design-kit specimens. Client-bundle specimens remain fully self-contained with inline styles.
 - **Four new agents.** `design-kit-foundation` (token extraction and specimen post-processing), `design-kit-packager` (components, previews, landing page), `skill-bundle-packager` (voice-to-skill translation), plus enhanced `document-assembler` with voice fingerprint integration.
 - **Phase transition context management.** Every phase completion writes a structured handoff block to state — what was decided, key outputs, and what happens next — so cross-session continuity is automatic rather than dependent on conversation history.
@@ -66,7 +66,7 @@ You don't need design experience. You don't need marketing language. You need [C
 
 **An agent skill bundle** that lets any Claude Code agent write in your brand voice. Voice rules, guardrails, and language patterns extracted from the brand and translated into behavioral instructions — not "be professional and friendly" but the actual moves your voice makes.
 
-**A design kit** with externalized tokens, atomized HTML components, preview cards, and a branded landing page. Everything a developer or designer needs to implement the brand in code, with a handoff guide that explains the system.
+**A design kit** you can import directly into Claude Design — tokens, components, preview cards, and a branded landing page. Claude Design gets your brand as structured inputs it can build with, not screenshots it has to interpret. The same kit works for any developer or designer implementing the brand in code.
 
 Every deliverable comes in two formats: markdown for portability and HTML specimens rendered with your brand's own colors, fonts, and design language.
 
@@ -212,7 +212,7 @@ Brand Compass produces three output bundles, each shaped for a different consume
 |--------|----------|-----|
 | **Client Package** | Brand foundation, voice guide, color palette, visual system, UI kit, practical toolkit — all as markdown + self-contained HTML specimens | You — the shareable brand system |
 | **Agent Skill Bundle** | SKILL.md (skill definition), brand-prompt.md (prose prompt), source files (voice rules, guardrails, language bank) | Claude Code / Cowork agents — write in your brand voice |
-| **Design Kit** | Token files (CSS, JSON DTCG, Tailwind), atomized components, preview cards, landing page, README, HANDOFF.md | Developers and designers — implement the brand in code |
+| **Design Kit** | Token files (CSS, JSON DTCG, Tailwind), atomized components, preview cards, landing page, README, HANDOFF.md | Claude Design, developers, and designers — import and build with the brand directly |
 
 ---
 
