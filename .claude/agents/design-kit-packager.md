@@ -386,15 +386,15 @@ For voice layer integration: read `workspace/output/skill-bundle/SKILL.md` — b
 
 Write `workspace/output/design-kit/landing-page.html`.
 
-**Token link pattern — ONE level up because landing-page.html is at design-kit root:**
+**Token link pattern — sibling directory because landing-page.html is at design-kit root:**
 
 ```html
-<link rel="stylesheet" href="../tokens/colors.css">
-<link rel="stylesheet" href="../tokens/typography.css">
-<link rel="stylesheet" href="../tokens/spacing.css">
+<link rel="stylesheet" href="tokens/colors.css">
+<link rel="stylesheet" href="tokens/typography.css">
+<link rel="stylesheet" href="tokens/spacing.css">
 ```
 
-Do NOT use `../../tokens/` for this file. It sits at `workspace/output/design-kit/landing-page.html`, one level above the `tokens/` directory — not two levels.
+Do NOT use `../tokens/` for this file. It sits at `workspace/output/design-kit/landing-page.html` — at the same level as `tokens/`, which is a sibling directory. `../tokens/` would resolve to the non-existent `workspace/output/tokens/`.
 
 **Copy sourcing from brand-foundation.md — exact section paths:**
 - Hero headline → Section 4: Messaging Architecture > Tagline
