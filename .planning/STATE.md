@@ -2,9 +2,9 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Multi-Bundle Output
-status: executing
-stopped_at: Phase 13 context gathered
-last_updated: "2026-04-21T11:14:22.255Z"
+status: complete
+stopped_at: Milestone v2.0 shipped
+last_updated: "2026-04-21T12:00:00Z"
 last_activity: 2026-04-21
 progress:
   total_phases: 5
@@ -18,30 +18,25 @@ progress:
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-19)
+See: .planning/PROJECT.md (updated 2026-04-21)
 
 **Core value:** Discovery conversation produces brand outputs specific to the client, not generic templates
-**Current focus:** Phase 14 — token-path-fix
+**Current focus:** Planning next milestone
 
 ## Current Position
 
-Phase: 14
-Plan: Not started
-Status: Executing Phase 14
+Phase: —
+Plan: —
+Status: v2.0 shipped, ready for next milestone
 Last activity: 2026-04-21
 
-Progress: [░░░░░░░░░░] 0% (v2.0 milestone)
+Progress: [██████████] 100% (v2.0 milestone complete)
 
 ## Accumulated Context
 
 ### Decisions
 
-- Client specimens stay self-contained (inline tokens); design-kit specimens link external tokens
-- ui-kit.html stays standalone — no assembly relationship with atomized components
-- PPTX generation (EXPD-01) deferred to follow-up milestone
-- Both new agents use sonnet model with Read/Write/Glob/Grep tools only
-- Sequential milestone: Foundation (10) must complete before Skill Bundle (11) or Design Kit (12); Integration (13) comes last
-- Voice-fingerprint backlog fix (FOUN-05) bundled into Foundation phase
+(Cleared at milestone boundary — full log in PROJECT.md Key Decisions table)
 
 ### Pending Todos
 
@@ -64,6 +59,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-04-20T18:00:10.450Z
-Stopped at: Phase 13 context gathered
-Resume file: .planning/phases/13-integration/13-CONTEXT.md
+Last session: 2026-04-21
+Stopped at: Milestone v2.0 shipped
+Resume: /gsd-new-milestone to start next milestone

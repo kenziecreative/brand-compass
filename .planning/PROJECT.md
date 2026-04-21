@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Brand Compass is a guided brand development system that runs inside Claude Code. A Lead Brand Strategist walks clients through 8 phases of discovery — asking questions, pushing back on surface-level answers, and delegating specialized work to background agents. It produces a complete brand system: strategic foundation, voice guide, visual identity, and practical toolkit as both markdown and HTML specimens.
+Brand Compass is a guided brand development system that runs inside Claude Code. A Lead Brand Strategist walks clients through 8 phases of discovery — asking questions, pushing back on surface-level answers, and delegating specialized work to background agents. It produces a complete brand system across three output bundles: a client package (foundation, voice guide, visual identity, and practical toolkit as markdown and HTML specimens), an agent skill bundle for Claude Code/Cowork, and a design kit with externalized tokens and atomized components for developers and designers.
 
 ## Core Value
 
@@ -42,35 +42,22 @@ The discovery conversation must produce brand outputs that are specific to the c
 - Anti-anchoring across all discovery questions — v1.0
 - Stakeholder mapping for org entity types — v1.0
 - Full command-CLAUDE.md parity across all 7 discovery command files — v1.0
+- Three-bundle output model: client package, agent skill bundle, design kit — v2.0
+- Token externalization as single source of truth for design-kit consumers — v2.0
+- Skill bundle for Claude Code/Cowork agent surfaces — v2.0
+- Design kit shaped for Claude Design org onboarding — v2.0
+- Client specimens remain self-contained (no external token dependency) — v2.0
+- Document Assembler voice-fingerprint.md input fix (from backlog) — v2.0
+- Output directory restructured into client/, skill-bundle/, design-kit/ subfolders — v2.0
+- Two new packager agents (skill-bundle-packager, design-kit-packager) — v2.0
+- Updated export, verifier, Phase 8 orchestration, and CLAUDE.md for three-bundle model — v2.0
+- Frontend dashboard updated for new output paths — v2.0
+- React frontend functional bundle cards (skill-bundle + design-kit) — v2.0
+- Phase transition handoff blocks across all skill files — v2.0
 
-### Active (v2.0)
+### Active
 
-- Three-bundle output model: client package, agent skill bundle, design kit
-- Token externalization as single source of truth for design-kit consumers — Validated in Phase 10 (agent definition), token paths corrected in Phase 14
-- Skill bundle for Claude Code/Cowork agent surfaces — Validated in Phase 11 (agent definition)
-- Design kit shaped for Claude Design org onboarding — Validated in Phase 12 (agent definition)
-- Client specimens remain self-contained (no external token dependency) — Validated in Phase 10
-- Document Assembler voice-fingerprint.md input fix (from backlog) — Validated in Phase 10
-- Output directory restructured into client/, skill-bundle/, design-kit/ subfolders — Validated in Phase 10
-- Two new packager agents (skill-bundle-packager, design-kit-packager) — Validated in Phase 11 + Phase 12
-- Updated export, verifier, Phase 8 orchestration, and CLAUDE.md for three-bundle model — Validated in Phase 13
-- Frontend dashboard updated for new output paths — Validated in Phase 10
-- React frontend functional bundle cards (skill-bundle + design-kit) — Validated in Phase 13
-- Phase transition handoff blocks across all skill files — Validated in Phase 13
-
-## Current Milestone: v2.0 Multi-Bundle Output
-
-**Goal:** Add two new output bundles (Agent Skill Bundle + Design Kit) alongside the existing client package, so Brand Compass output feeds directly into Claude Code/Cowork and Claude Design.
-
-**Target features:**
-- Token externalization as single source of truth for design-kit consumers
-- Agent Skill Bundle (SKILL.md, brand-prompt.md, source files) for Claude Code/Cowork
-- Design Kit (tokens, atomized components, preview cards, specimens, HANDOFF.md) for Claude Design
-- Output directory restructured into client/, skill-bundle/, design-kit/ subfolders
-- Two new packager agents (skill-bundle-packager, design-kit-packager)
-- Updated export, verifier, Phase 8, and CLAUDE.md for three-bundle model
-- Voice-fingerprint backlog fix in Document Assembler
-- Frontend dashboard updated for new output paths
+(None yet — define next milestone to populate)
 
 ### Out of Scope
 
@@ -80,26 +67,22 @@ The discovery conversation must produce brand outputs that are specific to the c
 - Sonic identity — relevant only for subset of clients, not universal (research: Pattern 34)
 - Full JTBD switch interviews — research technique, not brand discovery framework (research: Pattern 2)
 - Custom iconography systems — enterprise-tier only (research: Pattern 21)
-- More differentiated personal brand track (Tier 3, recommendation 3.1) — significant structural change, evaluate after v1.0 proves out
-- Post-engagement brand query mode (Tier 3, recommendation 3.9) — future architectural consideration
-- Lightweight brand measurement card (Tier 3, recommendation 3.10) — future differentiator, not current priority
+- Light/dark token pairs — unless Phase 7 visual direction explicitly specifies dark mode
+- Figma plugin — DTCG tokens.json enables passive interop; active plugin is a separate project
+- Motion library in code form — motion captured as principles + timings, not keyframe library
+- Per-project brand prompt beyond skill bundle — skill-bundle/brand-prompt.md covers this use case
+- Framework-specific components — HTML and CSS only; framework adapters are future scope
+- Changes to discovery phases 0-7 — discovery is conversational and sequential; v2.0 was output-layer only
 
 ## Context
 
-Shipped v1.0 with 16,273 LOC across 108 files (68 markdown, 40 TypeScript/React).
+Shipped v2.0 with 91 files changed (+13,997 / -994 lines) across 88 commits in 24 days.
+Total codebase: ~30,000 LOC across ~200 files (68 markdown, 40 TypeScript/React, plus agent definitions and skill files).
 Tech stack: React + TypeScript + Vite + Tailwind CSS v4 (dashboard viewer), Claude Code terminal (primary interface).
 The actual brand development happens via slash commands and agent conversations — the React app is a viewer, not the primary interface.
-Feature research produced 7 research phases, 35 sources, 37 cross-reference patterns, and 7 audit-verified output documents.
-v1.0 implemented all 24 prioritized recommendations from feature research in 9 phases (20 plans, 131 commits, 45 days).
-v2.0 motivated by Claude Code, Cowork, and Claude Design becoming primary downstream consumers of brand data. Brand Compass output needs to feed those tools directly rather than requiring manual re-upload of source material. PRD authored by Claude Webb, reviewed and adjusted for implementation (8 adjustments documented in v2.0-REQUIREMENTS.md).
-
-## Constraints
-
-- **Implementation surface:** Changes span agent definitions (.claude/agents/), skill files (.claude/skills/), CLAUDE.md, and React frontend code (output path references)
-- **No new discovery phases:** The 8-phase discovery structure is unchanged; changes are output-layer only
-- **Two new agents:** skill-bundle-packager and design-kit-packager (both sonnet, Read/Write/Glob/Grep)
-- **Client specimens self-contained:** Client bundle HTML must render standalone without external dependencies; design-kit specimens may link external tokens
-- **Testing:** Agent definitions and skill changes can only be tested by running actual brand engagements
+v1.0 implemented 24 prioritized recommendations from feature research in 9 phases (20 plans, 131 commits, 45 days).
+v2.0 added three-bundle output model (client package, agent skill bundle, design kit) in 5 phases (8 plans, 88 commits, 24 days).
+Output now feeds Claude Code/Cowork (via skill bundle) and developers/designers (via design kit) directly, in addition to the human client package.
 
 ## Key Decisions
 
@@ -115,6 +98,23 @@ v2.0 motivated by Claude Code, Cowork, and Claude Design becoming primary downst
 | Voice compliance advisory not blocking | Automated voice matching is imperfect; human judgment needed | ✓ Good — flags without false-positive blocking |
 | Activation layer "no fixed timeline" vs "30-day" | Clients work at their own pace; arbitrary timelines create pressure without value | ⚠️ Revisit — evaluate with real engagements |
 | Pushback calibration three-path (high/low/unknown) | Different clients need different challenge intensity | — Pending — needs engagement testing |
+| Client specimens self-contained, design-kit links external tokens | Client HTML must render standalone; design-kit benefits from shared token source of truth | ✓ Good — clean separation of concerns |
+| ui-kit.html stays standalone (no assembly relationship with atomized components) | ui-kit.html is a specimen; atomized components are implementation reference — different purposes | ✓ Good — avoided confusing relationship |
+| Sequential agent chain in Phase 8 (DA → skill-bundle → dk-foundation → dk-packager) | Each step depends on the previous; parallel would cause race conditions | ✓ Good — failure isolation per step |
+| Both new agents use sonnet model with Read/Write/Glob/Grep only | Agent definitions don't need heavy reasoning; limited tools prevent unintended side effects | ✓ Good — fast and constrained |
+| PPTX generation deferred to future milestone | pptxgenjs integration is significant scope; not core to three-bundle model | ✓ Good — kept v2.0 focused |
+| Voice-fingerprint backlog fix bundled into Foundation phase | Small fix, natural fit with Document Assembler path migration work | ✓ Good — fixed without overhead |
+
+## Deferred Items
+
+| Category | Item | Status | Deferred At |
+|----------|------|--------|-------------|
+| Expanded Output | PPTX brand deck (EXPD-01) | Future milestone | v2.0 planning |
+| Expanded Output | Automated publishing to live URL (EXPD-02) | Future milestone | v2.0 planning |
+| Expanded Output | Framework-specific component adapters (EXPD-03) | Future milestone | v2.0 planning |
+| Brand Evolution | Post-engagement brand query mode (EVOL-01) | Future milestone | v2.0 planning |
+| Brand Evolution | Lightweight brand measurement card (EVOL-02) | Future milestone | v2.0 planning |
+| Brand Evolution | Differentiated personal brand track (EVOL-03) | Future milestone | v2.0 planning |
 
 ## Evolution
 
@@ -134,4 +134,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-21 after Phase 14 (Token Path Fix) completed — v2.0 milestone gap closure complete*
+*Last updated: 2026-04-21 after v2.0 milestone completion*
