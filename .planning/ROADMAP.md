@@ -32,7 +32,7 @@ Full details: milestones/v1.0-ROADMAP.md
 - [x] **Phase 11: Agent Skill Bundle** - Create skill-bundle-packager agent and all three skill bundle output files (completed 2026-04-20)
 - [x] **Phase 12: Design Kit** - Create design-kit-packager agent and all design kit outputs (components, previews, specimens) (completed 2026-04-20)
 - [x] **Phase 13: Integration** - Wire all three bundles into export, verifier, Phase 8, CLAUDE.md, and React frontend (completed 2026-04-21)
-- [ ] **Phase 14: Token Path Fix** - Fix token link resolution for root-level design-kit HTML files (gap closure)
+- [x] **Phase 14: Token Path Fix** - Fix token link resolution for root-level design-kit HTML files (gap closure) (completed 2026-04-21)
 
 ## Phase Details
 
@@ -103,9 +103,9 @@ Plans:
   1. Root-level design-kit HTML files (brand-foundation.html, color-palette.html, landing-page.html) use `href="tokens/..."` not `href="../tokens/..."`
   2. Subdirectory files (components/*.html, previews/*.html) continue using `href="../tokens/..."` unchanged
   3. Opening any root-level design-kit specimen in a browser loads token CSS and renders styled output
-**Plans:** 1/1 plans
+**Plans:** 1/1 plans complete
 Plans:
-- [ ] 14-01-PLAN.md — Fix token link paths in design-kit-foundation.md and design-kit-packager.md agent definitions
+- [x] 14-01-PLAN.md — Fix token link paths in design-kit-foundation.md and design-kit-packager.md agent definitions
 
 ## Progress
 
@@ -124,4 +124,4 @@ Plans:
 | 11. Agent Skill Bundle | v2.0 | 1/1 | Complete    | 2026-04-20 |
 | 12. Design Kit | v2.0 | 1/1 | Complete    | 2026-04-20 |
 | 13. Integration | v2.0 | 3/3 | Complete    | 2026-04-21 |
-| 14. Token Path Fix | v2.0 | 0/1 | Planned     | — |
+| 14. Token Path Fix | v2.0 | 1/1 | Complete   | 2026-04-21 |
