@@ -103,7 +103,7 @@ Plans:
   1. Root-level design-kit HTML files (brand-foundation.html, color-palette.html, landing-page.html) use `href="tokens/..."` not `href="../tokens/..."`
   2. Subdirectory files (components/*.html, previews/*.html) continue using `href="../tokens/..."` unchanged
   3. Opening any root-level design-kit specimen in a browser loads token CSS and renders styled output
-**Plans:** 0/1 plans
+**Plans:** 1/1 plans
 Plans:
 - [ ] 14-01-PLAN.md — Fix token link paths in design-kit-foundation.md and design-kit-packager.md agent definitions
 
