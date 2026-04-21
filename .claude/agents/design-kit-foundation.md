@@ -247,11 +247,11 @@ Convert each client HTML specimen into a design-kit variant that references exte
 
    d. Insert `<link>` tags immediately before `</head>`:
       ```html
-      <link rel="stylesheet" href="../tokens/colors.css">
-      <link rel="stylesheet" href="../tokens/typography.css">
-      <link rel="stylesheet" href="../tokens/spacing.css">
+      <link rel="stylesheet" href="tokens/colors.css">
+      <link rel="stylesheet" href="tokens/typography.css">
+      <link rel="stylesheet" href="tokens/spacing.css">
       ```
-      The relative path `../tokens/` is correct because design-kit HTML files sit at `workspace/output/design-kit/[filename].html` -- one level up from the tokens directory at `workspace/output/design-kit/tokens/`.
+      The relative path `tokens/` is correct because design-kit HTML files sit at `workspace/output/design-kit/[filename].html` -- at the same level as the `tokens/` directory, which is a sibling (not a parent). Using `../tokens/` would resolve to `workspace/output/tokens/` which does not exist.
 
    e. Write the modified HTML to `workspace/output/design-kit/[same-filename]`
 
@@ -279,5 +279,5 @@ Convert each client HTML specimen into a design-kit variant that references exte
 - DTCG `tokens.json` matches the structure already used in `color-palette.html`'s DTCG block (per D-03) -- same token names and hierarchy
 - Design-kit HTML files are structurally identical to client files except for token delivery method (per D-08) -- open both in a browser and they should render identically when token files are present
 - `:root` block is completely removed from design-kit HTML -- no inline custom properties remain in any `:root {}` rule
-- External `<link>` tags use relative paths (`../tokens/`) -- correct because design-kit HTML files sit at `workspace/output/design-kit/` alongside the `tokens/` directory
+- External `<link>` tags use relative paths (`tokens/`) -- correct because design-kit HTML files sit at `workspace/output/design-kit/` alongside the `tokens/` sibling directory (NOT `../tokens/` which would resolve to the non-existent `workspace/output/tokens/`)
 - All 5 token files created before post-processing begins -- design-kit HTML files depend on the token files being present to render correctly
