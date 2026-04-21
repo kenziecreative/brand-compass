@@ -430,7 +430,7 @@ Structure for individual/solo/creator entities:
 2. Proof points as personal statements (Section 4 > Proof Points) — 3-4 items presented as personal credentials or outcomes, not a feature grid
 3. Connect / contact section with a single minimal CTA (email link, contact form reference, or booking link placeholder)
 
-Token links: `../tokens/colors.css`, `../tokens/typography.css`, `../tokens/spacing.css`
+Token links: `tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css`
 
 ---
 
@@ -448,7 +448,7 @@ Structure for org/business/agency/studio entities:
 1. Core narrative as brand narrative section (Section 4 > Core Narrative) — brand story, not personal story
 2. About / mission section: 2-3 sentences from core narrative establishing what the brand does and who it serves
 
-Token links: `../tokens/colors.css`, `../tokens/typography.css`, `../tokens/spacing.css`
+Token links: `tokens/colors.css`, `tokens/typography.css`, `tokens/spacing.css`
 
 ---
 
@@ -486,7 +486,7 @@ Token links: `../tokens/colors.css`, `../tokens/typography.css`, `../tokens/spac
 - **All 5 preview cards contain `min-width: 150px`** on `.preview-card` and `overflow: hidden` on `.token-layer` — floor behavior clips, does not remove content
 - **Preview `<link>` tags use `../tokens/`** not `../../tokens/` — same subdirectory rule as components
 - **landing-page.html contains no `[bracket]` placeholder text** and no lorem ipsum — every piece of copy must be real brand copy sourced from brand-foundation.md Section 4
-- **landing-page.html `<link>` tags use `../tokens/`** (one level up, not two) — landing-page.html is at design-kit root, not in a subdirectory
+- **landing-page.html `<link>` tags use `tokens/`** not `../tokens/` — landing-page.html is at design-kit root, so `tokens/` is a sibling directory; `../tokens/` would resolve to the non-existent `workspace/output/tokens/`
 - **`package.json` parses as valid JSON** — no trailing commas, no comments, no single-quoted strings
 - **README.md is written in brand voice** — first paragraph does NOT start with "Welcome to" or any generic technical opener; it must reflect the brand's tone sourced from brand-foundation.md
 - **`brand-foundation.html` and `color-palette.html` at design-kit root are NOT overwritten** — if either file exists before this agent runs, verify it still exists with the same content after all tasks complete
