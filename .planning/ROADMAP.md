@@ -32,6 +32,7 @@ Full details: milestones/v1.0-ROADMAP.md
 - [x] **Phase 11: Agent Skill Bundle** - Create skill-bundle-packager agent and all three skill bundle output files (completed 2026-04-20)
 - [x] **Phase 12: Design Kit** - Create design-kit-packager agent and all design kit outputs (components, previews, specimens) (completed 2026-04-20)
 - [x] **Phase 13: Integration** - Wire all three bundles into export, verifier, Phase 8, CLAUDE.md, and React frontend (completed 2026-04-21)
+- [ ] **Phase 14: Token Path Fix** - Fix token link resolution for root-level design-kit HTML files (gap closure)
 
 ## Phase Details
 
@@ -93,6 +94,19 @@ Plans:
 - [x] 13-02-PLAN.md — Brand Verifier Level 7 + Level 8 checks; CLAUDE.md agent table + workspace structure + multi-bundle docs
 - [x] 13-03-PLAN.md — React frontend functional bundle cards; Phase transition handoff blocks + /clear nudge
 
+### Phase 14: Token Path Fix
+**Goal**: Root-level design-kit HTML files resolve token CSS paths correctly so specimens render styled in the browser
+**Depends on**: Phase 10, Phase 12
+**Requirements**: FOUN-02, DKIT-05
+**Gap Closure:** Closes gaps from v2.0 milestone audit
+**Success Criteria** (what must be TRUE):
+  1. Root-level design-kit HTML files (brand-foundation.html, color-palette.html, landing-page.html) use `href="tokens/..."` not `href="../tokens/..."`
+  2. Subdirectory files (components/*.html, previews/*.html) continue using `href="../tokens/..."` unchanged
+  3. Opening any root-level design-kit specimen in a browser loads token CSS and renders styled output
+**Plans:** 0/1 plans
+Plans:
+- [ ] 14-01-PLAN.md — Fix token link paths in design-kit-foundation.md and design-kit-packager.md agent definitions
+
 ## Progress
 
 | Phase | Milestone | Plans Complete | Status | Completed |
@@ -110,3 +124,4 @@ Plans:
 | 11. Agent Skill Bundle | v2.0 | 1/1 | Complete    | 2026-04-20 |
 | 12. Design Kit | v2.0 | 1/1 | Complete    | 2026-04-20 |
 | 13. Integration | v2.0 | 3/3 | Complete    | 2026-04-21 |
+| 14. Token Path Fix | v2.0 | 0/1 | Planned     | — |

@@ -73,7 +73,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FOUN-01 | Phase 10 | Pending |
-| FOUN-02 | Phase 10 | Pending |
+| FOUN-02 | Phase 14 | Pending |
 | FOUN-03 | Phase 10 | Pending |
 | FOUN-04 | Phase 10 | Pending |
 | FOUN-05 | Phase 10 | Pending |
@@ -85,7 +85,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DKIT-02 | Phase 12 | Pending |
 | DKIT-03 | Phase 12 | Pending |
 | DKIT-04 | Phase 12 | Pending |
-| DKIT-05 | Phase 12 | Pending |
+| DKIT-05 | Phase 14 | Pending |
 | INTG-01 | Phase 13 | Pending |
 | INTG-02 | Phase 13 | Pending |
 | INTG-03 | Phase 13 | Pending |
