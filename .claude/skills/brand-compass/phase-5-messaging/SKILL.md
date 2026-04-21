@@ -111,7 +111,24 @@ When confirmed:
    - Check `Tagline options generated`, `Core narrative drafted`, `Customer-hero narrative drafted`, `Boilerplates written`, `Proof points listed` in Discovery Outputs
    - Set Next Action: "Begin Phase 6: Voice & Expression"
    - Add Session Log entry
-2. Tell the client: "Phase 5 is solid. You have a tagline, a story, a customer-hero narrative, bios at three lengths, and proof points. Run `/brand-compass:phase-6-voice` when you're ready to define how you write."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Phase 5 — Messaging
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:phase-6-voice` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Phase 5 is solid. You have a tagline, a story, a customer-hero narrative, bios at three lengths, and proof points. Run `/brand-compass:phase-6-voice` when you're ready to define how you write. Suggest using `/clear` before starting Phase 6 to begin with a fresh context window."
 
 ## Conversation Guidelines
 

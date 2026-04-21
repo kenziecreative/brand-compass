@@ -231,7 +231,24 @@ When confirmed:
    - Check `Toolkit compiled` in Discovery Outputs
    - Set Next Action: "Run /brand-compass:export to package final deliverables"
    - Add Session Log entry
-2. Tell the client: "Phase 8 is complete. Your entire brand system is assembled — [N] deliverables covering strategy, messaging, voice, visuals, and practical tools. Run `/brand-compass:export` to package everything for delivery."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Phase 8 — Toolkit Assembly
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:export` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Phase 8 is complete. Your entire brand system is assembled — [N] deliverables covering strategy, messaging, voice, visuals, and practical tools. Run `/brand-compass:export` to package everything for delivery. Suggest using `/clear` before running export to begin with a fresh context window."
 
 ## Conversation Guidelines
 

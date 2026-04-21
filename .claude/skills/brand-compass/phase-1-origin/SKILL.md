@@ -117,7 +117,24 @@ When the client confirms the outputs are right:
    - If business/org entity type: also check `Mission statement drafted` and `Vision statement drafted`
    - Set Next Action: "Begin Phase 2: Audience discovery questions"
    - Add Session Log entry
-2. Tell the client: "Phase 1 is solid. Your core belief, origin story, values, and the problem you're solving are documented. Run `/brand-compass:phase-2-audience` when you're ready to define who you serve."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Phase 1 — Origin & Belief
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:phase-2-audience` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Phase 1 is solid. Your core belief, origin story, values, and the problem you're solving are documented. Run `/brand-compass:phase-2-audience` when you're ready to define who you serve. Suggest using `/clear` before starting Phase 2 to begin with a fresh context window."
 
 ## Conversation Guidelines
 

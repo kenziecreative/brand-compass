@@ -106,7 +106,24 @@ When confirmed:
    - Check `Personality traits defined`, `Archetypes mapped`, `Brand world described` in Discovery Outputs
    - Set Next Action: "Begin Phase 5: Messaging Architecture"
    - Add Session Log entry
-2. Tell the client: "Phase 4 is solid. Your brand has a personality now — not abstract values on a wall, but a character people will recognize. Run `/brand-compass:phase-5-messaging` when you're ready to put words to it."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Phase 4 — Personality & Archetypes
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:phase-5-messaging` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Phase 4 is solid. Your brand has a personality now — not abstract values on a wall, but a character people will recognize. Run `/brand-compass:phase-5-messaging` when you're ready to put words to it. Suggest using `/clear` before starting Phase 5 to begin with a fresh context window."
 
 ## Conversation Guidelines
 

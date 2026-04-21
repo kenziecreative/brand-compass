@@ -144,7 +144,24 @@ When confirmed:
    - If business/org entity type: also check `Service definition documented`
    - Set Next Action: "Run Checkpoint A to validate strategic foundation before Phase 4"
    - Add Session Log entry
-2. Tell the client: "Phase 3 is solid. Your positioning is clear — who you serve, how you're different, and what territory you own. Run `/brand-compass:checkpoint-a` to validate your strategic foundation before we move into personality and identity work."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Phase 3 — Positioning & Differentiation
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:checkpoint-a` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Phase 3 is solid. Your positioning is clear — who you serve, how you're different, and what territory you own. Run `/brand-compass:checkpoint-a` to validate your strategic foundation before we move into personality and identity work. Suggest using `/clear` before starting Checkpoint A to begin with a fresh context window."
 
 ## Conversation Guidelines
 

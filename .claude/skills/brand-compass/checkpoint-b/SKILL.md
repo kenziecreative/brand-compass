@@ -103,7 +103,24 @@ Before passing, run this 4-step challenge protocol on Phases 4-6 (do not re-liti
    - Check `Checkpoint B: Phases 1-6 complete` as passed
    - Set Next Action: "Begin Phase 7: Visual Identity"
    - Add Session Log entry noting checkpoint passed
-2. Tell the client: "Checkpoint B passed. Your verbal brand is complete and consistent. Every word, every trait, every guardrail tells the same story. Now we translate it into visuals. Run `/brand-compass:phase-7-visual` when you're ready."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Checkpoint B — Verbal Brand Review
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:phase-7-visual` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Checkpoint B passed. Your verbal brand is complete and consistent. Every word, every trait, every guardrail tells the same story. Now we translate it into visuals. Run `/brand-compass:phase-7-visual` when you're ready. Suggest using `/clear` before starting Phase 7 to begin with a fresh context window."
 
 ## Guidelines
 

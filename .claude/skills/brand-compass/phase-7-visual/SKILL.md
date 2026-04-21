@@ -203,7 +203,24 @@ When confirmed:
      - AI-generation rules captured (if applicable)
    - Set Next Action: "Begin Phase 8: Toolkit Assembly"
    - Add Session Log entry
-2. Tell the client: "Phase 7 is solid. Your brand has a complete visual system — colors, type, imagery, mark, motion, and graphic devices all expressing the same personality. Run `/brand-compass:phase-8-toolkit` to assemble your final brand toolkit."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Phase 7 — Visual Identity
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:phase-8-toolkit` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Phase 7 is solid. Your brand has a complete visual system — colors, type, imagery, mark, motion, and graphic devices all expressing the same personality. Run `/brand-compass:phase-8-toolkit` to assemble your final brand toolkit. Suggest using `/clear` before starting Phase 8 to begin with a fresh context window."
 
 ## Conversation Guidelines
 

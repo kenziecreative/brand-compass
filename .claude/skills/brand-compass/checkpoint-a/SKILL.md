@@ -96,8 +96,25 @@ Before passing, run this 4-step challenge protocol on Phases 1-3:
    - Check `Checkpoint A: Phases 1-3 solid` as passed
    - Set Next Action: "Begin Phase 4: Personality & Archetypes"
    - Add Session Log entry noting checkpoint passed
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Checkpoint A — Strategic Foundation Review
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:phase-4-personality` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
 2. Optionally launch the Document Assembler to capture the current state of the brand foundation.
-3. Tell the client: "Checkpoint A passed. Your strategic foundation is solid — belief, audience, and positioning all reinforce each other. Now we build identity on top of this. Run `/brand-compass:phase-4-personality` when you're ready."
+3. Tell the client: "Checkpoint A passed. Your strategic foundation is solid — belief, audience, and positioning all reinforce each other. Now we build identity on top of this. Run `/brand-compass:phase-4-personality` when you're ready. Suggest using `/clear` before starting Phase 4 to begin with a fresh context window."
 
 ## Guidelines
 

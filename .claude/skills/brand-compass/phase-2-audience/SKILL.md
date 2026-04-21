@@ -103,7 +103,24 @@ When confirmed:
    - Check `Stakeholders mapped (if org)` for business/organization entity types
    - Set Next Action: "Begin Phase 3: Positioning & Differentiation discovery questions"
    - Add Session Log entry
-2. Tell the client: "Phase 2 is solid. Your audience is defined — who they are, what they need, and who you're NOT for. Run `/brand-compass:phase-3-positioning` when you're ready to stake your territory."
+   - **Replace** the `## Last Phase Handoff` section in STATE.md with:
+     ```
+     ## Last Phase Handoff
+
+     **Phase completed:** Phase 2 — Audience
+     **Completed:** [today's date]
+
+     **Key decisions made:**
+     - [Key decisions from this phase — list 2-4 items]
+
+     **Key outputs produced:**
+     - [List output files or named discovery artifacts]
+
+     **What happens next:**
+     Run `/brand-compass:phase-3-positioning` to continue.
+     ```
+     If `## Last Phase Handoff` does not yet exist, append it to the end of STATE.md.
+2. Tell the client: "Phase 2 is solid. Your audience is defined — who they are, what they need, and who you're NOT for. Run `/brand-compass:phase-3-positioning` when you're ready to stake your territory. Suggest using `/clear` before starting Phase 3 to begin with a fresh context window."
 
 ## Conversation Guidelines
 
